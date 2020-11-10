@@ -21,8 +21,7 @@
 title: Datenlord
 email: pu.wang@datenlord.io
 description: >- # this means to ignore newlines until "baseurl:"
-        DatenLord is a next-generation cloud-native distributed storage system, 
-        which aims to be application-orientated software-defined storage (SDS) platform.
+        Next-generation cloud-native distributed storage system 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://datenlord.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
