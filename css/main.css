@@ -1,0 +1,340 @@
+@media only screen and (max-width: 1400px) {
+    .main .jingyu {
+        margin-top: 40px;
+        width: 321px;
+        height: 281px;
+        position: absolute;
+        right: -80px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .main {
+        min-width: 340px;
+        width: 100%;
+    }
+
+    /** 头部开始 */
+    .main .header_box {
+        height: 50px;
+    }
+    .main .header {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .header .datenLord_logo {
+        display: block;
+    }
+
+    .main .header .header_right div {
+        padding: 0 10px;
+        width: auto;
+    }
+
+    .main .header .header_right p {
+        width: auto;
+        height: 16px;
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    .main .header .header_right .active {
+        color: #FFFFFF;
+    }
+
+    .main .header .header_arrow {
+        width: 10px;
+        height: 6px;
+        margin-left: 6px;
+    }
+
+    .header .datenLord {
+        display: none;
+    }
+
+    .content .home_banner {
+        background: url(../images/banner_mo.jpg) 100% no-repeat;
+        height: 300px;
+        background-size: 100% 100%;
+    }
+
+    .main .lang_box {
+        padding: 0 !important;
+        top: 50px;
+        left: 0;
+    }
+
+    .main .lang {
+        width: 60px;
+    }
+
+    .main .lang li {
+        font-size: 16px;
+        line-height: 32px;
+        color: #2F519C;
+        cursor: pointer;
+    }
+
+    .main .lang_select {
+        padding: 0 0 0 10px !important;
+        position: relative;
+        width: 60px;
+        box-sizing: border-box;
+    }
+
+    .main .github_icon{
+        padding: 0 0 0 10px !important;
+    }
+
+    /** 头部结束 */
+
+    /** 内容开始 */
+
+    .main .content_body {
+        width: 100%;
+        max-width: 360px;
+        margin: 15px 0 45px 0 !important;
+    }
+    .main .content_box {
+        width: 165px;
+        height: 255px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        margin-right: 0;
+    }
+
+    .main .content_box:nth-child(2n + 1) {
+        margin-right: 15px;
+    }
+
+    .main .content .content_body {
+        flex-flow: wrap;
+    }
+
+    .main .content_box_title {
+        font-size: 18px;
+        margin: 0;
+        font-weight: 400;
+        margin-bottom: 10px;
+        font-family: PingFangSC-Regular, PingFang SC;
+    }
+    .main .content_box_con {
+        margin-bottom: 18px;
+        font-size: 14px;
+        padding: 0 10px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #000000;
+        line-height: 22px;
+    }
+
+    .main .home_img {
+        width: 135px;
+        height: 135px;
+    }
+
+    /**  join us start */
+
+    .content .content_recruit {
+        margin: 15px 20px;
+        max-width: 600px;
+        width: 100%;
+    }
+    .recruit_Con_img {
+        margin: 0;
+        display: none;
+    }
+
+    .content .recruit_title {
+        margin-bottom: 20px;
+    }
+
+    .content .recruit_title h3 {
+        font-size: 20px;
+        font-family: Helvetica;
+        color: #000000;
+        line-height: 20px;
+    }
+
+
+    .content .recruit_Con_left{
+        width: auto;
+    }
+    .content .recruit_Con_left p {
+        font-size: 14px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        color: #000000;
+        line-height: 24px;
+    }
+
+    .content .recruit_Con_box h4 {
+        font-size: 14px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        color: #000000;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .content .con_top {
+        margin-top: 20px;
+    }
+
+    .content .content_body:last-child {
+        margin-bottom: 45px !important;
+    }
+    /** join us end */
+
+    /** docs start */
+
+    .docs_phone_con {
+        padding: 10px 20px;
+    }
+
+    .docs_con_phone h3{
+        height: auto;
+        font-size: 24px;
+        font-family: Helvetica;
+        color: #000000;
+        line-height: 24px;
+    }
+
+    .docs_con_phone .h3_center {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .margin10 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .docs_con_phone .text {
+        font-size: 14px;
+        font-family: Helvetica-Light, Helvetica;
+        font-weight: 300;
+        color: #111111;
+        line-height: 20px;
+    }
+
+    .docs_con_phone .code_box {
+        box-sizing: border-box;
+        padding: 10px 15px;
+        background-color: #0C162D;
+    }
+
+    .docs_con_phone .code_box p {
+        word-break: break-word;
+        font-size: 14px;
+        font-family: Helvetica-Light, Helvetica;
+        font-weight: 300;
+        color: #2A9E4D;
+        line-height: 20px;
+    }
+
+    .docs_con_phone pre code.hljs {
+        padding: 0 15px !important;
+        line-height: 20px;
+    }
+
+    .docs_con_phone .hljs {
+        background-color: #0C162D !important;
+    }
+    .docs_con_phone pre code.hljs {
+        font-size: 14px;
+        font-family: Helvetica-Light, Helvetica;
+        font-weight: 300;
+        color: #2A9E4D;
+        line-height: 20px;
+    }
+
+    .content .docs_con_phone{
+        display: block;
+    }
+
+    .content .docs_con {
+        display: none;
+    }
+
+    .quick_start_title {
+        margin-top: 20px;
+        font-size: 18px !important;
+        font-family: Helvetica-Bold, Helvetica;
+        font-weight: bold;
+        color: #111111;
+        line-height: 20px;
+        margin-bottom: 5px !important;
+    }
+
+    .docs_con_phone .quickStartWord {
+        font-size: 14px;
+        font-family: Helvetica-Light, Helvetica;
+        font-weight: 300;
+        color: #111111;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .img_margin_10 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .docs_con_phone .map_text {
+        margin-left: 9px !important;
+    }
+
+    /** docs end */
+
+    /** 内容结束 */
+
+    /** 页脚开始 */
+    .main .footer {
+        width: 100%;
+    }
+
+    .main .footer_box{
+        height: 240px;
+    }
+    .main .footer .footer_img {
+        margin-bottom: 27px;
+    }
+
+    .main .footer {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .main .footer_icon {
+        justify-content: center;
+    }
+    /** 页脚结束 */
+}
+
+
+/*全屏显示大图*/
+.opacityMask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background:rgba(0,0,0,0.8);
+    z-index:1000;
+    top: 0;
+    left: 0
+}
+.none-scroll{
+    overflow: hidden;
+    height: 100%;
+}
+.enlargeImg{
+    width:100%;
+    left:0%;
+    top:6%;
+    position:fixed;
+    z-index: 10001;
+}

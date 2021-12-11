@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatenLord</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
+    <link type="text/css" rel="styleSheet"  href="./css/index.css?v20211211" />
+    <link type="text/css" rel="styleSheet"  href="./css/reset.css?v20211211" />
+    <link type="text/css" rel="styleSheet"  href="./css/main.css?v20211211" />
+    <style>
+        .content_box {
+            width: 270px;
+            height: 480px;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #000000;
+            box-shadow: 0px 8px 20px 10px rgb(47 81 157 / 20%);
+            margin-right: 40px;
+            border-radius: 8px;
+        }
+
+        .content_box:last-child {
+            margin-right: 0 !important;
+        }
+
+        .content_img {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content_box_title {
+            margin-top: 65px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .content_box_con {
+            margin-bottom: 88px;
+            padding: 0 20px;
+            font-size: 16px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #000000;
+            line-height: 32px;
+        }
+
+        .content_body {
+            margin: 40px 0 100px 0 !important;
+            justify-content: center !important;
+        }
+
+        .home_img {
+            width: 220px;
+            height: 220px;
+        }
+
+        .home_banner {
+            background: url(./images/banner.png) 100% no-repeat;
+            height: 400px;
+            background-size: 100% 100%;
+        }
+
+        .content_box:hover {
+            box-shadow: 0px 8px 20px 10px rgba(41, 93, 210, 0.6);
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="header_box">
+        <div class="header">
+            <div class="header_left">
+                <img src="images/daztenLord.png"  onclick="window.location.href='home.html'" class="datenLord">
+                <img src="images/datenLord_logo.png"  onclick="window.location.href='home.html'" class="datenLord_logo">
+            </div>
+            <div class="header_right">
+                <div class="div_hover">
+                    <p onclick="window.location.href='docs.html'">DOCS</p>
+                </div>
+                <div class="div_hover">
+                    <p onclick="window.location.href='join.html'">JOIN US</p>
+                </div>
+                <div class="lang_select">
+                    <p>中</p>
+                    <img src="./images/drop-down.png" class="header_arrow drop_down">
+                    <div id="lang" class="lang_box">
+                        <ul class="lang">
+                            <li>中</li>
+                            <li onclick="window.location.href='./en/home.html'">EN</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="github_icon">
+                    <img src="images/github_icon.png" onclick="window.open('https://github.com/datenlord/datenlord');">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="home_banner">
+        </div>
+        <div style="display: flex;justify-content: center;width: 100%">
+            <div class="content_body">
+                <div class="content_box">
+                    <div class="content_img">
+                        <img src="images/cloud.png" class="home_img"/>
+                    </div>
+                    <p class="content_box_title">跨云服务</p>
+                    <p class="content_box_con">使用S3存储协议实现跨云存储</p>
+                </div>
+                <div class="content_box">
+                    <div class="content_img">
+                        <img src="images/cache.png" class="home_img"/>
+                    </div>
+                    <p class="content_box_title">高性能缓存</p>
+                    <p class="content_box_con">使用内存对热点数据高速缓存</p>
+                </div>
+                <div class="content_box">
+                    <div class="content_img">
+                        <img src="images/network.png" class="home_img"/>
+                    </div>
+                    <p class="content_box_title">高速网络</p>
+                    <p class="content_box_con">使用RMDA增加网络吞吐降低网络延迟</p>
+                </div>
+                <div class="content_box">
+                    <div class="content_img">
+                        <img src="images/store.png" class="home_img"/>
+                    </div>
+                    <p class="content_box_title">分布式存储</p>
+                    <p class="content_box_con">使用EPaxos协议保证跨节点数据一致性</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_box">
+        <div class="footer">
+            <div class="footer_img">
+                <img src="images/logo_Dark.png">
+            </div>
+            <div class="footer_icon">
+                <img src="images/icon5.png" onclick="window.open('https://github.com/datenlord/datenlord');">
+            </div>
+        </div>
+        <div class="copyright">版权所有 © DatenLord 2021。 保留一切权利。</div>
+    </div>
+</div>
+<div class="model_back" id="tipModel">
+    <div class="model">
+        <div style="width: auto; text-align: center;">
+            <img src="images/DatenLord_logo_2x.png" style="margin-top: 30px;width: 100px;height: 100px">
+            <h3 style="color: #000000;margin-bottom: 20px;;font-size: 24px;font-weight: bold">请升级浏览器版本</h3>
+            <p>您正在使用旧版本浏览器。请升级浏览器以获得更好的体验。</p>
+            <div style="display: inline-block; text-align: center;">
+                <div style="display: inline-block;margin: 20px 0 10px 0">
+                    <img src="images/chrome.png" style="width: 100px; height: 100px; margin: 10px;">
+                    <p>Chrome</p>
+                </div>
+                <div style="display: inline-block;margin: 20px 0 10px 0">
+                    <img src="images/firefox.png" style="width: 100px; height: 100px; margin: 10px;">
+                    <p>Firefox</p>
+                </div>
+                <div style="display: inline-block;margin: 20px 0 10px 0">
+                    <img src="images/safari.png" style="width: 100px; height: 100px; margin: 10px;">
+                    <p>Safari</p>
+                </div>
+                <div style="display: inline-block;margin: 20px 0 10px 0">
+                    <img src="images/edge.png" style="width: 100px; height: 100px; margin: 10px;">
+                    <p>Edge</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="./js/main.js?v=20211211"></script>
+<script>isIE();</script>
+</body>
+</html>
