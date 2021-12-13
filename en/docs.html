@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>DatenLord | Docs</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="DatenLord,Docs,Documentation,Quick Start,Architecture,DatenLord Optimization Strategy,Target Usage Scenarios,deploy DatenLord,use DatenLord,Road Map">
+  <meta name="description" content="The DatenLord document page describes in detail what DatenLord is, why DatenLord is selected, the optimization strategy and usage scenario of DatenLord, and how to deploy and use DatenLord.">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
+  <link type="text/css" rel="styleSheet" href="../css/index.css?v=20211211" />
+  <link type="text/css" rel="styleSheet" href="../css/reset.css?v=20211211" />
+  <link type="text/css" rel="styleSheet" href="../css/main.css?v=20211211" />
+  <link rel="stylesheet" href="../css/vs2015.min.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+  <script src="../js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style>
+    .content {
+      background-color: #F6F8FA !important;
+    }
+
+    .f5back {
+      background-color: #F6F8FA !important;
+    }
+
+    .ffback {
+      background-color: #FFFFFF !important;
+    }
+
+    .content_box_con {
+      width: 1120px;
+      display: flex;
+    }
+
+    .bentween {
+      justify-content: space-between;
+    }
+
+    .con_img {
+      width: 480px;
+      height: 360px;
+      margin: auto 0 auto 62px;
+    }
+
+    .text {
+      font-size: 16px;
+      font-family: Helvetica-Light, Helvetica;
+      font-weight: 300;
+      color: #111111;
+      line-height: 24px;
+      margin: 0 !important;
+    }
+
+    h3 {
+      margin: 0;
+      height: 40px;
+      font-size: 40px;
+      font-family: Helvetica;
+      color: #000000;
+      line-height: 40px;
+      margin-bottom: 40px;
+    }
+
+    h4 {
+      margin: 0;
+    }
+
+    .ellipse {
+      background-color: #08113C;
+      width: 35px;
+      height: 25px;
+      border-radius: 50%/50%;
+      transform: rotate(150deg);
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ellipse p {
+      transform: rotate(210deg);
+    }
+
+    .quickStart {
+      background: url(../images/quick.png) 100% no-repeat;
+      background-size: 100% 100%;
+      z-index: 108;
+    }
+
+    .quickStart_bkcolor {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 65px;
+    }
+
+    .quickStart_con {
+      width: 1120px;
+      height: 100%;
+    }
+
+    .quickStart_con .title {
+      font-size: 30px;
+      font-family: Helvetica-Bold, Helvetica;
+      font-weight: bold;
+      color: #000000;
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+
+    .title_con {
+      font-size: 18px;
+      font-family: Helvetica;
+      color: #000000;
+      line-height: 30px
+    }
+
+    .para {
+      font-size: 18px;
+      font-family: Helvetica;
+      color: #000000;
+      line-height: 18px;
+      margin: 0;
+    }
+
+    .margintop20 {
+      margin-top: 20px;
+    }
+
+    .margin71 {
+      margin: 71px 0 0 0 !important;
+    }
+
+    .margin60 {
+      margin-top: 60px;
+    }
+
+    .margin34 {
+      margin: 34px 0 !important;
+    }
+
+    .line_margin40 {
+      margin: -50px 40px 0 40px !important;
+    }
+
+    .quickStartWord {
+      font-size: 18px;
+      font-family: Helvetica;
+      color: #000000;
+      line-height: 18px;
+    }
+
+    .wordmargin {
+      margin: 15px 0 0 0 !important;
+    }
+
+    code.hljs {
+      padding: 0 32px !important;
+      line-height: 18px;
+    }
+
+    pre {
+      margin: 0 !important;
+    }
+
+    .hljs {
+      background: #0C162D;
+    }
+
+    pre code.hljs {
+      font-size: 18px;
+      line-height: 32px;
+      font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+      border-radius: 8px;
+      color: #34CE58;
+    }
+
+    .hljs-meta .hljs-string,
+    .hljs-string,
+    .hljs-attr,
+    .hljs-attribute,
+    .hljs-meta,
+    .hljs-bullet {
+      color: #34CE58;
+    }
+
+    .jingyu {
+      margin-top: 40px;
+      width: 321px;
+      height: 281px;
+      position: absolute;
+      right: -120px;
+    }
+
+    .code_box {
+      background-color: #0C162D;
+      padding: 32px;
+      color: #34CE58;
+      font-size: 18px;
+      line-height: 32px;
+      border-radius: 8px;
+      z-index: 200;
+    }
+
+    .content_box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 50px 0;
+    }
+
+    .lineHight18 {
+      font-size: 16px;
+      font-family: Helvetica-Light, Helvetica;
+      font-weight: 300;
+      color: #000000;
+      line-height: 24px;
+    }
+
+    .docs_con_phone {
+      display: none;
+    }
+
+    .docs_con {
+      display: block;
+	  overflow-x: hidden;
+    }
+
+    .mapText {
+      font-size: 18px;
+      font-family: Helvetica;
+      color: #000000;
+      line-height: 24px;
+    }
+
+    .box_title {
+      font-size: 32px;
+      font-family: Helvetica;
+      color: #000000;
+      line-height: 32px;
+      margin-bottom: 30px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="header_box">
+      <div class="header">
+        <div class="header_left">
+          <img src="../images/daztenLord.png" onclick="window.location.href='home.html'" class="datenLord">
+          <img src="../images/datenLord_logo.png" onclick="window.location.href='home.html'" class="datenLord_logo">
+        </div>
+        <div class="header_right">
+          <div class="active">
+            <p onclick="window.location.href='docs.html'">DOCS</p>
+          </div>
+          <div class="div_hover">
+            <p onclick="window.location.href='join.html'">JOIN US</p>
+          </div>
+          <div class="lang_select">
+            <p>EN</p>
+            <img src="../images/drop-down.png" class="header_arrow drop_down">
+            <div id="lang" class="lang_box">
+              <ul class="lang">
+                <li onclick="window.location.href='../docs.html'">中</li>
+                <li>EN</li>
+              </ul>
+            </div>
+          </div>
+          <div class="github_icon">
+            <img src="../images/github_icon.png" onclick="window.open('https://github.com/datenlord/datenlord');">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="docs_con" class="docs_con">
+        <div class="content_box f5back">
+          <div class="content_box_con">
+            <div style="width: 100%">
+              <h3 style="margin-bottom: 30px" class="box_title">What is Datenlord ?</h3>
+              <div style="display: flex;justify-content: space-between">
+                <div content="con_left">
+                  <p class="text">DatenLord is a next-generation cloud-native distributed storage system, which aims to
+                    be application-orientated software-defined storage (SDS) platform. On one hand, DatenLord is
+                    designed as a cloud-native storage system, which itself is distributed, fault-tolerant, and graceful
+                    hot-upgrade. These cloud-native features make DatenLord easy to use and easy to maintain. On the
+                    other hand, DatenLord is designed as an application-orientated storage system, which is called
+                    “Computing Defined Storage”, in that DatenLord is optimized for many application scenarios, such as
+                    databases, big data, AI machine learning, and especially container ecosystems. DatenLord provides
+                    high-performance storage service for containers, which facilitates stateful applications running on
+                    top of Kubernetes (K8S). The high performance achieved by, DatenLord is by leveraging the most
+                    recent technological revolution in hardware and software, such as NVMe, non-volatile memory,
+                    asynchronous programming, and the native Linux asynchronous IO support.</p>
+                </div>
+                <div class="con_right">
+                  <img src="../images/2.png" class="con_img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_box ffback">
+          <div class="content_box_con">
+            <div style="width: 100%">
+              <h3 style="text-align: center;margin-bottom: 30px" class="box_title">Why do we build DatenLord?</h3>
+              <div style="display: flex;justify-content: space-between">
+                <div content="con_left" style="margin: auto 60px auto 0;">
+                  <img src="../images/6.png" style="width: 340px;height: 300px">
+                </div>
+                <div class="con_right">
+                  <p class="text" style="word-break: break-word;word-wrap:break-word; overflow:hidden;">Firstly, the
+                    recent computer hardware architecture revolution stimulates storage software refractory. The
+                    mainstream SDS systems haven’t changed much in recent 10 years, and at that time hard-disk drive
+                    (HDD) was the main storage device. Nowadays, solid-state drive (SSD) become the mainstream, not to
+                    mention the most advanced SSD, NVMe and non-volatile memory. The performance of storage devices
+                    becomes hundreds of times faster than before, that the HDD latency is around 1~10 ms, whereas the
+                    SSD latency is around 50–150 μs, NVMe latency is around 25 μs, and non-volatile memory latency is
+                    350 ns. With the storage performance revolution, traditional blocking-style/synchronous IO becomes
+                    very inefficient, and non-blocking-style/asynchronous IO is booming, such as the recent Linux kernel
+                    has built native-asynchronized IO mechanism, io_uring. Moreover, context switch overhead becomes no
+                    more negligible, w.r.t. SSD latency. Many modern programming languages have proposed asynchronized
+                    programming, green thread or coroutine to manage asynchronous IO tasks, so as to avoid context
+                    switch overhead introduced by blocking-style/synchronous IO. Therefore we think it’s time to build a
+                    next-generation SDS system that takes advantage of the storage performance revolution as far as
+                    possible, by leveraging non-blocking/asynchronous IO, asynchronized programming, NVMe, and even
+                    non-volatile memory.</p>
+                </div>
+              </div>
+              <div style="margin-top: 40px;display: flex;justify-content: space-between">
+                <div content="con_left">
+                  <p class="text">Secondly, most existing IT systems are computing and storage isolated, that
+                    applications and storage systems had their dedicated clusters, respectively. This isolated
+                    architecture is no longer feasible, in that nowadays, applications are dealing with much larger data
+                    than ever before. One notorious example is that an AI training job takes one hour to load training
+                    data whereas the training job itself finishes in only 45 minutes. Therefore, isolating computing and
+                    storage makes the whole system very inefficient, as transferring data between applications and
+                    storage systems wastes much time. We propose a more efficient computing and storage coupled
+                    architecture, which schedules jobs closer to data, so as to reduce data transfer overhead and
+                    improve data processing efficiency, exactly as HDFS does, except HDFS is dedicated for Hadoop,
+                    whereas DatenLord is more for container ecosystems.</p>
+                </div>
+                <div class="con_right" style="align-items: center;margin-left: 60px">
+                  <img src="../images/7.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_box f5back">
+          <div class="content_box_con">
+            <div>
+              <h3 style="text-align: center" class="box_title">Architecture</h3>
+              <img src="../images/architecture.png" style="height: 584px;width: 1100px">
+              <div style="margin-top: 40px;">
+                <p class="lineHight18">
+                  DatenLord is of classical master-slave architecture. To achieve better storage performance, DatenLord
+                  has a coupled architecture with K8S, that DatenLord can be deployed within a K8S cluster, in order to
+                  leverage data locality to speed up data access. The above figure is the overall DatenLord
+                  architecture, the green parts are DatenLord components, the blue parts are K8S components, the yellow
+                  part represents containerized applications. There are several major components of DatenLord: master
+                  node (marked as Daten Lord), slave node (marked as Daten Sklavin), and K8S plugins.
+                </p>
+                <br>
+                <p class="lineHight18">
+                  The master node has three parts: S3 compatible interface (S3I), Lord, and Meta Storage Engine (MSE).
+                  S3I provides a convenient way to read and write data in DatenLord via S3 protocol, especially for bulk
+                  upload and download scenarios, e.g. uploading large amounts of data for big data batch jobs or AI
+                  machine learning training jobs. Lord is the overall controller of DatenLord, which controls all the
+                  internal behaviours of DatenLord, such as where and how to write data, synchronize data, etc. MSE
+                  stores all the meta information of DatenLord, such as the file paths of all the data stored in each
+                  slave node, the user-defined labels of each data file, etc. MSE is similar to HDFS namenode.
+                </p>
+                <br>
+                <p class="lineHight18">
+                  The slave node has four parts: Data Storage Engine (DSE), Sklavin, Meta Storage Engine (MSE), S3/P2P
+                  interface. DSE is in charge of communicating with kernel modules so as to read/write data from/to
+                  memory or disks. More specifically, DatenLord sets up a filesystem in userspace (FUSE) in a slave node
+                  by using the FUSE driver and library. DSE is to implement the FUSE, executing all the underlying FUSE
+                  operations, such as open, create, read, and write, etc. DSE can implement different types of FUSE for
+                  different scenarios, e.g., memory-based FUSE, disk-based FUSE, and SAN-based FUSE, etc. Sklavin is to
+                  communicate with the Lord of the master node and handle the requests from the Lord and CSI driver,
+                  such as health check report, data synchronization, data consistency inspection, Lord election, etc.
+                  The MSE of the slave node is a local copy of the MSE from the master node. S3/P2P interface provides a
+                  convenient way, either S3 or P2P, to read, write and synchronize data in a slave node.
+                </p>
+                <br>
+                <p class="lineHight18">
+                  The K8S plugins include a container storage interface (CSI) driver and a customer filter. The CSI
+                  driver is for DatenLord to work with K8S to manage volumes for container tasks, such as loading a
+                  read-only volume, creating a read-write volume. The customer filter is to help K8S to schedule tasks
+                  to data nearby based on the meta-information in MSE of the master node.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_box ffback">
+          <div class="content_box_con">
+            <div style="width: 100%">
+              <h3 style="text-align: center;margin-bottom: 30px" class="box_title">DatenLord Optimization Strategy</h3>
+              <div style="display: flex;justify-content: space-between">
+                <p style="margin: 0" class="lineHight18">In general, there are two kinds of storage needs from an
+                  application perspective: one is latency-sensitive, and the other is throughput-sensitive. As for
+                  latency-sensitive applications, such as database applications, like MySQL, MongoDB, and ElasticSearch,
+                  etc, their performance relies on how fast a single I/O-request got handled. As for
+                  throughput-sensitive applications, such as big data and AI machine learning jobs, like Spark, Hadoop,
+                  and TensorFlow, etc, the more data load per unit time, the better their performance. </p>
+              </div>
+              <div style="margin-top: 30px;display: flex;justify-content: space-between">
+                <p style="margin: 0" class="lineHight18">DatenLord is crafted to fit the aforementioned two scenarios.
+                  Specifically, to reduce latency, DatenLord caches in memory as much data as possible, in order to
+                  minimize disk access; to improve throughput (we focus on reading throughput currently), DatenLord, on
+                  one hand, prefetches data in memory to speed up access, on the other hand, leverages K8S to schedule
+                  tasks to data nearby, so as to minimize data transfer cost.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_box fcback">
+          <div class="content_box_con">
+            <div style="width: 100%">
+              <h3 style="text-align: center" class="box_title">Target Usage Scenarios</h3>
+              <p style="margin: 30px 0 20px 0" class="lineHight18">DatenLord has several target scenarios, which fall
+                into two main categories:</p>
+              <div style="display: flex;justify-content: space-between;width: 100%">
+                <div style="width: 540px; flex-direction: column;align-items: center">
+                  <div style="width: 100%;text-align: center"><img src="../images/4.png"
+                      style="width: 320px;height: 220px;margin-bottom: 20px"></div>
+                  <p class="lineHight18">Latency-sensitive cases, that DatenLord will coordinate with K8S to schedule
+                    containers close to data to minimize latency: Containerized applications, especially stateful
+                    applications; Serverless, Lambda, FaaS, etc, event-driven tasks;</p>
+                </div>
+                <div style="width: 540px; flex-direction: column;align-items: center">
+                  <div style="width: 100%;text-align: center"><img src="../images/5.png"
+                      style="width: 320px;height: 220px;margin-bottom: 20px"></div>
+                  <p class="lineHight18">Throughput-sensitive cases, that DatenLord will pre-load remote data into local
+                    clusters to speed up access: AI and big-data jobs, especially training tasks; Multi-cloud storage
+                    unified management, to facilitate application migration across clouds.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quickStart">
+          <div class="quickStart_bkcolor">
+            <div class="quickStart_con">
+              <h3 style="text-align: center;margin: 50px 0 0 0;" class="box_title">Quick Start</h3>
+              <div style="display: flex;justify-content: space-between;margin-top: 30px">
+                <div>
+                  <h3 class="title">To deploy DatenLord via K8S</h3>
+                  <p class="quickStartWord wordmargin">just simply run:</p>
+                </div>
+                <div style="width: 616px;" class="code_box">
+                  <p>sed -e 's/e2e_test/latest/g' scripts/datenlord.yaml > datenlord-deploy.yaml kubectl apply -f
+                    datenlord-deploy.yaml</p>
+                </div>
+              </div>
+              <div class="line_margin40">
+                <img src="../images/quick_line.png">
+              </div>
+              <div style="display: flex;justify-content: space-between">
+                <div style="width: 680px; margin-top: -80px;height: auto;background-color: #000000;border-radius: 8px;">
+                  <pre><code>
+cat &lt;&lt;EOF >datenlord-demo.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-datenlord-test
+spec:
+  accessModes:
+   - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Mi
+  storageClassName: csi-datenlord-sc
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-datenlord-test
+spec:
+    containers:
+    - name: mysql
+      image: mysql
+      env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: "rootpasswd"
+      volumeMounts:
+      - mountPath: /var/lib/mysql
+        name: data
+        subPath: mysql
+    volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: pvc-datenlord-test
+EOF
+
+kubectl apply -f datenlord-demo.yaml
+                        </code></pre>
+                </div>
+                <div style="position: relative">
+                  <div style="width: 385px;margin-top: -50px;margin-bottom: 50px">
+                    <h3 class="title">To use DatenLord</h3>
+                    <p class="title_con margintop20">just define PVC using DatenLord Storage Class, and then deploy a
+                      Pod using this PVC:</p>
+                  </div>
+                  <div style="height: 456px;border-right: 2px #1E1E1E solid;margin-right: 40px; opacity: 50%">
+
+                  </div>
+                  <div style="width: 381px;height: 321px;">
+                    <img src="../images/jingyu.png" class="jingyu">
+                    <div style="clear: both"></div>
+                  </div>
+                  <div>
+                    <img src="../images/line2.png" style="    position: absolute;margin-top: 20px; margin-left: -228px;">
+                  </div>
+                </div>
+              </div>
+              <p class="para margin60">It may need to install snapshot CRD and controller on K8S,</p>
+              <h3 class="title" style="margin-top: 30px;margin-bottom: 35px">if used K8S CSI snapshot feature:</h3>
+              <div style="width: 100%" class="code_box">
+                <p>
+                  kubectl apply -f
+                  https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+                  kubectl apply -f
+                  https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+                  kubectl apply -f
+                  https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+                  kubectl apply -f
+                  https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+                  kubectl apply -f
+                  https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_box ffback">
+          <div class="content_box_con">
+            <div>
+              <h3 style="text-align: center" class="box_title">Road Map</h3>
+              <div style="margin-top: 40px ">
+                <div style="margin: 23px 0 0 0;display: flex">
+                  <div class="ellipse">
+                    <p>0.1</p>
+                  </div>
+                  <p style="margin: 0 0 0 20px" class="mapText">Refactor async fuse lib to provide clear async APIs, which is used by
+                    the datenlord filesystem.</p>
+                </div>
+                <div style="margin: 23px 0 0 0;display: flex">
+                  <div class="ellipse">
+                    <p>0.2</p>
+                  </div>
+                  <p style="margin: 0 0 0 20px" class="mapText">Support all Fuse APIs in the datenlord fs.</p>
+                </div>
+                <div style="margin: 23px 0 0 0;display: flex">
+                  <div class="ellipse">
+                    <p>0.3</p>
+                  </div>
+                  <p style="margin: 0 0 0 20px" class="mapText">Make fuse lib fully asynchronous. Switch async fuse lib’s device
+                    communication channel from blocking I/O to io_uring.</p>
+                </div>
+                <div style="margin: 23px 0 0 0;display: flex">
+                  <div class="ellipse">
+                    <p>0.4</p>
+                  </div>
+                  <p style="margin: 0 0 0 20px" class="mapText">Complete K8s integration test.</p>
+                </div>
+                <div style="margin: 23px 0 0 0;display: flex">
+                  <div class="ellipse">
+                    <p>1.0</p>
+                  </div>
+                  <p style="margin: 0 0 0 20px" class="mapText">Complete Tensorflow k8s integration and finish performance comparison
+                    with raw fs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="docs_con_phone" class="docs_con_phone">
+        <div class="f5back docs_phone_con">
+          <h3 class="margin10" style="margin-top: 20px;margin-bottom: 30px">What is Datenlord ?</h3>
+          <div style="width: 100%;text-align: center">
+            <img src="../images/2_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
+          <p class="text">DatenLord is a next-generation cloud-native distributed storage system, which aims to be
+            application-orientated software-defined storage (SDS) platform. On one hand, DatenLord is designed as a
+            cloud-native storage system, which itself is distributed, fault-tolerant, and graceful hot-upgrade. These
+            cloud-native features make DatenLord easy to use and easy to maintain. On the other hand, DatenLord is
+            designed as an application-orientated storage system, which is called “Computing Defined Storage”, in that
+            DatenLord is optimized for many application scenarios, such as databases, big data, AI machine learning, and
+            especially container ecosystems. DatenLord provides high-performance storage service for containers, which
+            facilitates stateful applications running on top of Kubernetes (K8S). The high performance achieved by,
+            DatenLord is by leveraging the most recent technological revolution in hardware and software, such as NVMe,
+            non-volatile memory, asynchronous programming, and the native Linux asynchronous IO support.</p>
+        </div>
+        <div class="ffback docs_phone_con">
+          <h3 class="h3_center">Why do we build DatenLord?</h3>
+          <div style="width: 100%;text-align: center">
+            <img src="../images/6_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
+          <p class="text">Firstly, the recent computer hardware architecture revolution stimulates storage software
+            refractory. The mainstream SDS systems haven’t changed much in recent 10 years, and at that time hard-disk
+            drive (HDD) was the main storage device. Nowadays, solid-state drive (SSD) become the mainstream, not to
+            mention the most advanced SSD, NVMe and non-volatile memory. The performance of storage devices becomes
+            hundreds of times faster than before, that the HDD latency is around 1~10 ms, whereas the SSD latency is
+            around 50–150 μs, NVMe latency is around 25 μs, and non-volatile memory latency is 350 ns. With the storage
+            performance revolution, traditional blocking-style/synchronous IO becomes very inefficient, and
+            non-blocking-style/asynchronous IO is booming, such as the recent Linux kernel has built
+            native-asynchronized IO mechanism, io_uring. Moreover, context switch overhead becomes no more negligible,
+            w.r.t. SSD latency. Many modern programming languages have proposed asynchronized programming, green thread
+            or coroutine to manage asynchronous IO tasks, so as to avoid context switch overhead introduced by
+            blocking-style/synchronous IO. Therefore we think it’s time to build a next-generation SDS system that takes
+            advantage of the storage performance revolution as far as possible, by leveraging non-blocking/asynchronous
+            IO, asynchronized programming, NVMe, and even non-volatile memory.</p>
+          <div style="width: 100%;text-align: center">
+            <img src="../images/7_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
+          <p class="text">Secondly, most existing IT systems are computing and storage isolated, that applications and
+            storage systems had their dedicated clusters, respectively. This isolated architecture is no longer
+            feasible, in that nowadays, applications are dealing with much larger data than ever before. One notorious
+            example is that an AI training job takes one hour to load training data whereas the training job itself
+            finishes in only 45 minutes. Therefore, isolating computing and storage makes the whole system very
+            inefficient, as transferring data between applications and storage systems wastes much time. We propose a
+            more efficient computing and storage coupled architecture, which schedules jobs closer to data, so as to
+            reduce data transfer overhead and improve data processing efficiency, exactly as HDFS does, except HDFS is
+            dedicated for Hadoop, whereas DatenLord is more for container ecosystems.</p>
+        </div>
+        <div class="f5back docs_phone_con">
+          <h3 class="h3_center">Architecture</h3>
+          <div style="width: 100%;text-align: center">
+            <img src="../images/architecture_mo.png" onclick="clickToEnlargeImg(this)">
+          </div>
+          <p class="lineHight18 text" style="margin-top: 10px!important;">
+            DatenLord is of classical master-slave architecture. To achieve better storage performance, DatenLord has a
+            coupled architecture with K8S, that DatenLord can be deployed within a K8S cluster, in order to leverage
+            data locality to speed up data access. The above figure is the overall DatenLord architecture, the green
+            parts are DatenLord components, the blue parts are K8S components, the yellow part represents containerized
+            applications. There are several major components of DatenLord: master node (marked as Daten Lord), slave
+            node (marked as Daten Sklavin), and K8S plugins.
+          </p>
+          <br>
+          <p class="lineHight18 text">
+            The master node has three parts: S3 compatible interface (S3I), Lord, and Meta Storage Engine (MSE). S3I
+            provides a convenient way to read and write data in DatenLord via S3 protocol, especially for bulk upload
+            and download scenarios, e.g. uploading large amounts of data for big data batch jobs or AI machine learning
+            training jobs. Lord is the overall controller of DatenLord, which controls all the internal behaviours of
+            DatenLord, such as where and how to write data, synchronize data, etc. MSE stores all the meta information
+            of DatenLord, such as the file paths of all the data stored in each slave node, the user-defined labels of
+            each data file, etc. MSE is similar to HDFS namenode.
+          </p>
+          <br>
+          <p class="lineHight18 text">
+            The slave node has four parts: Data Storage Engine (DSE), Sklavin, Meta Storage Engine (MSE), S3/P2P
+            interface. DSE is in charge of communicating with kernel modules so as to read/write data from/to memory or
+            disks. More specifically, DatenLord sets up a filesystem in userspace (FUSE) in a slave node by using the
+            FUSE driver and library. DSE is to implement the FUSE, executing all the underlying FUSE operations, such as
+            open, create, read, and write, etc. DSE can implement different types of FUSE for different scenarios, e.g.,
+            memory-based FUSE, disk-based FUSE, and SAN-based FUSE, etc. Sklavin is to communicate with the Lord of the
+            master node and handle the requests from the Lord and CSI driver, such as health check report, data
+            synchronization, data consistency inspection, Lord election, etc. The MSE of the slave node is a local copy
+            of the MSE from the master node. S3/P2P interface provides a convenient way, either S3 or P2P, to read,
+            write and synchronize data in a slave node.
+          </p>
+          <br>
+          <p class="lineHight18 text">
+            The K8S plugins include a container storage interface (CSI) driver and a customer filter. The CSI driver is
+            for DatenLord to work with K8S to manage volumes for container tasks, such as loading a read-only volume,
+            creating a read-write volume. The customer filter is to help K8S to schedule tasks to data nearby based on
+            the meta-information in MSE of the master node.
+          </p>
+        </div>
+        <div class="ffback docs_phone_con">
+          <h3 class="h3_center">DatenLord <br>Optimization Strategy</h3>
+          <p class="lineHight18 text">In general, there are two kinds of storage needs from an application perspective:
+            one is latency-sensitive, and the other is throughput-sensitive. As for latency-sensitive applications, such
+            as database applications, like MySQL, MongoDB, and ElasticSearch, etc, their performance relies on how fast
+            a single I/O-request got handled. As for throughput-sensitive applications, such as big data and AI machine
+            learning jobs, like Spark, Hadoop, and TensorFlow, etc, the more data load per unit time, the better their
+            performance. </p>
+          <br>
+          <p class="lineHight18 text">DatenLord is crafted to fit the aforementioned two scenarios. Specifically, to
+            reduce latency, DatenLord caches in memory as much data as possible, in order to minimize disk access; to
+            improve throughput (we focus on reading throughput currently), DatenLord, on one hand, prefetches data in
+            memory to speed up access, on the other hand, leverages K8S to schedule tasks to data nearby, so as to
+            minimize data transfer cost.</p>
+        </div>
+        <div class="f5back docs_phone_con">
+          <h3 class="h3_center">Target Usage Scenarios</h3>
+          <p class="lineHight18 text">DatenLord has several target scenarios, which fall into two main categories:</p>
+          <div style="width: 100%;text-align: center">
+            <img src="../images/4_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
+          <p class="lineHight18">Latency-sensitive cases, that DatenLord will coordinate with K8S to schedule containers
+            close to data to minimize latency: Containerized applications, especially stateful applications; Serverless,
+            Lambda, FaaS, etc, event-driven tasks;</p>
+          <div style="width: 100%;text-align: center">
+            <img src="../images/5_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
+          <p class="lineHight18">Throughput-sensitive cases, that DatenLord will pre-load remote data into local
+            clusters to speed up access: AI and big-data jobs, especially training tasks; Multi-cloud storage unified
+            management, to facilitate application migration across clouds.</p>
+        </div>
+        <div class="ffback docs_phone_con">
+          <h3 class="h3_center" style="margin-bottom: 0">Quick Start</h3>
+          <h3 class="title quick_start_title">To deploy DatenLord via K8S</h3>
+          <p class="quickStartWord">just simply run:</p>
+          <div style="width: 100%" class="code_box">
+            <p>sed -e 's/e2e_test/latest/g' scripts/datenlord.yaml > datenlord-deploy.yaml kubectl apply -f
+              datenlord-deploy.yaml</p>
+          </div>
+          <h3 class="title quick_start_title">To use DatenLord</h3>
+          <p class="quickStartWord">just define PVC using DatenLord Storage Class, and then deploy a Pod using this PVC:
+          </p>
+          <div style="width: 100%;height: auto;background-color: #0C162D;border-radius: 8px;">
+            <pre><code>
+cat &lt;&lt;EOF >datenlord-demo.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-datenlord-test
+spec:
+  accessModes:
+   - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Mi
+  storageClassName: csi-datenlord-sc
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-datenlord-test
+spec:
+    containers:
+    - name: mysql
+      image: mysql
+      env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: "rootpasswd"
+      volumeMounts:
+      - mountPath: /var/lib/mysql
+        name: data
+        subPath: mysql
+    volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: pvc-datenlord-test
+EOF
+
+kubectl apply -f datenlord-demo.yaml
+                        </code></pre>
+          </div>
+          <p class="quickStartWord" style="margin-top: 20px">It may need to install snapshot CRD and controller on K8S,
+          </p>
+          <h3 class="quick_start_title" style="margin-top: 5px;margin-bottom: 10px">if used K8S CSI snapshot feature:
+          </h3>
+          <div style="width: 100%;margin-bottom: 10px" class="code_box">
+            <p>
+              kubectl apply -f
+              https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml<br>
+              kubectl apply -f
+              https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml<br>
+              kubectl apply -f
+              https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml<br>
+              kubectl apply -f
+              https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml<br>
+              kubectl apply -f
+              https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml<br>
+            </p>
+          </div>
+        </div>
+        <div class="f5back docs_phone_con">
+          <h3 class="h3_center">Road Map</h3>
+          <div style="margin: 5px 0 0 0;display: flex">
+            <div style="display: flex; align-items: center">
+              <div class="ellipse">
+                <p>0.1</p>
+              </div>
+            </div>
+            <p class="text map_text">Refactor async fuse lib to provide clear async APIs, which is used by the datenlord
+              filesystem.</p>
+          </div>
+          <div style="margin: 5px 0 0 0;display: flex">
+            <div style="display: flex; align-items: center">
+              <div class="ellipse">
+                <p>0.2</p>
+              </div>
+            </div>
+            <p class="text map_text">Support all Fuse APIs in the datenlord fs.</p>
+          </div>
+          <div style="margin: 5px 0 0 0;display: flex">
+            <div style="display: flex; align-items: center">
+              <div class="ellipse">
+                <p>0.3</p>
+              </div>
+            </div>
+            <p class="text map_text">Make fuse lib fully asynchronous. Switch async fuse lib’s device communication
+              channel from blocking I/O to io_uring.</p>
+          </div>
+          <div style="margin: 5px 0 0 0;display: flex">
+            <div style="display: flex; align-items: center">
+              <div class="ellipse">
+                <p>0.4</p>
+              </div>
+            </div>
+            <p class="text map_text">Complete K8s integration test.</p>
+          </div>
+          <div style="margin: 5px 0 0 0;display: flex">
+            <div style="display: flex; align-items: center">
+              <div class="ellipse">
+                <p>1.0</p>
+              </div>
+            </div>
+            <p class="text map_text">Complete Tensorflow k8s integration and finish performance comparison with raw fs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_box">
+      <div class="footer">
+        <div class="footer_img">
+          <img src="../images/logo_Dark.png">
+        </div>
+        <div class="footer_icon">
+          <img src="../images/icon5.png" onclick="window.open('https://github.com/datenlord/datenlord');">
+        </div>
+      </div>
+      <div class="copyright">Copyright © DatenLord 2021.All rights reserved.</div>
+    </div>
+  </div>
+  <div class="model_back" id="tipModel" style="display: none">
+    <div class="model">
+      <div style="width: auto; text-align: center;">
+        <img src="../images/DatenLord_logo_2x.png" style="margin-top: 30px;width: 100px;height: 100px">
+        <h3 style="color: #000000;margin-bottom: 20px;;font-size: 24px;font-weight: bold">请升级浏览器版本</h3>
+        <p>您正在使用旧版本浏览器。请升级浏览器以获得更好的体验。</p>
+        <div style="display: inline-block; text-align: center;">
+          <div style="display: inline-block;margin: 20px 0 10px 0">
+            <img src="../images/chrome.png" style="width: 100px; height: 100px; margin: 10px;">
+            <p>Chrome</p>
+          </div>
+          <div style="display: inline-block;margin: 20px 0 10px 0">
+            <img src="../images/firefox.png" style="width: 100px; height: 100px; margin: 10px;">
+            <p>Firefox</p>
+          </div>
+          <div style="display: inline-block;margin: 20px 0 10px 0">
+            <img src="../images/safari.png" style="width: 100px; height: 100px; margin: 10px;">
+            <p>Safari</p>
+          </div>
+          <div style="display: inline-block;margin: 20px 0 10px 0">
+            <img src="../images/edge.png" style="width: 100px; height: 100px; margin: 10px;">
+            <p>Edge</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/main.js?v=20211211"></script>
+  <script>isIE();</script>
+</body>
+
+</html>

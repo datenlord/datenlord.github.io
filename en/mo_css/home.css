@@ -1,0 +1,31 @@
+@media only screen and (max-width: 1200px) {
+    .main .content_box_title {
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #000000;
+        line-height: 20px;
+        margin-bottom: 0;
+        letter-spacing: -0.5px;
+    }
+
+    .main .content_box_con {
+        letter-spacing: -0.5px;
+        margin-bottom: 47px;
+        padding: 0 10px;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #000000;
+        line-height: 20px;
+    }
+
+    .main .content_box {
+        height: 320px !important;
+    }
+}
+
