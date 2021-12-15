@@ -38,7 +38,6 @@ body{
 .main .header .header_right p {
     font-weight: 400;
     font-size: 20px;
-    font-family: PingFangSC-Regular, PingFang SC;
 }
 
 .main .header .header_right div {
@@ -58,7 +57,6 @@ body{
 
 .main .header .header_right .active p {
     font-weight: 600;
-    font-family: PingFangSC-Semibold, PingFang SC;
 }
 
 .datenLord {

@@ -1,3 +1,6 @@
+*{
+    font-family: PingFangSC-Regular, PingFang SC, "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+}
 @media only screen and (max-width: 1400px) {
     .main .jingyu {
         margin-top: 40px;
@@ -35,7 +38,6 @@
         width: auto;
         height: 16px;
         font-size: 16px;
-        font-family: PingFangSC-Regular, PingFang SC;
         font-weight: 400;
         line-height: 16px;
     }
@@ -118,13 +120,11 @@
         margin: 0;
         font-weight: 400;
         margin-bottom: 10px;
-        font-family: PingFangSC-Regular, PingFang SC;
     }
     .main .content_box_con {
         margin-bottom: 18px;
         font-size: 14px;
         padding: 0 10px;
-        font-family: PingFangSC-Regular, PingFang SC;
         font-weight: 400;
         color: #000000;
         line-height: 22px;
@@ -164,14 +164,12 @@
     }
     .content .recruit_Con_left p {
         font-size: 14px;
-        font-family: PingFangSC-Semibold, PingFang SC;
         color: #000000;
         line-height: 24px;
     }
 
     .content .recruit_Con_box h4 {
         font-size: 14px;
-        font-family: PingFangSC-Semibold, PingFang SC;
         color: #000000;
         font-weight: 600;
         line-height: 24px;
