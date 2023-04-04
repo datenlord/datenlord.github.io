@@ -31,6 +31,8 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
+    'react/no-unescaped-entities': 'off',
+    'react/jsx-key': 'warn',
   },
   settings: {
     react: {
