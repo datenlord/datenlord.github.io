@@ -1,13 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom'
-import styled from 'styled-components'
-
-const StyledDiv = styled.div`
-  color: ${props => props.theme.color};
-`
+import FullPageScroll from './demo/FullPageScroll'
 
 export const router = createBrowserRouter([
   {
-    path: '/',
-    element: <StyledDiv>Hello world!</StyledDiv>,
+    path: 'test',
+    children: [
+      {
+        path: 'full-page-scroll',
+        element: <FullPageScroll />,
+      },
+    ],
   },
 ])
