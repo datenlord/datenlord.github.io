@@ -2,6 +2,7 @@ import { createHashRouter } from 'react-router-dom'
 import HomePage from '@/pages/HomePage'
 import FullPageScroll from './demo/FullPageScroll'
 import ProductsPage from './pages/ProductsPage'
+import CustomersPage from './pages/CustomersPage'
 import TOC from './demo/TOC/TOC'
 
 export const router = createHashRouter([
@@ -10,8 +11,12 @@ export const router = createHashRouter([
     element: <HomePage />,
   },
   {
-    path: '/products',
+    path: 'products',
     element: <ProductsPage />,
+  },
+  {
+    path: 'customers',
+    element: <CustomersPage />,
   },
   {
     path: 'test',
