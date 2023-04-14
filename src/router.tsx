@@ -4,6 +4,7 @@ import FullPageScroll from './demo/FullPageScroll'
 import ProductsPage from './pages/ProductsPage'
 import CustomersPage from './pages/CustomersPage'
 import WhyJoinPage from './pages/Company/WhyJoinPage'
+import ContactUsPage from './pages/Company/ContactUsPage'
 import TOC from './demo/TOC/TOC'
 
 export const router = createHashRouter([
@@ -25,6 +26,10 @@ export const router = createHashRouter([
       {
         path: 'why-join',
         element: <WhyJoinPage />,
+      },
+      {
+        path: 'contact-us',
+        element: <ContactUsPage />,
       },
     ],
   },
