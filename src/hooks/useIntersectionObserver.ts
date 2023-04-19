@@ -14,7 +14,7 @@ const useIntersectionObserver = (
        *  使用 useRef hook 存储被观察对象
        */
       headingElementsRef.current = headings.reduce((map, headingElement) => {
-        console.log(headingElement)
+        // console.log(headingElement)
         map[headingElement.target.innerHTML] = headingElement
         return map
       }, headingElementsRef.current)
