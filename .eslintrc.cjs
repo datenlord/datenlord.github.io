@@ -33,6 +33,7 @@ module.exports = {
     ],
     'react/no-unescaped-entities': 'off',
     'react/jsx-key': 'warn',
+    '@typescript-eslint/ban-ts-comment': 'off',
   },
   settings: {
     react: {
