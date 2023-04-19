@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build-test": "vite build",
     "preview": "vite preview",
     "pub": "bash script/publish.sh",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./"
@@ -16,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",

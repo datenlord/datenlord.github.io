@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  moment:
+    specifier: ^2.29.4
+    version: registry.npmmirror.com/moment@2.29.4
   react:
     specifier: ^18.2.0
     version: registry.npmmirror.com/react@18.2.0
@@ -4122,6 +4125,12 @@ packages:
     name: minimist
     version: 1.2.8
     dev: true
+
+  registry.npmmirror.com/moment@2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/moment/-/moment-2.29.4.tgz}
+    name: moment
+    version: 2.29.4
+    dev: false
 
   registry.npmmirror.com/mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mri/-/mri-1.2.0.tgz}
