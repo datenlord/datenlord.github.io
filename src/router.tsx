@@ -8,6 +8,7 @@ import ContactUsPage from './pages/Company/ContactUsPage'
 import WhyBuildPage from './pages/Company/WhyBuildPage'
 import ContributingPage from './pages/Resources/Contributing'
 import SolutionPage from './pages/Solution'
+import BlogList from './pages/Resources/BlogList'
 import TOC from './demo/TOC/TOC'
 
 export const router = createHashRouter([
@@ -50,6 +51,10 @@ export const router = createHashRouter([
       {
         path: 'contribute',
         element: <ContributingPage />,
+      },
+      {
+        path: 'blog',
+        element: <BlogList />,
       },
     ],
   },
