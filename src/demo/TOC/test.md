@@ -1,6 +1,7 @@
 ---
 title: Title
 description: This is a description
+cover: ./test.png
 author: 
   - name: Zqa
     age: 23?
@@ -62,7 +63,7 @@ This is some text.
 This is some text.  
 
 ![image](./test.png)
-![image](./test.png)
+![image](./test1.jpg)
 
 This is some text.  
 This is some text.  

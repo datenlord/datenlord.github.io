@@ -76,9 +76,13 @@ const TOC: React.FC = () => {
     })
   }
 
+  console.log(data?.metadata.cover)
+
   return (
     <PageWrapper>
-      <Header />
+      {/* <Header /> */}
+      <img src={data?.assetURLs[0]} alt="fail" />
+      <div>{data?.assetURLs}</div>
       <PageContainer>
         <Content
           className="content"

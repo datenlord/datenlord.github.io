@@ -8,6 +8,7 @@ import rehypeRaw from 'rehype-raw'
 import rehypeStringify from 'rehype-stringify'
 import rehypeHighlight from 'rehype-highlight'
 import YAML from 'yaml'
+import moment from 'moment'
 
 const fileRegex = /\.(md)$/
 
@@ -23,11 +24,18 @@ function randomString(len: number) {
 }
 
 const compileMDToTS = (src: string, id: string) => {
+  // console.log(id)
   const urlMap = new Map<string, string>()
   const pathSet = new Set<string>()
   const randomSet = new Set<string>()
   let metadata = {}
   const toc: any[] = []
+
+  const a = id.split('/')
+  const b = a[a.length - 2]
+  const [year, month, day, ..._title] = b.split('-')
+  const title = _title.join(' ')
+  // console.log(year, month, day, title)
 
   const transURL = (data: any) => {
     if (!data) return
@@ -56,6 +64,9 @@ const compileMDToTS = (src: string, id: string) => {
     tree.children.forEach(({ type, value }: { type: any; value: any }) => {
       if (type === 'yaml') {
         metadata = YAML.parse(value)
+        const _date = `${year}-${month}-${day}`
+        metadata['date'] = moment(_date).format('YYYY-MM-DD')
+        metadata['title'] = title
       }
     })
   }
@@ -86,6 +97,24 @@ const compileMDToTS = (src: string, id: string) => {
     })
   }
 
+  const transCoverURL = () => {
+    // @ts-ignore
+    const src = metadata?.cover as string | undefined
+
+    if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+      let s: string
+      if (!pathSet.has(src)) {
+        s = '_' + randomString(29)
+        urlMap.set(s, src)
+        urlMap.set(src, s)
+        pathSet.add(src)
+        randomSet.add(s)
+      } else {
+        s = urlMap.get(src) || ''
+      }
+    }
+  }
+
   const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
@@ -100,6 +129,7 @@ const compileMDToTS = (src: string, id: string) => {
     .use(rehypeHighlight)
     .use(() => addId2Heading)
     // @ts-ignore
+    .use(() => transCoverURL)
     .use(() => transURL)
     // @ts-ignore
     .use(rehypeStringify)
@@ -125,7 +155,7 @@ const compileMDToTS = (src: string, id: string) => {
   }
   export default \`${tsxString.replace('`', '\\`')}\`
   `
-
+  // console.log(result)
   return result
 }
 
