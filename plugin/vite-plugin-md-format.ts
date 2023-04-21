@@ -74,21 +74,19 @@ const compileMDToTS = (src: string, id: string) => {
   const getTOC = (tree: any) => {
     tree.children.forEach((line: any) => {
       if (line.type === 'heading') {
-        toc.push({
-          label: line.children[0].value,
-          level: line.depth,
-        })
+        if (line.depth === 1 || line.depth === 2) {
+          toc.push({
+            label: line.children[0].value,
+            level: line.depth,
+          })
+        }
       }
     })
   }
 
   const addId2Heading = (tree: any) => {
     tree.children.forEach((element: any) => {
-      if (
-        element.tagName === 'h1' ||
-        element.tagName === 'h2' ||
-        element.tagName === 'h3'
-      ) {
+      if (element.tagName === 'h1' || element.tagName === 'h2') {
         element.properties['id'] = element.children[0].value
           .split(' ')
           .join('-')

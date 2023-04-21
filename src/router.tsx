@@ -9,6 +9,7 @@ import WhyBuildPage from './pages/Company/WhyBuildPage'
 import ContributingPage from './pages/Resources/Contributing'
 import SolutionPage from './pages/Solution'
 import BlogList from './pages/Resources/BlogList'
+import BlogDetailPage from './pages/Resources/BlogDetail'
 import TOC from './demo/TOC/TOC'
 
 export const router = createHashRouter([
@@ -55,6 +56,10 @@ export const router = createHashRouter([
       {
         path: 'blog',
         element: <BlogList />,
+      },
+      {
+        path: 'blog/:params',
+        element: <BlogDetailPage />,
       },
     ],
   },
