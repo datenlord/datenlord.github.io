@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import { useParams, useNavigate } from 'react-router-dom'
 import { Header } from '@/components/Header'
 import imgUrl1 from '@/assets/Home/cover3.svg'
 import imgUrl2 from '@/assets/Home/cover5.svg'
+import imgUrl3 from '@/assets/Home/cover2.svg'
+import { useEffect, useState } from 'react'
 
 const ViewWrapper = styled.div`
   padding-top: 128px;
@@ -68,6 +71,9 @@ const Card = styled.div`
     width: 100%;
   }
 `
+const RelatedCard = styled(Card)`
+  cursor: pointer;
+`
 const SText = styled.div`
   font-weight: 400;
   font-size: 13.5px;
@@ -81,52 +87,142 @@ const Image = styled.img`
 `
 
 const SolutionPage: React.FC = () => {
+  const [pageData, setPageData] = useState<any>()
+  const navigate = useNavigate()
+  const { id } = useParams()
+
+  const getPageData = (id: string | undefined) => {
+    switch (id) {
+      case 'Unified-and-High-Performance-Data-Access-Across-Clouds':
+        return {
+          title: 'Unified and High Performance Data Access Across Clouds',
+          problem: {
+            title:
+              'Cloud barrier leads to data isolation and data fragmentation:',
+            description:
+              'Data is bound to a specific cloud and cannot access freely. The isolation between clouds may not pose a problem when business scale is small. However, with the development of business which needs to access multiple clouds and multiple data centers world wide  frequently, data isolation and data fragmentation resulting from cloud barrier become impediment to business growth.',
+          },
+          solution: {
+            title:
+              'Unified data management to automate data migration and backup:',
+            description:
+              'No matter where data is stored, DatenLord can accelerate data access across clouds by leveraging memory to cache hot data, and provide unified data management to automate data migration and backup.',
+          },
+          related: [
+            {
+              title: 'Geo-distributed metadata management',
+              cover: imgUrl1,
+              url: '/solution/Geo-Distributed-Metadata-management',
+            },
+            {
+              title: 'Hardware acceleration for storage network',
+              cover: imgUrl2,
+              url: '/solution/Hardware-Acceleration-For-Storage-Network',
+            },
+          ],
+        }
+      case 'Geo-Distributed-Metadata-management':
+        return {
+          title: 'Geo-Distributed Metadata management',
+          problem: {
+            title: 'High latency and inconsistency for geo-distributed Storage',
+            description:
+              'Nowadays distributed consensus protocol is confined to be used in a single data center, and geo-distributed consensus protocol is only contemplated in theory. In the circumstances of accessing data across clouds, the speed and consistency has to be compromised.',
+          },
+          solution: {
+            title:
+              'The first industrial geo-distributed metadata management by consensus protocol',
+            description:
+              'DatenLord leverages asynchronous programming architecture and bypasses the Linux kernel to achieve completely kernel-independent, autonomous scheduling and management of storage IO. The protocol ensures data consistency across data nodes. The low-latency geo-distributed consensus protocol guarantees high-speed and strong consistency in WAN scenarios; and no single point bottleneck in the system.',
+          },
+          related: [
+            {
+              title: 'Unified and high performance data access across cloud',
+              cover: imgUrl3,
+              url: '/solution/Unified-and-High-Performance-Data-Access-Across-Clouds',
+            },
+            {
+              title: 'Hardware acceleration for storage network',
+              cover: imgUrl2,
+              url: '/solution/Hardware-Acceleration-For-Storage-Network',
+            },
+          ],
+        }
+      case 'Hardware-Acceleration-For-Storage-Network':
+        return {
+          title: 'Hardware-Acceleration-For-Storage-Network',
+          problem: {
+            title: 'High latency and inconsistency for geo-distributed Storage',
+            description:
+              'Communication across clouds requires reliable high-speed network and fast caching mechanism. Current software-based solution has become the performance bottleneck and can no longer meet the requirement as huge amount of data  already scatter around  different cloud providers and geo-distributed data centers.',
+          },
+          solution: {
+            title: 'Hardware Accelerator',
+            description:
+              'Hardware agile development methodology to build customized hardware; Adoption of RDMA and DPDK to build high performance network; Hardware implementations of RDMA protocol, encryption, compression and encoding and ultra-fast storage proof. ',
+          },
+          related: [
+            {
+              title: 'Unified and high performance data access across cloud',
+              cover: imgUrl1,
+              url: '/solution/Unified-and-High-Performance-Data-Access-Across-Clouds',
+            },
+            {
+              title: 'Hardware acceleration for storage network',
+              cover: imgUrl3,
+              url: '/solution/Hardware-Acceleration-For-Storage-Network',
+            },
+          ],
+        }
+      default:
+        break
+    }
+  }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const _pageData = getPageData(id)
+    setPageData(_pageData)
+  }, [id])
+
   return (
     <ViewWrapper>
       <ViewContainer>
         <Header theme="dark" />
         <Section>
-          <Heading1>Hardware Acceleration For Storage Network</Heading1>
+          <Heading1>{pageData?.title}</Heading1>
           <CardContainer>
             <Card>
               <DecorationHeading4>Problem</DecorationHeading4>
-              <Heading4>
-                High latency and inconsistency for geo-distributed Storage
-              </Heading4>
-              <SText>
-                Data is bound to a specific cloud and cannot access freely. The
-                isolation between clouds may not pose a problem when business
-                scale is small. However, with the development of business which
-                needs to access multiple clouds and multiple data centers world
-                wide frequently, data isolation and data fragmentation resulting
-                from cloud barrier become impediment to business growth.
-              </SText>
+              <Heading4>{pageData?.problem?.title}</Heading4>
+              <SText>{pageData?.problem?.description}</SText>
             </Card>
             <Card>
               <DecorationHeading4>Solution</DecorationHeading4>
-              <Heading4>
-                Unified data management to automate data migration and backup:
-              </Heading4>
-              <SText>
-                No matter where data is stored, DatenLord can accelerate data
-                access across clouds by leveraging memory to cache hot data, and
-                provide unified data management to automate data migration and
-                backup.
-              </SText>
+              <Heading4>{pageData?.solution?.title}</Heading4>
+              <SText>{pageData?.solution?.description}</SText>
             </Card>
           </CardContainer>
         </Section>
         <Section>
           <DecorationHeading1>Related Resources</DecorationHeading1>
           <CardContainer>
-            <Card>
-              <Heading3>Geo-distributed metadata management</Heading3>
-              <Image src={imgUrl1} />
-            </Card>
-            <Card>
-              <Heading3>Geo-distributed metadata management</Heading3>
-              <Image src={imgUrl1} />
-            </Card>
+            {(pageData?.related || []).map(
+              ({
+                title,
+                cover,
+                url,
+              }: {
+                title: string
+                cover: string
+                url: string
+              }) => (
+                <RelatedCard key={title} onClick={() => navigate(url)}>
+                  <Heading3>{title}</Heading3>
+                  <Image src={cover} />
+                </RelatedCard>
+              ),
+            )}
           </CardContainer>
         </Section>
       </ViewContainer>
