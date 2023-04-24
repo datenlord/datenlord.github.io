@@ -26,7 +26,7 @@ export const router = createHashRouter([
     element: <CustomersPage />,
   },
   {
-    path: 'solution',
+    path: 'solution/:id',
     element: <SolutionPage />,
   },
   {
