@@ -6,8 +6,25 @@ import imgUrl2 from '@/assets/Home/cover5.svg'
 import imgUrl3 from '@/assets/Home/cover2.svg'
 import { useEffect, useState } from 'react'
 
+interface PageDataProps {
+  title: string
+  problem: {
+    title: string
+    description: string
+  }
+  solution: {
+    title: string
+    description: string
+  }
+  related: {
+    title: string
+    cover: string
+    url: string
+  }[]
+}
+
 const ViewWrapper = styled.div`
-  padding-top: 128px;
+  padding-top: 84px;
   color: #42424a;
 `
 const ViewContainer = styled.div`
@@ -87,7 +104,7 @@ const Image = styled.img`
 `
 
 const SolutionPage: React.FC = () => {
-  const [pageData, setPageData] = useState<any>()
+  const [pageData, setPageData] = useState<PageDataProps>()
   const navigate = useNavigate()
   const { id } = useParams()
 
@@ -175,7 +192,33 @@ const SolutionPage: React.FC = () => {
           ],
         }
       default:
-        break
+        return {
+          title: 'Unified and High Performance Data Access Across Clouds',
+          problem: {
+            title:
+              'Cloud barrier leads to data isolation and data fragmentation:',
+            description:
+              'Data is bound to a specific cloud and cannot access freely. The isolation between clouds may not pose a problem when business scale is small. However, with the development of business which needs to access multiple clouds and multiple data centers world wide  frequently, data isolation and data fragmentation resulting from cloud barrier become impediment to business growth.',
+          },
+          solution: {
+            title:
+              'Unified data management to automate data migration and backup:',
+            description:
+              'No matter where data is stored, DatenLord can accelerate data access across clouds by leveraging memory to cache hot data, and provide unified data management to automate data migration and backup.',
+          },
+          related: [
+            {
+              title: 'Geo-distributed metadata management',
+              cover: imgUrl1,
+              url: '/solution/Geo-Distributed-Metadata-management',
+            },
+            {
+              title: 'Hardware acceleration for storage network',
+              cover: imgUrl2,
+              url: '/solution/Hardware-Acceleration-For-Storage-Network',
+            },
+          ],
+        }
     }
   }
 
@@ -188,7 +231,7 @@ const SolutionPage: React.FC = () => {
   return (
     <ViewWrapper>
       <ViewContainer>
-        <Header theme="dark" />
+        <Header theme="dark" activeId="solution" />
         <Section>
           <Heading1>{pageData?.title}</Heading1>
           <CardContainer>
@@ -207,22 +250,12 @@ const SolutionPage: React.FC = () => {
         <Section>
           <DecorationHeading1>Related Resources</DecorationHeading1>
           <CardContainer>
-            {(pageData?.related || []).map(
-              ({
-                title,
-                cover,
-                url,
-              }: {
-                title: string
-                cover: string
-                url: string
-              }) => (
-                <RelatedCard key={title} onClick={() => navigate(url)}>
-                  <Heading3>{title}</Heading3>
-                  <Image src={cover} />
-                </RelatedCard>
-              ),
-            )}
+            {(pageData?.related || []).map(({ title, cover, url }) => (
+              <RelatedCard key={title} onClick={() => navigate(url)}>
+                <Heading3>{title}</Heading3>
+                <Image src={cover} />
+              </RelatedCard>
+            ))}
           </CardContainer>
         </Section>
       </ViewContainer>
