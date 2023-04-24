@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import logoUrl from '@/assets/logo.svg'
@@ -6,6 +6,7 @@ import logoUrl from '@/assets/logo.svg'
 interface HeaderProps {
   theme: 'dark' | 'light'
   bg?: string
+  activeId?: string
 }
 
 interface HeaderStyleProps {
@@ -16,6 +17,7 @@ interface HeaderStyleProps {
 interface MenuItemProps {
   headerTheme: 'dark' | 'light'
   children?: React.ReactNode | React.ReactNode[]
+  activeId?: string
   data: {
     id: string
     label: string
@@ -31,6 +33,10 @@ interface MenuItemProps {
 interface SubMenuProps {
   headerTheme: 'dark' | 'light'
   active: boolean
+}
+
+interface MenuItemSProps {
+  isActive: boolean
 }
 
 const HeaderWrapper = styled.div<HeaderStyleProps>`
@@ -70,11 +76,12 @@ const Menu = styled.div`
   display: flex;
   height: 100%;
 `
-const MenuItemS = styled.div`
+const MenuItemS = styled.div<MenuItemSProps>`
   position: relative;
   display: flex;
   align-items: center;
   padding-inline: 20px;
+  color: ${({ isActive }) => (isActive ? '#7680DD' : 'inherit')};
   font-size: 14px;
   line-height: 1.5rem;
   text-transform: uppercase;
@@ -193,16 +200,23 @@ const headerData = [
   },
 ]
 
-const MenuItem: React.FC<MenuItemProps> = ({ headerTheme, data }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ headerTheme, data, activeId }) => {
   const navigate = useNavigate()
   const [isActive, setIsActive] = useState<boolean>(false)
+
+  useEffect(() => {
+    console.log(activeId)
+  }, [activeId])
+
   return (
     <MenuItemS
       onMouseOver={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
+      isActive={data.id === activeId}
       onClick={() => {
         if (data.url) {
           navigate(data.url)
+          // setActiveId(data.id)
         }
       }}
     >
@@ -210,7 +224,13 @@ const MenuItem: React.FC<MenuItemProps> = ({ headerTheme, data }) => {
       {data.children && (
         <SubMenuS headerTheme={headerTheme} active={isActive}>
           {data.children.map(({ id, label, url }) => (
-            <SubMenuItem key={id} onClick={() => navigate(url)}>
+            <SubMenuItem
+              key={id}
+              onClick={() => {
+                navigate(url)
+                // setActiveId(id)
+              }}
+            >
               {label}
             </SubMenuItem>
           ))}
@@ -220,7 +240,11 @@ const MenuItem: React.FC<MenuItemProps> = ({ headerTheme, data }) => {
   )
 }
 
-export const Header: React.FC<HeaderProps> = ({ theme, bg = '#fff' }) => {
+export const Header: React.FC<HeaderProps> = ({
+  theme,
+  bg = '#fff',
+  activeId,
+}) => {
   // console.log(theme)
   return (
     <HeaderWrapper headerTheme={theme} bg={bg}>
@@ -230,7 +254,12 @@ export const Header: React.FC<HeaderProps> = ({ theme, bg = '#fff' }) => {
         <Placeholder />
         <Menu>
           {headerData.map(item => (
-            <MenuItem key={item.id} data={item} headerTheme={theme}></MenuItem>
+            <MenuItem
+              key={item.id}
+              data={item}
+              headerTheme={theme}
+              activeId={activeId}
+            ></MenuItem>
           ))}
         </Menu>
       </HeaderContainer>
