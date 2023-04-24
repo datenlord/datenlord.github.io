@@ -8,7 +8,7 @@ import icon4Url from '@/assets/Company/WhyBuild/icon4.svg'
 
 const ViewWrapper = styled.div`
   height: 100vh;
-  padding-top: 128px;
+  padding-top: 84px;
   color: #42424a;
 `
 const ViewContainer = styled.div`
@@ -119,7 +119,7 @@ const ValueContent = styled.div``
 const WhyBuildPage: React.FC = () => {
   return (
     <ViewWrapper>
-      <Header theme="dark" />
+      <Header theme="dark" activeId="company" />
       <ViewContainer>
         <Overview>
           <Content>

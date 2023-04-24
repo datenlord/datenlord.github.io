@@ -19,7 +19,7 @@ const ScrollContainer = styled.main`
 `
 const ViewWrapper = styled.div`
   height: 100vh;
-  padding-top: 128px;
+  padding-top: 84px;
   color: #42424a;
   scroll-snap-align: center;
 `
@@ -86,7 +86,7 @@ const Paragraph = styled.div`
 const WhyJoinPage: React.FC = () => {
   return (
     <ScrollContainer>
-      <Header theme="dark" />
+      <Header theme="dark" bg="transparent" activeId="company" />
       <ViewWrapperOdd>
         <ViewContainer>
           <Title>Why Join DatenLord?</Title>

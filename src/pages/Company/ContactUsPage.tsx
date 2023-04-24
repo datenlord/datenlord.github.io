@@ -5,7 +5,7 @@ import icon1Url from '@/assets/Company/ContactUs/icon1.svg'
 
 const ViewWrapper = styled.div`
   height: 100vh;
-  padding-top: 128px;
+  padding-top: 84px;
   color: #42424a;
 `
 const ViewContainer = styled.div`
@@ -60,7 +60,7 @@ const Paragraph = styled.div`
 const ContactUsPage: React.FC = () => {
   return (
     <ViewWrapper>
-      <Header theme="dark" />
+      <Header theme="dark" activeId="company" />
       <ViewContainer>
         <Title>Contact Us</Title>
         <CardContainer>
