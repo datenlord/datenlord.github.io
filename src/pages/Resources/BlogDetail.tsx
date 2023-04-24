@@ -27,7 +27,7 @@ const Content = styled.div`
   margin-right: 32px;
   padding-inline: 64px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
 `
 const SidebarContainer = styled.div`
   flex-shrink: 0;
@@ -39,7 +39,7 @@ const Sidebar = styled.div`
   left: 0;
   padding: 32px;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 8px;
 `
 const SidebarItem = styled.div<SideBarItemProps>`
   display: block;
@@ -49,7 +49,7 @@ const SidebarItem = styled.div<SideBarItemProps>`
   border-left: ${({ isActive }) =>
     isActive ? '8px solid #722ed1' : '8px solid transparent'};
   font-weight: 700;
-  font-size: 0.28rem;
+  font-size: 0.24rem;
   line-height: 1.5;
   /* border-radius: 50%; */
 `
@@ -85,7 +85,6 @@ const BlogDetailPage: React.FC = () => {
 
   return (
     <ViewWrapper>
-      <Header theme="dark" />
       <ViewContainer>
         <Content
           className="content"
@@ -109,6 +108,7 @@ const BlogDetailPage: React.FC = () => {
           </Sidebar>
         </SidebarContainer>
       </ViewContainer>
+      <Header theme="dark" activeId="resources" />
     </ViewWrapper>
   )
 }
