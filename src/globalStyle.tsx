@@ -10,8 +10,26 @@ const GlobalStyle = createGlobalStyle`
     font-family: Inter;
   }
 
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
   html{
-    scroll-padding-top: 68px;
+    font-size: 100px;
+    scroll-padding-top: 128px;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 75px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 54px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
   }
 `
 
