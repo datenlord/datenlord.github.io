@@ -20,7 +20,7 @@ const ScrollContainer = styled.main`
 `
 const ViewWrapper = styled.div`
   height: 100vh;
-  padding-top: 128px;
+  padding-top: 84px;
   scroll-snap-align: center;
 `
 const ViewWrapperFirst = styled(ViewWrapper)`
@@ -186,7 +186,7 @@ const ProductsPage: React.FC = () => {
 
   return (
     <ScrollContainer>
-      <Header theme={headerTheme} />
+      <Header theme={headerTheme} bg="transparent" activeId="products" />
       <ViewWrapperFirst>
         <ViewContainer id="first-page-dark" className="view">
           <FrontPageTitle>Async-RDMA</FrontPageTitle>
