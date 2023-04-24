@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Header } from '@/components/Header'
 import cover1Url from '@/assets/Home/cover1.svg'
 import cover2Url from '@/assets/Home/cover2.svg'
@@ -27,7 +28,7 @@ const view: ViewProps[] = [
     description:
       'A unified data access service across clouds assisted by high performance cache and effective network technology',
     bgcolor: 'hsl(235, 41%, 89%)',
-    url: 'www.example.com',
+    url: '/solution/Unified-and-High-Performance-Data-Access-Across-Clouds',
   },
   {
     id: 'third-page',
@@ -38,7 +39,7 @@ const view: ViewProps[] = [
     description:
       'The first industrial geo-distributed metadata management guarantees high-speed and strong consistency in WAN scenarios',
     bgcolor: 'hsl(0, 0%, 100%)',
-    url: 'www.example.com',
+    url: '/solution/Geo-Distributed-Metadata-management',
   },
   {
     id: 'forth-page',
@@ -48,7 +49,7 @@ const view: ViewProps[] = [
     title: 'Hardware Acceleration For Storage Network',
     description: 'Adoption of RDMA and DPDK to build high performance network',
     bgcolor: 'hsl(235, 41%, 89%)',
-    url: 'www.example.com',
+    url: '/solution/Hardware-Acceleration-For-Storage-Network',
   },
   {
     id: 'fifth-page',
@@ -95,7 +96,7 @@ const ScrollContainer = styled.main`
 `
 const ViewWrapper = styled.div<ViewStyleProps>`
   height: 100vh;
-  padding-top: 128px;
+  padding-top: 84px;
   color: ${({ myTheme }) => (myTheme === 'dark' ? 'white' : 'black')};
   background: ${({ backgroundColor }) => backgroundColor};
   scroll-snap-align: center;
@@ -115,13 +116,13 @@ const ViewContainer = styled.div<LayoutProps>`
     }
   }};
   justify-content: ${({ layout }) =>
-    layout === 'row' || layout === 'row-reverse' ? 'center' : 'start'};
+    layout === 'row' || layout === 'row-reverse' ? 'center' : 'center'};
   align-items: center;
   max-width: 1440px;
   height: 100%;
   margin-inline: auto;
-  padding: 0.64rem;
-  padding-bottom: calc(0.64rem + 5%);
+  padding-inline: 0.64rem;
+  padding-bottom: 0.64rem;
 `
 const Cover = styled.img<LayoutProps>`
   height: 5rem;
@@ -174,6 +175,7 @@ const View: React.FC<ViewProps> = ({
   description,
   url,
 }) => {
+  const navigate = useNavigate()
   return (
     <ViewWrapper myTheme={theme} backgroundColor={bgcolor}>
       {layout === 'row' || layout === 'row-reverse' ? (
@@ -182,7 +184,16 @@ const View: React.FC<ViewProps> = ({
           <Content layout={layout}>
             <Title layout={layout}>{title}</Title>
             <Description layout={layout}>{description}</Description>
-            {url && <Button layout={layout}>Learn more {'>'}</Button>}
+            {url && (
+              <Button
+                layout={layout}
+                onClick={() => {
+                  navigate(url)
+                }}
+              >
+                Learn more {'>'}
+              </Button>
+            )}
           </Content>
         </ViewContainer>
       ) : (
@@ -190,7 +201,11 @@ const View: React.FC<ViewProps> = ({
           <Title layout={layout}>{title}</Title>
           <Description layout={layout}>{description}</Description>
           <Cover src={cover} alt="cover" layout={layout} />
-          {url && <Button layout={layout}>Learn more {'>'}</Button>}
+          {url && (
+            <Button layout={layout} onClick={() => navigate(url)}>
+              Learn more {'>'}
+            </Button>
+          )}
         </ViewContainer>
       )}
     </ViewWrapper>
@@ -248,7 +263,7 @@ const HomePage: React.FC = () => {
 
   return (
     <ScrollContainer>
-      <Header theme={headerTheme} />
+      <Header theme={headerTheme} bg="transparent" />
       {view.map(props => (
         <View key={props.id} {...props} />
       ))}
