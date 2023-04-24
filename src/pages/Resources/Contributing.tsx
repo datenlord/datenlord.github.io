@@ -22,7 +22,7 @@ interface TabItemProps {
 
 const ViewWrapper = styled.div`
   height: 100vh;
-  padding-top: 128px;
+  padding-top: 84px;
   color: #42424a;
 `
 const ViewContainer = styled.div`
@@ -157,6 +157,7 @@ const TabItem = styled.div<TabItemProps>`
   background: ${({ isActive }) => (isActive ? '#7680DD' : 'white')};
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
+  cursor: pointer;
 `
 const TabPanel = styled.div`
   padding: 64px;
@@ -180,12 +181,29 @@ const TabPanelText = styled(Paragraph1)`
     margin-bottom: 32px;
   }
 `
+const HengyuWang = {
+  description: [
+    'Hengyu Wang is a graduate student majoring in computer science. He joined the async-rdma project because it happens to fit in his academic interest on integrating software and hardware. Guided by his community mentor, he grows with the development of the project and is invited to share his practical experience on using Rust to package RDMA on several hands-on workshops.',
+    'I am having unforgettable experience with the async-rdma project. The DatenLord community is friendly and my mentor is a seasoned engineer who encourages me to verify my ideas and assumptions about the project while pay attention to the engineering discipline, which shift my perspective from a student who merely focuses on running a program to a professional engineer who cares about its maintainability and stability as well.',
+  ],
+  id: 'Hengyu Wang 王恒宇',
+  url: 'https://github.com/GTwhy',
+}
+const HongyuLi = {
+  description: [
+    'Hongyu Li is passionate about open source community and Rust, and thus joined this particular project of DatenLord to add support for Rust to be merged in the Linux kernel. With the guidance of his community mentor, he honed his skills in Rust in the process of contributing code, writing document and replying revisions to the upstream.',
+    'Working with the Rust for Linux project in DatenLord is rewarding. The community is friendly and interactive. I was encouraged by my mentor to seriously weigh different options to revise even a small bug and go beyond just write code, but lines of ELEGANT codes. What I acquire in the community is not only conceptual, but practical.',
+  ],
+  id: 'Richard Li',
+  url: 'https://github.com/Richardhongyu',
+}
+
 const ContributingPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('WangHengyu')
 
   return (
     <ViewWrapper>
-      <Header theme="dark" />
+      <Header theme="dark" activeId="resources" />
       <ViewContainer>
         <FirstSection>
           <Image src={imageUrl} />
@@ -220,7 +238,9 @@ const ContributingPage: React.FC = () => {
               Looking for the source code, or have an idea to contribute? Join
               our open source community on GitHub.
             </Paragraph2>
-            <Button>DatenLord on Github</Button>
+            <Button as="a" href="https://github.com/datenlord">
+              DatenLord on Github
+            </Button>
           </Card>
         </SecondSection>
         <ThirdSection>
@@ -240,23 +260,25 @@ const ContributingPage: React.FC = () => {
             <TabPanel>
               <TabPanelContent>
                 <TabPanelText>
-                  “Hongyu Li is passionate about open source community and Rust,
-                  and thus joined this particular project of Datenlord to add
-                  support for Rust to be merged in the Linux kernel. With the
-                  guidance of his community mentor, he honed his skills in Rust
-                  in the process of contributing code, writing document and
-                  replying revisions to the upstream.”
+                  {activeTab === 'WangHengyu'
+                    ? HengyuWang.description[0]
+                    : HongyuLi.description[0]}
                 </TabPanelText>
                 <TabPanelText>
-                  “Working with the Rust for Linux project in Datenlord is
-                  rewarding. The community is friendly and interactive. I was
-                  encouraged by my mentor to seriously weigh different options
-                  to revise even a small bug and go beyond just write code, but
-                  lines of ELEGANT codes. What I acquire in the community is not
-                  only conceptual, but practical.”
+                  {activeTab === 'WangHengyu'
+                    ? HengyuWang.description[1]
+                    : HongyuLi.description[1]}
                 </TabPanelText>
               </TabPanelContent>
-              <Button>Github ID: Richardhongyu</Button>
+              {activeTab === 'WangHengyu' ? (
+                <Button as="a" href={HengyuWang.url}>
+                  Github ID: {HengyuWang.id}
+                </Button>
+              ) : (
+                <Button as="a" href={HongyuLi.url}>
+                  Github ID: {HongyuLi.id}
+                </Button>
+              )}
             </TabPanel>
           </TabContainer>
         </ThirdSection>
