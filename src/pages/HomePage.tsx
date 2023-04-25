@@ -60,7 +60,7 @@ const view: ViewProps[] = [
     description:
       'Attract global talents from open source communities related to distributed system, Linux kernel, open source hardware and more',
     bgcolor: 'hsl(0, 0%, 100%)',
-    url: 'www.example.com',
+    url: '/resources/contribute',
   },
 ]
 
