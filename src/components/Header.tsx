@@ -110,10 +110,12 @@ const SubMenuS = styled.div<SubMenuProps>`
 `
 const SubMenuItem = styled.p`
   display: block;
+  margin-block: 8px;
   padding-block: 4px;
   font-weight: 600;
   font-size: 13px;
   line-height: 1;
+  color: inherit;
   &:hover {
     color: #7680dd;
   }
@@ -158,7 +160,7 @@ const headerData = [
       {
         id: 'Tech Talk',
         label: 'Tech Talk',
-        url: 'https://www.baibu.com',
+        url: 'https://www.cncf.io/online-programs/cncf-on-demand-webinar-geo-distributed-metadata-management-system/',
       },
       {
         id: 'Blog',
@@ -168,7 +170,7 @@ const headerData = [
       {
         id: 'Events',
         label: 'Events',
-        url: 'https://www.baibu.com',
+        url: 'https://www.youtube.com/@datenlord',
       },
     ],
   },
@@ -183,12 +185,12 @@ const headerData = [
     children: [
       {
         id: 'Why build DatenLord',
-        label: 'Why build DatenLord?',
+        label: 'Why build DatenLord ?',
         url: '/company/why-build',
       },
       {
         id: 'Why Join DatenLord',
-        label: 'Why Join DatenLord?',
+        label: 'Why Join DatenLord ?',
         url: '/company/why-join',
       },
       {
@@ -204,9 +206,9 @@ const MenuItem: React.FC<MenuItemProps> = ({ headerTheme, data, activeId }) => {
   const navigate = useNavigate()
   const [isActive, setIsActive] = useState<boolean>(false)
 
-  useEffect(() => {
-    console.log(activeId)
-  }, [activeId])
+  // useEffect(() => {
+  //   console.log(activeId)
+  // }, [activeId])
 
   return (
     <MenuItemS
@@ -223,17 +225,22 @@ const MenuItem: React.FC<MenuItemProps> = ({ headerTheme, data, activeId }) => {
       {data.label}
       {data.children && (
         <SubMenuS headerTheme={headerTheme} active={isActive}>
-          {data.children.map(({ id, label, url }) => (
-            <SubMenuItem
-              key={id}
-              onClick={() => {
-                navigate(url)
-                // setActiveId(id)
-              }}
-            >
-              {label}
-            </SubMenuItem>
-          ))}
+          {data.children.map(({ id, label, url }) =>
+            url.startsWith('http') ? (
+              <SubMenuItem as={'a'} href={url} key={id}>
+                {label}
+              </SubMenuItem>
+            ) : (
+              <SubMenuItem
+                key={id}
+                onClick={() => {
+                  navigate(url)
+                }}
+              >
+                {label}
+              </SubMenuItem>
+            ),
+          )}
         </SubMenuS>
       )}
     </MenuItemS>
