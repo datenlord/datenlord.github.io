@@ -74,7 +74,7 @@ const compileMDToTS = (src: string, id: string) => {
   const getTOC = (tree: any) => {
     tree.children.forEach((line: any) => {
       if (line.type === 'heading') {
-        if (line.depth === 1 || line.depth === 2) {
+        if (line.depth === 2 || line.depth === 3) {
           toc.push({
             label: line.children[0].value,
             level: line.depth,
@@ -86,7 +86,7 @@ const compileMDToTS = (src: string, id: string) => {
 
   const addId2Heading = (tree: any) => {
     tree.children.forEach((element: any) => {
-      if (element.tagName === 'h1' || element.tagName === 'h2') {
+      if (element.tagName === 'h2' || element.tagName === 'h3') {
         element.properties['id'] = element.children[0].value
           .split(' ')
           .join('-')

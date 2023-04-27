@@ -10,9 +10,10 @@ interface SideBarItemProps {
 }
 
 const ViewWrapper = styled.div`
-  padding-top: 128px;
+  padding-top: 84px;
   color: #42424a;
   background: #f5f5f5;
+  min-height: 100vh;
 `
 const ViewContainer = styled.div`
   display: flex;
@@ -35,7 +36,7 @@ const SidebarContainer = styled.div`
 `
 const Sidebar = styled.div`
   position: sticky;
-  top: 128px;
+  top: calc(84px + 32px);
   left: 0;
   padding: 32px;
   background: #ffffff;
@@ -44,18 +45,19 @@ const Sidebar = styled.div`
 const SidebarItem = styled.div<SideBarItemProps>`
   display: block;
   margin-block: 16px;
-  padding-left: ${({ level }) => (level === 2 ? '48px' : '16px')};
+  padding-left: ${({ level }) => (level === 3 ? '48px' : '16px')};
   color: ${({ isActive }) => (isActive ? '#722ed1' : 'inherit')};
   border-left: ${({ isActive }) =>
     isActive ? '8px solid #722ed1' : '8px solid transparent'};
   font-weight: 700;
-  font-size: 0.24rem;
+  font-size: 0.18rem;
   line-height: 1.5;
   /* border-radius: 50%; */
+  cursor: pointer;
 `
 
 const blogs = import.meta.glob('@/blogs/*/index.md')
-console.log(blogs)
+// console.log(blogs)
 
 const BlogDetailPage: React.FC = () => {
   const { params } = useParams()
@@ -64,7 +66,7 @@ const BlogDetailPage: React.FC = () => {
   useIntersectionObserver(setActiveId, data)
 
   useEffect(() => {
-    console.log(params)
+    // console.log(params)
     blogs[`/src/blogs/${params}/index.md`]()
       .then(res => {
         // @ts-ignore
@@ -81,7 +83,7 @@ const BlogDetailPage: React.FC = () => {
     })
   }
 
-  console.log(data?.metadata.cover)
+  // console.log(data?.metadata.cover)
 
   return (
     <ViewWrapper>
@@ -90,23 +92,25 @@ const BlogDetailPage: React.FC = () => {
           className="content"
           dangerouslySetInnerHTML={{ __html: data?.default || '' }}
         />
-        <SidebarContainer>
-          <Sidebar>
-            {(data?.toc || []).map(({ label, level }) => {
-              const id = label.split(' ').join('-').toLowerCase()
-              return (
-                <SidebarItem
-                  key={label}
-                  level={level}
-                  isActive={activeId === id}
-                  onClick={() => handleClick(id)}
-                >
-                  {label}
-                </SidebarItem>
-              )
-            })}
-          </Sidebar>
-        </SidebarContainer>
+        {data?.toc.length !== 0 && (
+          <SidebarContainer>
+            <Sidebar>
+              {(data?.toc || []).map(({ label, level }) => {
+                const id = label.split(' ').join('-').toLowerCase()
+                return (
+                  <SidebarItem
+                    key={label}
+                    level={level}
+                    isActive={activeId === id}
+                    onClick={() => handleClick(id)}
+                  >
+                    {label}
+                  </SidebarItem>
+                )
+              })}
+            </Sidebar>
+          </SidebarContainer>
+        )}
       </ViewContainer>
       <Header theme="dark" activeId="resources" />
     </ViewWrapper>

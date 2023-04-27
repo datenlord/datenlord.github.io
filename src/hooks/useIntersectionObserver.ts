@@ -48,7 +48,7 @@ const useIntersectionObserver = (
 
     const observer = new IntersectionObserver(callback, option)
 
-    const headingElements = Array.from(document.querySelectorAll('h1, h2'))
+    const headingElements = Array.from(document.querySelectorAll('h2, h3'))
 
     headingElements.forEach(element => observer.observe(element))
 
