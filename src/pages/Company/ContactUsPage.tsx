@@ -47,8 +47,8 @@ const Card = styled.div`
   box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.13);
 `
 const Icon = styled.img`
-  width: 0.64rem;
-  height: 0.64rem;
+  width: 1.24rem;
+  height: 1.24rem;
   margin-right: 0.32rem;
 `
 const Paragraph = styled.div`
