@@ -50,11 +50,11 @@ const ViewContainer = styled.div`
 `
 const Title = styled.div`
   font-weight: 700;
-  font-size: 0.4rem;
+  font-size: 0.34rem;
   line-height: 1.5;
 `
 const FrontPageTitle = styled(Title)`
-  margin-bottom: 0.32rem;
+  margin-bottom: 0.24rem;
 `
 const BasicTitle = styled(Title)`
   margin-bottom: 0.32rem;
@@ -62,7 +62,7 @@ const BasicTitle = styled(Title)`
 const Description = styled.div`
   text-align: center;
   font-weight: 600;
-  font-size: 0.3rem;
+  font-size: 0.22rem;
   line-height: 1.3;
 `
 const FrontViewDescription = styled(Description)`
@@ -76,7 +76,7 @@ const BasicDescription = styled(Description)`
 `
 const Paragraph = styled.div`
   font-weight: 400px;
-  font-size: 0.26rem;
+  font-size: 0.2rem;
   line-height: 1.5;
 `
 const FrontPageParagraph = styled(Paragraph)`
