@@ -227,7 +227,12 @@ const ContributingPage: React.FC = () => {
               Join our community of experts in building the next generation of
               cloud-native, geo-distributed storage system
             </Paragraph2>
-            <Button>DatenLord Gitter Channel</Button>
+            <Button
+              as="a"
+              href="https://app.gitter.im/#/room/#datenlord_datenlord:gitter.im"
+            >
+              DatenLord Gitter Channel
+            </Button>
           </Card>
           <Card>
             <CardTitleContainer>
