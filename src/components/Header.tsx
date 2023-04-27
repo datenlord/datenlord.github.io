@@ -48,7 +48,7 @@ const HeaderWrapper = styled.div<HeaderStyleProps>`
   background: ${({ bg }) => bg};
   color: ${({ headerTheme }) => (headerTheme === 'dark' ? 'black' : 'white')};
   transition: color 0.5s;
-  box-shadow: 0px -10px 20px 4px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px -10px 20px 4px rgba(0, 0, 0, 0.2); */
 `
 const HeaderContainer = styled.div`
   display: flex;
