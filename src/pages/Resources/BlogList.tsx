@@ -131,7 +131,6 @@ const Card = styled.div`
   box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.160784);
   cursor: pointer;
   page-break-inside: avoid;
-  z-index: -1;
 
   @media screen and (max-width: 1200px) {
     width: 100%;
