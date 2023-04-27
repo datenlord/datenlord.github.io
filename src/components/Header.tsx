@@ -48,6 +48,7 @@ const HeaderWrapper = styled.div<HeaderStyleProps>`
   background: ${({ bg }) => bg};
   color: ${({ headerTheme }) => (headerTheme === 'dark' ? 'black' : 'white')};
   transition: color 0.5s;
+  box-shadow: 0px -10px 20px 4px rgba(0, 0, 0, 0.2);
 `
 const HeaderContainer = styled.div`
   display: flex;
@@ -61,12 +62,14 @@ const HeaderContainer = styled.div`
 const Logo = styled.img`
   height: 44px;
   margin-right: 20px;
+  cursor: pointer;
 `
 const Title = styled.div`
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 4px;
   font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 `
 const Placeholder = styled.div`
   flex: 1;
@@ -252,12 +255,13 @@ export const Header: React.FC<HeaderProps> = ({
   bg = '#fff',
   activeId,
 }) => {
+  const navigate = useNavigate()
   // console.log(theme)
   return (
     <HeaderWrapper headerTheme={theme} bg={bg}>
       <HeaderContainer>
-        <Logo src={logoUrl} />
-        <Title>DatenLord</Title>
+        <Logo src={logoUrl} onClick={() => navigate('/')} />
+        <Title onClick={() => navigate('/')}>DatenLord</Title>
         <Placeholder />
         <Menu>
           {headerData.map(item => (
