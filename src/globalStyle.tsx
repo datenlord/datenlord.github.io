@@ -39,13 +39,13 @@ const GlobalStyle = createGlobalStyle`
     h1 {
       margin-block: 0.48rem;
       font-weight: 700;
-      font-size: 0.48rem;
+      font-size: 0.4rem;
       line-height: 0.52rem;
     }
     h2 {
       margin-block: 0.48rem;
       font-weight: 700;
-      font-size: 0.36rem;
+      font-size: 0.32rem;
       line-height: 0.44rem;
     }
     h3 {
@@ -63,13 +63,13 @@ const GlobalStyle = createGlobalStyle`
     h5 {
       margin-block: 0.32rem;
       font-weight: 700;
-      font-size: 0.2rem;
+      font-size: 0.22rem;
       line-height: 0.28rem;
     }
     h6 {
       margin-block: 0.24rem;
       font-weight: 700;
-      font-size: 0.16rem;
+      font-size: 0.2rem;
       line-height: 0.24rem;
     }
     p {
@@ -82,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
       margin-block: 0.64rem;
       display: block;
       margin-inline: auto;
-      max-width: 80%;
+      max-width: 60%;
     }
     ol, ul {
       margin-block: 0.16rem;
@@ -103,6 +103,9 @@ const GlobalStyle = createGlobalStyle`
       background: #f0f0f0;
       border-radius: 4px;
       overflow-x: scroll;
+      code {
+        padding: 0;
+      }
     }
     code {
     padding: 4px;
