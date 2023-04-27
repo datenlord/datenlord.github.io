@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
     h1 {
       margin-block: 0.48rem;
       font-weight: 700;
-      font-size: 0.4rem;
+      font-size: 0.36rem;
       line-height: 0.52rem;
     }
     h2 {
@@ -77,6 +77,11 @@ const GlobalStyle = createGlobalStyle`
       font-weight: 400;
       font-size: 0.18rem;
       line-height: 0.28rem;
+    }
+    a {
+      display: inline;
+      text-decoration: underline;
+      color: #0052D9;
     }
     img {
       margin-block: 0.64rem;
