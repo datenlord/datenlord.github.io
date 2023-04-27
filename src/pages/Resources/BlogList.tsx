@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import moment from 'moment'
 import { Header } from '@/components/Header'
+import arrowIconUrl from '@/assets/arrow.svg'
 
 const categoryData = [
   {
@@ -44,42 +45,45 @@ interface SortItemProps {
 
 const Heading1 = styled.div`
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 33px;
 `
 const Heading2 = styled.div`
+  max-width: 85%;
   margin-bottom: 16px;
   font-weight: 700;
-  font-size: 24.75px;
-  line-height: 26.4px;
+  font-size: 16px;
+  line-height: 1.5;
 `
 const Heading4 = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 16.5px;
 `
 const DefaultHeading1 = styled(Heading1)`
+  height: 32px;
   text-align: center;
 `
 const PrimaryHeading1 = styled(Heading1)`
-  margin-bottom: 48px;
+  margin-bottom: 26px;
   color: #7680dd;
 `
 const SmallText = styled.div`
   margin-bottom: 16px;
   font-weight: 400;
-  font-size: 13.5px;
-  line-height: 22.2px;
+  font-size: 8px;
+  line-height: 1.5;
 `
 const Cover = styled.img`
   display: block;
   margin-inline: auto;
-  width: 60%;
+  width: 100%;
   margin-top: 24px;
+  border-radius: 8px;
 `
 const ViewWrapper = styled.div`
-  padding-top: 128px;
+  padding-top: 84px;
   color: #42424a;
 `
 const ViewContainer = styled.div`
@@ -87,32 +91,32 @@ const ViewContainer = styled.div`
   max-width: 1440px;
   margin-inline: auto;
   padding-block: 64px;
+  padding-top: 48px;
   padding-inline: 128px;
 `
 const Sidebar = styled.div`
   position: sticky;
-  top: calc(128px + 32px);
+  top: calc(84px + 48px + 48px);
   left: 0;
 `
 const SortSection = styled.div`
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 `
 const SortItem = styled.div<SortItemProps>`
   width: 200px;
   margin-bottom: 16px;
-  padding-block: 4px;
+  padding-block: 2px;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 22.2px;
+  font-size: 12px;
+  line-height: 1.5;
   text-align: center;
   background: ${({ isActive }) => (isActive ? '#D9DBEF' : 'white')};
   border: 1px solid #d9dbef;
   border-radius: 16px;
 `
 const Content = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  column-count: 2;
+  column-gap: 32px;
   flex-grow: 1;
 
   @media screen and (max-width: 1200px) {
@@ -120,13 +124,14 @@ const Content = styled.div`
   }
 `
 const Card = styled.div`
-  width: 46%;
-  height: min-content;
-  margin-bottom: 48px;
+  position: relative;
+  margin-bottom: 32px;
   padding: 32px;
   border-radius: 16px;
   box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.160784);
   cursor: pointer;
+  page-break-inside: avoid;
+  z-index: -1;
 
   @media screen and (max-width: 1200px) {
     width: 100%;
@@ -136,6 +141,13 @@ const SidebarContainer = styled.div`
   flex-shrink: 0;
   width: 250px;
   margin-right: 32px;
+`
+const ArrowIcon = styled.img`
+  position: absolute;
+  top: 36px;
+  right: 36px;
+  width: 18px;
+  height: 18 px;
 `
 
 const blogs = import.meta.glob('@/blogs/*/index.md')
@@ -186,28 +198,6 @@ const BlogList: React.FC = () => {
       console.log(categorySorted)
       setCurrentData(categorySorted)
     }
-
-    // // console.log(time)
-    // const _now = new Date()
-    // const now = moment(_now).format('YYYY-MM-DD')
-    // const zqa = moment(now).diff(moment(data[2]?.metadata.date), 'months')
-    // // if (category.length === 0 && time === 999999) {
-    // //   setCurrentData(data)
-    // // } else {
-    // const temp = data.filter(item => {
-    //   const date1 = moment(now)
-    //   const date2 = moment(item.metadata.date)
-    //   const diff = date1.diff(date2, 'months')
-    //   console.log(diff)
-    //   if (diff <= Number(time)) {
-    //     return true
-    //   } else {
-    //     return false
-    //   }
-    // })
-    // const _data = temp.filter(item => haveSame(item.metadata.tags, category))
-    // setCurrentData(_data)
-    // }
   }, [category, time])
 
   useEffect(() => {
@@ -256,6 +246,70 @@ const BlogList: React.FC = () => {
           </Sidebar>
         </SidebarContainer>
         <Content>
+          {/* <div
+            style={{
+              background: 'red',
+              width: '24%',
+              height: '200px',
+              marginBottom: '16px',
+            }}
+          ></div>
+          <div
+            style={{
+              background: 'red',
+              width: '24%',
+              height: '100px',
+              marginBottom: '16px',
+            }}
+          ></div>
+          <div
+            style={{
+              background: 'red',
+              width: '24%',
+              height: '200px',
+              marginBottom: '16px',
+            }}
+          ></div>
+          <div
+            style={{
+              background: 'red',
+              width: '24%',
+              height: '200px',
+              marginBottom: '16px',
+            }}
+          ></div>
+          <div
+            style={{
+              background: 'red',
+              width: '24%',
+              height: '200px',
+              marginBottom: '16px',
+            }}
+          ></div>
+          <div
+            style={{
+              background: 'red',
+              width: '24%',
+              height: '200px',
+              marginBottom: '16px',
+            }}
+          ></div>
+          <div
+            style={{
+              background: 'red',
+              width: '24%',
+              height: '200px',
+              marginBottom: '16px',
+            }}
+          ></div>
+          <div
+            style={{
+              background: 'red',
+              width: '24%',
+              height: '200px',
+              marginBottom: '16px',
+            }}
+          ></div> */}
           {currentData.length === 0 ? (
             <Heading2>No match results</Heading2>
           ) : (
@@ -271,6 +325,7 @@ const BlogList: React.FC = () => {
                     )
                   }}
                 >
+                  <ArrowIcon src={arrowIconUrl} />
                   <Heading2>{item.metadata.title}</Heading2>
                   <SmallText>{item.metadata.description}</SmallText>
                   <Cover src={item.assetURLs[0]} alt="cover" />
