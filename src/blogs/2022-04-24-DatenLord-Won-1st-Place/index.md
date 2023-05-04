@@ -1,7 +1,7 @@
 ---
 title: Title
 description: DatenLord, a tech start-up based in Shanghai and Beijing in China, won the 1st place in Big Data Analysis Project in Adaptive Computing Challenge in 2021. 
-cover: ./cover.png
+# cover: ./cover.png
 tags: [rdma]
 ---
 

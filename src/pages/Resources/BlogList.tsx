@@ -327,7 +327,9 @@ const BlogList: React.FC = () => {
                   <ArrowIcon src={arrowIconUrl} />
                   <Heading2>{item.metadata.title}</Heading2>
                   <SmallText>{item.metadata.description}</SmallText>
-                  <Cover src={item.assetURLs[0]} alt="cover" />
+                  {item.assetURLs[0] && (
+                    <Cover src={item.assetURLs[0]} alt="cover" />
+                  )}
                 </Card>
               )
             })

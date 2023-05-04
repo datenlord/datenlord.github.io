@@ -1,7 +1,7 @@
 ---
 title: Title
 description: In this blog, we introduce the general concept of Functor and Natural Transformations.
-cover: ./cover.png
+cover: ./image1.webp
 author: 
   - name: Zqa
     age: 23?
