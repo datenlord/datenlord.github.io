@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import logoUrl from '@/assets/logo.svg'
+import logoTextDarkUrl from '@/assets/logo-text-dark.svg'
+import logoTextLightUrl from '@/assets/logo-text-light.svg'
 
 interface HeaderProps {
   theme: 'dark' | 'light'
@@ -64,6 +66,9 @@ const Logo = styled.img`
   height: 44px;
   margin-right: 20px;
   cursor: pointer;
+`
+const LogoText = styled.img`
+  height: 16px;
 `
 const Title = styled.div`
   font-size: 22px;
@@ -278,7 +283,12 @@ export const Header: React.FC<HeaderProps> = ({
     <HeaderWrapper headerTheme={theme} bg={bg}>
       <HeaderContainer>
         <Logo src={logoUrl} onClick={() => navigate('/')} />
-        <Title onClick={() => navigate('/')}>DatenLord</Title>
+        {theme === 'dark' ? (
+          <LogoText src={logoTextDarkUrl} />
+        ) : (
+          <LogoText src={logoTextLightUrl} />
+        )}
+        {/* <Title onClick={() => navigate('/')}>DatenLord</Title> */}
         <Placeholder />
         <Menu>
           {headerData.map(item => (
