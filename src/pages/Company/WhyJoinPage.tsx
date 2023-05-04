@@ -7,6 +7,10 @@ import icon4Url from '@/assets/Company/WhyJoin/icon4.svg'
 import icon5Url from '@/assets/Company/WhyJoin/icon5.svg'
 import icon6Url from '@/assets/Company/WhyJoin/icon6.svg'
 
+interface TagProps {
+  type: string
+}
+
 const ScrollContainer = styled.main`
   height: 100vh;
   overflow-y: scroll;
@@ -42,10 +46,16 @@ const ViewContainer = styled.div`
   overflow: hidden;
 `
 const Title = styled.div`
-  margin-bottom: 0.84rem;
+  margin-bottom: 0.75rem;
   font-weight: 700;
-  font-size: 0.4rem;
-  line-height: 1.5;
+  font-size: 0.3rem;
+  line-height: 1.3;
+`
+const StyledTitle = styled(Title)`
+  width: 100%;
+  padding-left: 0.36rem;
+  border-left: 0.24rem solid #7680dd;
+  text-align: left;
 `
 const CardContainer = styled.div`
   display: flex;
@@ -82,6 +92,93 @@ const Paragraph = styled.div`
   font-size: 0.32rem;
   line-height: 0.6rem;
 `
+const CardContainer1 = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+`
+const Card1 = styled.div`
+  width: 48%;
+  min-height: 100px;
+  margin-bottom: 0.48rem;
+  padding-block: 0.22rem;
+  padding-inline: 0.3375rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.13);
+`
+const SubTitle = styled.div`
+  margin-bottom: 0.2rem;
+  font-size: 0.225rem;
+  line-height: 1.48;
+  font-weight: 600;
+`
+const TagContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 0.1rem;
+`
+const Tag = styled.div<TagProps>`
+  margin-right: 0.2rem;
+  padding-block: 0.02rem;
+  padding-inline: 0.25rem;
+  color: ${({ type }) => {
+    switch (type) {
+      case 'full-time':
+        return '#9254de'
+      case 'internship':
+        return '#597ef7'
+      default:
+        return '#434343'
+    }
+  }};
+  font-size: 0.195rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-transform: capitalize;
+  background: ${({ type }) => {
+    switch (type) {
+      case 'full-time':
+        return '#f9f0ff'
+      case 'internship':
+        return '#f0f5ff'
+      default:
+        return '#fafafa'
+    }
+  }};
+  border: 0.01rem solid
+    ${({ type }) => {
+      switch (type) {
+        case 'full-time':
+          return '#9254de'
+        case 'internship':
+          return '#597ef7'
+        default:
+          return '#434343'
+      }
+    }};
+  border-radius: 0.08rem;
+`
+
+const jobDescription = [
+  {
+    name: 'Distributed storage software development senior engineer',
+    type: ['full-time', 'urgent recruitment'],
+  },
+  {
+    name: 'Rust distributed storage development',
+    type: ['internship', 'soon to be filled'],
+  },
+  {
+    name: 'FPGA development',
+    type: ['internship'],
+  },
+  {
+    name: 'The joint hardware and software research and development internship',
+    type: ['internship'],
+  },
+]
 
 const WhyJoinPage: React.FC = () => {
   return (
@@ -147,6 +244,25 @@ const WhyJoinPage: React.FC = () => {
           </ContentContainer>
         </ViewContainer>
       </ViewWrapperEven>
+      <ViewWrapperOdd>
+        <ViewContainer>
+          <StyledTitle>Open Position</StyledTitle>
+          <CardContainer1>
+            {jobDescription.map(({ name, type }) => (
+              <Card1 key={name}>
+                <SubTitle>{name}</SubTitle>
+                <TagContainer>
+                  {type.map(tag => (
+                    <Tag type={tag} key={tag}>
+                      {tag}
+                    </Tag>
+                  ))}
+                </TagContainer>
+              </Card1>
+            ))}
+          </CardContainer1>
+        </ViewContainer>
+      </ViewWrapperOdd>
     </ScrollContainer>
   )
 }
