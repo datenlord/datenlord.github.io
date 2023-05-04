@@ -6,6 +6,12 @@ import icon3Url from '@/assets/Company/WhyJoin/icon3.svg'
 import icon4Url from '@/assets/Company/WhyJoin/icon4.svg'
 import icon5Url from '@/assets/Company/WhyJoin/icon5.svg'
 import icon6Url from '@/assets/Company/WhyJoin/icon6.svg'
+import icon7Url from '@/assets/Company/WhyJoin/icon7.png'
+import icon8Url from '@/assets/Company/WhyJoin/icon8.svg'
+import icon9Url from '@/assets/Company/WhyJoin/icon9.svg'
+import bg1Url from '@/assets/Company/WhyJoin/bg1.png'
+import bg2Url from '@/assets/Company/WhyJoin/bg2.png'
+import bg3Url from '@/assets/Company/WhyJoin/bg3.png'
 
 interface TagProps {
   type: string
@@ -76,7 +82,19 @@ const Card = styled.div`
   padding-block: 0.85rem;
   padding-inline: 0.35rem;
   border-radius: 0.2rem;
+  font-size: 0.15rem;
+  line-height: 1.48;
+  font-weight: 400;
   box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.13);
+`
+const Card1 = styled(Card)`
+  background-image: url(${bg1Url});
+`
+const Card2 = styled(Card)`
+  background-image: url(${bg2Url});
+`
+const Card3 = styled(Card)`
+  background-image: url(${bg3Url});
 `
 const ContentContainer = styled.div``
 const ListItem = styled.div`
@@ -88,17 +106,21 @@ const Icon = styled.img`
   height: 0.64rem;
   margin-right: 0.32rem;
 `
+const _Icon = styled.img`
+  width: 0.48rem;
+  height: 0.48rem;
+`
 const Paragraph = styled.div`
   font-size: 0.32rem;
   line-height: 0.6rem;
 `
-const CardContainer1 = styled.div`
+const _CardContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
 `
-const Card1 = styled.div`
+const _Card = styled.div`
   width: 48%;
   min-height: 100px;
   margin-bottom: 0.48rem;
@@ -188,20 +210,26 @@ const WhyJoinPage: React.FC = () => {
         <ViewContainer>
           <Title>Why Join DatenLord?</Title>
           <CardContainer>
-            <Card>
+            <Card1>
+              <_Icon src={icon7Url} />
+              <SubTitle>Creative Working</SubTitle>
               At DatenLord, you find yourself working with talented and
               motivated people in highly creative and productive ways.
-            </Card>
-            <Card>
+            </Card1>
+            <Card2>
+              <_Icon src={icon8Url} />
+              <SubTitle>Sense of Belonging</SubTitle>
               DatenLord values COMMUNITY, which is not confined in referring
               open source community. We want our employees to have a sense of
               inclusion and belonging in our company.
-            </Card>
-            <Card>
+            </Card2>
+            <Card3>
+              <_Icon src={icon9Url} />
+              <SubTitle>Remote Working</SubTitle>
               DatenLord is focused on researching and developing geo-distributed
               storage system by a distributed team with most members working
               remotely.
-            </Card>
+            </Card3>
           </CardContainer>
         </ViewContainer>
       </ViewWrapperOdd>
@@ -247,9 +275,9 @@ const WhyJoinPage: React.FC = () => {
       <ViewWrapperOdd>
         <ViewContainer>
           <StyledTitle>Open Position</StyledTitle>
-          <CardContainer1>
+          <_CardContainer>
             {jobDescription.map(({ name, type }) => (
-              <Card1 key={name}>
+              <_Card key={name}>
                 <SubTitle>{name}</SubTitle>
                 <TagContainer>
                   {type.map(tag => (
@@ -258,9 +286,9 @@ const WhyJoinPage: React.FC = () => {
                     </Tag>
                   ))}
                 </TagContainer>
-              </Card1>
+              </_Card>
             ))}
-          </CardContainer1>
+          </_CardContainer>
         </ViewContainer>
       </ViewWrapperOdd>
     </ScrollContainer>
