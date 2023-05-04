@@ -186,7 +186,7 @@ const HengyuWang = {
     'Hengyu Wang is a graduate student majoring in computer science. He joined the async-rdma project because it happens to fit in his academic interest on integrating software and hardware. Guided by his community mentor, he grows with the development of the project and is invited to share his practical experience on using Rust to package RDMA on several hands-on workshops.',
     'I am having unforgettable experience with the async-rdma project. The DatenLord community is friendly and my mentor is a seasoned engineer who encourages me to verify my ideas and assumptions about the project while pay attention to the engineering discipline, which shift my perspective from a student who merely focuses on running a program to a professional engineer who cares about its maintainability and stability as well.',
   ],
-  id: 'Hengyu Wang 王恒宇',
+  id: 'GTwhy',
   url: 'https://github.com/GTwhy',
 }
 const HongyuLi = {
