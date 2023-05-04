@@ -76,6 +76,10 @@ const Heading2 = styled.div`
 const ValueHeading2 = styled(Heading2)`
   margin-bottom: 16px;
 `
+const StyledHeading2 = styled(Heading2)`
+  padding-left: 16px;
+  border-left: 20px solid #7680dd;
+`
 const Paragraph1 = styled.div`
   font-weight: 400;
   font-size: 19.5px;
@@ -88,6 +92,7 @@ const Paragraph2 = styled.div`
 `
 const Card = styled.div`
   width: 48%;
+  align-self: stretch;
   padding: 32px;
   background: #d9dbef;
   border-radius: 24px;
@@ -139,14 +144,14 @@ const WhyBuildPage: React.FC = () => {
         </Overview>
         <VisionAndMission>
           <Card>
-            <Heading2>Vision</Heading2>
+            <StyledHeading2>Vision</StyledHeading2>
             <Paragraph1>
               Empower enterprises to read, write and retrieve data across
               multiple clouds world-wide with high performance and security.
             </Paragraph1>
           </Card>
           <Card>
-            <Heading2>Vision</Heading2>
+            <StyledHeading2>Mission</StyledHeading2>
             <Paragraph1>
               Breaking barriers across clouds by using Datenlord Geo-distributed
               storage system.
