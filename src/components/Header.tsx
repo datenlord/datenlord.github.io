@@ -129,7 +129,23 @@ const headerData = [
   {
     id: 'products',
     label: 'products',
-    url: '/products',
+    children: [
+      {
+        id: 'DatenLord',
+        label: 'DatenLord',
+        url: 'https://github.com/datenlord/datenlord',
+      },
+      {
+        id: 'Xline',
+        label: 'Xline',
+        url: 'https://github.com/datenlord/Xline',
+      },
+      {
+        id: 'RDMA',
+        label: 'RDMA',
+        url: '/products/RDMA',
+      },
+    ],
   },
   {
     id: 'solution',

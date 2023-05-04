@@ -18,7 +18,7 @@ export const router = createHashRouter([
     element: <HomePage />,
   },
   {
-    path: 'products',
+    path: 'products/RDMA',
     element: <ProductsPage />,
   },
   {
