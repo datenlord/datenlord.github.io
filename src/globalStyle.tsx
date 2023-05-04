@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
   }
 
   a {
