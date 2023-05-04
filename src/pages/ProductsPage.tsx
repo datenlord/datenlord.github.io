@@ -50,14 +50,14 @@ const ViewContainer = styled.div`
 `
 const Title = styled.div`
   font-weight: 700;
-  font-size: 0.34rem;
+  font-size: 0.3rem;
   line-height: 1.5;
 `
 const FrontPageTitle = styled(Title)`
   margin-bottom: 0.24rem;
 `
 const BasicTitle = styled(Title)`
-  margin-bottom: 0.32rem;
+  margin-bottom: 0.24rem;
 `
 const Description = styled.div`
   text-align: center;
@@ -72,7 +72,7 @@ const FrontViewDescription = styled(Description)`
   border-image: linear-gradient(to right, #8f41e9, #578aef) 1;
 `
 const BasicDescription = styled(Description)`
-  margin-bottom: 0.84rem;
+  margin-bottom: 0.32rem;
 `
 const Paragraph = styled.div`
   font-weight: 400px;
@@ -83,7 +83,7 @@ const FrontPageParagraph = styled(Paragraph)`
   margin-bottom: 0.32rem;
 `
 const BasicParagraph = styled(Paragraph)`
-  margin-bottom: 0.32rem;
+  margin-bottom: 0.24rem;
 `
 const CardContainer = styled.div`
   display: flex;
