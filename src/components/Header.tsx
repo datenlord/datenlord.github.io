@@ -179,7 +179,7 @@ const headerData = [
     children: [
       {
         id: 'Contributing is Thinking and Learning',
-        label: 'Contributing is Thinking and Learning',
+        label: 'Community',
         url: '/resources/contribute',
       },
       {
