@@ -223,6 +223,11 @@ const headerData = [
         label: 'Contact Us',
         url: '/company/contact-us',
       },
+      {
+        id: 'Join Us',
+        label: 'Join Us',
+        url: '/company/join-us',
+      },
     ],
   },
 ]

@@ -6,6 +6,7 @@ import CustomersPage from './pages/CustomersPage'
 import WhyJoinPage from './pages/Company/WhyJoinPage'
 import ContactUsPage from './pages/Company/ContactUsPage'
 import WhyBuildPage from './pages/Company/WhyBuildPage'
+import JoinUsPage from './pages/Company/JoinUsPage'
 import ContributingPage from './pages/Resources/Contributing'
 import SolutionPage from './pages/Solution'
 import BlogList from './pages/Resources/BlogList'
@@ -43,6 +44,10 @@ export const router = createHashRouter([
       {
         path: 'why-build',
         element: <WhyBuildPage />,
+      },
+      {
+        path: 'join-us',
+        element: <JoinUsPage />,
       },
     ],
   },
