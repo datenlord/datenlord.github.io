@@ -8,6 +8,20 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: Inter, sans-serif;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-block: 0;
+  }
+
+  p {
+    margin-block: 0;
+  }
+
+  ol, ul {
+    margin-block: 0;
+    padding-inline-start: 16px;
   }
 
   a {
