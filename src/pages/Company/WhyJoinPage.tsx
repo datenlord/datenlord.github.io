@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 import { Header } from '@/components/Header'
 import icon1Url from '@/assets/Company/WhyJoin/icon1.svg'
 import icon2Url from '@/assets/Company/WhyJoin/icon2.svg'
@@ -182,6 +183,18 @@ const Tag = styled.div<TagProps>`
     }};
   border-radius: 0.08rem;
 `
+const Button = styled.button`
+  margin-top: 24px;
+  padding: 16px 64px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  background: #7680dd;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.5);
+`
 
 const jobDescription = [
   {
@@ -203,6 +216,7 @@ const jobDescription = [
 ]
 
 const WhyJoinPage: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <ScrollContainer>
       <Header theme="dark" bg="transparent" activeId="company" />
@@ -289,6 +303,7 @@ const WhyJoinPage: React.FC = () => {
               </_Card>
             ))}
           </_CardContainer>
+          <Button onClick={() => navigate('/company/join-us')}>Learn more</Button>
         </ViewContainer>
       </ViewWrapperOdd>
     </ScrollContainer>
