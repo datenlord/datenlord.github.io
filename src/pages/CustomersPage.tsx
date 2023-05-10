@@ -3,6 +3,7 @@ import { Header } from '@/components/Header'
 import image1Url from '@/assets/Customers/image1.svg'
 import image2Url from '@/assets/Customers/image2.svg'
 import image3Url from '@/assets/Customers/image3.svg'
+import image4Url from '@/assets/Customers/image4.png'
 
 const ScrollContainer = styled.main`
   height: 100vh;
@@ -40,7 +41,7 @@ const ViewContainer = styled.div`
 `
 const Text = styled.div`
   font-weight: 500;
-  font-size: 0.32rem;
+  font-size: 0.28rem;
   line-height: 1.5;
 `
 const FrontPageText = styled(Text)`
@@ -48,7 +49,7 @@ const FrontPageText = styled(Text)`
 `
 const Image = styled.img`
   width: 5.5rem;
-  height: 5.5rem;
+  /* height: 5.5rem; */
 `
 const ImageRight = styled(Image)`
   margin-left: 0.96rem;
@@ -63,7 +64,7 @@ const CustomersPage: React.FC = () => {
       <Header theme="dark" bg="transparent" activeId="customers" />
       <ViewWrapperOdd>
         <ViewContainer>
-          <FrontPageText>
+          <Text>
             By achieving high-speed access to data across clouds and data
             centers, DatenLord will greatly enhance the scalability of storage
             systems, simplify enterprise level IT business systems in terms of
@@ -72,7 +73,8 @@ const CustomersPage: React.FC = () => {
             infrastructure, geo-distributed storage will be widely used in
             diversified industries, such as the Internet, finance,
             telecommunications, and energy.
-          </FrontPageText>
+          </Text>
+          <ImageRight src={image4Url} />
         </ViewContainer>
       </ViewWrapperOdd>
       <ViewWrapperEven>
