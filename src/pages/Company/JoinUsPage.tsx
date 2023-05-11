@@ -77,7 +77,6 @@ const IconText1 = styled(Text1)`
 const Text2 = styled.p`
   font-size: 12px;
   margin-bottom: 6px;
-  word-break: break-all;
 `
 const Text2Bold = styled(Text2)`
   font-weight: 700;
