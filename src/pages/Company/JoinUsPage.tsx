@@ -428,8 +428,15 @@ const JoinUsPage: React.FC = () => {
           <H2>{`${data.length} Jobs`}</H2>
           <JDList>
             {data.map(props => {
-              const { id, label, tag, workNature, workType, releaseTime } =
-                props
+              const {
+                id,
+                label,
+                tag,
+                workNature,
+                workType,
+                releaseTime,
+                content,
+              } = props
               return (
                 <JDCard key={id}>
                   <Logo src={logoUrl} />
@@ -449,36 +456,16 @@ const JoinUsPage: React.FC = () => {
                         {moment(releaseTime, 'YYYY-MM-DD').fromNow()}
                       </Tag>
                     </TagContainer>
-                    <SP as={'p'}>[Job Responsibilities]</SP>
-                    <ol>
-                      <P>
-                        Participate in the development and maintenance of the
-                        open source distributed storage project DatenLord;
-                      </P>
-                      <P>
-                        Improve the testing of DatenLord and build a new
-                        DatenLord testing framework;
-                      </P>
-                      <P>
-                        Improve the performance of DatenLord distributed
-                        performance.
-                      </P>
-                    </ol>
-                    <SP as={'p'}>[Job Responsibilities]</SP>
-                    <ol>
-                      <P>
-                        Participate in the development and maintenance of the
-                        open source distributed storage project DatenLord;
-                      </P>
-                      <P>
-                        Improve the testing of DatenLord and build a new
-                        DatenLord testing framework;
-                      </P>
-                      <P>
-                        Improve the performance of DatenLord distributed
-                        performance.
-                      </P>
-                    </ol>
+                    {content.map(({ title, body }) => (
+                      <div key={title}>
+                        <SP as={'p'}>{title}</SP>
+                        <ol>
+                          {body.map(item => (
+                            <P key={item}>{item}</P>
+                          ))}
+                        </ol>
+                      </div>
+                    ))}
                   </ContentContainer>
                 </JDCard>
               )
