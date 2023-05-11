@@ -50,7 +50,7 @@ const ViewContainer = styled.div`
   margin-inline: auto;
   padding-bottom: 0.64rem;
   padding-inline: 0.96rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 `
 const Title = styled.div`
   margin-bottom: 0.75rem;
