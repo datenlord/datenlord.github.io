@@ -53,7 +53,7 @@ const ViewContainer = styled.div`
   /* overflow: hidden; */
 `
 const Title = styled.div`
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.48rem;
   font-weight: 700;
   font-size: 0.3rem;
   line-height: 1.3;
@@ -100,11 +100,12 @@ const Card3 = styled(Card)`
 const ContentContainer = styled.div``
 const ListItem = styled.div`
   display: flex;
-  margin-bottom: 0.36rem;
+  align-items: center;
+  margin-bottom: 0.20rem;
 `
 const Icon = styled.img`
-  width: 0.64rem;
-  height: 0.64rem;
+  width: 0.32rem;
+  height: 0.32rem;
   margin-right: 0.32rem;
 `
 const _Icon = styled.img`
@@ -112,7 +113,7 @@ const _Icon = styled.img`
   height: 0.48rem;
 `
 const Paragraph = styled.div`
-  font-size: 0.32rem;
+  font-size: 0.24rem;
   line-height: 0.6rem;
 `
 const _CardContainer = styled.div`
@@ -122,18 +123,18 @@ const _CardContainer = styled.div`
   width: 100%;
 `
 const _Card = styled.div`
-  width: 48%;
+  width: 49%;
   min-height: 100px;
-  margin-bottom: 0.48rem;
+  margin-bottom: 0.32rem;
   padding-block: 0.22rem;
   padding-inline: 0.3375rem;
   background: #fff;
-  border-radius: 14px;
+  border-radius: 0.14rem;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.13);
 `
 const SubTitle = styled.div`
   margin-bottom: 0.2rem;
-  font-size: 0.225rem;
+  font-size: 0.2rem;
   line-height: 1.48;
   font-weight: 600;
 `
@@ -156,7 +157,7 @@ const Tag = styled.div<TagProps>`
         return '#434343'
     }
   }};
-  font-size: 0.195rem;
+  font-size: 0.16rem;
   line-height: 1.5;
   font-weight: 400;
   text-transform: capitalize;
@@ -184,15 +185,15 @@ const Tag = styled.div<TagProps>`
   border-radius: 0.08rem;
 `
 const Button = styled.button`
-  margin-top: 24px;
-  padding: 16px 64px;
+  margin-top: 0.24rem;
+  padding: 0.16rem 0.64rem;
   color: #fff;
-  font-size: 32px;
+  font-size: 0.32rem;
   font-weight: 600;
   line-height: 1;
   background: #7680dd;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.12rem;
   box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.5);
 `
 
