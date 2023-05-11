@@ -67,13 +67,13 @@ const ContactUsPage: React.FC = () => {
           <Card>
             <Icon src={weChatQRUrl} />
             <Paragraph>
-              Please follow our WeChat official account for more information{' '}
+              Please follow our WeChat official account for more information
             </Paragraph>
           </Card>
           <Card>
             <Icon src={icon1Url} />
             <Paragraph>
-              Please contact us through our email Email: info@datenlord.com
+              Please contact us through our email: info@datenlord.com
             </Paragraph>
           </Card>
         </CardContainer>
