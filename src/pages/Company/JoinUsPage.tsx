@@ -425,7 +425,6 @@ const JoinUsPage: React.FC = () => {
           </Filters>
         </LeftSidebarContainer>
         <MainContainer>
-          <H2>{`${data.length} Jobs`}</H2>
           <JDList>
             {data.map(props => {
               const {
