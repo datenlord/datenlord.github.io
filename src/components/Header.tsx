@@ -185,7 +185,7 @@ const headerData = [
       {
         id: 'Tech Talk',
         label: 'Tech Talk',
-        url: 'https://www.cncf.io/online-programs/cncf-on-demand-webinar-geo-distributed-metadata-management-system/',
+        url: '/resources/tech-talk',
       },
       {
         id: 'Blog',
