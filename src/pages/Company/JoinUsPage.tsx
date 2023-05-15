@@ -139,7 +139,6 @@ const Text5 = styled.p`
   color: #7767a0;
 `
 const H3 = styled.h3`
-  width: 80%;
   font-size: 22.5px;
   font-weight: 600;
   margin-bottom: 12px;
@@ -443,7 +442,7 @@ const JoinUsPage: React.FC = () => {
                     <Text5>{tag.join(', ')}</Text5>
                     <Container>
                       <H3>{label}</H3>
-                      <Button>New Post</Button>
+                      {/* <Button>New Post</Button> */}
                     </Container>
                     <TagContainer>
                       <Tag icon={locationIconUrl}>{workNature}</Tag>
