@@ -231,7 +231,7 @@ const JDdata: JDdataProps = [
     tag: ['full-time', 'urgent recruitment'],
     workNature: 'Teleworking',
     workType: 'fullTime',
-    releaseTime: '2023-4-17',
+    releaseTime: '2023-5-17',
     content: [
       {
         title: '[Job Responsibilities]',
@@ -261,7 +261,7 @@ const JDdata: JDdataProps = [
     tag: ['internship', 'soon to be filled'],
     workNature: 'Teleworking',
     workType: 'internship',
-    releaseTime: '2023-4-17',
+    releaseTime: '2023-5-17',
     content: [
       {
         title: '[Job Responsibilities]',
@@ -298,7 +298,7 @@ const JDdata: JDdataProps = [
     tag: ['internship'],
     workNature: 'Teleworking',
     workType: 'internship',
-    releaseTime: '2023-4-17',
+    releaseTime: '2023-5-17',
     content: [
       {
         title: '[Job Responsibilities]',
@@ -338,7 +338,7 @@ const JDdata: JDdataProps = [
     tag: ['internship'],
     workNature: 'Teleworking',
     workType: 'internship',
-    releaseTime: '2023-4-17',
+    releaseTime: '2023-5-17',
     content: [
       {
         title: '[Job Responsibilities]',
