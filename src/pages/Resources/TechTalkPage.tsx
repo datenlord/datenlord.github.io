@@ -103,7 +103,7 @@ const data = [
   },
   {
     date: '2023-05-04',
-    title: 'Geo-distributed Metadata Management System',
+    title: 'Proofing the Correctness of the CURP Consensus Protocol Using TLA+',
     description:
       'The CURP Replication Protocol (NSDI ’19) aims to eliminate the additional round trips between servers in replicated state machines. We extended CURP into a consensus protocol and used it in our open source project Xline. This webinar is about how we modeled the CURP consensus protocol in TLA+ and verified the correctness of it.',
     author: 'By DatenLord',
