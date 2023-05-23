@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import moment from 'moment'
 import { Header } from '@/components/Header'
 
-import hrQRCodeUrl from '@/assets/hr-qr-code.png'
+import hrQRCodeUrl from '@/assets/hr-qr-code.jpg'
 import logoUrl from '@/assets/logo.svg'
 import locationIconUrl from '@/assets/Company/JoinUs/location.svg'
 import clockIconUrl from '@/assets/Company/JoinUs/clock.svg'
@@ -500,8 +500,8 @@ const JoinUsPage: React.FC = () => {
             <IconText1>Interview Process</IconText1>
             <Text2Bold>- Resume submission to the email:</Text2Bold>
             <Text2Regular>
-              <ColorText>ruopeng.zhou@datenlord.com</ColorText> or scan the QR
-              code at the bottom of the article to add WeChat.
+              <ColorText>info@datenlord.com</ColorText> or scan the QR code at
+              the bottom of the article to add WeChat.
             </Text2Regular>
             <Img src={hrQRCodeUrl} />
           </SidebarCard1>
