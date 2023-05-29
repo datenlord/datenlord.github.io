@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import background1Url from '@/assets/Products/background1.svg'
 import icon1Url from '@/assets/Products/icon1.svg'
 import icon2Url from '@/assets/Products/icon2.svg'
@@ -22,6 +22,12 @@ const ViewWrapper = styled.div`
   height: 100vh;
   padding-top: 84px;
   scroll-snap-align: center;
+  @media screen and (max-width: 1024px) {
+    padding-top: 69px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 53px;
+  }
 `
 const ViewWrapperFirst = styled(ViewWrapper)`
   color: white;
@@ -90,19 +96,28 @@ const CardContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 100%;
-  height: 3rem;
+  /* height: 3rem; */
+  @media screen and (max-width: 768px) {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
 `
 const Card = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   width: 3rem;
-  height: 100%;
+  /* height: 100%; */
   margin-inline: 0.32rem;
   padding: 0.32rem;
   background: #ffffff14;
   border: 0.01rem solid white;
   border-radius: 0.12rem;
+  @media screen and (max-width: 768px) {
+    width: 48%;
+    margin-bottom: 0.56rem;
+    margin-inline: 0;
+  }
 `
 const Icon = styled.img`
   width: 0.9rem;
@@ -119,6 +134,9 @@ const Text = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   align-items: center;
+  @media screen and (max-width: 540px) {
+    flex-direction: column;
+  }
 `
 const TextContainer = styled.div`
   display: flex;
