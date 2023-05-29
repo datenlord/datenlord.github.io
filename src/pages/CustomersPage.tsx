@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import image1Url from '@/assets/Customers/image1.svg'
 import image2Url from '@/assets/Customers/image2.svg'
 import image3Url from '@/assets/Customers/image3.svg'
@@ -44,6 +44,9 @@ const ViewContainer = styled.div`
   padding-bottom: 0.64rem;
   padding-inline: 0.96rem;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 const ViewContainerFirst = styled(ViewContainer)`
   flex-direction: column;
@@ -60,12 +63,15 @@ const FrontPageText = styled(Text)`
 const Image = styled.img`
   width: 5.5rem;
   /* height: 5.5rem; */
+
 `
 const ImageRight = styled(Image)`
   margin-left: 0.96rem;
+  margin-top: 0.64rem;
 `
 const ImageLeft = styled(Image)`
   margin-right: 0.96rem;
+  margin-bottom: 0.64rem;
 `
 
 const CustomersPage: React.FC = () => {
