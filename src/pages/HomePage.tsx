@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Header } from '@/components/Header'
+// import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import cover1Url from '@/assets/Home/cover1.svg'
 import cover2Url from '@/assets/Home/cover2.svg'
 import cover3Url from '@/assets/Home/cover3.svg'
@@ -100,6 +101,12 @@ const ViewWrapper = styled.div<ViewStyleProps>`
   color: ${({ myTheme }) => (myTheme === 'dark' ? 'white' : 'black')};
   background: ${({ backgroundColor }) => backgroundColor};
   scroll-snap-align: center;
+  @media screen and (max-width: 1024px) {
+    padding-top: 69px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 53px;
+  }
 `
 const ViewContainer = styled.div<LayoutProps>`
   display: flex;
@@ -123,6 +130,11 @@ const ViewContainer = styled.div<LayoutProps>`
   margin-inline: auto;
   padding-inline: 0.64rem;
   padding-bottom: 0.64rem;
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    padding-inline: 2.45rem;
+    padding-bottom: 20%;
+  }
 `
 const Cover = styled.img<LayoutProps>`
   height: 5rem;
@@ -130,6 +142,9 @@ const Cover = styled.img<LayoutProps>`
   margin-left: ${({ layout }) => (layout === 'row-reverse' ? '0.64rem' : 0)};
   margin-right: ${({ layout }) => (layout === 'row' ? '0.64rem' : 0)};
   margin-bottom: ${({ layout }) => (layout === 'col' ? '0.32rem' : 0)};
+  @media screen and (max-width: 425px) {
+    margin-bottom: 0.48rem;
+  }
 `
 const Content = styled.div<LayoutProps>`
   display: flex;
