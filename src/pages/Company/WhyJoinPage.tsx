@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import icon1Url from '@/assets/Company/WhyJoin/icon1.svg'
 import icon2Url from '@/assets/Company/WhyJoin/icon2.svg'
 import icon3Url from '@/assets/Company/WhyJoin/icon3.svg'
@@ -72,6 +72,10 @@ const CardContainer = styled.div`
   font-weight: 400;
   font-size: 0.2rem;
   line-height: 1.2;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 const Card = styled.div`
   display: flex;
@@ -87,6 +91,10 @@ const Card = styled.div`
   line-height: 1.48;
   font-weight: 400;
   box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.13);
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 0.48rem;
+  }
 `
 const Card1 = styled(Card)`
   background-image: url(${bg1Url});
@@ -101,7 +109,7 @@ const ContentContainer = styled.div``
 const ListItem = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 0.20rem;
+  margin-bottom: 0.2rem;
 `
 const Icon = styled.img`
   width: 0.32rem;
@@ -121,6 +129,10 @@ const _CardContainer = styled.div`
   flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 const _Card = styled.div`
   width: 49%;
@@ -131,6 +143,9 @@ const _Card = styled.div`
   background: #fff;
   border-radius: 0.14rem;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.13);
+  @media screen and (max-width: 425px) {
+    width: 80%;
+  }
 `
 const SubTitle = styled.div`
   margin-bottom: 0.2rem;
@@ -304,7 +319,9 @@ const WhyJoinPage: React.FC = () => {
               </_Card>
             ))}
           </_CardContainer>
-          <Button onClick={() => navigate('/company/join-us')}>Learn more</Button>
+          <Button onClick={() => navigate('/company/join-us')}>
+            Learn more
+          </Button>
         </ViewContainer>
       </ViewWrapperOdd>
     </ScrollContainer>
