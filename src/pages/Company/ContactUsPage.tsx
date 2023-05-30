@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import weChatQRUrl from '@/assets/Company/ContactUs/wechat-QR.svg'
 import icon1Url from '@/assets/Company/ContactUs/icon1.svg'
 
@@ -34,6 +34,10 @@ const CardContainer = styled.div`
   font-weight: 400;
   font-size: 0.2rem;
   line-height: 1.2;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 const Card = styled.div`
   display: flex;
@@ -45,6 +49,10 @@ const Card = styled.div`
   padding-inline: 0.35rem;
   border-radius: 0.2rem;
   box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.13);
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 0.64rem;
+  }
 `
 const Icon = styled.img`
   width: 1.24rem;
