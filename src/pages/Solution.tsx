@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import imgUrl1 from '@/assets/Home/cover3.svg'
 import imgUrl2 from '@/assets/Home/cover5.svg'
 import imgUrl3 from '@/assets/Home/cover2.svg'
@@ -26,6 +26,12 @@ interface PageDataProps {
 const ViewWrapper = styled.div`
   padding-top: 84px;
   color: #42424a;
+  @media screen and (max-width: 1024px) {
+    padding-top: 69px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 53px;
+  }
 `
 const ViewContainer = styled.div`
   max-width: 1440px;
@@ -33,41 +39,102 @@ const ViewContainer = styled.div`
   padding-block: 64px;
   padding-inline: 128px;
   overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    padding-block: 48px;
+    padding-inline: 96px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-block: 32px;
+    padding-inline: 64px;
+  }
+  @media screen and (max-width: 425px) {
+    padding-block: 24px;
+    padding-inline: 48px;
+  }
+
 `
 const Heading1 = styled.div`
   margin-bottom: 52px;
   font-weight: 700;
   font-size: 30px;
-  line-height: 33px;
+  line-height: 1.1;
   text-align: center;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 39px;
+    font-size: 22.5px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 26px;
+    font-size: 15px;
+  }
 `
 const Heading3 = styled.div`
   margin-bottom: 32px;
   font-weight: 600;
   font-size: 22.5px;
-  line-height: 33.3px;
+  line-height: 1.5;
   text-align: center;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 24px;
+    font-size: 16.875px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+    font-size: 11.25px;
+  }
 `
 const Heading4 = styled.div`
   margin-bottom: 16px;
   font-weight: 600;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 1.5;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 12px;
+    font-size: 13.5px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 8px;
+    font-size: 9px;
+  }
 `
 const DecorationHeading1 = styled(Heading1)`
   padding-left: 16px;
   text-align: left;
   border-left: 16px solid #7680dd;
+  @media screen and (max-width: 1024px) {
+    padding-left: 12px;
+    border-width: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 8px;
+    border-width: 8px;
+  }
 `
 const DecorationHeading4 = styled(Heading4)`
   margin-bottom: 32px;
   padding-right: 12px;
   width: min-content;
-  line-height: 16.5px;
+  line-height: 1.375;
   border-right: 4px solid #7680dd;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 24px;
+    padding-right: 9px;
+    border-width: 3px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+    padding-right: 6px;
+    border-width: 2px;
+  }
 `
 const Section = styled.div`
   margin-bottom: 96px;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 72px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 48px;
+  }
 `
 const CardContainer = styled.div`
   display: flex;
@@ -86,6 +153,14 @@ const Card = styled.div`
   @media screen and (max-width: 1024px) {
     margin-bottom: 32px;
     width: 100%;
+    padding: 24px;
+    min-height: 150px;
+    border-radius: 10.5px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 16px;
+    min-height: 150px;
+    border-radius: 7px;
   }
 `
 const RelatedCard = styled(Card)`
@@ -94,13 +169,24 @@ const RelatedCard = styled(Card)`
 const SText = styled.div`
   font-weight: 400;
   font-size: 13.5px;
-  line-height: 22.5px;
+  line-height: 1.66;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 const Image = styled.img`
   display: block;
   width: 150px;
   height: 150px;
   margin-inline: auto;
+  @media screen and (max-width: 1024px) {
+    height: 112.5px;
+    width: 112.5px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 75px;
+    width: 75px;
+  }
 `
 
 const SolutionPage: React.FC = () => {
