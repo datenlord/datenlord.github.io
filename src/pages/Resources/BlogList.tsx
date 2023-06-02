@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import moment from 'moment'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import arrowIconUrl from '@/assets/arrow.svg'
 
 const categoryData = [
@@ -46,7 +46,13 @@ interface SortItemProps {
 const Heading1 = styled.div`
   font-weight: 700;
   font-size: 24px;
-  line-height: 33px;
+  line-height: 1.375;
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `
 const Heading2 = styled.div`
   max-width: 85%;
@@ -54,6 +60,14 @@ const Heading2 = styled.div`
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
 `
 const Heading4 = styled.div`
   margin-bottom: 24px;
@@ -74,6 +88,14 @@ const SmallText = styled.div`
   font-weight: 400;
   font-size: 8px;
   line-height: 1.5;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 12px;
+    font-size: 6px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 8px;
+    font-size: 4px;
+  }
 `
 const Cover = styled.img`
   display: block;
@@ -81,10 +103,24 @@ const Cover = styled.img`
   width: 100%;
   margin-top: 24px;
   border-radius: 8px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 18px;
+    border-radius: 6px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 12px;
+    border-radius: 4px;
+  }
 `
 const ViewWrapper = styled.div`
   padding-top: 84px;
   color: #42424a;
+  @media screen and (max-width: 1024px) {
+    padding-top: 69px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 53px;
+  }
 `
 const ViewContainer = styled.div`
   display: flex;
@@ -93,6 +129,21 @@ const ViewContainer = styled.div`
   padding-block: 64px;
   padding-top: 48px;
   padding-inline: 128px;
+  @media screen and (max-width: 1024px) {
+    padding-block: 48px;
+    padding-top: 32px;
+    padding-inline: 96px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-block: 32px;
+    padding-top: 24px;
+    padding-inline: 64px;
+  }
+  @media screen and (max-width: 425px) {
+    padding-block: 16px;
+    padding-top: 12px;
+    padding-inline: 32px;
+  }
 `
 const Sidebar = styled.div`
   position: sticky;
@@ -135,18 +186,43 @@ const Card = styled.div`
   @media screen and (max-width: 1200px) {
     width: 100%;
   }
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 24px;
+    padding: 24px;
+    border-radius: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
 `
 const SidebarContainer = styled.div`
   flex-shrink: 0;
   width: 250px;
   margin-right: 32px;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 const ArrowIcon = styled.img`
   position: absolute;
   top: 36px;
   right: 36px;
   width: 18px;
-  height: 18 px;
+  height: 18px;
+  @media screen and (max-width: 1024px) {
+    top: 27px;
+    right: 27px;
+    width: 13.5px;
+    height: 13.5px;
+  }
+  @media screen and (max-width: 768px) {
+    top: 18px;
+    right: 27px;
+    width: 13.5px;
+    height: 13.5px;
+  }
 `
 
 const blogs = import.meta.glob('@/blogs/*/index.md')
