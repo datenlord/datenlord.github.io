@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import moment from 'moment'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 
 import CoverUrl from '@/assets/resources/cover.png'
 import Image1Url from '@/assets/resources/image1.png'
@@ -11,25 +11,43 @@ const ViewWrapper = styled.div`
   margin-top: 84px;
   color: #42424a;
   font-family: PingFang SC;
+  @media screen and (max-width: 1024px) {
+    margin-top: 69px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 53px;
+  }
 `
-// const TopSection = styled.section`
-//   height: calc(492px - 84px);
-//   background-image: url(${CoverUrl});
-//   background-size: cover;
-// `
 const ViewContainer = styled.div`
   max-width: 1440px;
-  min-height: calc(100vh - 84px);
   margin-inline: auto;
   padding-block: 24px;
   padding-inline: 165px;
+  @media screen and (max-width: 1024px) {
+    padding-block: 18px;
+    padding-inline: 123.75px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-block: 12px;
+    padding-inline: 82.5px;
+  }
+  @media screen and (max-width: 425px) {
+    margin-block: 6px;
+    padding-inline: 41.25px;
+  }
 `
 const Heading = styled.h1`
   font-weight: 600px;
   font-size: 36px;
-  line-height: 54px;
+  line-height: 1.5;
   text-align: center;
   color: #42424a;
+  @media screen and (max-width: 1024px) {
+    font-size: 27px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 const List = styled.ul``
 const ListItem = styled.li`
@@ -42,46 +60,99 @@ const ListItem = styled.li`
   /* :last-child {
     border-bottom: none;
   } */
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding-block: 18px;
+    padding-inline: 9px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-block: 12px;
+    padding-inline: 6px;
+  }
 `
 const ContentContainer = styled.div`
   flex-grow: 1;
   margin-right: 48px;
+  @media screen and (max-width: 1024px) {
+    margin-right: 0;
+  }
 `
 const Image = styled.img`
   width: 40%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `
 const Date = styled.div`
   margin-bottom: 6px;
   font-size: 15px;
-  line-height: 30px;
+  line-height: 2;
   font-weight: 600px;
   color: #7680dd;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 4.5px;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 3px;
+  }
 `
 const Title = styled.div`
   margin-bottom: 27px;
   font-size: 27px;
-  line-height: 33px;
+  line-height: 1.22;
   font-weight: 600;
   color: #1e1e1e;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 20.25px;
+    font-size: 20.25;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 13.5px;
+    font-size: 16px;
+  }
 `
 const Description = styled.div`
   margin-bottom: 6px;
   font-size: 13.5px;
-  line-height: 24px;
+  line-height: 1.77;
   font-weight: 400;
   color: #7d7d7d;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 4.5px;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 3px;
+  }
 `
 const MetaDataContainer = styled.div`
   display: flex;
   align-items: center;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1%.5;
   font-weight: 600;
+  @media screen and (max-width: 1024px) {
+    font-size: 9px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 6px;
+  }
 `
 const Dot = styled.img`
   width: 22px;
   height: 22px;
   padding-inline: 8px;
+  @media screen and (max-width: 1024px) {
+    width: 16.5px;
+    height: 16.5px;
+    padding-inline: 6px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 11px;
+    height: 11px;
+    padding-inline: 4px;
+  }
 `
 const Author = styled.div`
   color: #797979;
