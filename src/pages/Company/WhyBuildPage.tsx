@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import logoUrl from '@/assets/Company/WhyBuild/logo.svg'
 import icon1Url from '@/assets/Company/WhyBuild/icon1.svg'
 import icon2Url from '@/assets/Company/WhyBuild/icon2.svg'
@@ -10,6 +10,12 @@ const ViewWrapper = styled.div`
   height: 100vh;
   padding-top: 84px;
   color: #42424a;
+  @media screen and (max-width: 1024px) {
+    padding-top: 69px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 53px;
+  }
 `
 const ViewContainer = styled.div`
   align-items: center;
@@ -18,11 +24,29 @@ const ViewContainer = styled.div`
   padding-block: 64px;
   padding-inline: 128px;
   overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    padding-block: 48px;
+    padding-inline: 96px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-block: 32px;
+    padding-inline: 64px;
+  }
+  @media screen and (max-width: 425px) {
+    padding-block: 16px;
+    padding-inline: 32px;
+  }
 `
 const Section = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 64px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 48px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 32px;
+  }
 `
 const Overview = styled(Section)`
   @media screen and (max-width: 1200px) {
@@ -51,9 +75,16 @@ const Content = styled.div`
 const Logo = styled.img`
   width: 300px;
   margin: 64px;
+  margin-bottom: 0;
 
   @media screen and (max-width: 1200px) {
-    width: 400px;
+    width: 80%;
+    margin: 48px;
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 32px;
+    margin-bottom: 0;
   }
 `
 const Heading1 = styled.div`
@@ -61,34 +92,83 @@ const Heading1 = styled.div`
   font-weight: 700;
   font-size: 30px;
   line-height: 1.1;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 24px;
+    font-size: 22.5px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
 `
 const StyleHeading1 = styled(Heading1)`
   padding-left: 24px;
   border-left: 24px solid #7680dd;
   margin-bottom: 48px;
+  @media screen and (max-width: 1024px) {
+    padding-left: 18px;
+    border-width: 18px;
+    margin-bottom: 36px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 12px;
+    border-width: 12px;
+    margin-bottom: 24px;
+  }
 `
 const Heading2 = styled.div`
   margin-bottom: 24px;
   font-weight: 600;
   font-size: 22.5px;
   line-height: 1.5;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 18px;
+    font-size: 16.875px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 12px;
+    font-size: 11.25px;
+  }
 `
 const ValueHeading2 = styled(Heading2)`
   margin-bottom: 16px;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 8px;
+  }
 `
 const StyledHeading2 = styled(Heading2)`
   padding-left: 16px;
   border-left: 20px solid #7680dd;
+  @media screen and (max-width: 1024px) {
+    padding-left: 12px;
+    border-width: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 8px;
+    border-width: 10px;
+  }
 `
 const Paragraph1 = styled.div`
   font-weight: 400;
   font-size: 19.5px;
   line-height: 1.5;
+  @media screen and (max-width: 1024px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 const Paragraph2 = styled.div`
   font-weight: 400%;
   font-size: 13.5px;
   line-height: 1.6;
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
 `
 const Card = styled.div`
   width: 48%;
@@ -101,6 +181,14 @@ const Card = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+    padding: 24px;
+    border-radius: 18px;
+    margin-bottom: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 16px;
+    border-radius: 12px;
+    padding-top: 16px;
   }
 `
 const ValueItem = styled.div`
@@ -112,12 +200,26 @@ const ValueItem = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+    margin-bottom: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
   }
 `
 const Icon = styled.img`
   margin-right: 24px;
   width: 96px;
   height: 96px;
+  @media screen and (max-width: 1024px) {
+    margin-right: 18px;
+    width: 72px;
+    height: 72px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-right: 12px;
+    width: 48px;
+    height: 48px;
+  }
 `
 const ValueContent = styled.div``
 
