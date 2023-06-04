@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 
 interface SideBarItemProps {
