@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import moment from 'moment'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/Header1'
 
 import hrQRCodeUrl from '@/assets/hr-qr-code.jpg'
 import logoUrl from '@/assets/logo.svg'
@@ -13,6 +13,12 @@ const ViewWrapper = styled.div`
   min-height: 100vh;
   padding-top: 84px;
   background: #fafafa;
+  @media screen and (max-width: 1024px) {
+    padding-top: 69px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 53px;
+  }
 `
 const ViewContainer = styled.div`
   display: flex;
@@ -21,18 +27,36 @@ const ViewContainer = styled.div`
   margin-inline: auto;
   padding-block: 48px;
   padding-inline: 48px;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `
 const LeftSidebarContainer = styled.aside`
   display: block;
   width: 250px;
   margin-right: 48px;
+  @media screen and (max-width: 1024px) {
+    order: 2;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
 `
 const MainContainer = styled.main`
   flex-grow: 1;
+  @media screen and (max-width: 1024px) {
+    order: 3;
+  }
 `
 const RightSidebarContainer = styled.aside`
   width: 200px;
   margin-left: 48px;
+  @media screen and (max-width: 1024px) {
+    order: 1;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
 `
 const Filters = styled.section`
   position: sticky;
@@ -114,7 +138,7 @@ const JDList = styled.section`
 const JDCard = styled.div`
   display: flex;
   min-height: 200px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   padding: 20px;
   background: #fff;
   border: 1px solid rgba(20, 20, 20, 0.05);
@@ -123,11 +147,28 @@ const JDCard = styled.div`
   :last-child {
     margin-bottom: 0;
   }
+  @media screen and (max-width: 1024px) {
+    padding: 15px;
+    border-radius: 6px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 24px;
+    padding: 10px;
+    border-radius: 4px;
+  }
 `
 const Logo = styled.img`
   height: min-content;
   width: 60px;
   margin-right: 24px;
+  @media screen and (max-width: 1024px) {
+    width: 45px;
+    margin-right: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 30px;
+    margin-right: 12px;
+  }
 `
 const ContentContainer = styled.div`
   flex-grow: 1;
@@ -137,20 +178,44 @@ const Text5 = styled.p`
   font-size: 15px;
   font-weight: 600;
   color: #7767a0;
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+  }
 `
 const H3 = styled.h3`
   font-size: 22.5px;
   font-weight: 600;
   margin-bottom: 12px;
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+    margin-bottom: 9px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
 `
 const TagContainer = styled.div`
   display: flex;
   margin-bottom: 12px;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 9px;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 6px;
+  }
 `
 const Placeholder = styled.div`
   font-size: 15px;
   font-weight: 400;
   padding-right: 24px;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 interface TagProps {
   icon: string
@@ -172,10 +237,27 @@ const Tag = styled.div<TagProps>`
     background-image: url(${props => props.icon});
     background-size: cover;
   }
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+    ::before {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    ::before {
+      width: 14px;
+      height: 14px;
+    }
+  }
 `
 const P = styled.li`
   font-size: 13.5px;
   font-weight: 400;
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
 `
 const SP = styled(P)`
   color: #7680dd;
