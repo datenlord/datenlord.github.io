@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
   ol, ul {
     margin-block: 0;
-    padding-inline-start: 16px;
+    padding-inline-start: 0px;
   }
 
   a {
@@ -43,6 +43,10 @@ const GlobalStyle = createGlobalStyle`
 
     @media screen and (max-width: 768px) {
       font-size: 40px;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 30px;
     }
   }
 
