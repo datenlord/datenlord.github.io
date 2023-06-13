@@ -140,10 +140,10 @@ const HeaderContainer = styled.div`
   padding-inline: 72px;
   @media screen and (max-width: 1024px) {
     padding-inline: 64px;
-    background: #111429;
   }
   @media screen and (max-width: 768px) {
     padding-inline: 20px;
+    background: #111429;
   }
 `
 const Logo = styled.img`
@@ -184,7 +184,7 @@ export const Header: React.FC<{
     <HeaderWrapper headerTheme={theme} bg={bg}>
       <HeaderContainer>
         <Logo src={logoUrl} alt="DatenLord" onClick={() => navigate('/')} />
-        {theme !== 'dark' || window.innerWidth < 1024 ? (
+        {theme !== 'dark' || window.innerWidth < 768 ? (
           <LogoText src={logoTextLightUrl} />
         ) : (
           <LogoText src={logoTextDarkUrl} />
