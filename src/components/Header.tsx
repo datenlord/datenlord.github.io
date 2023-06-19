@@ -9,7 +9,8 @@ import logoLightUrl from '@/assets/logo-light.svg'
 import type { NavItem } from '@/components/PCNav'
 
 const HeaderWrapper = styled.header`
-  position: fixed;
+  z-index: 10;
+  position: relative;
   top: 0;
   left: 0;
   height: 0.72rem;
@@ -17,7 +18,7 @@ const HeaderWrapper = styled.header`
   background-color: transparent;
   color: #fff;
   // - - -
-  background-color: ${props => props.theme.themeDark};
+  /* background-color: ${props => props.theme.themeDark}; */
 `
 const HeaderContainer = styled.div`
   display: flex;
@@ -46,7 +47,7 @@ export const Header: React.FC<{ items: NavItem[] }> = ({ items }) => {
         <Logo src={logoLightUrl} alt="达坦科技" onClick={() => navigate('/')} />
         <Placeholder />
         <PCNav items={items} />
-        <MobNav items={items} />
+        {/* <MobNav items={items} /> */}
       </HeaderContainer>
     </HeaderWrapper>
   )
