@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Typography } from '@/components/Text'
+import { Typography } from '@/components/Typography'
 import { Button } from '@/components/Button'
 
 import type { CarouseData } from '../Home'

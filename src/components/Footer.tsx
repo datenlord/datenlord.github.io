@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Typography } from './Text'
+import { Typography } from './Typography'
 import { nav } from '@/configs/nav'
 
 import logoUrl from '@/assets/logo-light.svg'

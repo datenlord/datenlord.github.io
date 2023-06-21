@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import type { NavigateFunction } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { Typography } from '@/components/Text'
+import { Typography } from '@/components/Typography'
 
 const { Paragraph } = Typography
 const { CNBodyMedium } = Paragraph
