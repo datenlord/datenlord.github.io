@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 import { Carousel } from '@/components/Carousel/Carousel'
-import { ProductSection } from './components/ProductSection'
-import { LearnSection } from './components/LearnSection'
-import { UseSection } from './components/UseSection'
-import { ExploreSection } from './components/ExploreSection'
+import { ProductSection } from './ProductSection'
+import { LearnSection } from './LearnSection'
+import { UseSection } from './UseSection'
+import { ExploreSection } from './ExploreSection'
 
 import { Typography } from '@/components/Typography'
 import { Button } from '@/components/Button'

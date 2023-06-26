@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Slider from 'react-slick'
 import type { Settings } from 'react-slick'
 
-import { CarouselView } from '@/pages/Home/components/CarouselView'
+import { CarouselView } from '@/pages/Home/CarouselView'
 
 import type { CarouseData } from '@/pages/Home/Home'
 

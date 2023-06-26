@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Typography } from '@/components/Typography'
 import { Button } from '@/components/Button'
 
-import type { CarouseData } from '../Home'
+import type { CarouseData } from './Home'
 
 import distributedStorageBgUrl from '@/assets/carousel/distributed-storage-bg.png'
 import dataAccessBgUrl from '@/assets/carousel/data-access-bg.png'
