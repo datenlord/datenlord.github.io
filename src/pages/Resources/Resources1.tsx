@@ -17,6 +17,7 @@ const PageWrapper = styled.div`
   z-index: -2;
   position: relative;
   background: #ededf6;
+  overflow: hidden;
 `
 const PageContainer = styled.div`
   max-width: 1440px;
