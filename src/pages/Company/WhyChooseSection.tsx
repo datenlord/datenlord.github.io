@@ -29,6 +29,7 @@ const Card = styled.div<{ bg: string }>`
   text-align: center;
   background: #00000015;
   background-image: url(${props => props.bg});
+  background-size: cover;
 `
 const CardTitle = styled(CNHead4)`
   padding-bottom: 0.51rem;
