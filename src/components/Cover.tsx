@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { Typography } from '@/components/Typography'
+import React from 'react'
 
 const { Heading } = Typography
 const { CNHead1, CNTitleLarge } = Heading
@@ -30,7 +31,7 @@ const SubTitle = styled(CNTitleLarge)`
 
 export const Cover: React.FC<{
   cover: string
-  children: string
+  children?: React.ReactNode
   subTitle?: string
 }> = ({ cover, children, subTitle }) => {
   return (
