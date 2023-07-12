@@ -14,7 +14,7 @@ const HeaderWrapper = styled.header`
   top: 0;
   left: 0;
   height: 0.72rem;
-  width: 100vw;
+  width: 100%;
   background-color: transparent;
   color: #fff;
   // - - -
@@ -46,8 +46,11 @@ export const Header: React.FC<{ items: NavItem[] }> = ({ items }) => {
       <HeaderContainer>
         <Logo src={logoLightUrl} alt="达坦科技" onClick={() => navigate('/')} />
         <Placeholder />
-        <PCNav items={items} />
-        {/* <MobNav items={items} /> */}
+        {window.innerWidth > 425 ? (
+          <PCNav items={items} />
+        ) : (
+          <MobNav items={items} />
+        )}
       </HeaderContainer>
     </HeaderWrapper>
   )

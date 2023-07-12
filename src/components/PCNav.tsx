@@ -22,14 +22,14 @@ const StyledNav = styled.ul`
     display: none;
   }
 `
-const StyledNavItem = styled.li<{ isDropdown: boolean }>`
+const StyledNavItem = styled.li<{ isdropdown: string }>`
   position: relative;
   display: flex;
   align-items: center;
   padding-inline: 0.24rem;
   color: #fff;
   border-bottom: ${props =>
-    props.isDropdown ? '0.04rem solid hsla(234, 60%, 66%, 1)' : 'none'};
+    props.isdropdown === 'true' ? '0.04rem solid hsla(234, 60%, 66%, 1)' : 'none'};
   transition: all 0.05s;
   cursor: pointer;
   /* @media screen and (max-width: 1024px) {
@@ -38,11 +38,11 @@ const StyledNavItem = styled.li<{ isDropdown: boolean }>`
     padding-inline: 16px;
   } */
 `
-const StyledSubNav = styled.ul<{ isDropdown: boolean }>`
+const StyledSubNav = styled.ul<{ isdropdown: string }>`
   position: absolute;
   top: 0.72rem;
   right: -0.6rem;
-  display: ${props => (props.isDropdown ? 'block' : 'none')};
+  display: ${props => (props.isdropdown === 'true' ? 'block' : 'none')};
   padding: 0.16rem 0.2rem;
   background: ${props => props.theme.themeDark};
   border-radius: 0.08rem;
@@ -83,12 +83,12 @@ const SubNavItem: React.FC<{
   )
 }
 
-const SubNav: React.FC<{ subNavItems?: NavItem[]; isDropdown: boolean }> = ({
+const SubNav: React.FC<{ subNavItems?: NavItem[]; isdropdown: string }> = ({
   subNavItems,
-  isDropdown,
+  isdropdown,
 }) => {
   return (
-    <StyledSubNav isDropdown={isDropdown}>
+    <StyledSubNav isdropdown={isdropdown}>
       {subNavItems?.map(({ key, label, url }) => (
         <SubNavItem key={key} label={label} url={url} />
       ))}
@@ -102,17 +102,17 @@ const NavItem: React.FC<{
   url?: string
 }> = ({ label, subNavItems, url }) => {
   const navigate = useNavigate()
-  const [dropdown, setDropdown] = useState<boolean>(false)
+  const [dropdown, setDropdown] = useState<string>('false')
   return (
     <StyledNavItem
-      isDropdown={dropdown}
-      onMouseOver={() => setDropdown(true)}
-      onMouseOut={() => setDropdown(false)}
+      isdropdown={dropdown}
+      onMouseOver={() => setDropdown('true')}
+      onMouseOut={() => setDropdown('false')}
       onClick={() => jumpPage(navigate, url)}
     >
       <CNBodyMedium>{label}</CNBodyMedium>
       {subNavItems && (
-        <SubNav subNavItems={subNavItems} isDropdown={dropdown} />
+        <SubNav subNavItems={subNavItems} isdropdown={dropdown} />
       )}
     </StyledNavItem>
   )
