@@ -5,7 +5,7 @@
         "@/*": [ "src/*" ]
     },
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "ES2015", "ES2017"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -23,6 +23,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "plugin"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
