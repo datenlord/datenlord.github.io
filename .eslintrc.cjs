@@ -23,5 +23,6 @@ module.exports = {
     'react/display-name': 0,
     '@typescript-eslint/no-unused-vars': 1,
     'react/jsx-key': 1,
+    '@typescript-eslint/ban-ts-comment': 0,
   },
 }
