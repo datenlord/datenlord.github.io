@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { NavigateFunction } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Typography } from '@/components/Typography'
+import { HeaderContext } from '@/components/Header'
 
 const { Paragraph } = Typography
 const { CNBodyMedium } = Paragraph
@@ -27,9 +28,11 @@ const StyledNavItem = styled.li<{ isdropdown: string }>`
   display: flex;
   align-items: center;
   padding-inline: 0.24rem;
-  color: #fff;
+  /* color: #fff; */
   border-bottom: ${props =>
-    props.isdropdown === 'true' ? '0.04rem solid hsla(234, 60%, 66%, 1)' : 'none'};
+    props.isdropdown === 'true'
+      ? '0.04rem solid hsla(234, 60%, 66%, 1)'
+      : 'none'};
   transition: all 0.05s;
   cursor: pointer;
   /* @media screen and (max-width: 1024px) {
@@ -103,6 +106,12 @@ const NavItem: React.FC<{
 }> = ({ label, subNavItems, url }) => {
   const navigate = useNavigate()
   const [dropdown, setDropdown] = useState<string>('false')
+  const { mode } = useContext(HeaderContext)
+
+  useEffect(() => {
+    setDropdown('false')
+  }, [mode])
+
   return (
     <StyledNavItem
       isdropdown={dropdown}
@@ -118,7 +127,9 @@ const NavItem: React.FC<{
   )
 }
 
-const Nav: React.FC<{ items: NavItem[] }> = ({ items }) => {
+const Nav: React.FC<{
+  items: NavItem[]
+}> = ({ items }) => {
   return (
     <StyledNav>
       {items.map(({ key, label, url, children }) => (
