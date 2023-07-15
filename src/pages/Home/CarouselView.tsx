@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 import { Typography } from '@/components/Typography'
 import { Button } from '@/components/Button'
@@ -18,7 +19,7 @@ const cardData = [
   {
     key: 'new-honors',
     label: '新闻/荣誉',
-    url: '',
+    url: '/news-honor-dynamic',
     content: {
       type: 'ul',
       children: [
@@ -38,7 +39,7 @@ const cardData = [
   {
     key: 'event-preview',
     label: '活动预告',
-    url: '',
+    url: '/events',
     content: {
       type: 'text',
       content: 'Virtual Meetings & Meetups 线上会议及分享的预告',
@@ -47,7 +48,7 @@ const cardData = [
   {
     key: 'highlight-review',
     label: '精彩回顾',
-    url: '',
+    url: '/highlights',
     content: {
       type: 'text',
       content: '简要描述简要描述简要描述简要描述简要描述简要描述...',
@@ -59,29 +60,28 @@ const { Heading, Paragraph } = Typography
 const { CNHead1 } = Heading
 const { CNBodyLarge } = Paragraph
 
+const getBackgroundImage = (bg: string) => {
+  switch (bg) {
+    case 'distributed-storage':
+      return distributedStorageBgUrl
+    case 'data-access':
+      return dataAccessBgUrl
+    case 'metadata-management':
+      return metadataManagementBgUrl
+    case 'hardware-acceleration':
+      return hardwareAccelerationBgUrl
+    case 'open-source':
+      return openSourceBgUrl
+    default:
+      return distributedStorageBgUrl
+  }
+}
+
 const Wrapper = styled.div<{ bg: string }>`
   color: #fff;
-  background-image: url(
-    ${({bg}) => {
-      switch (bg) {
-        case 'distributed-storage':
-          return distributedStorageBgUrl
-        case 'data-access':
-          return dataAccessBgUrl
-        case 'metadata-management':
-          return metadataManagementBgUrl
-        case 'hardware-acceleration':
-          return hardwareAccelerationBgUrl
-        case 'open-source':
-          return openSourceBgUrl
-        default:
-          return distributedStorageBgUrl
-      }
-    }}
-  );
   background-size: cover;
-
   padding-top: 0.72rem;
+  background-image: url(${({ bg }) => getBackgroundImage(bg)});
 `
 const Container = styled.div`
   display: flex;
@@ -159,15 +159,22 @@ const Text = styled.p`
 // const DecorationRight = styled(Decoration)``
 
 const Card: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <SCard>
-      {cardData.map(({ key, label, content }) => (
+      {cardData.map(({ key, label, content, url }) => (
         <SectionWrapper key={key}>
           <Section>
             <TopContainer>
               <Title>{label}</Title>
               <FoxIcon src={foxIconUrl} />
-              <More>更多</More>
+              <More
+                onClick={() => {
+                  navigate(url)
+                }}
+              >
+                更多
+              </More>
               <ArrowIcon src={rightArrowUrl} />
             </TopContainer>
             {content.type === 'ul' ? (
@@ -189,7 +196,7 @@ const Card: React.FC = () => {
 export const CarouselView: React.FC<{ items: CarouseData }> = ({ items }) => {
   const { key, title, description } = items
   return (
-    <Wrapper bg={key}>
+    <Wrapper id='aaa' bg={key}>
       <Container>
         <CNHead1 style={{ marginBottom: '0.32rem' }}>{title}</CNHead1>
         <CNBodyLarge
