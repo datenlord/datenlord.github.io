@@ -107,18 +107,16 @@ export default () => {
     getEvents()
   }, [])
 
-  useEffect(() => {
-    console.log(blogs)
-  }, [blogs])
+  // useEffect(() => {
+  //   console.log(blogs)
+  // }, [blogs])
 
   return (
     <>
       <Cover cover={blogCoverUrl}>技术博客</Cover>
       <MainWrapper>
         <MainContainer>
-          {blogs.map(({ metadata, assetURLs }) => {
-            console.log(metadata)
-            console.log(assetURLs)
+          {blogs.reverse().map(({ metadata }) => {
             const {
               date,
               title,
