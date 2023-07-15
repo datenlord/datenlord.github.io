@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import moment from 'moment'
 import 'moment/locale/zh-cn'
@@ -111,8 +110,9 @@ import clockIconUrl from '@/assets/job-description/clock.svg'
 import calendarIconUrl from '@/assets/job-description/calendar.svg'
 
 const { Heading, Paragraph } = Typography
-const { CNTitleMedium, CNTitleSmall } = Heading
-const { CNBodySmall, CNMarkSmall, CNBodyLarge, CNMarkMedium } = Paragraph
+const { CNTitleSmall, CNHead5S, CNTitleLarge } = Heading
+const { CNBodySmall, CNMarkSmall, CNBodyLarge, CNMarkMedium, CNBodyMedium } =
+  Paragraph
 
 const ViewWrapper = styled.div`
   background: #fafafa;
@@ -122,20 +122,9 @@ const ViewContainer = styled.div`
   max-width: 1440px;
   margin-inline: auto;
   padding-block: 0.87rem;
-  padding-inline: 1.28rem;
+  padding-inline: 1.64rem;
   @media screen and (max-width: 1024px) {
     flex-direction: column;
-  }
-`
-const LeftSidebarContainer = styled.aside`
-  display: block;
-  width: 250px;
-  margin-right: 0.48rem;
-  @media screen and (max-width: 1024px) {
-    order: 2;
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 0.32rem;
   }
 `
 const MainContainer = styled.main`
@@ -145,7 +134,7 @@ const MainContainer = styled.main`
   }
 `
 const RightSidebarContainer = styled.aside`
-  width: 200px;
+  width: 250px;
   margin-left: 0.48rem;
   @media screen and (max-width: 1024px) {
     order: 1;
@@ -153,16 +142,6 @@ const RightSidebarContainer = styled.aside`
     margin-left: 0;
     margin-bottom: 0.32rem;
   }
-`
-const Filters = styled.section`
-  position: sticky;
-  top: calc(0.84rem + 0.48rem);
-  left: 0;
-  padding: 0.22rem;
-  color: #141414;
-  background: #fff;
-  border-radius: 0.07rem;
-  box-shadow: 0 0.01rem 0.02rem 0 rgba(0, 0, 0, 0.03);
 `
 const DescriptionCard = styled.section`
   padding: 0.16rem;
@@ -228,13 +207,8 @@ const Img = styled.img`
   width: 120px;
   margin-inline: auto;
 `
-const FiltersTitle = styled(CNTitleMedium)`
-  padding-bottom: 0.14rem;
-`
-const FiltersClass = styled(CNTitleMedium)`
-  margin-bottom: 0.11rem;
-`
 const JDList = styled.section`
+  padding-bottom: 0.96rem;
   min-height: 200px;
   color: rgba(20, 20, 20, 0.7);
 `
@@ -250,10 +224,22 @@ const JDCard = styled.div`
     margin-bottom: 0;
   }
 `
+const RelatedCard = styled(JDCard)`
+  flex-direction: column;
+`
+const RelatedTop = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.24rem;
+`
 const Logo = styled.img`
   height: min-content;
   width: 0.625rem;
   margin-right: 0.22rem;
+`
+const RelatedLogo = styled.img`
+  display: block;
+  width: 0.48rem;
 `
 const ContentContainer = styled.div`
   flex-grow: 1;
@@ -265,6 +251,10 @@ const CardTags = styled(CNMarkSmall)`
 const CardTitle = styled(CNBodyLarge)`
   margin-bottom: 0.07rem;
   color: #141414;
+`
+const RelatedCardTitle = styled(CNTitleLarge)`
+  padding-bottom: 0.08rem;
+  color: ${props => props.theme.gray007};
 `
 const TagContainer = styled.div`
   display: flex;
@@ -302,44 +292,43 @@ const Tag = styled(CNBodySmall)<TagProps>`
 `
 const ContentSection = styled.div`
   padding-bottom: 0.24rem;
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 `
 const ContentList = styled.ol`
   padding-left: 0.24rem;
 `
 const ContentItem = styled(CNBodySmall)``
+const RelatedItem = styled(CNBodyMedium)``
 const ContentTitle = styled(CNBodySmall)`
   color: #7680dd;
 `
-// const Button = styled.button`
-//   padding: 6px 12px;
-//   color: #d9dbef;
-//   font-size: 12px;
-//   font-weight: 600;
-//   line-height: 1;
-//   background: #7680dd;
-//   border: none;
-//   border-radius: 4px;
-// `
+const RelatedSubTitle = styled(CNBodyMedium)``
+const Button = styled.button`
+  padding-inline: 0.18rem;
+  color: ${props => props.theme.gray007};
+  font-size: 0.14rem;
+  font-weight: 600;
+  line-height: 1;
+  background: ${props => props.theme.white00};
+  border: 0.01rem solid #dae0e6;
+  border-radius: 0.06rem;
+`
 const Container = styled.div`
   width: 96%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `
-const CheckboxContainer = styled(CNBodySmall)`
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.07rem;
-  color: #393f47;
-`
-const Checkbox = styled.input`
-  margin: 0;
-  margin-right: 0.07rem;
-  height: 0.145rem;
-  width: 0.145rem;
-  &:checked {
-    accent-color: ${props => props.theme.secondary01};
-  }
+const RelatedSection = styled.div``
+const RelatedTitle = styled(CNHead5S)``
+const RelatedContent = styled.div`
+  padding-top: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 0.26rem;
 `
 
 const workTypeMap = new Map([
@@ -514,55 +503,13 @@ const JDdata: JDdataProps = [
 ]
 
 export default () => {
-  const navigate = useNavigate()
-  const [data, setData] = useState(JDdata)
-  const [selected, setSelected] = useState({
-    fullTime: true,
-    internship: true,
-  })
-
-  useEffect(() => {
-    setData(JDdata.filter(item => selected[item.workType] === true))
-  }, [selected])
-
+  const { key } = useParams()
   return (
     <ViewWrapper>
       <ViewContainer>
-        <LeftSidebarContainer>
-          <Filters>
-            <FiltersTitle>筛选</FiltersTitle>
-            <FiltersClass>工作类型</FiltersClass>
-            <CheckboxContainer as={'div'}>
-              <Checkbox
-                type="checkbox"
-                id="full-time"
-                checked={selected['fullTime']}
-                onChange={() => {
-                  const _selected = { ...selected }
-                  _selected['fullTime'] = !_selected['fullTime']
-                  setSelected(_selected)
-                }}
-              />
-              <label htmlFor="full-time">全职</label>
-            </CheckboxContainer>
-            <CheckboxContainer as={'div'}>
-              <Checkbox
-                type="checkbox"
-                id="internship"
-                checked={selected['internship']}
-                onChange={() => {
-                  const _selected = { ...selected }
-                  _selected['internship'] = !_selected['internship']
-                  setSelected(_selected)
-                }}
-              />
-              <label htmlFor="internship">兼职</label>
-            </CheckboxContainer>
-          </Filters>
-        </LeftSidebarContainer>
         <MainContainer>
           <JDList>
-            {data.map(props => {
+            {JDdata.map(props => {
               const {
                 id,
                 label,
@@ -572,44 +519,90 @@ export default () => {
                 releaseTime,
                 content,
               } = props
-              return (
-                <JDCard key={id} onClick={() => {
-                  navigate(id.split(' ').join('-'))
-                }}>
-                  <Logo src={logoUrl} />
-                  <ContentContainer>
-                    <CardTags>{tag.join(', ')}</CardTags>
-                    <Container>
-                      <CardTitle>{label}</CardTitle>
-                      {/* <Button>New Post</Button> */}
-                    </Container>
-                    <TagContainer>
-                      <Tag icon={locationIconUrl}>{workNature}</Tag>
-                      <Placeholder>·</Placeholder>
-                      <Tag icon={clockIconUrl}>{workTypeMap.get(workType)}</Tag>
-                      <Placeholder>·</Placeholder>
-                      <Placeholder>·</Placeholder>
-                      <Tag icon={calendarIconUrl}>
-                        {moment(releaseTime, 'YYYY-MM-DD').fromNow()}
-                      </Tag>
-                    </TagContainer>
-                    {content.map(({ title, body }) => (
-                      <ContentSection key={title}>
-                        <ContentTitle as={'p'}>{title}</ContentTitle>
-                        <ContentList>
-                          {body.map(item => (
-                            <ContentItem as={'li'} key={item}>
-                              {item}
-                            </ContentItem>
-                          ))}
-                        </ContentList>
-                      </ContentSection>
-                    ))}
-                  </ContentContainer>
-                </JDCard>
-              )
+              if (key === id) {
+                return (
+                  <JDCard key={id}>
+                    <Logo src={logoUrl} />
+                    <ContentContainer>
+                      <CardTags>{tag.join(', ')}</CardTags>
+                      <Container>
+                        <CardTitle>{label}</CardTitle>
+                      </Container>
+                      <TagContainer>
+                        <Tag icon={locationIconUrl}>{workNature}</Tag>
+                        <Placeholder>·</Placeholder>
+                        <Tag icon={clockIconUrl}>
+                          {workTypeMap.get(workType)}
+                        </Tag>
+                        <Placeholder>·</Placeholder>
+                        <Placeholder>·</Placeholder>
+                        <Tag icon={calendarIconUrl}>
+                          {moment(releaseTime, 'YYYY-MM-DD').fromNow()}
+                        </Tag>
+                      </TagContainer>
+                      {content.map(({ title, body }) => (
+                        <ContentSection key={title}>
+                          <ContentTitle as={'p'}>{title}</ContentTitle>
+                          <ContentList>
+                            {body.map(item => (
+                              <ContentItem as={'li'} key={item}>
+                                {item}
+                              </ContentItem>
+                            ))}
+                          </ContentList>
+                        </ContentSection>
+                      ))}
+                    </ContentContainer>
+                  </JDCard>
+                )
+              } else {
+                return null
+              }
             })}
           </JDList>
+          <RelatedSection>
+            <RelatedTitle>相关岗位</RelatedTitle>
+            <RelatedContent>
+              {JDdata.map((props, index) => {
+                const { id, label, content } = props
+                if (index < 2) {
+                  return (
+                    <RelatedCard key={id}>
+                      <RelatedTop>
+                        <RelatedLogo src={logoUrl} />
+                        <Button>岗位详情</Button>
+                      </RelatedTop>
+                      <ContentContainer>
+                        <Container>
+                          <RelatedCardTitle>{label}</RelatedCardTitle>
+                        </Container>
+                        {content.map(({ title, body }, index) => {
+                          if (index === 0) {
+                            return (
+                              <ContentSection key={title}>
+                                <RelatedSubTitle as={'p'}>
+                                  {title}
+                                </RelatedSubTitle>
+                                <ContentList>
+                                  {body.map(item => (
+                                    <RelatedItem as={'li'} key={item}>
+                                      {item}
+                                    </RelatedItem>
+                                  ))}
+                                </ContentList>
+                              </ContentSection>
+                            )
+                          }
+                        })}
+                      </ContentContainer>
+                    </RelatedCard>
+                  )
+                } else {
+                  return null
+                }
+              })}
+            </RelatedContent>
+          </RelatedSection>
         </MainContainer>
         <RightSidebarContainer>
           <DescriptionCard>
