@@ -1,3 +1,4 @@
+import { createContext, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -8,15 +9,17 @@ import logoLightUrl from '@/assets/logo-light.svg'
 
 import type { NavItem } from '@/components/PCNav'
 
-const HeaderWrapper = styled.header`
-  z-index: 10;
-  position: relative;
-  top: 0;
+const HeaderWrapper = styled.header<HeaderContextProps>`
+  z-index: 1000;
+  position: ${props => (props.mode === 'fixed' ? 'fixed' : 'sticky')};
+  top: ${props => (props.mode === 'fixed' ? '0' : '-0.72rem')};
   left: 0;
   height: 0.72rem;
   width: 100%;
-  background-color: transparent;
-  color: #fff;
+  background-color: ${props =>
+    props.color === 'transparent' ? 'transparent' : props.theme.themeDark};
+  color: ${props => props.theme.white00};
+  transition: all 0.3s;
   // - - -
   /* background-color: ${props => props.theme.themeDark}; */
 `
@@ -38,20 +41,39 @@ const Placeholder = styled.div`
   min-width: 32px;
 `
 
-export const Header: React.FC<{ items: NavItem[] }> = ({ items }) => {
-  const navigate = useNavigate()
+interface HeaderContextProps {
+  color: 'dark' | 'light' | 'transparent'
+  mode: 'default' | 'fixed'
+}
 
+export const HeaderContext = createContext<HeaderContextProps>({
+  color: 'dark',
+  mode: 'default',
+})
+
+export const Header: React.FC<{
+  items: NavItem[]
+  color?: 'dark' | 'light' | 'transparent'
+  mode?: 'default' | 'fixed'
+}> = ({ items, color = 'dark', mode = 'default' }) => {
+  const navigate = useNavigate()
   return (
-    <HeaderWrapper>
-      <HeaderContainer>
-        <Logo src={logoLightUrl} alt="达坦科技" onClick={() => navigate('/')} />
-        <Placeholder />
-        {window.innerWidth > 425 ? (
-          <PCNav items={items} />
-        ) : (
-          <MobNav items={items} />
-        )}
-      </HeaderContainer>
-    </HeaderWrapper>
+    <HeaderContext.Provider value={{ color, mode }}>
+      <HeaderWrapper color={color} mode={mode}>
+        <HeaderContainer>
+          <Logo
+            src={logoLightUrl}
+            alt="达坦科技"
+            onClick={() => navigate('/')}
+          />
+          <Placeholder />
+          {window.innerWidth > 425 ? (
+            <PCNav items={items} />
+          ) : (
+            <MobNav items={items} />
+          )}
+        </HeaderContainer>
+      </HeaderWrapper>
+    </HeaderContext.Provider>
   )
 }
