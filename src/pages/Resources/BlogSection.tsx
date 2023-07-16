@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 import { Typography } from '@/components/Typography'
 
@@ -102,6 +103,7 @@ const items = [
 ]
 
 export const BlogSection: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <SectionWrapper id='blog'>
       <SectionContainer>
@@ -117,7 +119,7 @@ export const BlogSection: React.FC = () => {
               </BlogItem>
             ))}
           </ContentContainer>
-          <Button>了解更多</Button>
+          <Button onClick={() => navigate('/blogs')}>了解更多</Button>
         </MainContainer>
       </SectionContainer>
     </SectionWrapper>

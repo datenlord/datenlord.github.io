@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 import { Typography } from '@/components/Typography'
+import { Button } from '@/components/Button'
 
 import rightArrowUrl from '@/assets/resources/right-arrow.svg'
 import dynamicsTestImageUrl from '@/assets/resources/dynamics-test-image.png'
@@ -91,6 +93,12 @@ const LinkIcon = styled.img`
   width: 0.12rem;
   height: 0.12rem;
 `
+const SectionButton = styled(Button)`
+  margin-top: 0.64rem;
+  display: block;
+  margin-inline: auto;
+  color: #fff;
+`
 
 const items = [
   {
@@ -126,6 +134,7 @@ const items = [
 ]
 
 export const DynamicsSection: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <SectionWrapper id="dynamics">
       <SectionContainer>
@@ -159,6 +168,9 @@ export const DynamicsSection: React.FC = () => {
             ),
           )}
         </CardContainer>
+        <SectionButton onClick={() => navigate('/events')}>
+          了解更多
+        </SectionButton>
       </SectionContainer>
     </SectionWrapper>
   )
