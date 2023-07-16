@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 import { Carousel } from '@/components/Carousel/Carousel'
 import { ProductSection } from './ProductSection'
@@ -8,9 +9,11 @@ import { ExploreSection } from './ExploreSection'
 
 import { Typography } from '@/components/Typography'
 import { Button } from '@/components/Button'
+import { useEffect } from 'react'
 
-const { Heading } = Typography
+const { Heading, Paragraph } = Typography
 const { Heading6 } = Heading
+const { CNBodyMedium } = Paragraph
 
 export interface CarouseData {
   key: string
@@ -75,21 +78,46 @@ const SectionContainer = styled.div`
 const Content = styled(Heading6)`
   width: 50%;
 `
+const OutlineButtonWrapper = styled.div`
+  margin-right: 0.18rem;
+  padding: 0.01rem;
+  border-radius: 50vh;
+  background: linear-gradient(90deg, #767ee5, #9966cc);
+`
+const OutlineButton = styled(CNBodyMedium)`
+  padding: 0.12rem 0.34rem;
+  border-radius: 50vh;
+  background: ${props => props.theme.secondary02};
+  color: ${props => props.theme.themeDark};
+`
+const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 const LinkSection: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <SectionWrapper>
       <SectionContainer>
         <Content>
           通过软硬件深度融合的方式，满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。
         </Content>
-        <Button style={{ color: '#fff', height: '0.52rem' }}>联系我们</Button>
+        <ButtonContainer>
+          <OutlineButtonWrapper>
+            <OutlineButton>立即体验</OutlineButton>
+          </OutlineButtonWrapper>
+          <Button style={{ color: '#fff', height: '0.52rem' }} onClick={() => navigate('company2/contact-us')}>联系我们</Button>
+        </ButtonContainer>
       </SectionContainer>
     </SectionWrapper>
   )
 }
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <PageContainer>
       <Carousel items={carouselData} />

@@ -158,6 +158,14 @@ const Text = styled.p`
 // const DecorationLeft = styled(Decoration)``
 // const DecorationRight = styled(Decoration)``
 
+const routerMap = new Map([
+  ['distributed-storage', 'company1'],
+  ['data-access', '/solutions/data-access'],
+  ['metadata-management', '/solutions/metadata-management'],
+  ['hardware-acceleration', '/solutions'],
+  ['open-source', '/resources1'],
+])
+
 const Card: React.FC = () => {
   const navigate = useNavigate()
   return (
@@ -194,9 +202,10 @@ const Card: React.FC = () => {
 }
 
 export const CarouselView: React.FC<{ items: CarouseData }> = ({ items }) => {
+  const navigate = useNavigate()
   const { key, title, description } = items
   return (
-    <Wrapper id='aaa' bg={key}>
+    <Wrapper bg={key}>
       <Container>
         <CNHead1 style={{ marginBottom: '0.32rem' }}>{title}</CNHead1>
         <CNBodyLarge
@@ -208,7 +217,15 @@ export const CarouselView: React.FC<{ items: CarouseData }> = ({ items }) => {
         >
           {description}
         </CNBodyLarge>
-        <Button style={{ marginBottom: '1.49rem' }}>了解更多</Button>
+        <Button
+          style={{ marginBottom: '1.49rem' }}
+          onClick={() => {
+            // @ts-ignore
+            navigate(routerMap.get(key))
+          }}
+        >
+          了解更多
+        </Button>
         <Card />
       </Container>
     </Wrapper>

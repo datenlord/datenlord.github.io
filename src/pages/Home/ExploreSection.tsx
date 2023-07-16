@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 import { Typography } from '@/components/Typography'
 
@@ -15,17 +16,20 @@ const data: Data[] = [
     key: 'first',
     content:
       '我们致力于探索前沿科技，拥抱创新与改变，并做持续的技术分享与思考。',
+    url: '/tech-talk',
   },
   {
     key: 'second',
     content:
       '我们一直深耕科学前沿技术的研究和软硬件融合创新的实践，并对外持续输出我们的创新观察。',
+    url: '/blogs'
   },
 ]
 
 interface Data {
   key: React.Key
   content: string
+  url: string
 }
 
 const SectionWrapper = styled.section`
@@ -87,7 +91,11 @@ const ArrowIcon = styled.img`
 `
 
 const Card: React.FC<{ item: Data }> = ({ item }) => {
+  const navigate = useNavigate()
   const [isHover, setIsHover] = useState<boolean>(false)
+  const pageJump = (url: string) => {
+    navigate(url)
+  }
   return (
     <SCard
       onMouseEnter={() => setIsHover(true)}
@@ -95,11 +103,11 @@ const Card: React.FC<{ item: Data }> = ({ item }) => {
     >
       <Content>{item.content}</Content>
       {isHover ? (
-        <ButtonHover>
+        <ButtonHover onClick={() => pageJump(item.url)}>
           <ArrowIcon src={ArrowWhiteUrl} />
         </ButtonHover>
       ) : (
-        <Button>
+        <Button onClick={() => pageJump(item.url)}>
           <ArrowIcon src={ArrowBlackUrl} />
         </Button>
       )}

@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 import { Typography } from '@/components/Typography'
 import { Button } from '@/components/Button'
@@ -274,11 +275,12 @@ const FakeNaveDotActive = styled.div`
 `
 
 export const ProductSection: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <Wrapper>
       <Container>
         <Title>开源产品</Title>
-        <DatenLordCardWrapper id='datenlord'>
+        <DatenLordCardWrapper id="datenlord">
           <DatenLordCard>
             <DatenLordLogo src={datenlordLogoUrl} />
             <DatenLordTitle>DatenLord</DatenLordTitle>
@@ -292,7 +294,13 @@ export const ProductSection: React.FC = () => {
               面向对象存储接口等，用户可以根据需求选择适合自己的方式。DatenLord
               使用了软硬件融合的方式，充分发挥软硬件的性能潜力，实现了极致的数据传输和读写性能。
             </DatenLordDescription>
-            <Button style={{ width: 'max-content', color: '#fff' }}>
+            <Button
+              style={{ width: 'max-content', color: '#fff' }}
+              onClick={() =>
+                (window.location.href =
+                  'https://github.com/datenlord/datenlord')
+              }
+            >
               了解更多
             </Button>
           </DatenLordCard>
@@ -305,7 +313,7 @@ export const ProductSection: React.FC = () => {
             <Dot2 />
           </DecorationContainer>
         </DatenLordCardWrapper>
-        <XlineCardWrapper id='xline'>
+        <XlineCardWrapper id="xline">
           <XlineCard>
             <XlineLogo src={xlineLogoUrl} />
             <XlineContent>
@@ -314,7 +322,13 @@ export const ProductSection: React.FC = () => {
                 保证数据在跨数据中心 跨云访问时的一致性
                 方便业务系统实现多地多中心多活部署
               </XlineDescription>
-              <Button style={{ width: 'max-content', color: '#fff' }}>
+              <Button
+                style={{ width: 'max-content', color: '#fff' }}
+                onClick={() =>
+                  (window.location.href =
+                    'https://github.com/datenlord/xline-home')
+                }
+              >
                 了解更多
               </Button>
             </XlineContent>
@@ -335,7 +349,7 @@ export const ProductSection: React.FC = () => {
             <Cone2 src={coneUrl} />
           </DecorationContainer>
         </XlineCardWrapper>
-        <RDMACardWrapper id='rdma'>
+        <RDMACardWrapper id="rdma">
           <RDMACard>
             <RDMATitle>RDMA</RDMATitle>
             <RDMADescription>
@@ -355,7 +369,12 @@ export const ProductSection: React.FC = () => {
                 是一套验证RDMA协议的软件框架，方便测试RDMA硬件的正确性，即是否符合RoCEv2协议的要求。
               </RDMAContent>
             </RDMAList>
-            <Button style={{ width: 'max-content', color: '#fff' }}>
+            <Button
+              style={{ width: 'max-content', color: '#fff' }}
+              onClick={() => {
+                navigate('/rdma')
+              }}
+            >
               了解更多
             </Button>
           </RDMACard>
