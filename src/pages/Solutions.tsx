@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Cover } from '@/components/Cover'
@@ -148,6 +148,7 @@ const Card: React.FC<{ items: CardData }> = ({ items }) => {
 }
 
 export default () => {
+  const navigate = useNavigate()
   const { sectionId } = useParams()
   useEffect(() => {
     const sectionEl = document.querySelector(`#${sectionId}`)
@@ -169,7 +170,10 @@ export default () => {
             · Related Resources ·
           </RelatedResourcesTitleEN>
           <RelatedResourcesTitleZH>相关资源</RelatedResourcesTitleZH>
-          <Button style={{ background: '#FDCB6E', color: '#fff' }}>
+          <Button
+            style={{ background: '#FDCB6E', color: '#fff' }}
+            onClick={() => navigate('/resources2')}
+          >
             查看资源合集
           </Button>
         </RelatedResources>
