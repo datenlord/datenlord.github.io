@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Cover } from '@/components/Cover'
@@ -40,11 +41,16 @@ const CloudBg = styled.img`
 `
 
 export default () => {
+  const { sectionId } = useParams()
+  useEffect(() => {
+    const sectionEl = document.querySelector(`#${sectionId}`)
+    sectionEl?.scrollIntoView()
+  }, [sectionId])
   return (
     <React.Fragment>
       <Cover cover={coverUrl}>资源</Cover>
       <PageWrapper>
-        <PageContainer>
+        <PageContainer id="community">
           <PageTitle>社区</PageTitle>
           <OpenSourceCommunity />
           <LearnCommunitySection />

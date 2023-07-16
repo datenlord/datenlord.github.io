@@ -1,5 +1,5 @@
-import { createContext, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { createContext } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { PCNav } from '@/components/PCNav'
@@ -44,12 +44,25 @@ const Placeholder = styled.div`
 interface HeaderContextProps {
   color: 'dark' | 'light' | 'transparent'
   mode: 'default' | 'fixed'
+  // activeId: string
 }
 
 export const HeaderContext = createContext<HeaderContextProps>({
   color: 'dark',
   mode: 'default',
+  // activeId: 'home',
 })
+
+// const HeaderMap = new Map([
+//   ['/products', ['product', 'datenlord', 'xline']],
+//   ['/rdma', ['rdma']],
+//   ['/solutions', ['solution', 'data-access', 'metadata-management', 'hardware-acceleration', 'related-resource']],
+//   ['/resources1', ['resource', 'community']],
+//   ['/resources2', ['resource', 'tech-share', 'dynamics', 'blog']],
+//   ['/clients', ['client', 'usage-scenarios', 'project-cooperation']],
+//   ['/company1', ['company', 'about-us']],
+//   ['/company2', ['company', 'join-us', 'contact-us']],
+// ])
 
 export const Header: React.FC<{
   items: NavItem[]
@@ -57,6 +70,9 @@ export const Header: React.FC<{
   mode?: 'default' | 'fixed'
 }> = ({ items, color = 'dark', mode = 'default' }) => {
   const navigate = useNavigate()
+  const location = useLocation()
+  console.log(location)
+
   return (
     <HeaderContext.Provider value={{ color, mode }}>
       <HeaderWrapper color={color} mode={mode}>

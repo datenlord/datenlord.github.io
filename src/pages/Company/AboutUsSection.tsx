@@ -131,7 +131,7 @@ const CardInscription = styled(CNBodySmall)`
 
 export const AboutUsSection: React.FC = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="about-us">
       <SectionContainer>
         <SectionTitle>关于我们</SectionTitle>
         <Overview>

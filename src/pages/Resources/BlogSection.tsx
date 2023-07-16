@@ -103,7 +103,7 @@ const items = [
 
 export const BlogSection: React.FC = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id='blog'>
       <SectionContainer>
         <Title>技术博客</Title>
         <MainContainer>

@@ -98,7 +98,7 @@ const items = [
 
 export const ContactUsSection: React.FC = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id='contact-us'>
       <SectionContainer>
         <SectionTitle>联系我们</SectionTitle>
         <ContentContainer>

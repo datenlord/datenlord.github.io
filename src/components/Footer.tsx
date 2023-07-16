@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 import { Typography } from './Typography'
 import { nav } from '@/configs/nav'
@@ -61,6 +62,7 @@ const Copyright = styled(CNBodyLarge)`
 `
 
 export const Footer: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <>
       <FooterWrapper>
@@ -68,18 +70,25 @@ export const Footer: React.FC = () => {
           <MainContainer>
             <Logo src={logoUrl} />
             <LinkClassContainer>
-              {nav.map(({ key, label, children }) => (
-                <LinkClass key={key}>
-                  <LinkClassTitle>{label}</LinkClassTitle>
-                  <LinkList>
-                    {(children || []).map(({ key, label }) => (
-                      <LinkListItem key={key}>
-                        <CNBodyLarge>{label}</CNBodyLarge>
-                      </LinkListItem>
-                    ))}
-                  </LinkList>
-                </LinkClass>
-              ))}
+              {nav.map(({ key, label, children }) => {
+                return (
+                  <LinkClass key={key}>
+                    <LinkClassTitle>{label}</LinkClassTitle>
+                    <LinkList>
+                      {(children || []).map(({ key, label, url }) => (
+                        <LinkListItem
+                          key={key}
+                          onClick={() => {
+                            url && navigate(url)
+                          }}
+                        >
+                          <CNBodyLarge>{label}</CNBodyLarge>
+                        </LinkListItem>
+                      ))}
+                    </LinkList>
+                  </LinkClass>
+                )
+              })}
             </LinkClassContainer>
           </MainContainer>
           <Copyright style={{ textAlign: 'center' }}>

@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import type { NavigateFunction } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -10,7 +10,7 @@ const { Paragraph } = Typography
 const { CNBodyMedium } = Paragraph
 
 export interface NavItem {
-  key: React.Key
+  key: string
   label: string
   url?: string
   children?: NavItem[]
@@ -105,12 +105,13 @@ const NavItem: React.FC<{
   url?: string
 }> = ({ label, subNavItems, url }) => {
   const navigate = useNavigate()
+  const location = useLocation()
   const [dropdown, setDropdown] = useState<string>('false')
   const { mode } = useContext(HeaderContext)
 
   useEffect(() => {
     setDropdown('false')
-  }, [mode])
+  }, [mode, location.pathname])
 
   return (
     <StyledNavItem

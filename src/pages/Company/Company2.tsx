@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Cover } from '@/components/Cover'
@@ -31,6 +32,11 @@ const SectionTitle = styled(CNHead4)`
 `
 
 export default () => {
+  const { sectionId } = useParams()
+  useEffect(() => {
+    const sectionEl = document.querySelector(`#${sectionId}`)
+    sectionEl?.scrollIntoView()
+  }, [sectionId])
   return (
     <React.Fragment>
       <Cover
@@ -39,7 +45,7 @@ export default () => {
       >
         公司
       </Cover>
-      <SectionWrapper>
+      <SectionWrapper id='join-us'>
         <SectionContainer>
           <SectionTitle>加入我们</SectionTitle>
           <WhyChooseSection />

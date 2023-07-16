@@ -61,7 +61,7 @@ const CardDescription = styled(CNBodyLarge)`
 
 export const UseSection: React.FC = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="usage-scenarios">
       <SectionContainer>
         <Title>使用场景</Title>
         <ContentContainer>

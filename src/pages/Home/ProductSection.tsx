@@ -278,7 +278,7 @@ export const ProductSection: React.FC = () => {
     <Wrapper>
       <Container>
         <Title>开源产品</Title>
-        <DatenLordCardWrapper>
+        <DatenLordCardWrapper id='datenlord'>
           <DatenLordCard>
             <DatenLordLogo src={datenlordLogoUrl} />
             <DatenLordTitle>DatenLord</DatenLordTitle>
@@ -305,7 +305,7 @@ export const ProductSection: React.FC = () => {
             <Dot2 />
           </DecorationContainer>
         </DatenLordCardWrapper>
-        <XlineCardWrapper>
+        <XlineCardWrapper id='xline'>
           <XlineCard>
             <XlineLogo src={xlineLogoUrl} />
             <XlineContent>
@@ -335,7 +335,7 @@ export const ProductSection: React.FC = () => {
             <Cone2 src={coneUrl} />
           </DecorationContainer>
         </XlineCardWrapper>
-        <RDMACardWrapper>
+        <RDMACardWrapper id='rdma'>
           <RDMACard>
             <RDMATitle>RDMA</RDMATitle>
             <RDMADescription>

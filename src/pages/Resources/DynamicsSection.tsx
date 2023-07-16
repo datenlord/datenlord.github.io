@@ -127,7 +127,7 @@ const items = [
 
 export const DynamicsSection: React.FC = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="dynamics">
       <SectionContainer>
         <Title>达坦动态</Title>
         <CardContainer>

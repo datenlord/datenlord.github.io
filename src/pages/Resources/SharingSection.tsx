@@ -98,7 +98,7 @@ const CardText = styled.div`
 export default () => {
   const navigate = useNavigate()
   return (
-    <SectionWrapper>
+    <SectionWrapper id='tech-share'>
       <SectionContainer>
         <Title>技术分享</Title>
         <Container>
