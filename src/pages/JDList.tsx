@@ -525,6 +525,10 @@ export default () => {
     setData(JDdata.filter(item => selected[item.workType] === true))
   }, [selected])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <ViewWrapper>
       <ViewContainer>
@@ -573,9 +577,12 @@ export default () => {
                 content,
               } = props
               return (
-                <JDCard key={id} onClick={() => {
-                  navigate(id.split(' ').join('-'))
-                }}>
+                <JDCard
+                  key={id}
+                  onClick={() => {
+                    navigate(id.split(' ').join('-'))
+                  }}
+                >
                   <Logo src={logoUrl} />
                   <ContentContainer>
                     <CardTags>{tag.join(', ')}</CardTags>

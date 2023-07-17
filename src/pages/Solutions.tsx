@@ -152,8 +152,12 @@ export default () => {
   const { sectionId } = useParams()
   useEffect(() => {
     const sectionEl = document.querySelector(`#${sectionId}`)
-    sectionEl?.scrollIntoView()
-    window.scrollBy(0, -32)
+    if (sectionEl) {
+      sectionEl?.scrollIntoView()
+      window.scrollBy(0, -32)
+    } else {
+      window.scrollTo(0, 0)
+    }
   }, [sectionId])
   return (
     <>

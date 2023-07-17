@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import moment from 'moment'
@@ -504,6 +505,9 @@ const JDdata: JDdataProps = [
 
 export default () => {
   const { key } = useParams()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <ViewWrapper>
       <ViewContainer>

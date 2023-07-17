@@ -35,7 +35,11 @@ export default () => {
   const { sectionId } = useParams()
   useEffect(() => {
     const sectionEl = document.querySelector(`#${sectionId}`)
-    sectionEl?.scrollIntoView()
+    if (sectionEl) {
+      sectionEl?.scrollIntoView()
+    } else {
+      window.scrollTo(0, 0)
+    }
   }, [sectionId])
   return (
     <React.Fragment>
