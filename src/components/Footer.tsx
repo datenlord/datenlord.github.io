@@ -30,10 +30,10 @@ const LinkClassContainer = styled.div`
   justify-content: space-around;
 `
 const LinkClass = styled.div`
-  padding-inline: 0.32rem;
+  padding-inline: 0.16rem;
   padding-bottom: 0.64rem;
   color: white;
-  width: 1.5rem;
+  width: 2rem;
 `
 const LinkClassTitle = styled.h2`
   padding-bottom: 0.16rem;
