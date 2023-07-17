@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { PCNav } from '@/components/PCNav'
@@ -70,8 +70,6 @@ export const Header: React.FC<{
   mode?: 'default' | 'fixed'
 }> = ({ items, color = 'dark', mode = 'default' }) => {
   const navigate = useNavigate()
-  const location = useLocation()
-  console.log(location)
 
   return (
     <HeaderContext.Provider value={{ color, mode }}>
