@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 import { Typography } from '@/components/Typography'
 
@@ -18,7 +19,7 @@ const items = [
       '完善DatenLord的测试，构建新的DatenLord测试框架；',
       '提高DatenLord分布式性能表现。',
     ],
-    url: '',
+    url: '/job-description/distributed-storage-software-development-senior-engineer',
   },
   {
     title: 'Rust分布式存储开发（实习，即将招满）',
@@ -29,7 +30,7 @@ const items = [
       '分布式数据一致性协议研究和开发；',
       '分布式缓存、数据管理服务...',
     ],
-    url: '',
+    url: '/job-description/rust-distributed-storage-development',
   },
   {
     title: 'FPGA开发（实习）',
@@ -39,7 +40,7 @@ const items = [
       '实现常用外设接口IP的RTL设计、集成和验证；',
       '配合上层软件实现软硬件联调。',
     ],
-    url: '',
+    url: '/job-description/fpga-development',
   },
   {
     title: '软硬件联合研发实习生（实习）',
@@ -51,12 +52,11 @@ const items = [
       '负责SoC芯片的Linux驱动开发；',
       '负责实现软硬件联合调试与自动化测...',
     ],
-    url: '',
+    url: '/job-description/the-joint-hardware-and-software-research-and-development-internship',
   },
 ]
 
-const SectionContainer = styled.section`
-`
+const SectionContainer = styled.section``
 const SectionTitle = styled(CNHead5S)``
 const MainContainer = styled.div`
   display: grid;
@@ -167,17 +167,18 @@ const Emphasis = styled.span`
 `
 
 export const RecruitmentSection: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <SectionContainer>
       <SectionTitle>公开招聘</SectionTitle>
       <MainContainer>
-        {items.map(({ title, text, items }, index) => (
+        {items.map(({ title, text, items, url }, index) => (
           <Card key={index}>
             <CardTopSection>
               <CardAvatar>
                 <CardAvatarIcon src={avatarIconUrl} />
               </CardAvatar>
-              <CardButton>岗位详情</CardButton>
+              <CardButton onClick={() => navigate(url)}>岗位详情</CardButton>
             </CardTopSection>
             <CardTitle>{title}</CardTitle>
             <SubTitle>【岗位职责】</SubTitle>
@@ -196,7 +197,9 @@ export const RecruitmentSection: React.FC = () => {
             <DetailCardAvatarIcon src={avatarIconUrl} />
           </DetailCardAvatar>
           <DetailCardText>进入招聘岗位详情</DetailCardText>
-          <DetailCardLink>【寻人启事】达坦科技持续招人ing</DetailCardLink>
+          <DetailCardLink onClick={() => navigate('/job-description')}>
+            【寻人启事】达坦科技持续招人ing
+          </DetailCardLink>
         </DetailCard>
       </MainContainer>
       <DetailContainer>
