@@ -7,7 +7,6 @@ import CoverUrl from '@/assets/products/cover.png'
 
 export default () => {
   const { sectionId } = useParams()
-  console.log(sectionId)
 
   useEffect(() => {
     const sectionEl = document.querySelector(`#${sectionId}`)
