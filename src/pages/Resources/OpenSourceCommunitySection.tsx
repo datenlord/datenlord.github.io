@@ -39,7 +39,7 @@ const cardData = [
     quote:
       '“我在Async-rdma项目中收获了一段难忘的经历。DatenLord社区氛围很友好，我的导师是一位经验丰富的工程师，他鼓励我在验证我对项目的想法和假设的同时也要关注工程规范。这让我的视角从一个只关注实现产品原型的学生转变为一个同时也关注产品的可维护性和稳定性的专业工程师。”',
     link_text: 'GitHub ID: GTwhy',
-    url: '',
+    url: 'https://github.com/GTwhy',
   },
   {
     key: 2,
@@ -47,7 +47,7 @@ const cardData = [
     quote:
       '“在DatenLord中参与Rust for Linux项目的工作很有意义。这是一个友好互助的社区。即使在修改一个很小的bug时，我的导师也鼓励我认真权衡不同的选择。教导我不仅仅是要能够写出代码，更重要的是写出优雅的代码。我在社区中收获到的不仅是理论上的，更是极具实操价值的。”',
     link_text: 'GitHub ID: Richardhongyu',
-    url: '',
+    url: 'https://github.com/Richardhongyu',
   },
 ]
 
@@ -176,12 +176,12 @@ export const OpenSourceCommunity: React.FC = () => {
       <Card>
         <CardTitle style={{ paddingBottom: '0.39rem' }}>社区高光时刻</CardTitle>
         <CardContentContainer>
-          {cardData.map(({ key, text, quote, link_text }) => (
+          {cardData.map(({ key, text, quote, link_text, url }) => (
             <CardContent key={key}>
               <CardText>{text}</CardText>
               <CardQuote>{quote}</CardQuote>
               <CardLink>
-                <CardLinkText as={'a'}>{link_text}</CardLinkText>
+                <CardLinkText as={'a'} href={url}>{link_text}</CardLinkText>
                 <CardLinkIcon src={githubIconUrl} />
               </CardLink>
             </CardContent>

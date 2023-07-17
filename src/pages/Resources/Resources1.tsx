@@ -15,7 +15,7 @@ const { Heading } = Typography
 const { CNHead4 } = Heading
 
 const PageWrapper = styled.div`
-  z-index: -2;
+  z-index: 1;
   position: relative;
   background: #ededf6;
   overflow: hidden;
