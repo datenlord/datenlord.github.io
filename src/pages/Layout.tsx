@@ -14,7 +14,7 @@ const Layout: React.FC = () => {
   const [isFocus, setIsFocus] = useState<boolean>(false)
 
   useEffect(() => {
-    const threshold = 100
+    const threshold = 0
     let lastScrollY = window.scrollY
     let ticking = false
 
