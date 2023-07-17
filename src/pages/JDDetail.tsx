@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import moment from 'moment'
 import 'moment/locale/zh-cn'
-moment.locale('zh-cn', {
+moment.updateLocale('zh-cn', {
   months:
     '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split(
       '_',
