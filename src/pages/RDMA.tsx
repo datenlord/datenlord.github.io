@@ -117,7 +117,7 @@ const data: Data[] = [
         ],
       },
     ],
-    url: '',
+    url: 'https://github.com/datenlord/async-rdma',
   },
   {
     key: 'RoCE-Sim',
@@ -144,7 +144,7 @@ const data: Data[] = [
           '该模拟器集成了一个测试框架，开发人员只需编写配置文件来控制模拟器生成、发送、接收和检查数据包，从而有效地完成端端验证工作。',
       },
     ],
-    url: '',
+    url: 'https://github.com/datenlord/roce-sim',
     img: imgUrl,
   },
   {
@@ -171,12 +171,12 @@ const data: Data[] = [
           '目前，我们已经实现了该协议的基本框架，并计划实现一些增强功能，如优先级流量控制、拥堵控制以及对组播流量的支持，使其更适合大规模数据中心环境。此外，我们正在探索如何使用正式方法来对我们的实现进行验证。',
       },
     ],
-    url: '',
+    url: 'https://github.com/datenlord/open-rdma',
   },
 ]
 
 const Section: React.FC<{ item: Data }> = ({ item }) => {
-  const { title, subTitle, img, main } = item
+  const { title, subTitle, img, main, url } = item
   return (
     <SectionContainer>
       <TitleContainer>
@@ -205,7 +205,14 @@ const Section: React.FC<{ item: Data }> = ({ item }) => {
           )
         } else return null
       })}
-      <Button style={{ color: '#fff', display: 'block' }}>了解更多</Button>
+      <Button
+        style={{ color: '#fff', display: 'block' }}
+        onClick={() => {
+          window.location.href = `${url}`
+        }}
+      >
+        了解更多
+      </Button>
     </SectionContainer>
   )
 }
