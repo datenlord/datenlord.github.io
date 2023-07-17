@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import styled from 'styled-components'
 
 import { Cover } from '@/components/Cover'
@@ -203,12 +205,15 @@ const Section: React.FC<{ item: Data }> = ({ item }) => {
           )
         } else return null
       })}
-      <Button style={{color: '#fff', display: 'block'}}>了解更多</Button>
+      <Button style={{ color: '#fff', display: 'block' }}>了解更多</Button>
     </SectionContainer>
   )
 }
 
 export default () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <Cover cover={coverUrl}>RDMA</Cover>

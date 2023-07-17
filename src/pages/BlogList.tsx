@@ -95,6 +95,10 @@ export default () => {
   const navigate = useNavigate()
   const [blogs, setBlogs] = useState<typeof import('*.md')[]>([])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const getEvents = async () => {
     setBlogs(
       (await Promise.all(

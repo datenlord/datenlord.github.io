@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useLocation, Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -158,6 +158,10 @@ export default () => {
   const description = data.get(name)?.description
   const items = data.get(name)?.list.reverse()
   // console.log(typeof title.get(name))
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <React.Fragment>

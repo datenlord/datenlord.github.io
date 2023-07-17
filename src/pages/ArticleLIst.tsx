@@ -110,6 +110,9 @@ export default () => {
   const location = useLocation()
   const { title } = useParams()
   // console.log(title)
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const getItems = () => {
     switch (title) {
