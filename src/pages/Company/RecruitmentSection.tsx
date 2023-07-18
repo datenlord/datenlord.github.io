@@ -64,7 +64,7 @@ const MainContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.58rem 0.32rem;
   margin-inline: calc(1.48rem - 1.93rem);
-  padding-block: 0.82rem 1.22rem;
+  padding-block: 0.82rem 0;
 `
 const Card = styled.div`
   padding: 0.24rem;
@@ -202,7 +202,7 @@ export const RecruitmentSection: React.FC = () => {
           </DetailCardLink>
         </DetailCard>
       </MainContainer>
-      <DetailContainer>
+      {/* <DetailContainer>
         <Illustration src={illustrationUrl} />
         <ContentContainer>
           <DetailTitle>
@@ -232,7 +232,7 @@ export const RecruitmentSection: React.FC = () => {
             初级工程师：<Emphasis>15000元/人</Emphasis>
           </DetailText>
         </ContentContainer>
-      </DetailContainer>
+      </DetailContainer> */}
     </SectionContainer>
   )
 }
