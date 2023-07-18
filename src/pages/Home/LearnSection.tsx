@@ -112,7 +112,7 @@ const Data = [
     key: 'open-source-diploma-internship',
     icon: IconCpuUrl,
     iconBg: '#FDCB6E',
-    label_en: 'Open Source Diploma Internship',
+    label_en: 'Open Source Project Internship',
     label_zh: '开源毕业设计实习',
     content: [
       {
