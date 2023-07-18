@@ -21,7 +21,7 @@ const FooterContainer = styled.div`
 `
 const Logo = styled.img`
   height: 0.58rem;
-  padding-inline: 0.64rem;
+  padding-inline: 0.16rem 0.16rem;
 `
 const LinkClassContainer = styled.div`
   width: 100%;
@@ -33,7 +33,7 @@ const LinkClass = styled.div`
   padding-inline: 0.16rem;
   padding-bottom: 0.64rem;
   color: white;
-  width: 2rem;
+  width: 1.8rem;
 `
 const LinkClassTitle = styled.h2`
   padding-bottom: 0.16rem;
