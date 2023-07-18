@@ -326,7 +326,7 @@ export const ProductSection: React.FC = () => {
                 style={{ width: 'max-content', color: '#fff' }}
                 onClick={() =>
                   (window.location.href =
-                    'https://github.com/datenlord/xline-home')
+                    'https://xline.cloud/')
                 }
               >
                 了解更多
