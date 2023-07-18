@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 import { Outlet, useLocation } from 'react-router-dom'
 
@@ -6,6 +7,10 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 import { nav } from '@/configs/nav'
+
+const HeaderPlaceholder = styled.div`
+  height: 0.72rem;
+`
 
 const Layout: React.FC = () => {
   const location = useLocation()
@@ -74,6 +79,7 @@ const Layout: React.FC = () => {
   return (
     <>
       <Header items={nav} mode={getMode()} color={getColor()} />
+      {getMode() === 'fixed' && <HeaderPlaceholder />}
       <Outlet />
       <Footer />
     </>
