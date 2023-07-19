@@ -73,23 +73,28 @@ const jumpPage = (navigate: NavigateFunction, url?: string) => {
 const SubNavItem: React.FC<{
   label: string
   url?: string
-}> = ({ label, url }) => {
+  setDropdown: React.Dispatch<React.SetStateAction<string>>
+}> = ({ label, url, setDropdown }) => {
   const navigate = useNavigate()
   return (
-    <StyledSubNavItem onClick={() => jumpPage(navigate, url)}>
+    <StyledSubNavItem onClick={() => {
+      setDropdown('false')
+      jumpPage(navigate, url)
+      }}>
       {label}
     </StyledSubNavItem>
   )
 }
 
-const SubNav: React.FC<{ subNavItems?: NavItem[]; isdropdown: string }> = ({
-  subNavItems,
-  isdropdown,
-}) => {
+const SubNav: React.FC<{
+  subNavItems?: NavItem[]
+  isdropdown: string
+  setDropdown: React.Dispatch<React.SetStateAction<string>>
+}> = ({ subNavItems, isdropdown, setDropdown }) => {
   return (
     <StyledSubNav isdropdown={isdropdown}>
       {subNavItems?.map(({ key, label, url }) => (
-        <SubNavItem key={key} label={label} url={url} />
+        <SubNavItem key={key} label={label} url={url} setDropdown={setDropdown} />
       ))}
     </StyledSubNav>
   )
@@ -120,7 +125,11 @@ const NavItem: React.FC<{
     >
       <CNBodyMedium>{label}</CNBodyMedium>
       {subNavItems && (
-        <SubNav subNavItems={subNavItems} isdropdown={dropdown} />
+        <SubNav
+          subNavItems={subNavItems}
+          isdropdown={dropdown}
+          setDropdown={setDropdown}
+        />
       )}
     </StyledNavItem>
   )
