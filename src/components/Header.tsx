@@ -1,9 +1,9 @@
 import { createContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { PCNav } from '@/components/PCNav'
-import { MobNav } from '@/components/MobNav'
+// import { MobNav } from '@/components/MobNav'
 
 import logoLightUrl from '@/assets/logo-light.svg'
 
@@ -44,25 +44,30 @@ const Placeholder = styled.div`
 interface HeaderContextProps {
   color: 'dark' | 'light' | 'transparent'
   mode: 'default' | 'fixed'
-  // activeId: string
+  activeId?: string
 }
 
 export const HeaderContext = createContext<HeaderContextProps>({
   color: 'dark',
   mode: 'default',
-  // activeId: 'home',
+  activeId: 'home',
 })
 
-// const HeaderMap = new Map([
-//   ['/products', ['product', 'datenlord', 'xline']],
-//   ['/rdma', ['rdma']],
-//   ['/solutions', ['solution', 'data-access', 'metadata-management', 'hardware-acceleration', 'related-resource']],
-//   ['/resources1', ['resource', 'community']],
-//   ['/resources2', ['resource', 'tech-share', 'dynamics', 'blog']],
-//   ['/clients', ['client', 'usage-scenarios', 'project-cooperation']],
-//   ['/company1', ['company', 'about-us']],
-//   ['/company2', ['company', 'join-us', 'contact-us']],
-// ])
+export const HeaderMap = new Map([
+  ['products', 'product'],
+  ['rdma', 'product'],
+  ['solutions', 'solution'],
+  ['resources1', 'resource'],
+  ['resources2', 'resource'],
+  ['news-honor-dynamic', 'resource'],
+  ['tech-talk', 'resource'],
+  ['events', 'resource'],
+  ['blogs', 'resource'],
+  ['clients', 'client'],
+  ['company1', 'company'],
+  ['company2', 'company'],
+  ['job-description', 'company'],
+])
 
 export const Header: React.FC<{
   items: NavItem[]
@@ -70,9 +75,11 @@ export const Header: React.FC<{
   mode?: 'default' | 'fixed'
 }> = ({ items, color = 'dark', mode = 'default' }) => {
   const navigate = useNavigate()
+  const location = useLocation()
+  const activeId = HeaderMap.get(location.pathname.split('/')[1])
 
   return (
-    <HeaderContext.Provider value={{ color, mode }}>
+    <HeaderContext.Provider value={{ color, mode, activeId }}>
       <HeaderWrapper color={color} mode={mode}>
         <HeaderContainer>
           <Logo
@@ -81,11 +88,10 @@ export const Header: React.FC<{
             onClick={() => navigate('/')}
           />
           <Placeholder />
-          {window.innerWidth > 425 ? (
-            <PCNav items={items} />
-          ) : (
-            <MobNav items={items} />
-          )}
+          {
+            window.innerWidth > 425 ? <PCNav items={items} /> : null
+            // <MobNav items={items} />
+          }
         </HeaderContainer>
       </HeaderWrapper>
     </HeaderContext.Provider>

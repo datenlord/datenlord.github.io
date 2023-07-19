@@ -23,23 +23,19 @@ const StyledNav = styled.ul`
     display: none;
   }
 `
-const StyledNavItem = styled.li<{ isdropdown: string }>`
+const StyledNavItem = styled.li<{ isdropdown: string; isactive: string }>`
   position: relative;
   display: flex;
   align-items: center;
   padding-inline: 0.24rem;
-  /* color: #fff; */
   border-bottom: ${props =>
     props.isdropdown === 'true'
       ? '0.04rem solid hsla(234, 60%, 66%, 1)'
       : 'none'};
   transition: all 0.05s;
   cursor: pointer;
-  /* @media screen and (max-width: 1024px) {
-    font-size: 16px;
-    font-weight: 300;
-    padding-inline: 16px;
-  } */
+  color: ${props =>
+    props.isactive === 'true' ? props.theme.secondary08 : props.theme.white00};
 `
 const StyledSubNav = styled.ul<{ isdropdown: string }>`
   position: absolute;
@@ -59,7 +55,7 @@ const StyledSubNavItem = styled.li`
   font-weight: 400;
   font-size: 0.14rem;
   &:hover {
-    color: ${props => props.theme.themeDark};
+    color: ${props => props.theme.secondary01};
   }
 `
 
@@ -100,14 +96,15 @@ const SubNav: React.FC<{ subNavItems?: NavItem[]; isdropdown: string }> = ({
 }
 
 const NavItem: React.FC<{
+  id: string
   label: string
   subNavItems?: NavItem[]
   url?: string
-}> = ({ label, subNavItems, url }) => {
+}> = ({ id, label, subNavItems, url }) => {
   const navigate = useNavigate()
   const location = useLocation()
   const [dropdown, setDropdown] = useState<string>('false')
-  const { mode } = useContext(HeaderContext)
+  const { mode, activeId } = useContext(HeaderContext)
 
   useEffect(() => {
     setDropdown('false')
@@ -115,6 +112,7 @@ const NavItem: React.FC<{
 
   return (
     <StyledNavItem
+      isactive={activeId === id ? 'true' : 'false'}
       isdropdown={dropdown}
       onMouseOver={() => setDropdown('true')}
       onMouseOut={() => setDropdown('false')}
@@ -134,7 +132,13 @@ const Nav: React.FC<{
   return (
     <StyledNav>
       {items.map(({ key, label, url, children }) => (
-        <NavItem key={key} label={label} url={url} subNavItems={children} />
+        <NavItem
+          key={key}
+          id={key}
+          label={label}
+          url={url}
+          subNavItems={children}
+        />
       ))}
     </StyledNav>
   )
