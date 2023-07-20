@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Typography } from '@/components/Typography'
 
 import githubIconUrl from '@/assets/github-icon.svg'
+import discordIconUrl from '@/assets/resources/discord-icon.svg'
 import illustrationUrl from '@/assets/resources/illustration.png'
 
 const { Heading, Paragraph } = Typography
@@ -12,17 +13,22 @@ const { CNBodyLarge, CNBodySmall } = Paragraph
 const data1 = [
   {
     key: 1,
-    title: '社区—贡献意味着思考和学习：',
+    title: '社区—贡献意味着思考和学习',
     text: '开源不仅仅是在Github上贡献代码。在DatenLord，我们相信：贡献代码（给予）同样是一个思考和学习的过程。在不断收到开源社区反馈的过程中，我们能够构建彼此的信任与合作。我们也想借助于开源的社区平台吸引更多优秀的开发者参与到项目中来。',
   },
   {
     key: 2,
-    title: '在Discord上与我们对话：',
+    title: '在Discord上与我们对话',
     text: '加入我们的开发者社区，构建下一代云原生、跨云的存储系统。',
+    link: {
+      icon: discordIconUrl,
+      text: 'Discord',
+      url: '',
+    },
   },
   {
     key: 3,
-    title: '在Github中成为贡献者：',
+    title: '在Github中成为贡献者',
     text: '你在寻找源代码吗，或有一个精彩的想法想要贡献？加入我们在GitHub上的开源项目。',
     link: {
       icon: githubIconUrl,
@@ -90,8 +96,9 @@ const Illustration = styled.img`
 // SubTitleExtra
 const SubTitleExtraContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding-left: 0.48rem;
+  padding-left: 0.64rem;
 `
 const SubTitleExtraIcon = styled.img`
   width: 0.3rem;
@@ -181,7 +188,9 @@ export const OpenSourceCommunity: React.FC = () => {
               <CardText>{text}</CardText>
               <CardQuote>{quote}</CardQuote>
               <CardLink>
-                <CardLinkText as={'a'} href={url}>{link_text}</CardLinkText>
+                <CardLinkText as={'a'} href={url}>
+                  {link_text}
+                </CardLinkText>
                 <CardLinkIcon src={githubIconUrl} />
               </CardLink>
             </CardContent>
