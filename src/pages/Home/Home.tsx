@@ -83,6 +83,7 @@ const OutlineButtonWrapper = styled.div`
   padding: 0.01rem;
   border-radius: 50vh;
   background: linear-gradient(90deg, #767ee5, #9966cc);
+  cursor: pointer;
 `
 const OutlineButton = styled(CNBodyMedium)`
   padding: 0.12rem 0.34rem;
@@ -107,7 +108,12 @@ const LinkSection: React.FC = () => {
           <OutlineButtonWrapper>
             <OutlineButton>立即体验</OutlineButton>
           </OutlineButtonWrapper>
-          <Button style={{ color: '#fff', height: '0.52rem' }} onClick={() => navigate('company2/contact-us')}>联系我们</Button>
+          <Button
+            style={{ color: '#fff', height: '0.52rem' }}
+            onClick={() => navigate('company2/contact-us')}
+          >
+            联系我们
+          </Button>
         </ButtonContainer>
       </SectionContainer>
     </SectionWrapper>

@@ -68,6 +68,7 @@ const CardWrapper = styled.div`
   background: linear-gradient(45deg, #ffffff90, #ffffff00 60%);
   border-radius: 0.12rem;
   overflow: hidden;
+  cursor: pointer;
 `
 const Card = styled.div`
   width: 100%;

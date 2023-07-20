@@ -245,6 +245,7 @@ const JDCard = styled.div`
   padding: 0.22rem;
   background: #fff;
   border-radius: 0.12rem;
+  cursor: pointer;
   box-shadow: 0 0.01rem 0.018rem rgba(0, 0, 0, 0.03);
   :last-child {
     margin-bottom: 0;
@@ -337,6 +338,7 @@ const Checkbox = styled.input`
   margin-right: 0.07rem;
   height: 0.145rem;
   width: 0.145rem;
+  cursor: pointer;
   &:checked {
     accent-color: ${props => props.theme.secondary01};
   }

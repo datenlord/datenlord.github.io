@@ -140,9 +140,11 @@ const More = styled.p`
   font-size: 0.14rem;
   line-height: 0.26rem;
   color: ${props => props.theme.secondary08};
+  cursor: pointer;
 `
 const ArrowIcon = styled.img`
   width: 0.14rem;
+  cursor: pointer;
 `
 const List = styled.ul`
   padding-left: 0.2rem;

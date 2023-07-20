@@ -98,6 +98,7 @@ const CardButton = styled(CNMarkMedium)`
   background: ${({ theme }) => theme.white00};
   border: 0.01rem solid #dae0e6;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+  cursor: pointer;
 `
 const CardTitle = styled(CNTitleLarge)`
   color: ${props => props.theme.gray007};
@@ -141,6 +142,7 @@ const DetailCardLink = styled.div`
   color: #fff;
   text-decoration: underline;
   text-align: center;
+  cursor: pointer;
 `
 
 const DetailContainer = styled.div`

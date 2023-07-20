@@ -22,7 +22,7 @@ const data: Data[] = [
     key: 'second',
     content:
       '我们一直深耕科学前沿技术的研究和软硬件融合创新的实践，并对外持续输出我们的创新观察。',
-    url: '/blogs'
+    url: '/blogs',
   },
 ]
 
@@ -81,6 +81,7 @@ const Button = styled.div`
   height: 0.6rem;
   background: #fff;
   border-radius: 50%;
+  cursor: pointer;
 `
 const ButtonHover = styled(Button)`
   background: ${props => props.theme.secondary08};

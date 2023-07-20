@@ -69,6 +69,7 @@ const Button = styled(CNBodyMedium)`
   background: linear-gradient(90deg, #767ee5, #9966cc);
   border-radius: 0.5rem;
   border: none;
+  cursor: pointer;
 `
 
 const items = [

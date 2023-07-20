@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import moment from 'moment'
 import 'moment/locale/zh-cn'
@@ -109,6 +109,7 @@ import logoUrl from '@/assets/logo-image.svg'
 import locationIconUrl from '@/assets/job-description/location.svg'
 import clockIconUrl from '@/assets/job-description/clock.svg'
 import calendarIconUrl from '@/assets/job-description/calendar.svg'
+import avatarIconUrl from '@/assets/company/avatar-icon.svg'
 
 const { Heading, Paragraph } = Typography
 const { CNTitleSmall, CNHead5S, CNTitleLarge } = Heading
@@ -315,6 +316,7 @@ const Button = styled.button`
   background: ${props => props.theme.white00};
   border: 0.01rem solid #dae0e6;
   border-radius: 0.06rem;
+  cursor: pointer;
 `
 const Container = styled.div`
   width: 96%;
@@ -330,6 +332,19 @@ const RelatedContent = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-gap: 0.26rem;
+`
+const CardAvatar = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.48rem;
+  height: 0.48rem;
+  background: ${props => props.theme.secondary02};
+  border-radius: 50%;
+`
+const CardAvatarIcon = styled.img`
+  width: 0.32rem;
+  height: 0.32rem;
 `
 
 const workTypeMap = new Map([
@@ -504,10 +519,12 @@ const JDdata: JDdataProps = [
 ]
 
 export default () => {
+  const navigate = useNavigate()
   const { key } = useParams()
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, [key])
+  const _JDdata = JDdata.filter(({id}) => id !== key)
   return (
     <ViewWrapper>
       <ViewContainer>
@@ -567,14 +584,20 @@ export default () => {
           <RelatedSection>
             <RelatedTitle>相关岗位</RelatedTitle>
             <RelatedContent>
-              {JDdata.map((props, index) => {
+              {_JDdata.map((props, index) => {
                 const { id, label, content } = props
                 if (index < 2) {
                   return (
                     <RelatedCard key={id}>
                       <RelatedTop>
-                        <RelatedLogo src={logoUrl} />
-                        <Button>岗位详情</Button>
+                      <CardAvatar>
+                <CardAvatarIcon src={avatarIconUrl} />
+              </CardAvatar>
+                        <Button
+                          onClick={() => navigate(`/job-description/${id}`)}
+                        >
+                          岗位详情
+                        </Button>
                       </RelatedTop>
                       <ContentContainer>
                         <Container>
