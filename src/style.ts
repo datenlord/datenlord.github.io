@@ -125,8 +125,8 @@ export const GlobalStyle = createGlobalStyle`
       margin-block: 0.64rem;
       display: block;
       margin-inline: auto;
-      max-width: 90%;
-      max-height: 7.2rem;
+      max-width: 80%;
+      /* max-height: 7.2rem; */
       border-radius: 0.08rem;
     }
     ol, ul {
