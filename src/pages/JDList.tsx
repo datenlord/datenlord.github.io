@@ -104,7 +104,7 @@ moment.locale('zh-cn', {
 
 import { Typography } from '@/components/Typography'
 
-import hrQRCodeUrl from '@/assets/job-description/hr-qr-code.png'
+import weChatQRcode from '@/assets/company/wechat-qrcode.png'
 import logoUrl from '@/assets/logo-image.svg'
 import locationIconUrl from '@/assets/job-description/location.svg'
 import clockIconUrl from '@/assets/job-description/clock.svg'
@@ -225,8 +225,9 @@ const ColorText = styled.span`
 `
 const Img = styled.img`
   display: block;
-  width: 120px;
+  width: 0.8rem;
   margin-inline: auto;
+  padding-top: 0.12rem;
 `
 const FiltersTitle = styled(CNTitleMedium)`
   padding-bottom: 0.14rem;
@@ -645,7 +646,7 @@ export default () => {
             <LinkText>
               <ColorText>info@datenlord.com</ColorText>或扫描微信联系也可以喔~
             </LinkText>
-            <Img src={hrQRCodeUrl} />
+            <Img src={weChatQRcode} />
           </LinkCard>
         </RightSidebarContainer>
       </ViewContainer>
