@@ -7,7 +7,11 @@ import mailIconUrl from '@/assets/icons/mail.svg'
 import wechatIconUrl from '@/assets/icons/wechat.svg'
 import bilibiliIconUrl from '@/assets/icons/bilibili.svg'
 import zhihuIconUrl from '@/assets/icons/zhihu.svg'
-import qrcodeExampleUrl from '@/assets/qrcode-example.png'
+import weChatPublicQRcode from '@/assets/company/wechat-public-qrcode.png'
+import emailQRcode from '@/assets/company/email-qrcode.png'
+import weChatQRcode from '@/assets/company/wechat-qrcode.png'
+import bilibiliQRcode from '@/assets/company/bilibili-qrcode.png'
+import zhihuQRcode from '@/assets/company/zhihu-qrcode.png'
 
 const { Heading, Paragraph } = Typography
 const { CNHead4, CNTitleMedium } = Heading
@@ -59,6 +63,7 @@ const IconText = styled(CNTitleMedium)`
   text-align: center;
 `
 const QRCode = styled.img`
+  width: 1rem;
   padding-bottom: 0.16rem;
   display: block;
 `
@@ -68,37 +73,38 @@ const items = [
   {
     title: '公众号',
     icon: publicIconUrl,
-    qrCode: qrcodeExampleUrl,
-    text: '达坦科技 DatenLord',
+    qrCode: weChatPublicQRcode,
+    text: '达坦科技DatenLord',
   },
   {
     title: '邮箱',
     icon: mailIconUrl,
-    text: '达坦科技 DatenLord',
+    qrCode: emailQRcode,
+    text: 'info@datenlord.com',
   },
   {
     title: '微信',
     icon: wechatIconUrl,
-    qrCode: qrcodeExampleUrl,
-    text: '达坦科技 DatenLord',
+    qrCode: weChatQRcode,
+    text: 'DatenLord小助手',
   },
   {
     title: 'B站',
     icon: bilibiliIconUrl,
-    qrCode: qrcodeExampleUrl,
-    text: '达坦科技 DatenLord',
+    qrCode: bilibiliQRcode,
+    text: '达坦科技DatenLord',
   },
   {
     title: '知乎',
     icon: zhihuIconUrl,
-    qrCode: qrcodeExampleUrl,
-    text: '达坦科技 DatenLord',
+    qrCode: zhihuQRcode,
+    text: '达坦科技DatenLord',
   },
 ]
 
 export const ContactUsSection: React.FC = () => {
   return (
-    <SectionWrapper id='contact-us'>
+    <SectionWrapper id="contact-us">
       <SectionContainer>
         <SectionTitle>联系我们</SectionTitle>
         <ContentContainer>
