@@ -4,7 +4,7 @@ description: RDMA（Remote Direct Memory Access）是近年越来越热门的高
 location: 浙江
 author: [施继成]
 editor: [李慧文]
-tags: [Xline]
+tags: [RDMA]
 ---
 
 RDMA（Remote Direct Memory Access）是近年越来越热门的高速网络传输协议，被广泛应用于超算中心和高端存储领域，用于缩短网络延迟、提高网络带宽。但是 RDMA 的 API 接口非常难以使用，且错误地使用很容易造成程序错误甚至数据丢失。

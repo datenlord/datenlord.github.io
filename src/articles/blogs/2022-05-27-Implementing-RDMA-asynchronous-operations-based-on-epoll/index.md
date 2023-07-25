@@ -1,10 +1,10 @@
 ---
 label: Rust实现RDMA异步编程（一）：基于epoll实现RDMA异步操作
 description: RDMA是一套高性能网络协议栈，多用于高性能计算、高性能存储领域。RDMA的library是用C实现的，但是没有很好用的Rust的binding，不方便Rust开发者使用。于是我们正在封装一层符合Rust风格、便于Rust开发者使用的RDMA Rust binding。特别的，异步编程是近几年很受关注的编程方式，用Rust异步编程来实现IO操作，可以避免操作系统的进程上下文切换，提高性能，而且Rust的异步编程框架也在逐步成熟和完善。本系列文章探讨下如何用异步的方式实现RDMA的操作。本文先讨论下如何基于Linux的epoll机制实现RDMA异步操作，后续的文章再探讨如何用Rust异步编程来实现RDMA异步操作。
-location: 浙江
-author: [施继成]
-editor: [李慧文]
-tags: [Xline]
+location: 河南
+author: [王璞]
+editor: [张汉东]
+tags: [RDMA]
 ---
 
 RDMA 是一套高性能网络协议栈，多用于高性能计算、高性能存储领域。RDMA 的 library 是用 C 实现的，但是没有很好用的 Rust 的 binding，不方便 Rust 开发者使用。于是我们正在封装一层符合 Rust 风格、便于 Rust 开发者使用的 RDMA Rust binding。特别的，异步编程是近几年很受关注的编程方式，用 Rust 异步编程来实现 IO 操作，可以避免操作系统的进程上下文切换，提高性能，而且 Rust 的异步编程框架也在逐步成熟和完善。本系列文章探讨下如何用异步的方式实现 RDMA 的操作。本文先讨论下如何基于 Linux 的 epoll 机制实现 RDMA 异步操作，后续的文章再探讨如何用 Rust 异步编程来实现 RDMA 异步操作。
