@@ -64,7 +64,7 @@ const BlogTitle = styled(TitleLarge)`
   }
 `
 const BlogDescription = styled(CNBodyMedium)`
-  padding-bottom: 0.07rem;
+  margin-bottom: 0.07rem;
   color: #383838;
   display: -webkit-box;
   -webkit-line-clamp: 3;
