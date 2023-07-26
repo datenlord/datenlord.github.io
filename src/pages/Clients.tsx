@@ -13,6 +13,7 @@ import BUPTLogoUrl from '@/assets/clients/BUPT-logo.png'
 import RUCLogoUrl from '@/assets/clients/RUC-logo.png'
 import SCUTLogoUrl from '@/assets/clients/SCUT-logo.png'
 import SBULogoUrl from '@/assets/clients/SBU-logo.png'
+import imageUrl from '@/assets/clients/image.png'
 
 const { Heading, Paragraph } = Typography
 const { CNHead4, CNHead5 } = Heading
@@ -20,9 +21,10 @@ const { CNBodyLarge } = Paragraph
 
 const SectionWrapper = styled.section`
   background: ${props => props.theme.white00};
+  background: linear-gradient(180deg, #BFC5FB, #BFC5FB00 50%);
 `
 const SectionContainer = styled.div`
-  padding-top: 1rem;
+  padding-top: 1.48rem;
   max-width: 1440px;
   margin-inline: auto;
   padding-bottom: 0.79rem;
@@ -89,6 +91,10 @@ const ItemTitle = styled(CNHead5)`
   color: ${props => props.theme.secondary01};
 `
 const ItemText = styled(CNBodyLarge)``
+const Image = styled.img`
+  width: 100%;
+  padding-bottom: 1.18rem;
+`
 
 const items = [
   {
@@ -158,6 +164,7 @@ export default () => {
       <UseSection />
       <SectionWrapper id="project-cooperation">
         <SectionContainer>
+          <Image src={imageUrl} />
           <SectionTitle>产学研项目合作</SectionTitle>
           <SectionSubTitle>
             DatenLord积极推动产学研合作，与国内外各大高校的顶尖实验室合作，在高性能跨云SaaS服务基础、高性能跨云网络基础、高性能网络硬件支持和高性能跨云网络一致性算法领域共同进行深入的前瞻研究和实践落地。
