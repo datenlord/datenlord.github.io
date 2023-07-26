@@ -5,6 +5,8 @@ import { Typography } from '@/components/Typography'
 
 import avatarIconUrl from '@/assets/company/avatar-icon.svg'
 import illustrationUrl from '@/assets/company/illustration.png'
+import imageUrl from '@/assets/company/image.png'
+import { Button } from '@/components/Button'
 
 const { Heading, Paragraph } = Typography
 const { CNHead5S, CNTitleLarge, CNTitleMedium } = Heading
@@ -114,7 +116,7 @@ const DetailCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: ${props => props.theme.secondary01};
+  background: #d8dcfa;
   border-radius: 0.05rem;
   padding: 0.72rem 0.64rem 0.59rem;
 `
@@ -167,6 +169,13 @@ const DetailText = styled(CNBodyMedium)``
 const Emphasis = styled.span`
   color: ${props => props.theme.secondary01};
 `
+const Image = styled.img`
+  width: 2.44rem;
+  padding-bottom: 0.16rem;
+`
+const DetailButton = styled(Button)`
+  color: #fff;
+`
 
 export const RecruitmentSection: React.FC = () => {
   const navigate = useNavigate()
@@ -195,13 +204,17 @@ export const RecruitmentSection: React.FC = () => {
           </Card>
         ))}
         <DetailCard>
-          <DetailCardAvatar>
+          <Image src={imageUrl} />
+          <DetailButton onClick={() => navigate('/job-description')}>
+            进入招聘岗位详情
+          </DetailButton>
+          {/* <DetailCardAvatar>
             <DetailCardAvatarIcon src={avatarIconUrl} />
           </DetailCardAvatar>
           <DetailCardText>进入招聘岗位详情</DetailCardText>
           <DetailCardLink onClick={() => navigate('/job-description')}>
             【寻人启事】达坦科技持续招人ing
-          </DetailCardLink>
+          </DetailCardLink> */}
         </DetailCard>
       </MainContainer>
       {/* <DetailContainer>
