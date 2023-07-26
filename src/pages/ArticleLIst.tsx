@@ -195,7 +195,9 @@ export default () => {
                     {tags && (
                       <>
                         <Separator />
-                        <Tag>xline</Tag>
+                        {tags.map((tag: string) => (
+                          <Tag key={tag}>{tag}</Tag>
+                        ))}
                       </>
                     )}
                     {/* <ReadTime>{read_time}</ReadTime> */}
