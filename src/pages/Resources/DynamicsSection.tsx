@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 
@@ -37,6 +38,7 @@ const Card = styled.div`
   position: relative;
   background: ${props => props.theme.white00};
   overflow: hidden;
+  cursor: pointer;
 `
 const CardBig = styled(Card)`
   grid-area: 1 / 1 / 3 / 3;
@@ -68,23 +70,52 @@ const CardContentSmall = styled(CardContent)`
 `
 
 const CardTitleBig = styled(CNTitleLarge)`
-  padding-bottom: 0.09rem;
+  margin-bottom: 0.09rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 const CardTitleSmall = styled(CNTitleMedium)`
-  padding-bottom: 0.13rem;
+  margin-bottom: 0.13rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 const CardTextBig = styled(CNBodySmall)`
-  padding-bottom: 0.36rem;
+  margin-bottom: 0.36rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 const CardTextSmall = styled(CNBodySmall)`
-  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 const LinkContainer = styled.div`
+  position: absolute;
   display: flex;
   align-items: center;
   color: ${props => props.theme.secondary01};
+`
+const LinkContainerBig = styled(LinkContainer)`
+  bottom: 0.28rem;
+  left: 0.28rem;
+`
+const LinkContainerSmall = styled(LinkContainer)`
+  bottom: 0.12rem;
+  left: 0.12rem;
 `
 const LinkText = styled(CNMarkSmall)`
   padding-right: 0.04rem;
@@ -100,73 +131,72 @@ const SectionButton = styled(Button)`
   color: #fff;
 `
 
-const items = [
-  {
-    key: 1,
-    cover: dynamicsTestImageUrl,
-    title: '达坦科技受邀在2022中国计算机学会芯片大会做硬件加速研究分享',
-    text: '2022年7月29日至7月30日，由中国计算机学会（CCF）集成电路设计专业委员会、容错计算专业委员会、体系结构专业委员会和信息存储技术专业委员会联合举办的学术大会中国计算机学会芯片大会在江苏南京如期圆满举行。',
-  },
-  {
-    key: 2,
-    cover: dynamicsTestImageUrl,
-    title: '达坦科技受邀在2022中国计算机学会芯片大会做硬件加速研究分享',
-    text: '2022年7月29日至7月30日，由中国计算机学会（CCF）集成电路设计专业委...',
-  },
-  {
-    key: 3,
-    cover: dynamicsTestImageUrl,
-    title: '达坦科技受邀在2022中国计算机学会芯片大会做硬件加速研究分享',
-    text: '2022年7月29日至7月30日，由中国计算机学会（CCF）集成电路设计专业委...',
-  },
-  {
-    key: 4,
-    cover: dynamicsTestImageUrl,
-    title: '达坦科技受邀在2022中国计算机学会芯片大会做硬件加速研究分享',
-    text: '2022年7月29日至7月30日，由中国计算机学会（CCF）集成电路设计专业委...',
-  },
-  {
-    key: 5,
-    cover: dynamicsTestImageUrl,
-    title: '达坦科技受邀在2022中国计算机学会芯片大会做硬件加速研究分享',
-    text: '2022年7月29日至7月30日，由中国计算机学会（CCF）集成电路设计专业委...',
-  },
-]
+const _data = import.meta.glob(`@/articles/events/*/index.md`)
 
 export const DynamicsSection: React.FC = () => {
   const navigate = useNavigate()
+  const [data, setData] = useState<typeof import('*.md')[]>([])
+
+  const getBlogs = async () => {
+    const data = (await Promise.all(
+      Object.keys(_data).map(path => _data[path]()),
+    )) as typeof import('*.md')[]
+    setData(data.reverse())
+  }
+
+  useEffect(() => {
+    getBlogs()
+  }, [])
+
   return (
     <SectionWrapper id="dynamics">
       <SectionContainer>
         <Title>达坦动态</Title>
         <CardContainer>
-          {items.map(({ key, cover, title, text }, index) =>
-            index === 0 ? (
-              <CardBig key={key}>
-                <CardCoverBig src={cover} />
-                <CardContentBig>
-                  <CardTitleBig>{title}</CardTitleBig>
-                  <CardTextBig>{text}</CardTextBig>
-                  <LinkContainer>
+          {data.map(({ metadata, assetURLs }, index) => {
+            const { title, date, cover, label, description } = metadata
+            if (index === 0) {
+              return (
+                <CardBig key={title}>
+                  <CardCoverBig
+                    src={cover ? assetURLs[0] : dynamicsTestImageUrl}
+                  />
+                  <CardContentBig>
+                    <CardTitleBig>{label}</CardTitleBig>
+                    <CardTextBig>{description}</CardTextBig>
+                  </CardContentBig>
+                  <LinkContainerBig
+                    onClick={() => {
+                      navigate(`/events/${date}-${title.split(' ').join('-')}`)
+                    }}
+                  >
                     <LinkText>详情</LinkText>
                     <LinkIcon src={rightArrowUrl} />
-                  </LinkContainer>
-                </CardContentBig>
-              </CardBig>
-            ) : (
-              <CardSmall key={key}>
-                <CardCoverSmall src={cover} />
-                <CardContentSmall>
-                  <CardTitleSmall>{title}</CardTitleSmall>
-                  <CardTextSmall>{text}</CardTextSmall>
-                  <LinkContainer>
+                  </LinkContainerBig>
+                </CardBig>
+              )
+            } else if (index < 5) {
+              return (
+                <CardSmall key={title}>
+                  <CardCoverSmall
+                    src={cover ? assetURLs[0] : dynamicsTestImageUrl}
+                  />
+                  <CardContentSmall>
+                    <CardTitleSmall>{label}</CardTitleSmall>
+                    <CardTextSmall>{description}</CardTextSmall>
+                  </CardContentSmall>
+                  <LinkContainerSmall
+                    onClick={() => {
+                      navigate(`/events/${date}-${title.split(' ').join('-')}`)
+                    }}
+                  >
                     <LinkText>详情</LinkText>
                     <LinkIcon src={rightArrowUrl} />
-                  </LinkContainer>
-                </CardContentSmall>
-              </CardSmall>
-            ),
-          )}
+                  </LinkContainerSmall>
+                </CardSmall>
+              )
+            }
+          })}
         </CardContainer>
         <SectionButton onClick={() => navigate('/events')}>
           了解更多
