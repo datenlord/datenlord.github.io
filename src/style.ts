@@ -149,6 +149,7 @@ export const GlobalStyle = createGlobalStyle`
       border-radius: 4px;
       overflow-x: scroll;
       code {
+        white-space: pre-wrap;
         padding: 0;
       }
     }
