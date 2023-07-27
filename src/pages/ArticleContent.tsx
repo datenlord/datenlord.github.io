@@ -17,9 +17,18 @@ const ViewContainer = styled.div`
   padding-inline: 1.22rem;
   padding-top: 1.2rem;
 `
-const Content = styled.div`
+const ContentContainer = styled.div`
   flex-grow: 1;
   padding-inline: 0.64rem;
+`
+const Title = styled.h1`
+  margin-bottom: 0.96rem;
+  color: #1e1e1e;
+  font-size: 0.4rem;
+  line-height: 0.48rem;
+  font-weight: 600;
+`
+const Content = styled.div`
   background: #fff;
   border-radius: 0.08rem;
 `
@@ -127,10 +136,13 @@ export default () => {
             </Sidebar>
           </SidebarContainer>
         )}
-        <Content
-          className="content"
-          dangerouslySetInnerHTML={{ __html: data?.default || '' }}
-        />
+        <ContentContainer>
+          <Title>{data?.metadata.label}</Title>
+          <Content
+            className="content"
+            dangerouslySetInnerHTML={{ __html: data?.default || '' }}
+          />
+        </ContentContainer>
       </ViewContainer>
     </ViewWrapper>
   )
