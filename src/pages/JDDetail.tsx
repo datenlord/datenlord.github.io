@@ -104,7 +104,7 @@ moment.updateLocale('zh-cn', {
 
 import { Typography } from '@/components/Typography'
 
-import hrQRCodeUrl from '@/assets/job-description/hr-qr-code.png'
+import weChatQRcode from '@/assets/company/wechat-qrcode.png'
 import logoUrl from '@/assets/logo-image.svg'
 import locationIconUrl from '@/assets/job-description/location.svg'
 import clockIconUrl from '@/assets/job-description/clock.svg'
@@ -206,7 +206,8 @@ const ColorText = styled.span`
 `
 const Img = styled.img`
   display: block;
-  width: 120px;
+  width: 0.8rem;
+  padding-top: 0.12rem;
   margin-inline: auto;
 `
 const JDList = styled.section`
@@ -524,7 +525,7 @@ export default () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [key])
-  const _JDdata = JDdata.filter(({id}) => id !== key)
+  const _JDdata = JDdata.filter(({ id }) => id !== key)
   return (
     <ViewWrapper>
       <ViewContainer>
@@ -590,9 +591,9 @@ export default () => {
                   return (
                     <RelatedCard key={id}>
                       <RelatedTop>
-                      <CardAvatar>
-                <CardAvatarIcon src={avatarIconUrl} />
-              </CardAvatar>
+                        <CardAvatar>
+                          <CardAvatarIcon src={avatarIconUrl} />
+                        </CardAvatar>
                         <Button
                           onClick={() => navigate(`/job-description/${id}`)}
                         >
@@ -656,7 +657,7 @@ export default () => {
             <LinkText>
               <ColorText>info@datenlord.com</ColorText>或扫描微信联系也可以喔~
             </LinkText>
-            <Img src={hrQRCodeUrl} />
+            <Img src={weChatQRcode} />
           </LinkCard>
         </RightSidebarContainer>
       </ViewContainer>
