@@ -1,9 +1,8 @@
 ---
 label: 硬件敏捷开发与验证方法学研讨
 description: 作为2022年第二届RISC-V中国峰会的同期活动，8月27日下午，达坦科技将在线上举办硬件敏捷开发与验证方法学研讨。
-# cover: ./cover.jpg
+cover: ./cover.png
 location: 新加坡
-# tags: ['Tech Talk', 'Xline']
 ---
 
 作为 **2022 年第二届 RISC-V 中国峰会**的同期活动，8 月 27 日下午，达坦科技将在线上举办硬件敏捷开发与验证方法学研讨。

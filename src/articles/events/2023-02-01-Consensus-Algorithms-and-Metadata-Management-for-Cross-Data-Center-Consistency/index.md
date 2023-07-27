@@ -1,9 +1,8 @@
 ---
 label: 分布式实验室直播 | 共识算法与跨数据中心一致性的元数据管理
 description: 在 2021 年时，UC Berkeley 提出了天空计算（Sky Computing）的概念。所谓天空计算是云平台上的一层，其目标是打通彼此孤立的云，将分布式系统从数据中心范围扩展到全球范围。Xline 是一款开源分布式 kv 存储系统，基于 curp 共识算法实现，旨在提供跨云元数据管理功能。相比于传统共识协议 Raft 或 Paxos，curp 在天空计算的场景中有着更好的性能表现。
-# cover: ./image1.webp
+cover: ./cover.jpeg
 location: 海南
-# tags: ['Tech Talk', 'Xline']
 ---
 
 在 2021 年时，UC Berkeley 提出了 **天空计算（Sky Computing）** 的概念。所谓天空计算是云平台上的一层，其目标是打通彼此孤立的云，将分布式系统从数据中心范围扩展到全球范围。 **Xline 是一款开源分布式 kv 存储系统，** 基于 curp 共识算法实现，旨在提供跨云元数据管理功能。相比于传统共识协议 Raft 或 Paxos，curp 在天空计算的场景中有着更好的性能表现

@@ -1,7 +1,7 @@
 ---
 label: 直播预告 | RDMA软件接口高层封装
 description: RDMA 作为高速通信协议被数据中心广泛使用，但是因为底层接口设计得过于繁复，对使用者造成了很大的不便，因此我们使用 Rust 语言对 RDMA 进行了一层高层封装。这次分享将介绍这层封装的做法和原理。
-# cover: ./image1.webp
+cover: ./cover.png
 location: 香港
 ---
 
