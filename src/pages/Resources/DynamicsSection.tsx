@@ -55,10 +55,10 @@ const CardCover = styled.img`
   width: 100%;
 `
 const CardCoverBig = styled(CardCover)`
-  height: 4.14rem;
+  /* height: 4.14rem; */
 `
 const CardCoverSmall = styled(CardCover)`
-  height: 1.4rem;
+  /* height: 1.4rem; */
 `
 
 const CardContent = styled.div``
@@ -89,7 +89,7 @@ const CardTitleSmall = styled(CNTitleMedium)`
 const CardTextBig = styled(CNBodySmall)`
   margin-bottom: 0.36rem;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
