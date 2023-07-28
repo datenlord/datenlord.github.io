@@ -4,6 +4,8 @@ import { Typography } from '@/components/Typography'
 
 import LogoUrl from '@/assets/logo-theme-dark.svg'
 import FoundingImageUrl from '@/assets/company/founding-image.png'
+import ShiJichengAvatarUrl from '@/assets/company/shi-jicheng-avatar.png'
+import WangPuAvatarUrl from '@/assets/company/wang-pu-avatar.png'
 
 const { Heading, Paragraph } = Typography
 const { CNHead4, CNHead5S, CNHead5 } = Heading
@@ -12,7 +14,7 @@ const { CNBodyLarge, CNBodySmall } = Paragraph
 const cardData = [
   {
     key: 'wang-pu',
-    avatar: '',
+    avatar: WangPuAvatarUrl,
     name: '王璞',
     position: '达坦科技创始人兼CEO',
     text: '达坦科技创始人兼CEO，美国George Mason大学计算机博士、北大硕士、北航本科，拥有多年云计算和大数据领域的经验和积累，擅长分布式系统研发、海量数据处理、云计算产品设计及大规模机器学习等。2014年回国创业，创立数人云科技公司，专注容器技术在国内的落地和推广，2018年被上市公司收购。曾发表十余篇论文，共计被引用上千次，拥有多项云计算专利、软著，并于2020年被评选为腾讯云TVP（最有价值专家）。',
@@ -22,7 +24,7 @@ const cardData = [
   },
   {
     key: 'shi-ji-cheng',
-    avatar: '',
+    avatar: ShiJichengAvatarUrl,
     name: '施继成',
     position: '达坦科技联合创始人兼 CTO',
     text: 'DatenLord 联合创始人兼 CTO，复旦大学软件工程本硕，师从华为基础软件首席科学家、鸿蒙实验室主任陈海波教授。擅长操作系统内核开发、分布式系统、嵌入式系统，对分布式数据一致性有钻深的研究，发表多篇操作系统内核相关论文，累计数百次引用。毕业后曾在谷歌中国、微软亚太和阿里巴巴等公司从事分布式计算和存储等相关工作。入选2022年度6氪S级创业者名册，荣获中国“企业工具与底层软件”领域 “36位36岁以下创业者“称号。',
@@ -103,7 +105,7 @@ const CardPerson = styled.div`
 const CardContent = styled.div`
   width: 80%;
 `
-const CardAvatar = styled.div`
+const CardAvatar = styled.img`
   width: 1.2rem;
   height: 1.2rem;
   margin-bottom: 0.13rem;
@@ -153,10 +155,10 @@ export const AboutUsSection: React.FC = () => {
           </FoundingContent>
           <FoundingImage src={FoundingImageUrl} />
         </FoundingContainer>
-        {cardData.map(({ key, name, position, text, quote, inscription }) => (
+        {cardData.map(({ key, name, avatar, position, text, quote, inscription }) => (
           <Card key={key} name={key}>
             <CardPerson>
-              <CardAvatar />
+              <CardAvatar src={avatar} />
               <CardName>{name}</CardName>
               <CardPosition>{position}</CardPosition>
             </CardPerson>

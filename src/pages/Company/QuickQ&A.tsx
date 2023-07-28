@@ -2,6 +2,9 @@ import { styled } from 'styled-components'
 
 import { Typography } from '@/components/Typography'
 
+import ShiJichengAvatarUrl from '@/assets/company/shi-jicheng-avatar.png'
+import WangPuAvatarUrl from '@/assets/company/wang-pu-avatar.png'
+
 const { Heading, Paragraph } = Typography
 const { CNHead5S, CNHead4 } = Heading
 const { CNBodyLarge } = Paragraph
@@ -11,7 +14,7 @@ const QAdata = [
     title: 'Q：当时是在什么契机下决定要创立达坦科技呢？',
     content: [
       {
-        avatar: '',
+        avatar: WangPuAvatarUrl,
         name: '王璞',
         text: [
           '首先我和继成过往的经验一直都是在云计算、分布式系统相关领域。我自己一直是一个喜欢创业的人，上一家公司被收购之后尝试着在上市公司做高管，但说实话不喜欢。上市公司门多组织复杂，里面繁冗的流程、复杂的人际关系，这些都不是我想要的，所以决定还是要出来创业，专注前沿技术，并且从创业最初期就特别关注团队的人才培养和文化建设，营造追求极致的技术氛围。',
@@ -19,7 +22,7 @@ const QAdata = [
         ],
       },
       {
-        avatar: '',
+        avatar: ShiJichengAvatarUrl,
         name: '施继成',
         text: [
           '我从另一个角度补充一下。作为技术人员，能够深入钻研技术是很令人开心的一件事情。技术人员往往更愿意在感兴趣的领域进行深挖，探索其中的深入问题，甚至是一些世界级的前沿技术和问题。当然这也需要花费大量的时间和精力，短时间的速成往往是欲速则不达。我们在创办 DatenLord 的时候就想做这么一家沉下心钻研技术的公司，相信也会吸引一群有同样追求的人员加入我们。',
@@ -32,7 +35,7 @@ const QAdata = [
     title: 'Q：为什么选择“跨云”这个细分领域？',
     content: [
       {
-        avatar: '',
+        avatar: WangPuAvatarUrl,
         name: '王璞',
         text: [
           '跨云存储是非常有挑战的问题，达坦科技立志要做出世界级产品，我们选择的领域也是业界公认的难点。 回答这个问题之前，我们先看看云计算的现状：现在的云计算其实是一座座围城，用户一旦进入一座围城中就很难再翻越出来。例如用户一旦开始大规模使用私有云部署，一段时间之后想要上公有云就非常困难；又或者用户一旦选择了一家云计算厂商，之后想要迁移到另外一家厂商成本就会很高。',
@@ -40,7 +43,7 @@ const QAdata = [
         ],
       },
       {
-        avatar: '',
+        avatar: ShiJichengAvatarUrl,
         name: '施继成',
         text: [
           '是的，如何高效解决数据远程访问的问题是上云碰到的最突出问题，有了高性能跨云数据访问能力，即可以轻松上云又可以突破云厂商的绑定，让客户真正享受到云计算带来的弹性便利。而想要能大幅度提升跨云数据访问性能，就需要做软硬件深度融合。目前软硬件融合领域，不论对互联网公司、云计算巨头，还是老牌企业级IT厂商，都是极具挑战的场景。总之，达坦选择跨云存储领域，具有很高的技术门槛，即使对大厂来说也很有挑战。我们跟巨头站在差不多的起跑线上，真正用技术实力来竞争。',
@@ -52,7 +55,7 @@ const QAdata = [
     title: 'Q：达坦科技希望能带来什么样的价值呢？',
     content: [
       {
-        avatar: '',
+        avatar: WangPuAvatarUrl,
         name: '王璞',
         text: [
           '我从市场和产业的角度说一下吧。一方面，随着云计算的普及，企业客户对应用上云已经形成共识，但是企业客户对于数据上云还有不少顾虑，会更倾向于将数据保存在可控的环境，比如私有数据中心。那企业应用上云后如何访问远程私有数据中心的数据，成为云计算进一步普及落地亟需解决的问题。',
@@ -61,7 +64,7 @@ const QAdata = [
         ],
       },
       {
-        avatar: '',
+        avatar: ShiJichengAvatarUrl,
         name: '施继成',
         text: [
           '跨云存储是非常有挑战的场景，不仅要保证跨云数据访问的性能，更要保证跨云访问场景下，数据被竞争读写时仍然能保证数据一致性（正确性），即跨云、跨数据中心的数据一致性。我们当前已经推出的DatenLord开源项目可以实现跨云、跨数据中心场景下远程数据高性能访问，一方面方便企业客户的应用上云后访问远程私有数据中心的数据，另一方面方便无服务计算的应用（跨云）访问远程数据。',
@@ -111,7 +114,7 @@ const CardPerson = styled.div`
   align-items: center;
   width: 8%;
 `
-const CardAvatar = styled.div`
+const CardAvatar = styled.img`
   width: 0.64rem;
   height: 0.64rem;
   margin-bottom: 0.08rem;
@@ -158,10 +161,10 @@ export const QuickQA: React.FC = () => {
         {QAdata.map(({ title, content }, index) => (
           <Card key={index}>
             <CardTitle>{title}</CardTitle>
-            {content.map(({ name, text }, index) => (
+            {content.map(({ name, avatar, text }, index) => (
               <CardContent key={index}>
                 <CardPerson>
-                  <CardAvatar />
+                  <CardAvatar src={avatar} />
                   <CardName>{name}</CardName>
                 </CardPerson>
                 <CardTextWrapper index={index}>
