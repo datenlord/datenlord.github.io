@@ -3,7 +3,6 @@ label: Rust唠嗑室：Xline跨数据中心一致性管理
 description: 2022年10月15日，达坦科技和Rust语言中文社区合作，在Rust唠嗑室活动中，由达坦科技（DatenLord）联合创始人施继成做了关于开源分布式存储技术的分享，着重介绍了达坦科技新的开源项目Xline，这一跨云的metadata(元数据)KV存储的产品是如何实现高性能跨数据中心的数据一致性管理的
 cover: ./cover.jpg
 location: 香港
-tags: [Xline]
 ---
 
 ![封面](./cover.jpg)
