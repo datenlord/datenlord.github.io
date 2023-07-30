@@ -130,6 +130,10 @@ const CardInscription = styled(CNBodySmall)`
   color: ${props => props.theme.gray03};
   text-align: right;
 `
+const Bold = styled.span`
+  color: ${props => props.theme.secondary01};
+  font-weight: 600;
+`
 
 export const AboutUsSection: React.FC = () => {
   return (
@@ -139,7 +143,8 @@ export const AboutUsSection: React.FC = () => {
         <Overview>
           <OverviewLogo src={LogoUrl} />
           <OverviewText>
-            达坦科技（DatenLord）专注于打造新一代开源跨云存储平台。通过软硬件深度融合的方式打通云云壁垒，实现无限制跨云存储、跨云联通，建立海量异地、异构数据的统一存储访问机制，为云上应用提供高性能安全存储支持。以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。
+            <Bold>达坦科技（DatenLord）</Bold>
+            专注下一代云计算——“天空计算”的基础设施技术，致力于拓宽云计算的边界。达坦科技打造的新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云间壁垒，实现数据高效跨云访问，建立海量异地、异构数据的统一存储访问机制，为云上应用提供高性能安全存储支持。以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。
           </OverviewText>
         </Overview>
         <FoundingContainer>
@@ -155,20 +160,22 @@ export const AboutUsSection: React.FC = () => {
           </FoundingContent>
           <FoundingImage src={FoundingImageUrl} />
         </FoundingContainer>
-        {cardData.map(({ key, name, avatar, position, text, quote, inscription }) => (
-          <Card key={key} name={key}>
-            <CardPerson>
-              <CardAvatar src={avatar} />
-              <CardName>{name}</CardName>
-              <CardPosition>{position}</CardPosition>
-            </CardPerson>
-            <CardContent>
-              <CardText>{text}</CardText>
-              <CardQuote>{quote}</CardQuote>
-              <CardInscription>{inscription}</CardInscription>
-            </CardContent>
-          </Card>
-        ))}
+        {cardData.map(
+          ({ key, name, avatar, position, text, quote, inscription }) => (
+            <Card key={key} name={key}>
+              <CardPerson>
+                <CardAvatar src={avatar} />
+                <CardName>{name}</CardName>
+                <CardPosition>{position}</CardPosition>
+              </CardPerson>
+              <CardContent>
+                <CardText>{text}</CardText>
+                <CardQuote>{quote}</CardQuote>
+                <CardInscription>{inscription}</CardInscription>
+              </CardContent>
+            </Card>
+          ),
+        )}
       </SectionContainer>
     </SectionWrapper>
   )
