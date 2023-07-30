@@ -91,7 +91,7 @@ const XlineTitle = styled(CNHead4)`
   padding-bottom: 0.14rem;
 `
 const XlineDescription = styled(CNBodyLarge)`
-  width: 60%;
+  width: 70%;
   text-align: right;
   padding-bottom: 0.14rem;
 `
@@ -319,8 +319,8 @@ export const ProductSection: React.FC = () => {
             <XlineContent>
               <XlineTitle>Xline开源分布式KV存储系统</XlineTitle>
               <XlineDescription>
-                保证数据在跨数据中心 跨云访问时的一致性
-                方便业务系统实现多地多中心多活部署
+                保证数据在跨数据中心，跨云访问时的一致性，
+                方便业务系统实现多地多中心多活部署。
               </XlineDescription>
               <Button
                 style={{ width: 'max-content', color: '#fff' }}
