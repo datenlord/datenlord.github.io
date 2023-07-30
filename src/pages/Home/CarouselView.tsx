@@ -21,19 +21,21 @@ const cardData = [
     label: '新闻/荣誉',
     url: '/news-honor-dynamic',
     content: {
-      type: 'ul',
-      children: [
-        {
-          key: 'open-source',
-          label: '开源之夏',
-          url: '',
-        },
-        {
-          key: 'system-competition',
-          label: 'OS系统大赛',
-          url: '',
-        },
-      ],
+      type: 'text',
+      content: 'Xline正式成为CNCF沙箱项目',
+      // type: 'ul',
+      // children: [
+      //   {
+      //     key: 'open-source',
+      //     label: '开源之夏',
+      //     url: '',
+      //   },
+      //   {
+      //     key: 'system-competition',
+      //     label: 'OS系统大赛',
+      //     url: '',
+      //   },
+      // ],
     },
   },
   {
@@ -146,12 +148,12 @@ const ArrowIcon = styled.img`
   width: 0.14rem;
   cursor: pointer;
 `
-const List = styled.ul`
-  padding-left: 0.2rem;
-  font-size: 0.16rem;
-  line-height: 0.3rem;
-`
-const ListItem = styled.li``
+// const List = styled.ul`
+//   padding-left: 0.2rem;
+//   font-size: 0.16rem;
+//   line-height: 0.3rem;
+// `
+// const ListItem = styled.li``
 const Text = styled.p`
   font-size: 0.16rem;
   line-height: 0.3rem;
@@ -187,13 +189,12 @@ const Card: React.FC = () => {
               </More>
               <ArrowIcon src={rightArrowUrl} />
             </TopContainer>
-            {content.type === 'ul' ? (
-              <List>
-                {content.children?.map(({ key, label }) => (
-                  <ListItem key={key}>{label}</ListItem>
-                ))}
-              </List>
-            ) : (
+            {content.type === 'ul' ? null : (
+              // <List>
+              //   {content.children?.map(({ key, label }) => (
+              //     <ListItem key={key}>{label}</ListItem>
+              //   ))}
+              // </List>
               <Text>{content.content}</Text>
             )}
           </Section>

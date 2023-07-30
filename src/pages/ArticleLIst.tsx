@@ -11,7 +11,7 @@ const titleMap = new Map([
   ['blogs', '技术博客'],
   ['events', '活动预告'],
   ['highlights', '精彩回顾'],
-  ['news-honor-dynamic', '新闻 / 荣誉 / 动态'],
+  ['news-honor-dynamic', '新闻 / 荣誉'],
 ])
 
 const MainWrapper = styled.main`
