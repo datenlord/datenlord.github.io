@@ -7,11 +7,11 @@ import mailIconUrl from '@/assets/icons/mail.svg'
 import wechatIconUrl from '@/assets/icons/wechat.svg'
 import bilibiliIconUrl from '@/assets/icons/bilibili.svg'
 import zhihuIconUrl from '@/assets/icons/zhihu.svg'
-import weChatPublicQRcode from '@/assets/company/wechat-public-qrcode.png'
-import emailQRcode from '@/assets/company/email-qrcode.png'
-import weChatQRcode from '@/assets/company/wechat-qrcode.png'
-import bilibiliQRcode from '@/assets/company/bilibili-qrcode.png'
-import zhihuQRcode from '@/assets/company/zhihu-qrcode.png'
+import weChatPublicQRcode from '@/assets/company/wechat-public-qrcode1.png'
+import emailQRcode from '@/assets/company/email-qrcode1.png'
+import weChatQRcode from '@/assets/company/wechat-qrcode1.png'
+import bilibiliQRcode from '@/assets/company/bilibili-qrcode1.png'
+import zhihuQRcode from '@/assets/company/zhihu-qrcode1.png'
 
 const { Heading, Paragraph } = Typography
 const { CNHead4, CNTitleMedium } = Heading
@@ -63,7 +63,7 @@ const IconText = styled(CNTitleMedium)`
   text-align: center;
 `
 const QRCode = styled.img`
-  width: 1rem;
+  width: 1.6rem;
   padding-bottom: 0.16rem;
   display: block;
 `
