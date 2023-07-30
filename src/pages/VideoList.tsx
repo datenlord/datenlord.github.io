@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useLocation, Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -139,10 +139,12 @@ const VideoTitleContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-bottom: 0.11rem;
-`
-const VideoTitle = styled(CNTitleLarge)`
   color: #1a1a1a;
+  &:hover {
+    color: #531dab;
+  }
 `
+const VideoTitle = styled(CNTitleLarge)``
 const ArrowUpRight = styled.img`
   width: 0.215rem;
   height: 0.215rem;
@@ -177,11 +179,11 @@ export default () => {
                 items.map(({ key, image, date, title, text, url }, index) => {
                   if (index === 0) {
                     return (
-                      <NewVideoVertical key={key} as={Link} to={url}>
+                      <NewVideoVertical key={key}>
                         <VideoImageVertical src={image} />
                         <VideoContentVertical>
                           <VideoDate>{date}</VideoDate>
-                          <VideoTitleContainer>
+                          <VideoTitleContainer as={Link} to={url}>
                             <VideoTitle>{title}</VideoTitle>
                             <ArrowUpRight src={arrowUpRightUrl} />
                           </VideoTitleContainer>
@@ -191,10 +193,10 @@ export default () => {
                     )
                   } else if (index < 3) {
                     return (
-                      <VideoMix key={index} as={Link} to={url}>
+                      <VideoMix key={index}>
                         <VideoImageMix src={image} />
                         <VideoDate>{date}</VideoDate>
-                        <VideoTitleContainer>
+                        <VideoTitleContainer as={Link} to={url}>
                           <VideoTitle>{title}</VideoTitle>
                           <ArrowUpRight src={arrowUpRightUrl} />
                         </VideoTitleContainer>
@@ -213,11 +215,11 @@ export default () => {
               items.map(({ key, image, date, title, text, url }, index) => {
                 if (index === 0) {
                   return (
-                    <VideoHorizon key={key} as={Link} to={url}>
+                    <VideoHorizon key={key}>
                       <VideoImageHorizon src={image} />
                       <VideoContentHorizon>
                         <VideoDate>{date}</VideoDate>
-                        <VideoTitleContainer>
+                        <VideoTitleContainer as={Link} to={url}>
                           <VideoTitle>{title}</VideoTitle>
                           <ArrowUpRight src={arrowUpRightUrl} />
                         </VideoTitleContainer>
@@ -233,11 +235,11 @@ export default () => {
             <AllVideoContainer>
               {items &&
                 items.map(({ key, image, date, title, text, url }) => (
-                  <VideoVertical key={key} as={Link} to={url}>
+                  <VideoVertical key={key}>
                     <VideoImageVertical src={image} />
                     <VideoContentVertical>
                       <VideoDate>{date}</VideoDate>
-                      <VideoTitleContainer>
+                      <VideoTitleContainer as={Link} to={url}>
                         <VideoTitle>{title}</VideoTitle>
                         <ArrowUpRight src={arrowUpRightUrl} />
                       </VideoTitleContainer>

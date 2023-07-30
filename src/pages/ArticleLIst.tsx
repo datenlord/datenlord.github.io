@@ -60,6 +60,10 @@ const Title = styled.div`
   line-height: 0.33rem;
   font-weight: 600;
   color: #1e1e1e;
+  cursor: pointer;
+  &:hover {
+    color: #531dab;
+  }
 `
 const Description = styled.div`
   padding-bottom: 0.13rem;
@@ -167,16 +171,17 @@ export default () => {
               tags,
             } = metadata
             return (
-              <Card
-                key={title}
-                onClick={() => {
-                  navigate(`${date}-${title.split(' ').join('-')}`)
-                }}
-              >
+              <Card key={title}>
                 {cover && <Illustration src={cover && assetURLs[0]} />}
                 <Content>
                   <Date>{moment(date).format('YYYY.M.D')}</Date>
-                  <Title>{label}</Title>
+                  <Title
+                    onClick={() => {
+                      navigate(`${date}-${title.split(' ').join('-')}`)
+                    }}
+                  >
+                    {label}
+                  </Title>
                   <Description>{description}</Description>
                   <MetaData>
                     {author && (
