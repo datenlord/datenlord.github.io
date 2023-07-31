@@ -159,6 +159,18 @@ export const GlobalStyle = createGlobalStyle`
     background: #f0f0f0;
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      th {
+        padding: 0.12rem;
+        border: 1px solid #000;
+      }
+      td {
+        padding: 0.12rem;
+        border: 1px solid #000;
+      }
+    }
     .hljs-comment,
     .hljs-quote {
       color: #998;
