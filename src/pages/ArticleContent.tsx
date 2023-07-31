@@ -43,6 +43,8 @@ const Sidebar = styled.div`
   padding: 0.32rem;
   background: #ffffff;
   border-radius: 0.08rem;
+  max-height: 60vh;
+  overflow-y: scroll;
 `
 const SidebarItem = styled.div<SideBarItemProps>`
   display: block;
