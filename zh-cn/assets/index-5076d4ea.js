@@ -1,4 +1,4 @@
-const e="/zh-cn/assets/cover-6865ae02.png",l="/zh-cn/assets/image1-1421d5c3.png",i="/zh-cn/assets/image2-03115587.png",t="/zh-cn/assets/image3-8a8d1c33.png",a="/zh-cn/assets/image4-c1593056.png",s=[e,l,i,t,a],p={label:"Xline 源码解读（一） —— 初识 CURP 协议",description:"Xline 是一款开源的分布式 KV 存储引擎，其核心目的是实现高性能的跨数据中心强一致性，提供跨数据中心的meatdata 管理。那么 Xline 是怎么实现这种高性能的跨数据中心强一致性的呢？这篇文章就将带领大家一起来一探究竟。",cover:"./cover.png",location:"中国香港",author:["赵佳炜"],tags:["Xline"],date:"2023-07-13",title:"Interpretation of Xline source code (1)——Introduction to CURP protocol"},n=[{label:"Xline 是什么",level:2},{label:"Xline 的整体架构",level:2},{label:"CURP 协议简介",level:2},{label:"CURP 是什么？",level:3},{label:"为什么选择 CURP 协议",level:3},{label:"fast path 与 slow path",level:3},{label:"Summary",level:2}],r=`<p><img src="${e}" alt="封面"></p>
+const e="/zh-cn/assets/cover-6865ae02.png",l="/zh-cn/assets/image1-1421d5c3.png",t="/zh-cn/assets/image2-03115587.png",i="/zh-cn/assets/image3-8a8d1c33.png",a="/zh-cn/assets/image4-c1593056.png",s=[e,l,t,i,a],p={label:"Xline 源码解读（一） —— 初识 CURP 协议",description:"Xline 是一款开源的分布式 KV 存储引擎，其核心目的是实现高性能的跨数据中心强一致性，提供跨数据中心的meatdata 管理。那么 Xline 是怎么实现这种高性能的跨数据中心强一致性的呢？这篇文章就将带领大家一起来一探究竟。",cover:"./cover.png",location:"中国香港",author:["赵佳炜"],tags:["Xline"],date:"2023-07-13",title:"Interpretation of Xline source code (1)——Introduction to CURP protocol"},n=[{label:"Xline 是什么",level:2},{label:"Xline 的整体架构",level:2},{label:"CURP 协议简介",level:2},{label:"CURP 是什么？",level:3},{label:"为什么选择 CURP 协议",level:3},{label:"fast path 与 slow path",level:3},{label:"Summary",level:2}],o=`<p><img src="${e}" alt="封面"></p>
 <h2 id="xline-是什么">Xline 是什么</h2>
 <p>Xline 是一款开源的分布式 KV 存储引擎，其核心目的是实现高性能的跨数据中心强一致性，提供跨数据中心的 meatdata 管理。那么 Xline 是怎么实现这种高性能的跨数据中心强一致性的呢？这篇文章就将带领大家一起来一探究竟。</p>
 <h2 id="xline-的整体架构">Xline 的整体架构</h2>
@@ -21,7 +21,7 @@ const e="/zh-cn/assets/cover-6865ae02.png",l="/zh-cn/assets/image1-1421d5c3.png"
 <h3 id="为什么选择-curp-协议">为什么选择 CURP 协议</h3>
 <p>那为什么 Xline 要使用 CURP 这样一种新的协议，而非 Raft 或者 Multi-Paxos 来作为底层的共识协议呢？为了说明这个问题，我们不妨先来看看 Raft 以及 Multi-Paxos 都存在什么样的问题？</p>
 <p>下图是 Raft 协议达成共识的一个时序流程：</p>
-<p><img src="${i}" alt="图片"></p>
+<p><img src="${t}" alt="图片"></p>
 <p>在这个时序图中，我们可以了解到 Raft 协议达成共识的流程：</p>
 <ol>
 <li>client 需要向 leader 发起一个提案请求。</li>
@@ -30,7 +30,7 @@ const e="/zh-cn/assets/cover-6865ae02.png",l="/zh-cn/assets/image1-1421d5c3.png"
 <li>leader 统计所收到的成功响应的数量，如果超过集群节点数量的一半以上，则认为共识已达成，提案成功，否则认为提案失败，并将结果返回给 client。</li>
 </ol>
 <p>下图是 Multi-Paxos 协议达成共识的一个时序流程：</p>
-<p><img src="${t}" alt="图片"></p>
+<p><img src="${i}" alt="图片"></p>
 <p>在这个时序图中，我们可以了解到 Multi-Paxos 协议达成共识的流程：</p>
 <ol>
 <li>client 向 leader 发起一个提案请求。</li>
@@ -77,4 +77,4 @@ b. follower 接收到请求后，由于 z = 9 与 witness 中的 z = 7 相冲突
 <p>Xline 是一款提供跨数据中心强一致性的分布式 KV 存储，其核心问题之一便是如何在跨数据中心这种高延迟的广域网环境中提供高性能的强一致性保证。传统的分布式共识算法，如 Raft 和 Multi-Paxos，通过让所有操作都满足持久化存储和有序性前提来保证状态机一致性。而 CURP 协议则是对达成共识的场景做了更细粒度的划分，将协议分割成了前端（fast path）和后端（slow path），前端只保证了提案会被持久化到集群当中，而后端不仅保证了持久化，也保证了所有保存了该提案的节点会按照相同的顺序执行命令，保证了状态机的一致性。</p>
 <p>关于 CURP 协议的简介就到这里，更多的细节欢迎参考我们的其他文章和分享，如下：<br>
 <a href="https://mp.weixin.qq.com/s?__biz=MzkwNTMzOTE2MA==&#x26;mid=2247484411&#x26;idx=1&#x26;sn=ea75ac5e8dd0e7b0275a8fefc87e06ad&#x26;chksm=c0f80b8cf78f829ade62d72086b6bac2232650cf46f8cd35e790703c686657526f9d62e53657&#x26;scene=21#wechat_redirect">Curp 共识协议的重新思考</a></p>
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzkwNTMzOTE2MA==&#x26;mid=2247484541&#x26;idx=1&#x26;sn=a7606b6f899a8fe6fddd8e9d77caa027&#x26;chksm=c0f80c0af78f851cb8699105225749da05526dfef676a244f53d7154c0f35399b30e5984f123&#x26;scene=21#wechat_redirect">DatenLord | Xline Geo-distributed KV Storage</a></p>`;export{s as assetURLs,r as default,p as metadata,n as toc};
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzkwNTMzOTE2MA==&#x26;mid=2247484541&#x26;idx=1&#x26;sn=a7606b6f899a8fe6fddd8e9d77caa027&#x26;chksm=c0f80c0af78f851cb8699105225749da05526dfef676a244f53d7154c0f35399b30e5984f123&#x26;scene=21#wechat_redirect">DatenLord | Xline Geo-distributed KV Storage</a></p>`;export{s as assetURLs,o as default,p as metadata,n as toc};

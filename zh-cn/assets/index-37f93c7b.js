@@ -1,4 +1,4 @@
-const e="/zh-cn/assets/image1-d5e6eb74.jpg",t="/zh-cn/assets/image2-5d4b8e33.jpg",s="/zh-cn/assets/image3-a4b62ce6.jpg",a=[e,t,s],p={label:"创造性地精细造车轮：RDMA的Rust安全实践",description:"极客时间打造的QCon+案例研习社以案例讲解视频、主题直播、社群交互结合的全新线上学习模式，为数字化人才提供利用碎片化时间来提升知识和技能的平台",location:"新加坡",date:"2022-07-28",title:"Creatively fine tuned wheels: RDMA's Rust safety practices"},i=[{label:"讲解回顾",level:2},{label:"达坦宗旨",level:2},{label:"联系我们",level:2},{label:"推荐阅读",level:2}],c=`<p>极客时间打造的 QCon+案例研习社以案例讲解视频、主题直播、社群交互结合的全新线上学习模式，为数字化人才提供利用碎片化时间来提升知识和技能的平台。</p>
+const e="/zh-cn/assets/image1-d5e6eb74.jpg",t="/zh-cn/assets/image2-5d4b8e33.jpg",s="/zh-cn/assets/image3-a4b62ce6.jpg",a=[e,t,s],p={label:"创造性地精细造车轮：RDMA的Rust安全实践",description:"极客时间打造的QCon+案例研习社以案例讲解视频、主题直播、社群交互结合的全新线上学习模式，为数字化人才提供利用碎片化时间来提升知识和技能的平台",location:"新加坡",date:"2022-07-28",title:"Creatively fine tuned wheels: RDMA's Rust safety practices"},i=[{label:"讲解回顾",level:2},{label:"达坦宗旨",level:2},{label:"联系我们",level:2},{label:"推荐阅读",level:2}],n=`<p>极客时间打造的 QCon+案例研习社以案例讲解视频、主题直播、社群交互结合的全新线上学习模式，为数字化人才提供利用碎片化时间来提升知识和技能的平台。</p>
 <h2 id="讲解回顾">讲解回顾</h2>
 <p>达坦科技联合创始人施继成受邀作为案例研习社的讲师，近日分享了达坦实用的、可落地的 Rust 技术应用开发经验和实践案例，介绍了达坦是如何使用以安全性著称的系统编程语言—Rust 去封装 RDMA 接口以达到安全高效的目的。</p>
 <p><img src="${e}" alt="图片"></p>
@@ -19,4 +19,4 @@ const e="/zh-cn/assets/image1-d5e6eb74.jpg",t="/zh-cn/assets/image2-5d4b8e33.jpg
 <p>有意加入 Rust 前沿交流讨论群，请扫如下的二维码</p>
 <p><img src="${s}" alt="图片"></p>
 <h2 id="推荐阅读">推荐阅读</h2>
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzkwNTMzOTE2MA==&#x26;mid=2247484456&#x26;idx=1&#x26;sn=5f6a6714edeec6444d774b680ddad4ab&#x26;chksm=c0f80c5ff78f8549bb4778146c9a431a7872a0f77bcf7e817c36120ebc3b9a52e48abdce4719&#x26;scene=21#wechat_redirect">创业公司为什么要选 Rust 做 RDMA 库？Understanding Functor in Rust</a></p>`;export{a as assetURLs,c as default,p as metadata,i as toc};
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzkwNTMzOTE2MA==&#x26;mid=2247484456&#x26;idx=1&#x26;sn=5f6a6714edeec6444d774b680ddad4ab&#x26;chksm=c0f80c5ff78f8549bb4778146c9a431a7872a0f77bcf7e817c36120ebc3b9a52e48abdce4719&#x26;scene=21#wechat_redirect">创业公司为什么要选 Rust 做 RDMA 库？Understanding Functor in Rust</a></p>`;export{a as assetURLs,n as default,p as metadata,i as toc};
