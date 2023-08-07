@@ -12,6 +12,7 @@ import { techTalkItems } from './TechShare/TechTalk'
 import { OSSShowcaseItems } from './TechShare/OSSShowcase'
 import { rustShowcaseItems } from './TechShare/RustShowcase'
 import { spinalHDLItems } from './TechShare/SpinalHDL'
+import { RecommendItems } from './TechShare/Recommend'
 
 const { Heading, Paragraph } = Typography
 const { CNHead4, CNTitleLarge } = Heading
@@ -161,6 +162,8 @@ export default () => {
   const items = data.get(name)?.list.reverse()
   // console.log(typeof title.get(name))
 
+  const randomKey = Math.floor(Math.random() * 3) + 1;
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -211,9 +214,9 @@ export default () => {
           </Section>
           <Section>
             <SectionTitle>推荐视频</SectionTitle>
-            {items &&
-              items.map(({ key, image, date, title, text, url }, index) => {
-                if (index === 0) {
+            {RecommendItems &&
+              RecommendItems.map(({ key, image, date, title, text, url }, index) => {
+                if (key === randomKey) {
                   return (
                     <VideoHorizon key={key}>
                       <VideoImageHorizon src={image} />
