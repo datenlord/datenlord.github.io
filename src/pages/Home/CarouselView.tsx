@@ -22,7 +22,7 @@ const cardData = [
     url: '/news-honor-dynamic',
     content: {
       type: 'text',
-      content: 'Xline正式成为CNCF沙箱项目',
+      content: '达坦科技所获荣誉及相关新闻',
       // type: 'ul',
       // children: [
       //   {
@@ -53,7 +53,7 @@ const cardData = [
     url: '/highlights',
     content: {
       type: 'text',
-      content: '简要描述简要描述简要描述简要描述简要描述简要描述...',
+      content: '直播分享或Meetups精彩回顾',
     },
   },
 ]
