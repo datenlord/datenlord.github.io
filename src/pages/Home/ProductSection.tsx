@@ -290,8 +290,8 @@ export const ProductSection: React.FC = () => {
                 跨云跨数据中心的存储解决方案
               </span>
               ，帮助企业实现高效的跨云跨数据中心的存储访问。该方案为用户提供了丰富的系统结构，包括
-              Posix 文件接口， KV 接口 和
-              面向对象存储接口等，用户可以根据需求选择适合自己的方式。DatenLord
+              Posix 文件接口，
+              KV接口和面向对象存储接口等，用户可以根据需求选择适合自己的方式。DatenLord
               使用了软硬件融合的方式，充分发挥软硬件的性能潜力，实现了极致的数据传输和读写性能。
             </DatenLordDescription>
             <Button
@@ -324,10 +324,7 @@ export const ProductSection: React.FC = () => {
               </XlineDescription>
               <Button
                 style={{ width: 'max-content', color: '#fff' }}
-                onClick={() =>
-                  (window.location.href =
-                    'https://xline.cloud/')
-                }
+                onClick={() => (window.location.href = 'https://xline.cloud/')}
               >
                 了解更多
               </Button>
