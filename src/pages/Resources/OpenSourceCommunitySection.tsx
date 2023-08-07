@@ -23,7 +23,7 @@ const data1 = [
     link: {
       icon: discordIconUrl,
       text: 'Discord',
-      url: '',
+      url: 'https://discord.gg/Et7eSBgZ',
     },
   },
   {
@@ -33,7 +33,7 @@ const data1 = [
     link: {
       icon: githubIconUrl,
       text: 'GitHub',
-      url: '',
+      url: 'https://github.com/datenlord',
     },
   },
 ]
@@ -98,7 +98,7 @@ const SubTitleExtraContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 0.64rem;
+  margin-left: 0.64rem;
 `
 const SubTitleExtraIcon = styled.img`
   width: 0.3rem;
@@ -166,7 +166,7 @@ export const OpenSourceCommunity: React.FC = () => {
                 style={{ paddingBottom: '0.23rem' }}
                 extra={
                   link && (
-                    <SubTitleExtraContainer>
+                    <SubTitleExtraContainer as={'a'} href={link.url}>
                       <SubTitleExtraIcon src={link.icon} />
                       <SubTitleExtraText>{link.text}</SubTitleExtraText>
                     </SubTitleExtraContainer>
