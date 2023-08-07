@@ -1,4 +1,4 @@
-const t="/zh-cn/assets/cover-266fa864.png",p=[t],o={label:"从云计算到天空计算（一）",description:"2021年，UC Berkeley的Ion Stoica和Scott Shenker，在运行系统热点话题的研讨会上，发布了“从云计算到天空计算”的论文。不同于我们都熟知的Cloud Computing(“云计算”)，Sky Computing (“天空计算”)，是云计算的未来，是指天空中有很多的云，如何解决跨云的问题，打破不同云之间的隔阂，最大化地利用跨云数据。",cover:"./cover.png",location:"海南",author:["达坦科技"],tags:["Xline"],date:"2023-01-19",title:"From Cloud Computing to Sky Computing (1)"},n=[{label:"简介",level:2},{label:"历史的回顾",level:2},{label:"从因特网获得的启示",level:2},{label:"兼容层",level:2},{label:"未完待续……",level:2}],e=`<p><img src="${t}" alt="封面"></p>
+const t="/zh-cn/assets/cover-266fa864.png",p=[t],o={label:"从云计算到天空计算（一）",description:"2021年，UC Berkeley的Ion Stoica和Scott Shenker，在运行系统热点话题的研讨会上，发布了“从云计算到天空计算”的论文。不同于我们都熟知的Cloud Computing(“云计算”)，Sky Computing (“天空计算”)，是云计算的未来，是指天空中有很多的云，如何解决跨云的问题，打破不同云之间的隔阂，最大化地利用跨云数据。",cover:"./cover.png",location:"海南",author:["达坦科技"],tags:["Xline"],date:"2023-01-19",title:"From Cloud Computing to Sky Computing (1)"},e=[{label:"简介",level:2},{label:"历史的回顾",level:2},{label:"从因特网获得的启示",level:2},{label:"兼容层",level:2},{label:"未完待续……",level:2}],n=`<p><img src="${t}" alt="封面"></p>
 <p>2021 年，UC Berkeley 的 Ion Stoica 和 Scott Shenker，在运行系统热点话题的研讨会上，发布了“从云计算到天空计算”的论文。不同于我们都熟知的 <strong>Cloud Computing(“云计算”)，Sky Computing (“天空计算”)</strong>，是云计算的未来，是指天空中有很多的云，如何解决跨云的问题，打破不同云之间的隔阂，最大化地利用跨云数据。</p>
 <p>达坦科技的使命正如同论文中描述的“天空计算”的愿景：<strong>打造下一代云计算平台，让云之间没有隔阂</strong>。为此，新年伊始，我们翻译了这篇论文，将分两期发布。如下是“从云计算到天空计算”的第一部分。</p>
 <h2 id="简介">简介</h2>
@@ -24,4 +24,4 @@ const t="/zh-cn/assets/cover-266fa864.png",p=[t],o={label:"从云计算到天空
 <p>虽然开源软件解决了天空计算中的绝大多数问题, 但是还有一个问题没有解决, 那就是存储问题, 因为每一家云厂商都会提供自己的存储接口。幸运的是已经有一个方案提供 S3 兼容的接口, 甚至一些云厂商自己也会提供 S3 兼容的接口。更进一步, 云平台之间的数据访问应该是可行的, 不会受到阻碍。</p>
 <h2 id="未完待续……">未完待续……</h2>
 <p>达坦科技（DatenLord）推出的<strong>开源分布式 KV 存储 Xline</strong>，就是针对多数据中心场景，实现数据的高性能跨云、跨数据中心共享访问，并保证数据的一致性，方便业务系统实现多地多中心多活部署。</p>
-<p>GitHub 链接：<a href="Https://github.com/datenlord/Xline">Https://github.com/datenlord/Xline</a></p>`;export{p as assetURLs,e as default,o as metadata,n as toc};
+<p>GitHub 链接：<a href="Https://github.com/datenlord/Xline">Https://github.com/datenlord/Xline</a></p>`;export{p as assetURLs,n as default,o as metadata,e as toc};

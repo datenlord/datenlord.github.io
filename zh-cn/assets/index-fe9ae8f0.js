@@ -1,4 +1,4 @@
-const l="/zh-cn/assets/image1-130a4039.jpg",a=[l],o={label:"Rust语言无锁数据结构的内存管理",description:"正如大家所熟知的，无锁数据结构在并发访问中往往具有更好的访问效率和并发度。",location:"河南",author:["施继成"],tags:["Rust"],date:"2022-05-27",title:"Memory Management for Lock Free Data Structures in the Rust Language"},s=[{label:"无锁数据结构内存管理",level:2},{label:"Epoch-Based Reclamation",level:2},{label:"Rust 语言实现 EBR",level:2},{label:"总结",level:2}],p=`<h2 id="无锁数据结构内存管理">无锁数据结构内存管理</h2>
+const l="/zh-cn/assets/image1-130a4039.jpg",o=[l],a={label:"Rust语言无锁数据结构的内存管理",description:"正如大家所熟知的，无锁数据结构在并发访问中往往具有更好的访问效率和并发度。",location:"河南",author:["施继成"],tags:["Rust"],date:"2022-05-27",title:"Memory Management for Lock Free Data Structures in the Rust Language"},s=[{label:"无锁数据结构内存管理",level:2},{label:"Epoch-Based Reclamation",level:2},{label:"Rust 语言实现 EBR",level:2},{label:"总结",level:2}],p=`<h2 id="无锁数据结构内存管理">无锁数据结构内存管理</h2>
 <p>正如大家所熟知的，无锁数据结构在并发访问中往往具有更好的访问效率和并发度。无锁数据结构的性能优势主要来自于以下两点：</p>
 <ol>
 <li>数据结构的锁设计往往比较粗粒度，在很多可以并发访问的情况下，访问者被锁阻塞，无法实现并发访问。</li>
@@ -44,4 +44,4 @@ const l="/zh-cn/assets/image1-130a4039.jpg",a=[l],o={label:"Rust语言无锁数�
 </code></pre>
 <p>第一行和前面的例子类似，第二行的语义为从 map 中寻找 key 对应的 value，获取 value 的引用，其生命周期不超过 guard 的生命周期。通过生命周期的方法，我们限定了 value 引用的使用范围为 guard 的存活范围。</p>
 <h2 id="总结">总结</h2>
-<p>本文简单介绍了 Epoch-Based Reclamation 内存管理方法，并且从接口层面介绍了 Rust 的实现和使用。同时本文也分析了 EBR 在性能上的优越性，以及 Rust 语言从语言实现的优势。之后我们还会从 crossbeam epoch 的实现细节给大家带来深入的 Rust EBR 实现的分析。</p>`;export{a as assetURLs,p as default,o as metadata,s as toc};
+<p>本文简单介绍了 Epoch-Based Reclamation 内存管理方法，并且从接口层面介绍了 Rust 的实现和使用。同时本文也分析了 EBR 在性能上的优越性，以及 Rust 语言从语言实现的优势。之后我们还会从 crossbeam epoch 的实现细节给大家带来深入的 Rust EBR 实现的分析。</p>`;export{o as assetURLs,p as default,a as metadata,s as toc};
