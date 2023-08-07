@@ -7,7 +7,7 @@ const srcPath = resolve(__dirname, 'src')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '',
+  base: '/zh-cn/',
   resolve: {
     alias: {
       '@/': `${srcPath}/`,
