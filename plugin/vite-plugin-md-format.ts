@@ -4,9 +4,11 @@ import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkRehype from 'remark-rehype'
+import remarkMath from 'remark-math'
 import rehypeRaw from 'rehype-raw'
 import rehypeStringify from 'rehype-stringify'
 import rehypeHighlight from 'rehype-highlight'
+import rehypeKatex from 'rehype-katex'
 import YAML from 'yaml'
 import moment from 'moment'
 
@@ -120,11 +122,13 @@ const compileMDToTS = (src: string, id: string) => {
     .use(() => getMetadata)
     // @ts-ignore
     .use(() => getTOC)
+    // .use(remarkMath)
     .use(remarkRehype, {
       allowDangerousHtml: true,
     })
     .use(rehypeRaw)
     .use(rehypeHighlight)
+    // .use(rehypeKatex)
     .use(() => addId2Heading)
     // @ts-ignore
     .use(() => transCoverURL)

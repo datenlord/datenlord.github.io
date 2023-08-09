@@ -32,9 +32,9 @@ const carouselData: CarouseData[] = [
   },
   {
     key: 'data-access',
-    title: '统一的高性能跨云数据访问',
+    title: '统一的高性能多云数据访问',
     description:
-      '在高性能缓存和有效网络技术的协助下，提供跨云的统一数据访问服务。',
+      '在高性能缓存和高效网络技术的协助下，提供跨云的统一数据访问服务。',
     url: '',
   },
   {
