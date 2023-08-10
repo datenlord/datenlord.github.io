@@ -1,4 +1,4 @@
-const i="/zh-cn/assets/image1-9e1613a7.png",o="/zh-cn/assets/image2-7b7b20fc.png",e="/zh-cn/assets/image3-b15b4acb.png",n="/zh-cn/assets/image4-e5ed8af3.png",l="/zh-cn/assets/image5-74f0a1a0.png",t="/zh-cn/assets/image6-5ab2a1df.png",a="/zh-cn/assets/image7-bfc65522.png",p="/zh-cn/assets/image8-462cfa81.png",s="/zh-cn/assets/image9-ecae19a3.png",d="/zh-cn/assets/image10-1092617f.png",P="/zh-cn/assets/image11-2508217f.png",c="/zh-cn/assets/image12-69f6226d.png",r="/zh-cn/assets/image13-62fe53ff.png",h="/zh-cn/assets/image14-048f6e24.png",g="/zh-cn/assets/image15-c04accbc.png",m="/zh-cn/assets/image16-2de227b5.png",S="/zh-cn/assets/image17-ecbf7b1e.png",D="/zh-cn/assets/image18-88f5d1b8.png",F="/zh-cn/assets/image19-5df924ff.png",R="/zh-cn/assets/image20-5dfde1d6.png",b="/zh-cn/assets/image21-90c388d7.png",A=[i,o,e,n,l,t,a,p,s,d,P,c,r,h,g,m,S,D,F,R,b],u={label:"万字长文，详述TRIDENT：Poseidon 哈希算法的硬件加速与实现！",description:"本文主要介绍了DatenLord团队在今年的Xilinx全球自适应计算挑战赛上获得 Big Data Analytics赛道一等奖的作品——TRIDENT：Poseidon哈希算法的硬件实现与加速。该项目基于Xilinx Varium C1100 FPGA加速卡，为 Filecoin 区块链应用中的Poseidon哈希算法提供了一套完整的硬件加速方案。在硬件方面，TRIDENT基于 SpinalHDL 设计了Poseidon加速器 IP 并基于 Vivado中Block Design 工具搭建完整的FPGA硬件系统。在软件方面，我们为 Filecoin 软件实现 Lotus 提供了访问 FPGA 硬件加速器的接口。最终，TRIDENT 能够为Filecoin应用提供两倍于 AMD Ryzen 5900X 处理器的 Poseidon 计算加速效果。下文将主要从Poseidon哈希算法概述、基于SpinalHDL和Cocotb的硬件设计、总体方案设计、加速器 IP 设计和性能测试等方面对整个TRIDENT项目进行详细的介绍。",location:"中国香港",author:["翁万正"],tags:["硬件加速"],date:"2022-06-30",title:"Ten thousand words long article, detailing the hardware acceleration and implementation of TRIDENT: Poseidon hash algorithm!"},T=[{label:"引言",level:2},{label:"0.1 Poseidon 与零知识证明",level:3},{label:"0.2 Filecoin 分布式存储网络",level:3},{label:"Poseidon 哈希算法概述",level:2},{label:"1.1Poseidon 参数",level:3},{label:"1.2 Poseidon 详细计算流程",level:3},{label:"1.3Poseidon 算法特点",level:3},{label:"基于 SpinalHDL 和 Cocotb 的硬件设计与验证",level:2},{label:"2.1 SpinalHDL 和 Cocotb 概述",level:3},{label:"2.2 SpinalHDL 在硬件设计中的优势",level:3},{label:"2.3Cocotb 在验证中的优势",level:3},{label:"总体方案设计",level:2},{label:"3.1 开发平台",level:3},{label:"3.2 加速系统设计",level:3},{label:"加速器 IP 设计",level:2},{label:"4.1 模加电路的设计",level:3},{label:"4.2 模乘电路的设计",level:3},{label:"4.3 加速器架构设计",level:3},{label:"性能测试",level:2},{label:"5.1 Vivado Implementation 报告",level:3},{label:"总结",level:2}],C=`<p>本文主要介绍了 DatenLord 团队在今年的 Xilinx 全球自适应计算挑战赛上获得 Big Data Analytics 赛道一等奖的作品——TRIDENT: Poseidon 哈希算法的硬件实现与加速。该项目基于 Xilinx Varium C1100 FPGA 加速卡，为 Filecoin 区块链应用中的 Poseidon 哈希算法提供了一套完整的硬件加速方案。在硬件方面，TRIDENT 基于 SpinalHDL 设计了 Poseidon 加速器 IP 并基于 Vivado 中 Block Design 工具搭建完整的 FPGA 硬件系统。在软件方面，我们为 Filecoin 软件实现 Lotus 提供了访问 FPGA 硬件加速器的接口。最终，TRIDENT 能够为 Filecoin 应用提供两倍于 AMD Ryzen 5900X 处理器的 Poseidon 计算加速效果。下文将主要从 Poseidon 哈希算法概述、基于 SpinalHDL 和 Cocotb 的硬件设计、总体方案设计、加速器 IP 设计和性能测试等方面对整个 TRIDENT 项目进行详细的介绍。</p>
+const i="/zh-cn/assets/image1-9e1613a7.png",o="/zh-cn/assets/image2-7b7b20fc.png",e="/zh-cn/assets/image3-b15b4acb.png",n="/zh-cn/assets/image4-e5ed8af3.png",l="/zh-cn/assets/image5-74f0a1a0.png",t="/zh-cn/assets/image6-5ab2a1df.png",a="/zh-cn/assets/image7-bfc65522.png",p="/zh-cn/assets/image8-462cfa81.png",s="/zh-cn/assets/image9-ecae19a3.png",d="/zh-cn/assets/image10-1092617f.png",c="/zh-cn/assets/image11-2508217f.png",P="/zh-cn/assets/image12-69f6226d.png",r="/zh-cn/assets/image13-62fe53ff.png",h="/zh-cn/assets/image14-048f6e24.png",m="/zh-cn/assets/image15-c04accbc.png",g="/zh-cn/assets/image16-2de227b5.png",F="/zh-cn/assets/image17-ecbf7b1e.png",S="/zh-cn/assets/image18-88f5d1b8.png",R="/zh-cn/assets/image19-5df924ff.png",D="/zh-cn/assets/image20-5dfde1d6.png",b="/zh-cn/assets/image21-90c388d7.png",A=[i,o,e,n,l,t,a,p,s,d,c,P,r,h,m,g,F,S,R,D,b],u={label:"万字长文，详述TRIDENT：Poseidon 哈希算法的硬件加速与实现！",description:"本文主要介绍了DatenLord团队在今年的Xilinx全球自适应计算挑战赛上获得 Big Data Analytics赛道一等奖的作品——TRIDENT：Poseidon哈希算法的硬件实现与加速。该项目基于Xilinx Varium C1100 FPGA加速卡，为 Filecoin 区块链应用中的Poseidon哈希算法提供了一套完整的硬件加速方案。在硬件方面，TRIDENT基于 SpinalHDL 设计了Poseidon加速器 IP 并基于 Vivado中Block Design 工具搭建完整的FPGA硬件系统。在软件方面，我们为 Filecoin 软件实现 Lotus 提供了访问 FPGA 硬件加速器的接口。最终，TRIDENT 能够为Filecoin应用提供两倍于 AMD Ryzen 5900X 处理器的 Poseidon 计算加速效果。下文将主要从Poseidon哈希算法概述、基于SpinalHDL和Cocotb的硬件设计、总体方案设计、加速器 IP 设计和性能测试等方面对整个TRIDENT项目进行详细的介绍。",location:"中国香港",author:["翁万正"],tags:["硬件加速"],date:"2022-06-30",title:"Ten thousand words long article, detailing the hardware acceleration and implementation of TRIDENT: Poseidon hash algorithm!"},T=[{label:"引言",level:2},{label:"0.1 Poseidon 与零知识证明",level:3},{label:"0.2 Filecoin 分布式存储网络",level:3},{label:"Poseidon 哈希算法概述",level:2},{label:"1.1Poseidon 参数",level:3},{label:"1.2 Poseidon 详细计算流程",level:3},{label:"1.3Poseidon 算法特点",level:3},{label:"基于 SpinalHDL 和 Cocotb 的硬件设计与验证",level:2},{label:"2.1 SpinalHDL 和 Cocotb 概述",level:3},{label:"2.2 SpinalHDL 在硬件设计中的优势",level:3},{label:"2.3Cocotb 在验证中的优势",level:3},{label:"总体方案设计",level:2},{label:"3.1 开发平台",level:3},{label:"3.2 加速系统设计",level:3},{label:"加速器 IP 设计",level:2},{label:"4.1 模加电路的设计",level:3},{label:"4.2 模乘电路的设计",level:3},{label:"4.3 加速器架构设计",level:3},{label:"性能测试",level:2},{label:"5.1 Vivado Implementation 报告",level:3},{label:"总结",level:2}],L=`<p>本文主要介绍了 DatenLord 团队在今年的 Xilinx 全球自适应计算挑战赛上获得 Big Data Analytics 赛道一等奖的作品——TRIDENT: Poseidon 哈希算法的硬件实现与加速。该项目基于 Xilinx Varium C1100 FPGA 加速卡，为 Filecoin 区块链应用中的 Poseidon 哈希算法提供了一套完整的硬件加速方案。在硬件方面，TRIDENT 基于 SpinalHDL 设计了 Poseidon 加速器 IP 并基于 Vivado 中 Block Design 工具搭建完整的 FPGA 硬件系统。在软件方面，我们为 Filecoin 软件实现 Lotus 提供了访问 FPGA 硬件加速器的接口。最终，TRIDENT 能够为 Filecoin 应用提供两倍于 AMD Ryzen 5900X 处理器的 Poseidon 计算加速效果。下文将主要从 Poseidon 哈希算法概述、基于 SpinalHDL 和 Cocotb 的硬件设计、总体方案设计、加速器 IP 设计和性能测试等方面对整个 TRIDENT 项目进行详细的介绍。</p>
 <h2 id="引言">引言</h2>
 <p>Poseidon 是一种全新的面向零知识证明(ZKP: Zero-Knowledge Proof)密码学协议设计的哈希算法。相比同类算法，包括经典的 SHA-256、SHA-3 以及 Pedersen 哈希函数，在零知识证明的应用场景下，Poseidon 能够显著地降低证明生成和验证的计算复杂度，极大地提升零知识证明系统整体的运行效率。基于上述优点，Poseidon 目前已被广泛应用在了各种区块链项目当中，包括去中心化存储系统 Filecoin、加密货币 Mina Protocol 和 Dusk Network 等，主要用于加速其中的零知识证明系统。</p>
 <h3 id="0.1-poseidon-与零知识证明">0.1 Poseidon 与零知识证明</h3>
@@ -185,7 +185,7 @@ const i="/zh-cn/assets/image1-9e1613a7.png",o="/zh-cn/assets/image2-7b7b20fc.png
 <p>该算法对应硬件电路结构如下图(a)所示, 具体数据通路为：输入操作数经过一个加法器后得到加法结果，将加法结果同时传递给减法器和比较器，分别得到减去模值和与模值比较的结果，将比较结果作为多路选择器的选通信号对加法器和减法器的输出进行仲裁后输出。</p>
 <p><img src="${d}" alt="图片"></p>
 <p>除了普通加法和减法操作相结合的方式外，还可以只通过两次普通加法实现同样的模加功能，具体的算法定义如下：</p>
-<p><img src="${P}" alt="图片"></p>
+<p><img src="${c}" alt="图片"></p>
 <p>其对应的硬件电路结构由两个加法器和一个多路选择器组成，如上图(b)所示，具体数据通路为：输入操作数经过第一个加法器，输出两数之和与进位；两数之和继续输入第二个加法器(2k − p)与相加后得到对应的和与进位；将两次加法的进位进行或运算后，作为多路选择器的选通信号对两次加法的和进行仲裁后输出。</p>
 <p>上述两种模加的实现方式，均需要两个加/减法器，分别完成加法和取余的计算步骤，然后经过一个多路选择器仲裁后输出。而不同之处在于仲裁器选通信号的产生方式，第一种算法的选通信号需要通过一个比较器产生，而第二种算法只需要对两次加法的进位进行一次或运算。相比普通的位运算，比较器在电路实现上通常会消耗大量的硬件逻辑资源，同时产生长的组合逻辑路径延迟，对电路的时序性能产生不利的影响。尤其是对于 Poseidon 中 255 位的操作数，比较器带来的硬件和时序上的开销对整体模加电路的影响会更加显著。因此，TRIDENT 中采用了第二种模加算法进行电路设计。</p>
 <p>在具体的电路实现过程中，由于 Poseidon 操作数位宽为 255 比特，在代码中直接通过加法符号实现单周期加法器会对整体的时序产生较大的影响。为了提高电路的工作频率，我们将图(b)中两个 255 比特加法器进行了全流水线化，每个加法器进行五级流水线的分割，并在多路选择器的输出端添加一级寄存器，使得整体模加电路总共包含 11 级流水延迟。流水线化后的模加电路结构如上图 (c) 所示。</p>
@@ -193,7 +193,7 @@ const i="/zh-cn/assets/image1-9e1613a7.png",o="/zh-cn/assets/image2-7b7b20fc.png
 <p>和模加电路类似，模乘的实现也可以分解成一次普通的乘法运算和取余两个步骤。这两个步骤分别对应模乘实现过程中的两个难点。</p>
 <p>首先，从普通乘法的角度，Poseidon 哈希函数的操作数的位宽为 255Bit，而对于高位宽的乘法器电路，如果实现方式不当，通常会消耗大量的逻辑资源，同时对电路的时序性能造成很大的影响。在实际硬件代码编写中，一般不会直接通过乘号实现乘法电路，通常的做法是调用现成的乘法器 IP，或者，基于各种优化算法和结构，如 Booth 编码和华莱士树结构等，在电路级层次自行设计乘法器。TRIDENT 项目的实现方式为：将高位宽乘法分解成若干并行的小位宽乘法，小位宽乘法则可以通过 Xilinx FPGA DSP 模块中嵌入的 28*16 的乘法器实现。因此，整个 255-Bit 高位宽乘法器实现的关键在乘法的拆分算法上。</p>
 <p>最简单的拆分方式是基于经典的级联算法实现，每次拆分将一个乘法器分解为四个并行的位宽减半的乘法器。对于 256-Bit 乘法器，经过四次递归的拆分，可通过 256 个 16-Bit 的乘法器实现。这种拆分方式虽然实现的电路结构简单规整，但拆分后乘法单元的数量仍然不够理想。TRIDENT 中采用了 Karatsuba-Ofman 算法进行乘法器拆分，这种分解方式虽然在电路结构上相对复杂，并且需要引入额外的加法器，但每次分解只需要三个位宽减半的乘法器，对于 256-Bit 乘法，三次拆分后总共只需要 81 个 16 比特乘法器，大概是普通级联算法的三分之一。Karatusba-Ofman 算法定义如下：</p>
-<p><img src="${c}" alt="图片"></p>
+<p><img src="${P}" alt="图片"></p>
 <p>上述算法所对应的乘法器拆分结构如下图所示，每次拆分后乘法器位宽减半，但数量上增加两倍，同时需要引入额外的加/减法器。基于递归的思想，图中的三个乘法器还可以不断地进行拆分，直至位宽满足需求。TRIDENT 项目中对 255 比特的乘法器进行了三次拆分，最终分解为 27 个并行的 34-Bit 乘法器。而 34 比特乘法器则通过调用 Xilinx 提供的乘法器 IP 实现，每个 34 比特的乘法器 IP 由 4 个 DSP 模块中乘法器组合而成，因此，一个 255-Bit 乘法器总共需要消耗 108 个 DSP slices。</p>
 <p><img src="${r}" alt="图片"></p>
 <p>为了提升乘法器的工作频率，Poseidon 加速器中对 Karatsuba 乘法器拆分架构进行了流水线处理，上图中的虚线代表一级寄存器，每进行一次拆分乘法器内增加 3 级流水，而最底层的 Xilinx 乘法器 IP 内共有 5 级流水。因此，255-bit 的乘法器经过三级拆分后总共的流水线级数为 14。</p>
@@ -205,14 +205,14 @@ const i="/zh-cn/assets/image1-9e1613a7.png",o="/zh-cn/assets/image2-7b7b20fc.png
 <p>详细的算法实现流程如下：</p>
 <p><img src="${h}" alt="图片"></p>
 <p>由 R = 2k 可知，上述算法中 2 - 4 步的取余和除法操作均可以由移位代替， 而在 R 和 p 固定的情况下步骤 3 中 p′ 的值可以提前计算，⽽ 5-6 步的取余操作可以通过⼀次加法或减法实现，因此，整个 Montgomery 模乘算法总共需要完成三次乘法和两次加法/减法。在具体的电路设计中，为了提⾼模乘器性能，TRIDENT 采⽤了展开的设计思路，三次乘法运算分别由三个级联的乘法器完成，使得每个周期均可以输出⼀个乘法结果，同时基于流水线技术对长组合逻辑路径进行切割以使电路达到更高的工作频率，具体的电路实现结构如下图所示。</p>
-<p><img src="${g}" alt="图片"></p>
+<p><img src="${m}" alt="图片"></p>
 <h3 id="4.3-加速器架构设计">4.3 加速器架构设计</h3>
 <p>在上述单元运算电路的基础上，实现高性能算法加速器的另一个关键在于设计一个高效的电路架构，即如何组织好每一个运算器，最大化每个单元的利用率</p>
 <p>由本文第二部分的介绍可知，TRIDENT 所加速的 Filecoin Poseidon 哈希实例的输入为个有限域元素，每个元素的位宽为 255 比特。具体的计算流程由</p>
 <p>RF 次 Full Round 循环和 RP 次 Partial Round 循环组成。两种循环的计算流程基本相似，都依次包括 AddRoundConstant、SBox 和 MDSMixing 三个阶段，在这三个阶段分别完成常数模加、五次方模幂和向量—矩阵乘法，两者唯一的区别在于 Partial Round 在 Sbox 阶段只需要完成中间状态第一个元素的计算。Full Round 和 Partial Round 每次循环/迭代的计算流程如下图(a)和(b)所示。如果将 Poseidon 哈希函数的所有循环都依次展开，可以将其看成是一条单向的数据流，在该数据流上不断地进行模加、模幂和矩阵运算。</p>
-<p><img src="${m}" alt="图片"></p>
+<p><img src="${g}" alt="图片"></p>
 <p>基于上述算法流程的定义，本次课题中实现的 Poseidon 加速器的具体硬件架构如下图所示。在 Poseidon 单次迭代的算法流程的基础上, 加速器的实现针对具体的 FPGA 架构特点和硬件资源限制做了如下几点优化：</p>
-<p><img src="${S}" alt="图片"></p>
+<p><img src="${F}" alt="图片"></p>
 <ul>
 <li>流水线处理:</li>
 </ul>
@@ -252,17 +252,17 @@ const i="/zh-cn/assets/image1-9e1613a7.png",o="/zh-cn/assets/image2-7b7b20fc.png
 <p>在上文中介绍的 FPGA 硬件系统和其中 Poseidon 加速器 IP 的基础上，我们通过 Vivado 集成开发环境将其实现在了 Varium C1100 FPGA 加速卡上，该板卡搭载了 Xilinx Virtex UltraScale+系列的 FPGA 芯片，具体芯片型号为具体型号为 XCU55N-FSVH2892-2L-E。整个硬件系统实现(Implementation)后的报告以及计算性能的测试结果如下：</p>
 <h3 id="5.1-vivado-implementation-报告">5.1 Vivado Implementation 报告</h3>
 <p>整体硬件加速系统综合实现后逻辑资源消耗情况如下表所示：</p>
-<p><img src="${D}" alt="图片"></p>
+<p><img src="${S}" alt="图片"></p>
 <p>各项 FPGA 资源中 DSP Slices(70.01%)和 LUT(61.15%)的消耗最多, 主要用于 255-Bit Montgomery 模乘电路的实现上。这两项资源的不足也限制了在加速器中配置更多模乘器来提升计算并行度和整体的加速性能。</p>
 <p>在时序上，实现(Implementation)后 Poseidon 加速器刚好能够满足 100MHz 工作频率的要求。关键路径上，建立(set up)时间的余量为 0.069ns，保持(hold)时间的余量为 0.01ns。</p>
 <p>除了资源和时序外，FPGA 实现后的功耗信息如下图所示。由下图可见，在运行我们设计的加速器硬件时，FPGA 芯片的整体功耗在 24.7W 左右。而我们在性能测试中使用的 RTX 3070 GPU 加速卡的运行功耗在 120W 左右。</p>
-<p><img src="${F}" alt="图片"></p>
+<p><img src="${R}" alt="图片"></p>
 <p>###　 5.2 计算性能测试</p>
 <p>TRIDENT 项目中设计了两种方式测试 Poseidon 加速器的计算性能：</p>
 <ol>
 <li>C 语言程序测试结果：在 Xilinx 提供的 XDMA 驱动的基础上使用 C 语言编写简单的性能测试程序。该测试程序向 FPGA 加速器写入一定数量的输入数据，并记录加速器完成所有数据哈希运算所需要的时间。基于该测试程序，我们分别测试了 Poseidon 加速器在三种长度输入数据下的性能表现。当输入数据的大小为 arity2, 即中间状态向量元素个数 时，加速器在 0.877 秒内完成了 850000 次的哈希运算，数据吞吐率可达到 29.1651MB/s, 即每秒大约能够完成 1M 次哈希运算</li>
 </ol>
-<p><img src="${R}" alt="图片"></p>
+<p><img src="${D}" alt="图片"></p>
 <ol start="2">
 <li>Lotus-Bench 测试结果：Lotus 中提供了计算机硬件在 Filecoin 计算负载下性能表现的基准测试程序 Lotus-Bench；与自己实现的 C 语言测试程序相比，Lotus-Bench 的测试更加接近实际的工作负载，能够得到更加准确的测试结果。在 Lotus-Bench 的基础上，我们分别测试了 CPU, GPU 和 FPGA 在 preCommit 阶段(该阶段主要完成 Poseidon 哈希函数的计算)处理 512MB 数据所需要的时间。FPGA 在 Lotus-Bench 测试下的算力可达到 15.65MB/s，大约是 AMD Ryzen 5900X CPU 实现的 2 倍，但和 RTX 3070 GPU 的加速性能相比仍有很大的提升空间.</li>
 </ol>
@@ -278,4 +278,4 @@ const i="/zh-cn/assets/image1-9e1613a7.png",o="/zh-cn/assets/image2-7b7b20fc.png
 <li>
 <p>优化加速器架构：由于需要适配 Filecoin Poseidon 计算实例中不同大小的输入数据，目前在输入较小的情况下加速器中存在一些冗余的运算单元。通过进一步优化加速器的整体架构，使得在不同长度的输入数据下，所有运算单元都能得到更好的利用，能够进一步提升整体的加速性能。</p>
 </li>
-</ol>`;export{A as assetURLs,C as default,u as metadata,T as toc};
+</ol>`;export{A as assetURLs,L as default,u as metadata,T as toc};
