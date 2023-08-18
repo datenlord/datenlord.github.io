@@ -32,6 +32,11 @@ import cover31 from '@/assets/tech-talk/cover31.jpg'
 import cover32 from '@/assets/tech-talk/cover32.jpg'
 import cover33 from '@/assets/tech-talk/cover33.jpg'
 import cover34 from '@/assets/tech-talk/cover34.jpg'
+import cover35 from '@/assets/tech-talk/cover35.jpg'
+import cover36 from '@/assets/tech-talk/cover36.jpg'
+import cover37 from '@/assets/tech-talk/cover37.jpg'
+import cover38 from '@/assets/tech-talk/cover38.jpg'
+import cover39 from '@/assets/tech-talk/cover39.jpg'
 
 export const techTalkItems = [
   {
@@ -305,5 +310,53 @@ export const techTalkItems = [
     text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。达坦科技一直在探索用硬件加速做分布式跨云存储，在本周的前沿技术分享中，我们邀请到了中南大学在读博士生卢军，来为大家分享DPU任务卸载的相关研究。',
     date: '2023.06.17',
     url: 'https://www.bilibili.com/video/BV1R14y1S79T/',
+  },
+  {
+    key: 35,
+    image: cover35,
+    title: 'Rust在物理引擎研发中的应用',
+    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了Motphys CEO崔汉青，来为大家分享Rust在物理引擎研发中的应用。',
+    date: '2023.06.27',
+    url: 'https://b23.tv/BZuSvyW',
+  },
+  {
+    key: 36,
+    image: cover36,
+    title: 'Coroutines Applied to a Tilelink Interconnect Elaboration',
+    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第一部分，由Charles Popen进行分享。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1Vz4y1J7ck/',
+  },
+  {
+    key: 36,
+    image: cover36,
+    title: 'Coroutines Applied to a Tilelink Interconnect Elaboration',
+    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第一部分，由Charles Popen进行分享。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1Vz4y1J7ck/',
+  },
+  {
+    key: 37,
+    image: cover37,
+    title: 'Stream Transaction Extender设计与验证',
+    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第二部分，由电子科技大学副教授肖寅东（Readon）进行分享。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1pM4y1j7Lm/',
+  },
+  {
+    key: 38,
+    image: cover38,
+    title: '面向Multi-Die FPGA的设计与部署自动化方法探索',
+    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第三部分，由西安交通大学副教授邸志雄进行分享。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1og4y1c7RS/',
+  },
+  {
+    key: 39,
+    image: cover39,
+    title: '计算机体系结构MIT课程学习社区经验分享',
+    text: '在2023年初，达坦科技发起成立硬件设计学习社区，邀请所有有志于从事数字芯片设计的同学加入我们的学习互助自学小组，以理解数字芯片设计的精髓，强化理论知识的同时提升实操技能，继而整体提升设计能力。本场分享主题为【计算机体系结构MIT课程学习社区经验分享】，旨在了解学习社区各位同学学习的状态和面临的挑战，邀请已完成课程的学员分享学习和动手操作LAB的经验和教训，以此更好地辅助大家完成课程。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1cs4y1r7T3/',
   },
 ]
