@@ -37,6 +37,10 @@ import cover36 from '@/assets/tech-talk/cover36.jpg'
 import cover37 from '@/assets/tech-talk/cover37.jpg'
 import cover38 from '@/assets/tech-talk/cover38.jpg'
 import cover39 from '@/assets/tech-talk/cover39.jpg'
+import cover40 from '@/assets/tech-talk/cover40.jpg'
+import cover41 from '@/assets/tech-talk/cover41.jpg'
+import cover42 from '@/assets/tech-talk/cover42.jpg'
+import cover43 from '@/assets/tech-talk/cover43.jpg'
 
 export const techTalkItems = [
   {
@@ -358,5 +362,37 @@ export const techTalkItems = [
     text: '在2023年初，达坦科技发起成立硬件设计学习社区，邀请所有有志于从事数字芯片设计的同学加入我们的学习互助自学小组，以理解数字芯片设计的精髓，强化理论知识的同时提升实操技能，继而整体提升设计能力。本场分享主题为【计算机体系结构MIT课程学习社区经验分享】，旨在了解学习社区各位同学学习的状态和面临的挑战，邀请已完成课程的学员分享学习和动手操作LAB的经验和教训，以此更好地辅助大家完成课程。',
     date: '2023.07.08',
     url: 'https://www.bilibili.com/video/BV1cs4y1r7T3/',
+  },
+  {
+    key: 40,
+    image: cover40,
+    title: '基于BSV的RTL仿真加速设计研究',
+    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。BSV的仿真加速可以提升硬件开发调试的效率。在本周的前沿技术分享中，我们邀请到了梁之杰，来为大家分享基于BSV的RTL仿真加速设计研究。',
+    date: '2023.07.09',
+    url: 'https://www.bilibili.com/video/BV1ou411L7Yy/',
+  },
+  {
+    key: 41,
+    image: cover41,
+    title: 'RDMA网络的系统测试方案',
+    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了孔心皓，来为大家分享RDMA 网络的系统测试方案。',
+    date: '2023.07.16',
+    url: 'https://www.bilibili.com/video/BV1tz4y147rw/',
+  },
+  {
+    key: 42,
+    image: cover42,
+    title: 'RapidWright技术分享会',
+    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了西南交通大学邸志雄副教授和他的学生向瀚章，来为大家分享开源FPGA设计工具RapidWright技术。',
+    date: '2023.07.28',
+    url: 'https://www.bilibili.com/video/BV14z4y1x7a8/',
+  },
+  {
+    key: 43,
+    image: cover43,
+    title: '基于Karmada实现Kubernetes应用跨集群故障转移',
+    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了开源爱好者，云兴科技软件研发工程师梁远鹏，来为大家分享基于Karmada实现Kubernetes应用跨集群故障转移。',
+    date: '2023.08.01',
+    url: 'https://www.bilibili.com/video/BV1rN411Y7aZ/',
   },
 ]
