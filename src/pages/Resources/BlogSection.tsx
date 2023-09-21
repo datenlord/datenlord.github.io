@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { Typography } from '@/components/Typography'
 
 import blogTestImageUrl from '@/assets/resources/blog-test-image.png'
+import blogCoverUrl from '@/assets/resources/blog-cover.png'
 
 const { Heading, Paragraph } = Typography
 const { CNHead4, TitleLarge } = Heading
@@ -41,7 +42,7 @@ const ContentContainer = styled.div`
 `
 const Image = styled.img`
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   grid-area: 1 / 1 / 3 / 2;
   border-top-left-radius: 0.12rem;
   border-top-right-radius: 0.12rem;
@@ -113,7 +114,7 @@ export const BlogSection: React.FC = () => {
         <Title>技术博客</Title>
         <MainContainer>
           <ContentContainer>
-            <Image src={cover} />
+            <Image src={blogCoverUrl} />
             {blogs.map(({ metadata }, index) => {
               const { title, date, label, description } = metadata
               return (
