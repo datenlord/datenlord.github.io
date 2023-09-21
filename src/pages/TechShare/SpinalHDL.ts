@@ -10,7 +10,8 @@ import cover9 from '@/assets/spinal-hdl/cover9.jpg'
 import cover10 from '@/assets/spinal-hdl/cover10.jpg'
 import cover11 from '@/assets/spinal-hdl/cover11.jpg'
 import cover12 from '@/assets/spinal-hdl/cover12.jpg'
-
+import cover13 from '@/assets/spinal-hdl/cover13.jpg'
+ 
 export const spinalHDLItems = [
   {
     key: 1,
@@ -107,5 +108,13 @@ export const spinalHDLItems = [
     text: '本主题会提供构建好的docker开发环境，在30分钟内演示如何使用r4l开发一个简易内核模块，并介绍目前r4l的发展现状。可以自备好电脑现场体验。',
     date: '2023.06.24',
     url: 'https://www.bilibili.com/video/BV12j411U78o/',
+  },
+  {
+    key: 13,
+    image: cover13,
+    title: 'Coroutines Applied to a Tilelink Interconnect Elaboration',
+    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第一部分，由Charles Popen进行分享。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1Vz4y1J7ck/',
   },
 ]

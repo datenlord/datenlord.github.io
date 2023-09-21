@@ -33,7 +33,6 @@ import cover32 from '@/assets/tech-talk/cover32.jpg'
 import cover33 from '@/assets/tech-talk/cover33.jpg'
 import cover34 from '@/assets/tech-talk/cover34.jpg'
 import cover35 from '@/assets/tech-talk/cover35.jpg'
-import cover36 from '@/assets/tech-talk/cover36.jpg'
 import cover37 from '@/assets/tech-talk/cover37.jpg'
 import cover38 from '@/assets/tech-talk/cover38.jpg'
 import cover39 from '@/assets/tech-talk/cover39.jpg'
@@ -41,6 +40,14 @@ import cover40 from '@/assets/tech-talk/cover40.jpg'
 import cover41 from '@/assets/tech-talk/cover41.jpg'
 import cover42 from '@/assets/tech-talk/cover42.jpg'
 import cover43 from '@/assets/tech-talk/cover43.jpg'
+import cover44 from '@/assets/tech-talk/cover44.jpg'
+import cover45 from '@/assets/tech-talk/cover45.jpg'
+import cover46 from '@/assets/tech-talk/cover46.jpg'
+import cover47 from '@/assets/tech-talk/cover47.jpg'
+import cover48 from '@/assets/tech-talk/cover48.jpg'
+import cover49 from '@/assets/tech-talk/cover49.jpg'
+import cover50 from '@/assets/tech-talk/cover50.jpg'
+import cover51 from '@/assets/tech-talk/cover51.jpg'
 
 export const techTalkItems = [
   {
@@ -271,7 +278,7 @@ export const techTalkItems = [
     key: 29,
     image: cover29,
     title: '新一代计算架构：超异构计算',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。AGI带来的变化之一是算力将进一步从CPU转到GPU，在本周的前沿技术分享中，我们邀请到了上海矩向科技创始人兼CEO黄朝波为大家分享新一代计算架构：超异构计算。',
+    text: 'AGI带来的变化之一是算力将进一步从CPU转到GPU，在本周的前沿技术分享中，我们邀请到了上海矩向科技创始人兼CEO黄朝波为大家分享新一代计算架构：超异构计算。',
     date: '2023.04.04',
     url: 'https://www.bilibili.com/video/BV1Rm4y1q7Dx/',
   },
@@ -279,7 +286,7 @@ export const techTalkItems = [
     key: 30,
     image: cover30,
     title: '通过Chainsaw设计DSP电路',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。DSP在数据压缩、编码和加密方面都发挥了重要的作用；SpinalHDL具有更高的抽象层次和更强的表达能力，可以大大简化DSP电路设计的复杂度和提高开发效率；而Chainsaw框架可以在不同的FPGA平台上运行，提高了设计的灵活性和可移植性。在本周的前沿技术分享中，我们邀请到了中山大学在读博士李天瑞为大家分享通过Chainsaw设计DSP电路。',
+    text: 'DSP在数据压缩、编码和加密方面都发挥了重要的作用；SpinalHDL具有更高的抽象层次和更强的表达能力，可以大大简化DSP电路设计的复杂度和提高开发效率；而Chainsaw框架可以在不同的FPGA平台上运行，提高了设计的灵活性和可移植性。在本周的前沿技术分享中，我们邀请到了中山大学在读博士李天瑞为大家分享通过Chainsaw设计DSP电路。',
     date: '2023.04.18',
     url: 'https://www.bilibili.com/video/BV14o4y1j7bH/',
   },
@@ -287,7 +294,7 @@ export const techTalkItems = [
     key: 31,
     image: cover31,
     title: 'Something About Cache Security',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了浙江大学在读硕士研究生缪晨露为大家分享她在MICRO和HPCA上发表的两篇论文的精华，演讲主题是Something About Cache Security。',
+    text: '在本周的前沿技术分享中，我们邀请到了浙江大学在读硕士研究生缪晨露为大家分享她在MICRO和HPCA上发表的两篇论文的精华，演讲主题是Something About Cache Security。',
     date: '2023.04.25',
     url: 'https://www.bilibili.com/video/BV1p24y1F7fN/',
   },
@@ -295,7 +302,7 @@ export const techTalkItems = [
     key: 32,
     image: cover32,
     title: 'Rust嵌入式开发生态介绍及入门',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了一位爱好硬件的软件工程师米明恒，来为大家分享Rust嵌入式开发生态介绍及入门。',
+    text: '在本周的前沿技术分享中，我们邀请到了一位爱好硬件的软件工程师米明恒，来为大家分享Rust嵌入式开发生态介绍及入门。',
     date: '2023.05.04',
     url: 'https://www.bilibili.com/video/BV1J24y1T7EH/',
   },
@@ -303,7 +310,7 @@ export const techTalkItems = [
     key: 33,
     image: cover33,
     title: 'RDMA赋能数据中心/超算中心间远程互联',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了南京大学田臣教授，来为大家分享RDMA赋能数据中心/超算中心间远程互联。',
+    text: '在本周的前沿技术分享中，我们邀请到了南京大学田臣教授，来为大家分享RDMA赋能数据中心/超算中心间远程互联。',
     date: '2023.06.04',
     url: 'https://www.bilibili.com/video/BV1cz4y1B7cx/',
   },
@@ -311,7 +318,7 @@ export const techTalkItems = [
     key: 34,
     image: cover34,
     title: 'Paper Reading: DPU任务卸载',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。达坦科技一直在探索用硬件加速做分布式跨云存储，在本周的前沿技术分享中，我们邀请到了中南大学在读博士生卢军，来为大家分享DPU任务卸载的相关研究。',
+    text: '达坦科技一直在探索用硬件加速做分布式跨云存储，在本周的前沿技术分享中，我们邀请到了中南大学在读博士生卢军，来为大家分享DPU任务卸载的相关研究。',
     date: '2023.06.17',
     url: 'https://www.bilibili.com/video/BV1R14y1S79T/',
   },
@@ -319,25 +326,9 @@ export const techTalkItems = [
     key: 35,
     image: cover35,
     title: 'Rust在物理引擎研发中的应用',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了Motphys CEO崔汉青，来为大家分享Rust在物理引擎研发中的应用。',
+    text: '在本周的前沿技术分享中，我们邀请到了Motphys CEO崔汉青，来为大家分享Rust在物理引擎研发中的应用。',
     date: '2023.06.27',
     url: 'https://b23.tv/BZuSvyW',
-  },
-  {
-    key: 36,
-    image: cover36,
-    title: 'Coroutines Applied to a Tilelink Interconnect Elaboration',
-    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第一部分，由Charles Popen进行分享。',
-    date: '2023.07.08',
-    url: 'https://www.bilibili.com/video/BV1Vz4y1J7ck/',
-  },
-  {
-    key: 36,
-    image: cover36,
-    title: 'Coroutines Applied to a Tilelink Interconnect Elaboration',
-    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第一部分，由Charles Popen进行分享。',
-    date: '2023.07.08',
-    url: 'https://www.bilibili.com/video/BV1Vz4y1J7ck/',
   },
   {
     key: 37,
@@ -367,7 +358,7 @@ export const techTalkItems = [
     key: 40,
     image: cover40,
     title: '基于BSV的RTL仿真加速设计研究',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。BSV的仿真加速可以提升硬件开发调试的效率。在本周的前沿技术分享中，我们邀请到了梁之杰，来为大家分享基于BSV的RTL仿真加速设计研究。',
+    text: 'BSV的仿真加速可以提升硬件开发调试的效率。在本周的前沿技术分享中，我们邀请到了梁之杰，来为大家分享基于BSV的RTL仿真加速设计研究。',
     date: '2023.07.09',
     url: 'https://www.bilibili.com/video/BV1ou411L7Yy/',
   },
@@ -375,7 +366,7 @@ export const techTalkItems = [
     key: 41,
     image: cover41,
     title: 'RDMA网络的系统测试方案',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了孔心皓，来为大家分享RDMA 网络的系统测试方案。',
+    text: '在本周的前沿技术分享中，我们邀请到了孔心皓，来为大家分享RDMA 网络的系统测试方案。',
     date: '2023.07.16',
     url: 'https://www.bilibili.com/video/BV1tz4y147rw/',
   },
@@ -383,7 +374,7 @@ export const techTalkItems = [
     key: 42,
     image: cover42,
     title: 'RapidWright技术分享会',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了西南交通大学邸志雄副教授和他的学生向瀚章，来为大家分享开源FPGA设计工具RapidWright技术。',
+    text: '在本周的前沿技术分享中，我们邀请到了西南交通大学邸志雄副教授和他的学生向瀚章，来为大家分享开源FPGA设计工具RapidWright技术。',
     date: '2023.07.28',
     url: 'https://www.bilibili.com/video/BV14z4y1x7a8/',
   },
@@ -391,8 +382,80 @@ export const techTalkItems = [
     key: 43,
     image: cover43,
     title: '基于Karmada实现Kubernetes应用跨集群故障转移',
-    text: '达坦科技专注于打造新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云云壁垒，致力于解决多云架构、多数据中心场景下异构存储、数据统一管理需求等问题，以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。在本周的前沿技术分享中，我们邀请到了开源爱好者，云兴科技软件研发工程师梁远鹏，来为大家分享基于Karmada实现Kubernetes应用跨集群故障转移。',
+    text: '在本周的前沿技术分享中，我们邀请到了开源爱好者，云兴科技软件研发工程师梁远鹏，来为大家分享基于Karmada实现Kubernetes应用跨集群故障转移。',
     date: '2023.08.01',
     url: 'https://www.bilibili.com/video/BV1rN411Y7aZ/',
+  },
+  {
+    key: 44,
+    image: cover44,
+    title: 'RISC-V敏捷硬件开发-软件定义芯片',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第一个分享《RISC-V敏捷硬件开发-软件定义芯片》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV1Qh4y1K7pH/',
+  },
+  {
+    key: 45,
+    image: cover45,
+    title: '香山处理器与敏捷开发工具链的最新进展',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第二个分享《香山处理器与敏捷开发工具链的最新进展》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV1Dz4y1T7V6/',
+  },
+  {
+    key: 46,
+    image: cover46,
+    title: '数据流式编程在硬件设计中的应用',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第三个分享《数据流式编程在硬件设计中的应用》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV12N411B7TN/',
+  },
+  {
+    key: 47,
+    image: cover47,
+    title: 'EDA创新推动敏捷芯片设计',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第四个分享《EDA创新推动敏捷芯片设计》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV1Tz4y1M7vt/',
+  },
+  {
+    key: 48,
+    image: cover48,
+    title: 'Automated CPU design with AI',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第五个分享《Automated CPU design with AI》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV13w411Q7zi/',
+  },
+  {
+    key: 48,
+    image: cover48,
+    title: 'Automated CPU design with AI',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第五个分享《Automated CPU design with AI》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV13w411Q7zi/',
+  },
+  {
+    key: 49,
+    image: cover49,
+    title: 'MetaHVL硬件敏捷验证与协同仿真',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第六个分享《MetaHVL硬件敏捷验证与协同仿》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV1DN4y197Pm/',
+  },
+  {
+    key: 50,
+    image: cover50,
+    title: '大模型训练和基础设施',
+    text: '在本周的前沿技术分享中，我们邀请到了范一呈，来为大家分享大模型训练和基础设施。',
+    date: '2023.09.01',
+    url: 'https://www.bilibili.com/video/BV1ZN4y1R7HP/',
+  },
+  {
+    key: 51,
+    image: cover51,
+    title: 'RustBelt与Rust形式化方法',
+    text: '在本周的前沿技术分享中，我们邀请到了王俊吉，来为大家分享RustBelt与Rust形式化方法。',
+    date: '2023.09.04',
+    url: 'https://www.bilibili.com/video/BV1Vw411D7rT/',
   },
 ]
