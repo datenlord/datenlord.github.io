@@ -24,4 +24,4 @@ location: 海南
 
 达坦科技（DatenLord）推出的**开源分布式 KV 存储 Xline**，针对多数据中心场景，实现数据的高性能跨云、跨数据中心共享访问，并保证数据的一致性，方便业务系统实现多地多中心多活部署。
 
-GitHub 链接：https:github.com/datenlord/Xline
+GitHub 链接：https://github.com/xline-kv/

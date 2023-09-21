@@ -36,6 +36,6 @@ location: 中国香港
 
 ## Meetup 报名方式 （Registration）
 
-欢迎扫描下方二维码或点击阅读原文，即可报名。
+欢迎扫描下方二维码或点击[阅读原文](https://mp.weixin.qq.com/s?__biz=MzkwNTMzOTE2MA==&mid=2247485346&idx=2&sn=247d692751f44af2aa40b9b111a63b0f&chksm=c0f80fd5f78f86c3ac87ebcc18ba8cff35fe5cbe293812a00b57fd3e5ace24589ae790ee805a&token=1669647894&lang=zh_CN#rd)，即可报名。
 
 ![图片](./image2.jpg)
