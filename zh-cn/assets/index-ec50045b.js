@@ -1,4 +1,4 @@
-const e="/zh-cn/assets/cover-c17c52cc.png",s="/zh-cn/assets/image1-0dff4570.png",c="/zh-cn/assets/image2-e09cfdc8.png",o="/zh-cn/assets/image3-2b589463.png",p="/zh-cn/assets/image4-5841c9d6.png",a="/zh-cn/assets/image5-92344f1d.png",d="/zh-cn/assets/image6-b429f851.png",t="/zh-cn/assets/image7-97920b5a.png",i="/zh-cn/assets/image8-ecf5c6f3.png",r="/zh-cn/assets/image9-f47bad66.png",n="/zh-cn/assets/image10-b50adc27.png",l="/zh-cn/assets/image11-99ec2a51.png",m=[e,s,c,o,p,a,d,t,i,r,n,l],g={label:"从数学角度思考程序与验证正确性",description:"本文旨在为没有接触过形式化方法的读者提供一种新的视角看待计算机系统与算法，而非形式化方法或 TLA+ 教程。因此本文的重点是如何从数学角度思考程序，不会使用大篇幅讲解 TLA+ 的语法。",cover:"./cover.png",location:"中国香港",author:["田野"],tags:["Xline"],date:"2023-03-02",title:"Thinking about programs mathematically and verifying correctness"},h=[{label:"我们该如何写出正确的程序？",level:2},{label:"程序中会有什么样错误？",level:3},{label:"经验",level:3},{label:"形式化方法",level:3},{label:"TLA+",level:2},{label:"简单的例子",level:3},{label:"Two-Phase Commit",level:2},{label:"总结",level:2},{label:"我们的项目：Xline",level:2}],A=`<p><img src="${e}" alt="封面"></p>
+const e="/zh-cn/assets/cover-c17c52cc.png",s="/zh-cn/assets/image1-0dff4570.png",c="/zh-cn/assets/image2-e09cfdc8.png",o="/zh-cn/assets/image3-2b589463.png",a="/zh-cn/assets/image4-5841c9d6.png",p="/zh-cn/assets/image5-92344f1d.png",d="/zh-cn/assets/image6-b429f851.png",t="/zh-cn/assets/image7-97920b5a.png",i="/zh-cn/assets/image8-ecf5c6f3.png",r="/zh-cn/assets/image9-f47bad66.png",n="/zh-cn/assets/image10-b50adc27.png",l="/zh-cn/assets/image11-99ec2a51.png",m=[e,s,c,o,a,p,d,t,i,r,n,l],h={label:"从数学角度思考程序与验证正确性",description:"本文旨在为没有接触过形式化方法的读者提供一种新的视角看待计算机系统与算法，而非形式化方法或 TLA+ 教程。因此本文的重点是如何从数学角度思考程序，不会使用大篇幅讲解 TLA+ 的语法。",cover:"./cover.png",location:"中国香港",author:["田野"],tags:["Xline"],date:"2023-03-02",title:"Thinking about programs mathematically and verifying correctness"},g=[{label:"我们该如何写出正确的程序？",level:2},{label:"程序中会有什么样错误？",level:3},{label:"经验",level:3},{label:"形式化方法",level:3},{label:"TLA+",level:2},{label:"简单的例子",level:3},{label:"Two-Phase Commit",level:2},{label:"总结",level:2},{label:"我们的项目：Xline",level:2}],A=`<p><img src="${e}" alt="封面"></p>
 <p>本文旨在为没有接触过形式化方法的读者提供一种新的视角看待计算机系统与算法，而非形式化方法或 TLA+ 教程。因此本文的重点是如何从数学角度思考程序，不会使用大篇幅讲解 TLA+ 的语法。</p>
 <h2 id="我们该如何写出正确的程序？">我们该如何写出正确的程序？</h2>
 <p>程序设计的目标永远是写出正确的程序。随着时间的推移，我们的程序越来越复杂，其中可能存在的错误也越来越多。想要写出正确的程序，首先应该了解程序中可能出现的错误有哪些。</p>
@@ -67,7 +67,7 @@ const e="/zh-cn/assets/cover-c17c52cc.png",s="/zh-cn/assets/image1-0dff4570.png"
 <p>在其中用到了"或"连接两个状态，我们可以用布尔逻辑中的逻辑或 <code>∨</code> 来表示。这样，我们就可以清晰地表示出程序的状态转换关系了。为了美观，在 TLA+ 中，首句前也可以补上相同的布尔逻辑符号：</p>
 <p><img src="${o}" alt="图片"></p>
 <p>我们最终得到了这个简单程序在初始状态后的两个状态，下面我们将初始状态补全，并按照 TLA+ 语言的要求补全整个 specification：</p>
-<p><img src="${p}" alt="图片"></p>
+<p><img src="${a}" alt="图片"></p>
 <ul>
 <li>EXTENDS 用于引入其他 specification 中定义的 module，这里引入了标准库中的 Integers，主要用在 i' ∈ 0..1000 上。</li>
 <li>VARIABLES 用于定义变量，这里定义了 i 和 pc。</li>
@@ -83,7 +83,7 @@ Next 用于定义状态转换关系。</p>
 <p>二阶段提交（英语：Two-phase Commit）是指在计算机网络以及数据库领域内，为了使基于分布式系统架构下的所有节点在进行事务提交时保持一致性而设计的一种算法。通常，二阶段提交也被称为是一种协议（Protocol）。在分布式系统中，每个节点虽然可以知晓自己的操作时成功或者失败，却无法知道其他节点的操作的成功或失败。当一个事务跨越多个节点时，为了保持事务的 ACID 特性，需要引入一个作为协调者的组件来统一掌控所有节点（称作参与者）的操作结果并最终指示这些节点是否要把操作结果进行真正的提交（比如将更新后的数据写入磁盘等等）。因此，二阶段提交的算法思路可以概括为：参与者将操作成败通知协调者，再由协调者根据所有参与者的反馈情报决定各参与者是否要提交操作还是中止操作。—— <strong>Two-Phase Commit (Wikipedia)</strong></p>
 </blockquote>
 <p>在 <strong>Leslie Lamport's The TLA+ Video Course</strong> 中，Lamport 以这样的方式类比解释 Two-Phase Commit：</p>
-<p><img src="${a}" alt="图片"></p>
+<p><img src="${p}" alt="图片"></p>
 <p>在婚礼上，牧师是协调者，新郎和新娘是参与者。当新郎和新娘都同意婚事时，牧师才会正式宣布婚事。如果有一方不同意，牧师就会中止婚事：</p>
 <ol>
 <li>牧师问新郎：你是否同意这件婚事？</li>
@@ -149,4 +149,4 @@ Next 用于定义状态转换关系。</p>
 <h2 id="我们的项目：xline">我们的项目：Xline</h2>
 <p>TLA+被广泛用于分布式系统算法的研究和开发中。在我们的项目 Xline 中，TLA+被用来在设计阶段验证共识算法的正确性。</p>
 <p>Xline 是一个用于元数据管理的分布式 KV 存储。我们在 Xline 中使用 CURP 协议（<a href="https://www.usenix.org/system/files/nsdi19-park.pdf)%E7%9A%84%E4%BF%AE%E6%94%B9%E7%89%88%E4%BD%9C%E4%B8%BA%E5%85%B1%E8%AF%86%E5%8D%8F%E8%AE%AE%EF%BC%8CTLA+%E5%B0%86%E8%A2%AB%E7%94%A8%E4%BA%8E%E5%85%B6%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81%E4%B8%AD%E3%80%82">https://www.usenix.org/system/files/nsdi19-park.pdf)的修改版作为共识协议，TLA+将被用于其正确性验证中。</a></p>
-<p>如果你想了解更多关于 Xline 的信息，请参考我们的 Github：<a href="https://github.com/datenlord/Xline">https://github.com/datenlord/Xline</a></p>`;export{m as assetURLs,A as default,g as metadata,h as toc};
+<p>如果你想了解更多关于 Xline 的信息，请参考我们的 Github：<a href="https://github.com/datenlord/Xline">https://github.com/datenlord/Xline</a></p>`;export{m as assetURLs,A as default,h as metadata,g as toc};

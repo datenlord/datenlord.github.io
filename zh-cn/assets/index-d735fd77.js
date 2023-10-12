@@ -1,4 +1,4 @@
-const i="/zh-cn/assets/cover-964a3e23.png",e="/zh-cn/assets/image1-c300ce2e.png",n="/zh-cn/assets/image2-b3df764b.png",s="/zh-cn/assets/image3-6b1d2584.png",l="/zh-cn/assets/image4-034a33e9.png",t="/zh-cn/assets/image5-6a5e807d.png",o=[i,e,n,s,l,t],p={label:"达坦科技2023开源毕业设计实习招募中",description:"自1984年Richard Stallman发起GMU和Free Software Foundation，开源作为一种全新的软件开发和使用模式正式诞生。One for All, All for One的理念传播开后，之后的40年里在开源软件社区被无数开发者实践和传承。开源软件因其节省费用（不需要购买许可证，大大降低了IT投入成本）、安全稳定（安全漏洞少）、技术成熟、个性化定制、自主知识产权等优势获得喜人的发展，由此我们也见证了无数开源软件项目的成长和成熟",cover:"./cover.png",location:"海南",date:"2023-01-06",title:"Datan Technology 2023 Open Source Graduation Design Internship Recruitment"},r=[{label:"毕设项目的背景",level:2},{label:"细分方向",level:2},{label:"开源毕设导师组",level:2},{label:"开源毕设项目的流程",level:2},{label:"申请流程",level:2}],a=`<p>自 1984 年 Richard Stallman 发起 GMU 和 Free Software Foundation，开源作为一种全新的软件开发和使用模式正式诞生。<strong>One for All, All for One</strong> 的理念传播开后，之后的 40 年里在开源软件社区被无数开发者实践和传承。开源软件因其节省费用（不需要购买许可证，大大降低了 IT 投入成本）、安全稳定（安全漏洞少）、技术成熟、个性化定制、自主知识产权等优势获得喜人的发展，由此我们也见证了无数开源软件项目的成长和成熟</p>
+const o="/zh-cn/assets/cover-964a3e23.png",e="/zh-cn/assets/image1-c300ce2e.png",n="/zh-cn/assets/image2-b3df764b.png",l="/zh-cn/assets/image3-6b1d2584.png",s="/zh-cn/assets/image4-034a33e9.png",t="/zh-cn/assets/image5-6a5e807d.png",i=[o,e,n,l,s,t],p={label:"达坦科技2023开源毕业设计实习招募中",description:"自1984年Richard Stallman发起GMU和Free Software Foundation，开源作为一种全新的软件开发和使用模式正式诞生。One for All, All for One的理念传播开后，之后的40年里在开源软件社区被无数开发者实践和传承。开源软件因其节省费用（不需要购买许可证，大大降低了IT投入成本）、安全稳定（安全漏洞少）、技术成熟、个性化定制、自主知识产权等优势获得喜人的发展，由此我们也见证了无数开源软件项目的成长和成熟",cover:"./cover.png",location:"海南",date:"2023-01-06",title:"Datan Technology 2023 Open Source Graduation Design Internship Recruitment"},r=[{label:"毕设项目的背景",level:2},{label:"细分方向",level:2},{label:"开源毕设导师组",level:2},{label:"开源毕设项目的流程",level:2},{label:"申请流程",level:2}],a=`<p>自 1984 年 Richard Stallman 发起 GMU 和 Free Software Foundation，开源作为一种全新的软件开发和使用模式正式诞生。<strong>One for All, All for One</strong> 的理念传播开后，之后的 40 年里在开源软件社区被无数开发者实践和传承。开源软件因其节省费用（不需要购买许可证，大大降低了 IT 投入成本）、安全稳定（安全漏洞少）、技术成熟、个性化定制、自主知识产权等优势获得喜人的发展，由此我们也见证了无数开源软件项目的成长和成熟</p>
 <p><img src="${e}" alt="图片"></p>
 <p>相比而言，硬件开源之路更为崎岖。因为对物理器件的依赖度更高，复杂度更高，修改难度大，硬件开源之路走得比较缓慢。虽然是一条少有人走的路，但其正确性毋庸置疑。开源芯片生态（Open Source Chip Ecosystem-OSCE）的优势,包括可以节约市场化时间，以及知识产权的成本，EDA 工具、设施和劳动力。硬件开发者也期盼硬件设计可以像软件设计一样简单。</p>
 <p><img src="${n}" alt="图片"></p>
@@ -34,7 +34,7 @@ const i="/zh-cn/assets/cover-964a3e23.png",e="/zh-cn/assets/image1-c300ce2e.png"
 <p><strong>陈莉君</strong> 西安邮电大学 教授
 <strong>赖晓铮</strong> 华南理工大学计算机学院 副教授</p>
 <h2 id="开源毕设项目的流程">开源毕设项目的流程</h2>
-<p><img src="${s}" alt="图片"></p>
+<p><img src="${l}" alt="图片"></p>
 <h2 id="申请流程">申请流程</h2>
 <ol>
 <li><strong>简历投递：</strong> 需罗列本人擅长的专业技能、过往项目经历、研究成果等。</li>
@@ -44,6 +44,6 @@ const i="/zh-cn/assets/cover-964a3e23.png",e="/zh-cn/assets/image1-c300ce2e.png"
 </ol>
 <p>如果你对开源毕业设计感兴趣，对毕设的项目要求和细节解读有疑问，对毕设的申请及流程想咨询，欢迎大家参与 2023 年 1 月 8 日 20：00 的直播。</p>
 <p>欢迎您预约直播，或者登陆腾讯会议观看直播：</p>
-<p><img src="${l}" alt="图片"></p>
+<p><img src="${s}" alt="图片"></p>
 <p>对开源毕设感兴趣的朋友，欢迎添加小助手微信，加入达坦科技开源毕设群。</p>
-<p><img src="${t}" alt="图片"></p>`;export{o as assetURLs,a as default,p as metadata,r as toc};
+<p><img src="${t}" alt="图片"></p>`;export{i as assetURLs,a as default,p as metadata,r as toc};
