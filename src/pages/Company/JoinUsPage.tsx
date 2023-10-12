@@ -51,6 +51,7 @@ const MainContainer = styled.main`
 const RightSidebarContainer = styled.aside`
   width: 200px;
   margin-left: 48px;
+  word-break: break-all;
   @media screen and (max-width: 1024px) {
     order: 1;
     width: 100%;
@@ -107,6 +108,7 @@ const Text2Bold = styled(Text2)`
 `
 const Text2Regular = styled(Text2)`
   font-weight: 400;
+  word-break: break-all;
 `
 const ColorText = styled.span`
   color: #7680dd;
@@ -554,37 +556,38 @@ const JoinUsPage: React.FC = () => {
         </MainContainer>
         <RightSidebarContainer>
           <SidebarCard>
-            <Text2Bold>
+            {/* <Text2Bold>
               - After the resume evaluation is qualified, the interview process
               is
-            </Text2Bold>
+            </Text2Bold> */}
             <ColorText1>Internship position:</ColorText1>
+            <Text2Bold>Project written test</Text2Bold>
             <Text2Regular>
-              Project written test - two days Idea review-communication and
-              mentoring
+              - two days Idea review-communication and mentoring
             </Text2Regular>
-            <Text2Regular>
-              Performance optimization - no more than one week Cross-Interview
-            </Text2Regular>
+            <Text2Bold>Performance optimization</Text2Bold>
+            <Text2Regular>- no more than one week Cross-Interview</Text2Regular>
             <ColorText1>
               School recruitment / social recruitment positions:
             </ColorText1>
+            <Text2Bold>Project written test</Text2Bold>
             <Text2Regular>
-              Project written test - two days Idea review-communication and
-              mentoring
+              - two days Idea review-communication and mentoring
             </Text2Regular>
+            <Text2Bold>Performance optimization</Text2Bold>
             <Text2Regular>
-              Performance optimization - no more than one week Technical open
-              talk evaluation
+              - no more than one week Technical open talk evaluation
             </Text2Regular>
           </SidebarCard>
           <SidebarCard1>
-            <IconText1>Interview Process</IconText1>
+            {/* <IconText1>Interview Process</IconText1> */}
             <Text2Bold>- Resume submission to the email:</Text2Bold>
             <Text2Regular>
-              <ColorText>info@datenlord.com</ColorText> or scan the QR code at
-              the bottom of the article to add WeChat.
+              <ColorText>info@datenlord.com</ColorText>
             </Text2Regular>
+            <Text2Bold>
+              - Scan the QR code at the bottom of the article to add WeChat.
+            </Text2Bold>
             <Img src={hrQRCodeUrl} />
           </SidebarCard1>
         </RightSidebarContainer>
