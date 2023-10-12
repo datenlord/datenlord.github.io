@@ -11,7 +11,7 @@ import arrowUpRightUrl from '@/assets/video/arrow-up-right.svg'
 import { techTalkItems } from './TechShare/TechTalk'
 import { OSSShowcaseItems } from './TechShare/OSSShowcase'
 import { rustShowcaseItems } from './TechShare/RustShowcase'
-import { spinalHDLItems } from './TechShare/SpinalHDL'
+import { hardwareAccelerationItemsItems } from './TechShare/HardwareAccelerationItems'
 import { RecommendItems } from './TechShare/Recommend'
 
 const { Heading, Paragraph } = Typography
@@ -56,11 +56,11 @@ const data = new Map<
     },
   ],
   [
-    'spinal-hdl',
+    'hardware-acceleration',
     {
-      label: 'SpinalHDL',
-      description: 'SpinalHDL的实践、挑战与应用前景',
-      list: spinalHDLItems,
+      label: '硬件加速',
+      description: '硬件加速领域的实践、经验与挑战',
+      list: hardwareAccelerationItemsItems,
     },
   ],
 ])

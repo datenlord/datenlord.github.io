@@ -6,7 +6,7 @@ import { Typography } from '@/components/Typography'
 import techTalkCover from '@/assets/resources/tech-talk-cover.png'
 import OSSShowcaseCover from '@/assets/resources/oss-showcase-cover.png'
 import rustShowcaseCover from '@/assets/resources/rust-showcase-cover.png'
-import spinalHDLCover from '@/assets/resources/spinal-hdl-cover.png'
+import HardwareAccelerationCover from '@/assets/resources/hardware-acceleration-cover.png'
 
 const items = [
   {
@@ -32,10 +32,10 @@ const items = [
   },
   {
     key: 4,
-    cover: spinalHDLCover,
-    title: 'SpinalHDL',
-    text: 'SpinalHDL的实践、挑战与应用前景',
-    url: '/spinal-hdl',
+    cover: HardwareAccelerationCover,
+    title: '硬件加速',
+    text: '硬件加速领域的实践、经验与挑战',
+    url: '/hardware-acceleration',
   },
 ]
 

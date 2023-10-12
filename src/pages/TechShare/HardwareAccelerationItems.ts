@@ -1,18 +1,18 @@
-import cover1 from '@/assets/spinal-hdl/cover1.jpg'
-import cover2 from '@/assets/spinal-hdl/cover2.jpg'
-import cover3 from '@/assets/spinal-hdl/cover3.jpg'
-import cover4 from '@/assets/spinal-hdl/cover4.jpg'
-import cover5 from '@/assets/spinal-hdl/cover5.jpg'
-import cover6 from '@/assets/spinal-hdl/cover6.jpg'
-import cover7 from '@/assets/spinal-hdl/cover7.jpg'
-import cover8 from '@/assets/spinal-hdl/cover8.jpg'
-import cover9 from '@/assets/spinal-hdl/cover9.jpg'
-import cover10 from '@/assets/spinal-hdl/cover10.jpg'
-import cover11 from '@/assets/spinal-hdl/cover11.jpg'
-import cover12 from '@/assets/spinal-hdl/cover12.jpg'
-import cover13 from '@/assets/spinal-hdl/cover13.jpg'
+import cover1 from '@/assets/hardware-acceleration/cover1.jpg'
+import cover2 from '@/assets/hardware-acceleration/cover2.jpg'
+import cover3 from '@/assets/hardware-acceleration/cover3.jpg'
+import cover4 from '@/assets/hardware-acceleration/cover4.jpg'
+import cover5 from '@/assets/hardware-acceleration/cover5.jpg'
+import cover6 from '@/assets/hardware-acceleration/cover6.jpg'
+import cover7 from '@/assets/hardware-acceleration/cover7.jpg'
+import cover8 from '@/assets/hardware-acceleration/cover8.jpg'
+import cover9 from '@/assets/hardware-acceleration/cover9.jpg'
+import cover10 from '@/assets/hardware-acceleration/cover10.jpg'
+import cover11 from '@/assets/hardware-acceleration/cover11.jpg'
+import cover12 from '@/assets/hardware-acceleration/cover12.jpg'
+import cover13 from '@/assets/hardware-acceleration/cover13.jpg'
  
-export const spinalHDLItems = [
+export const hardwareAccelerationItemsItems = [
   {
     key: 1,
     image: cover1,

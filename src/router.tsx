@@ -98,7 +98,7 @@ export const router = createHashRouter([
         element: <VideoList />,
       },
       {
-        path: 'spinal-hdl',
+        path: 'hardware-acceleration',
         element: <VideoList />,
       },
       {
