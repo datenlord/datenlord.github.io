@@ -10,7 +10,7 @@ import { UseSection } from './Home/UseSection'
 import coverUrl from '@/assets/clients/cover.png'
 import SJTULogoUrl from '@/assets/clients/SJTU-logo.png'
 import BUPTLogoUrl from '@/assets/clients/BUPT-logo.png'
-import RUCLogoUrl from '@/assets/clients/RUC-logo.png'
+import HNULogoUrl from '@/assets/clients/HNU-logo.png'
 import SCUTLogoUrl from '@/assets/clients/SCUT-logo.png'
 import SBULogoUrl from '@/assets/clients/SBU-logo.png'
 import imageUrl from '@/assets/clients/image.png'
@@ -66,7 +66,7 @@ const SJTULogo = styled(Logo)`
 const BUPTLogo = styled(Logo)`
   grid-area: 2 / 1 / 3 / 3;
 `
-const RUCLogo = styled(Logo)`
+const HNULogo = styled(Logo)`
   grid-area: 2 / 3 / 3 / 5;
 `
 const SCUTLogo = styled(Logo)`
@@ -115,7 +115,7 @@ const items = [
         text: '北京邮电大学 合作项目：RDMA的流量控制',
       },
       {
-        text: ' 中国人民大学 合作项目：RDMA传输层优化',
+        text: '湖南大学  合作项目：RDMA  QoS',
       },
     ],
   },
@@ -173,7 +173,7 @@ export default () => {
             <LogoContainer>
               <SJTULogo src={SJTULogoUrl} />
               <BUPTLogo src={BUPTLogoUrl} />
-              <RUCLogo src={RUCLogoUrl} />
+              <HNULogo src={HNULogoUrl} />
               <SCUTLogo src={SCUTLogoUrl} />
               <SBULogo src={SBULogoUrl} />
             </LogoContainer>
