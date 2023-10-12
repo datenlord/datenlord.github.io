@@ -209,7 +209,7 @@ const LinkTitle = styled(CNBodySmall)`
 `
 const LinkSebTitle = styled(CNBodySmall)`
   font-weight: 600;
-  padding-bottom: 0.24rem;
+  /* padding-bottom: 0.04rem; */
 `
 const DescriptionTitle = styled(CNMarkMedium)`
   font-weight: 600;
@@ -643,9 +643,14 @@ export default () => {
           <LinkCard>
             <LinkTitle>面试流程</LinkTitle>
             <LinkSebTitle>- 简历投递至邮箱:</LinkSebTitle>
-            <LinkText>
-              <ColorText>info@datenlord.com</ColorText>或扫描微信联系也可以喔~
+            <LinkText style={{ paddingTop: '0.04rem'}}>
+              <ColorText>info@datenlord.com</ColorText>
             </LinkText>
+            <div style={{ height: '0.24rem' }} />
+            <LinkSebTitle>- 添加达坦科技小助手微信:</LinkSebTitle>
+            {/* <LinkText>
+              <ColorText>info@datenlord.com</ColorText>或扫描微信联系也可以喔~
+            </LinkText> */}
             <Img src={weChatQRcode} />
           </LinkCard>
         </RightSidebarContainer>
