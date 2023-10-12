@@ -1,4 +1,4 @@
-const s="/zh-cn/assets/image1-85650830.png",a="/zh-cn/assets/image2-d3ac686f.png",t="/zh-cn/assets/image3-d19685f7.png",e="/zh-cn/assets/image4-22c90bed.png",l="/zh-cn/assets/image5-060ec542.png",p="/zh-cn/assets/image6-e95accb5.png",n="/zh-cn/assets/image7-39b0aa47.png",c="/zh-cn/assets/image8-f5342e9f.png",i="/zh-cn/assets/image9-f8fdd108.png",r="/zh-cn/assets/image10-fea0520f.png",C="/zh-cn/assets/image11-3896bab5.png",o="/zh-cn/assets/image12-5d3c96d7.png",h="/zh-cn/assets/image13-56596c1a.png",d="/zh-cn/assets/image14-1cff1399.png",u="/zh-cn/assets/image15-f50d9208.png",m="/zh-cn/assets/image16-73064f95.png",g="/zh-cn/assets/image17-8fbf2614.png",R="/zh-cn/assets/image18-04a62cf7.png",b="/zh-cn/assets/image19-b4bc01e2.png",_="/zh-cn/assets/image20-41386794.png",j="/zh-cn/assets/image21-453c426e.png",S="/zh-cn/assets/image22-e0049342.png",f="/zh-cn/assets/image23-989a38cf.png",E=[s,a,t,e,l,p,n,c,i,r,C,o,h,d,u,m,g,R,b,_,j,S,f],y={label:"基于BSV的高性能并行CRC硬件电路生成器",description:"循环冗余校验码，即Cyclic Redundancy Check (CRC), 是一种在各种通信系统中广泛应用的检错机制。CRC算法的工作原理和哈希函数类似，具体来说，其对任意长度的数据计算出一段唯一的标识（校验和）, 然后根据这个标识来判断该数据在传输过程中是否发生变化。CRC检错码在实际生活中有着广泛的应用，诸如网络通信，存储系统等场景下都需要CRC来保证数据传输的正确性。而不同的应用场景往往需要采用不同的CRC配置参数，同时对计算的性能也有不同的需求。例如，在基于Ethernet协议的网络传输中需要采用IEEE802-3协议所规定的CRC参数，同时需要高吞吐率的CRC实现以和网络带宽相匹配。",location:"中国香港",author:["翁万正"],tags:["硬件加速"],date:"2023-07-27",title:"BSV based high performance parallel CRC hardware circuit generator"},x=[{label:"引 言",level:2},{label:"算法原理",level:2},{label:"CRC 计算的定义",level:3},{label:"电路架构与性能",level:2},{label:"架构设计",level:3},{label:"性能与面积",level:3},{label:"使用指南",level:2},{label:"配置参数",level:3},{label:"输入输出接口",level:3},{label:"BSV 使用接口",level:3},{label:"Verilog 使用接口",level:3},{label:"引用和链接",level:2}],F=`<h2 id="引-言">引 言</h2>
+const s="/zh-cn/assets/image1-85650830.png",a="/zh-cn/assets/image2-d3ac686f.png",t="/zh-cn/assets/image3-d19685f7.png",e="/zh-cn/assets/image4-22c90bed.png",l="/zh-cn/assets/image5-060ec542.png",p="/zh-cn/assets/image6-e95accb5.png",n="/zh-cn/assets/image7-39b0aa47.png",c="/zh-cn/assets/image8-f5342e9f.png",i="/zh-cn/assets/image9-f8fdd108.png",r="/zh-cn/assets/image10-fea0520f.png",C="/zh-cn/assets/image11-3896bab5.png",o="/zh-cn/assets/image12-5d3c96d7.png",h="/zh-cn/assets/image13-56596c1a.png",d="/zh-cn/assets/image14-1cff1399.png",u="/zh-cn/assets/image15-f50d9208.png",m="/zh-cn/assets/image16-73064f95.png",g="/zh-cn/assets/image17-8fbf2614.png",R="/zh-cn/assets/image18-04a62cf7.png",_="/zh-cn/assets/image19-b4bc01e2.png",b="/zh-cn/assets/image20-41386794.png",j="/zh-cn/assets/image21-453c426e.png",S="/zh-cn/assets/image22-e0049342.png",E="/zh-cn/assets/image23-989a38cf.png",f=[s,a,t,e,l,p,n,c,i,r,C,o,h,d,u,m,g,R,_,b,j,S,E],y={label:"基于BSV的高性能并行CRC硬件电路生成器",description:"循环冗余校验码，即Cyclic Redundancy Check (CRC), 是一种在各种通信系统中广泛应用的检错机制。CRC算法的工作原理和哈希函数类似，具体来说，其对任意长度的数据计算出一段唯一的标识（校验和）, 然后根据这个标识来判断该数据在传输过程中是否发生变化。CRC检错码在实际生活中有着广泛的应用，诸如网络通信，存储系统等场景下都需要CRC来保证数据传输的正确性。而不同的应用场景往往需要采用不同的CRC配置参数，同时对计算的性能也有不同的需求。例如，在基于Ethernet协议的网络传输中需要采用IEEE802-3协议所规定的CRC参数，同时需要高吞吐率的CRC实现以和网络带宽相匹配。",location:"中国香港",author:["翁万正"],tags:["硬件加速"],date:"2023-07-27",title:"BSV based high performance parallel CRC hardware circuit generator"},x=[{label:"引 言",level:2},{label:"算法原理",level:2},{label:"CRC 计算的定义",level:3},{label:"电路架构与性能",level:2},{label:"架构设计",level:3},{label:"性能与面积",level:3},{label:"使用指南",level:2},{label:"配置参数",level:3},{label:"输入输出接口",level:3},{label:"BSV 使用接口",level:3},{label:"Verilog 使用接口",level:3},{label:"引用和链接",level:2}],v=`<h2 id="引-言">引 言</h2>
 <p>循环冗余校验码，即 Cyclic Redundancy Check (CRC), 是一种在各种通信系统中广泛应用的检错机制。CRC 算法的工作原理和哈希函数类似，具体来说，其对任意长度的数据计算出一段唯一的标识（校验和）, 然后根据这个标识来判断该数据在传输过程中是否发生变化。CRC 检错码在实际生活中有着广泛的应用，诸如网络通信，存储系统等场景下都需要 CRC 来保证数据传输的正确性。而不同的应用场景往往需要采用不同的 CRC 配置参数，同时对计算的性能也有不同的需求。例如，在基于 Ethernet 协议的网络传输中需要采用 IEEE802-3 协议所规定的 CRC 参数，同时需要高吞吐率的 CRC 实现以和网络带宽相匹配。</p>
 <p>对于一个具体的通信系统，CRC 既可以通过软件编程也可以硬件电路的形态来实现。相较于网络上丰富的软件库，开源的 CRC 硬件实现却相对落后，尤其是面向高性能的应用场景。例如，下述链接都提供了参数可配置的 CRC 硬件电路生成器，但这些实现方式都是直接将 CRC 算法映射到组合逻辑电路上，这往往会导致较长的组合逻辑延时进而降低电路的整体工作频率，无法满足高吞吐率的需求。</p>
 <ul>
@@ -72,7 +72,7 @@ const s="/zh-cn/assets/image1-85650830.png",a="/zh-cn/assets/image2-d3ac686f.png
 <p><img src="${R}" alt="image"></p>
 <p>即需要将中间校验和 CRC[A'(x)]左移 256-bit，对其再次计算 CRC 校验值后和 CRC[A(x)]相加。同样我们可以通过硬件查找表的方式完成这里校验和的计算。</p>
 <p>实际 CRC 的计算中原始数据的长度并不一定都是 256-bit 的整数倍，因此在处理最后一帧输入时不能直接使用上面的公式进行累加。我们需要动态地计算每个数据包最后一帧的有效数据的宽度，设宽度为 m, 则可以采用如下公式进行累加:</p>
-<p><img src="${b}" alt="image"></p>
+<p><img src="${_}" alt="image"></p>
 <h2 id="电路架构与性能">电路架构与性能</h2>
 <h3 id="架构设计">架构设计</h3>
 <p>基于上述并行算法，CRC 硬件电路的架构设计如下图所示。为了提升吞吐率，电路设计时将 CRC 算法需要的组合逻辑实现划分成了八级单向传递的流水线, 其中前五级流水线计算每个周期输入数据的 CRC 校验和并累加到 CRC 中间值上，后三级流水线用于处理最后一帧数据非对齐（数据位宽非总线位宽的整数倍）情况下 CRC 校验值的累加。每一级流水线的完成的具体功能如下:</p>
@@ -86,7 +86,7 @@ const s="/zh-cn/assets/image1-85650830.png",a="/zh-cn/assets/image2-d3ac686f.png
 <li>Stage-7: 从查找表中取出中间 CRC 值移位后对应的校验和;</li>
 <li>Stage-8: 将上一级的查找表输出和 Stage-5 传递来的最后一帧输入数据的 CRC 校验和通过树状结构进行异或合并得到全部数据的校验和</li>
 </ul>
-<p><img src="${_}" alt="image"></p>
+<p><img src="${b}" alt="image"></p>
 <h3 id="性能与面积">性能与面积</h3>
 <p>CRC 硬件电路的实际性能和资源开销与具体的配置参数有关。大部分情况下，硬件电路的吞吐率随输入总线数据位宽增大而提升，硬件资源开销则同时和总线宽度以及 CRC 校验和宽度有关。以 IEEE 802-3 协议规定的 32 位 CRC 校验和为例，其在 256 位输入总线位宽的配置下，可在 Xilinx xcvu9p FPGA 器件上达到 500MHz 的工作频率，总吞吐率达 128Gb/s，实际的硬件资源开销如下。</p>
 <p><img src="${j}" alt="image"></p>
@@ -172,7 +172,7 @@ const s="/zh-cn/assets/image1-85650830.png",a="/zh-cn/assets/image2-d3ac686f.png
 );
 </code></pre>
 <p>发起 CRC 计算时原始数据需要按照大端字节序进行传输，即高位字节需要优先传输。假设 CRC 电路输入 AXI-Stream 总线数据位宽为 32-bit (4-byte), 若要传输 80-bit (10-byte)的数据，那么每一帧需要传输的内容如下图所示:</p>
-<p><img src="${f}" alt="image"></p>
+<p><img src="${E}" alt="image"></p>
 <h3 id="bsv-使用接口">BSV 使用接口</h3>
 <p>blue-crc 项目基于 Bluespec SystemVerilog 硬件描述语言实现，因此对于使用 BSV 的设计者，可以直接通过实例化的方式使用 CRC 模块。详细的使用步骤如下:</p>
 <ol>
@@ -266,4 +266,4 @@ CrcAxiStream#(<span class="hljs-number">32</span>, <span class="hljs-number">256
 <a href="https://github.com/datenlord/blue-crc">https://github.com/datenlord/blue-crc</a></p>
 <h2 id="引用和链接">引用和链接</h2>
 <p>[1] Y. Sun and M. S. Kim, "A Table-Based Algorithm for Pipelined CRC Calculation," 2010 IEEE International Conference on Communications, Cape Town, South Africa, 2010, pp. 1-5, doi: 10.1109/ICC.2010.5501903.</p>
-<p>[2] Sun Y, Kim M S. A pipelined CRC calculation using lookup tables[C]//2010 7th IEEE Consumer Communications and Networking Conference. IEEE, 2010: 1-2.</p>`;export{E as assetURLs,F as default,y as metadata,x as toc};
+<p>[2] Sun Y, Kim M S. A pipelined CRC calculation using lookup tables[C]//2010 7th IEEE Consumer Communications and Networking Conference. IEEE, 2010: 1-2.</p>`;export{f as assetURLs,v as default,y as metadata,x as toc};

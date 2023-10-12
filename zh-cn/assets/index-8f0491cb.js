@@ -1,4 +1,4 @@
-const s="/zh-cn/assets/cover-78606c04.png",t="/zh-cn/assets/image1-f46bfcc6.jpg",n=[s,t],o={label:"Rust X Datenlord：第二届中国Rust开发者大会回顾",description:"达坦科技自成立以来积极探索软硬件深度融合，专注于打造新一代的开源跨云存储平台，以满足不同行业客户对数据跨云、跨数据中心高性能访问的需求。",cover:"./cover.png",location:"新加坡",date:"2022-08-04",title:"Rust X Datenlord: Review of the Second China Rust Developer Conference"},e=[{label:"专题演讲",level:2},{label:"线上 workshop",level:2},{label:"参与我们",level:2}],p=`<p><img src="${s}" alt="封面"></p>
+const s="/zh-cn/assets/cover-78606c04.png",t="/zh-cn/assets/image1-f46bfcc6.jpg",n=[s,t],o={label:"Rust X Datenlord：第二届中国Rust开发者大会回顾",description:"达坦科技自成立以来积极探索软硬件深度融合，专注于打造新一代的开源跨云存储平台，以满足不同行业客户对数据跨云、跨数据中心高性能访问的需求。",cover:"./cover.png",location:"新加坡",date:"2022-08-04",title:"Rust X Datenlord: Review of the Second China Rust Developer Conference"},e=[{label:"专题演讲",level:2},{label:"线上 workshop",level:2},{label:"参与我们",level:2}],r=`<p><img src="${s}" alt="封面"></p>
 <p>达坦科技自成立以来积极探索<strong>软硬件深度融合</strong>，专注于打造新一代的<strong>开源跨云存储平台</strong>，以满足不同行业客户对数据跨云、跨数据中心高性能访问的需求。</p>
 <p>今年以来陆续发声，将达坦科技开源项目 async-rdma 的技术实践和案例对外输出，坚定地做 Rust 语言的布道，也将达坦科技探索的新一代硬件敏捷开发的研究成果在各硬件技术大会上做分享（本周的次条为达坦科技的团队在南京参加<strong>中国计算机学会芯片大会</strong>的回顾）。</p>
 <h2 id="专题演讲">专题演讲</h2>
@@ -12,4 +12,4 @@ const s="/zh-cn/assets/cover-78606c04.png",t="/zh-cn/assets/image1-f46bfcc6.jpg"
 <h2 id="参与我们">参与我们</h2>
 <p>目前，我们将整个库放在了 <strong>Github.com/datenlord/async-rdma</strong> 上，并且也在持续迭代中，欢迎感兴趣用 Rust 语言实现高性能编程的你前来讨论。</p>
 <p>有意加入 <strong>Rust 前沿交流讨论群</strong>，请添加小助手微信：</p>
-<p><img src="${t}" alt="封面"></p>`;export{n as assetURLs,p as default,o as metadata,e as toc};
+<p><img src="${t}" alt="封面"></p>`;export{n as assetURLs,r as default,o as metadata,e as toc};
