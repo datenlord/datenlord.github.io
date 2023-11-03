@@ -88,6 +88,8 @@ const Text1 = styled.p`
 `
 const ColorText1 = styled(Text1)`
   color: #7680dd;
+  word-break: keep-all;
+  text-transform: capitalize;
 `
 const IconText1 = styled(Text1)`
   position: relative;
@@ -108,7 +110,7 @@ const Text2Bold = styled(Text2)`
 `
 const Text2Regular = styled(Text2)`
   font-weight: 400;
-  word-break: break-all;
+  word-break: keep-all;
 `
 const ColorText = styled.span`
   color: #7680dd;
@@ -556,38 +558,36 @@ const JoinUsPage: React.FC = () => {
         </MainContainer>
         <RightSidebarContainer>
           <SidebarCard>
-            {/* <Text2Bold>
-              - After the resume evaluation is qualified, the interview process
-              is
-            </Text2Bold> */}
-            <ColorText1>Internship position:</ColorText1>
+            <ColorText1>Interview process</ColorText1>
+            <Text2Regular>Internship position:</Text2Regular>
             <Text2Bold>Project written test</Text2Bold>
-            <Text2Regular>
-              - two days Idea review-communication and mentoring
-            </Text2Regular>
+            <Text2Regular>- two days</Text2Regular>
+            <Text2Bold>Idea review</Text2Bold>
+            <Text2Regular>- communication and mentoring</Text2Regular>
             <Text2Bold>Performance optimization</Text2Bold>
-            <Text2Regular>- no more than one week Cross-Interview</Text2Regular>
-            <ColorText1>
+            <Text2Regular>- no more than one week</Text2Regular>
+            <Text2Bold>Cross-Interview</Text2Bold>
+            <div style={{ height: '0.25rem' }}></div>
+            <Text2Regular>
               School recruitment / social recruitment positions:
-            </ColorText1>
+            </Text2Regular>
             <Text2Bold>Project written test</Text2Bold>
-            <Text2Regular>
-              - two days Idea review-communication and mentoring
-            </Text2Regular>
+            <Text2Regular>- two days</Text2Regular>
+            <Text2Bold>Idea review</Text2Bold>
+            <Text2Regular>- communication and mentoring</Text2Regular>
             <Text2Bold>Performance optimization</Text2Bold>
-            <Text2Regular>
-              - no more than one week Technical open talk evaluation
-            </Text2Regular>
+            <Text2Regular>- no more than one week</Text2Regular>
+            <Text2Bold>Technical open talk evaluation</Text2Bold>
           </SidebarCard>
           <SidebarCard1>
-            {/* <IconText1>Interview Process</IconText1> */}
-            <Text2Bold>- Resume submission to the email:</Text2Bold>
+            <ColorText1>How to apply</ColorText1>
+            <Text2Regular>- Resume submission to the email:</Text2Regular>
             <Text2Regular>
               <ColorText>info@datenlord.com</ColorText>
             </Text2Regular>
-            <Text2Bold>
-              - Scan the QR code at the bottom of the article to add WeChat.
-            </Text2Bold>
+            <Text2Regular>
+              - Scan the QR code to add WeChat of DatenLord assistant
+            </Text2Regular>
             <Img src={hrQRCodeUrl} />
           </SidebarCard1>
         </RightSidebarContainer>
