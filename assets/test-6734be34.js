@@ -1,4 +1,4 @@
-const s="/assets/test-e2cb5366.png",e="/assets/test1-a4c78321.jpg",t=[s,e],i={title:"",description:"This is a description",cover:"./test.png",author:[{name:"Zqa",age:"23?"},{name:"Ying",age:21}],date:"Invalid date"},o=[{label:"Heading 2",level:2}],h=`<h1>Heading 4</h1>
+const s="/assets/test-e2cb5366.png",e="/assets/test1-a4c78321.jpg",t=[s,e],i={title:"",description:"This is a description",cover:"./test.png",author:[{name:"Zqa",age:"23?"},{name:"Ying",age:21}],date:"Invalid date"},h=[{label:"Heading 2",level:2}],o=`<h1>Heading 4</h1>
 <p>This is some text.<br>
 This is some text.<br>
 This is some text.<br>
@@ -56,4 +56,4 @@ This is some text.<br>
 This is some text.<br>
 This is some text.</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> hello = <span class="hljs-string">'Hello Word'</span>
-</code></pre>`;export{t as assetURLs,h as default,i as metadata,o as toc};
+</code></pre>`;export{t as assetURLs,o as default,i as metadata,h as toc};
