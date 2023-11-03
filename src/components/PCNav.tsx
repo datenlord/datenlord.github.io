@@ -42,6 +42,7 @@ const StyledSubNav = styled.ul<{
   isDropdown: boolean
   MyTheme: string
 }>`
+  z-index: 100;
   position: absolute;
   top: 86px;
   right: 0;
