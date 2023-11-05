@@ -184,7 +184,7 @@ const DescriptionClass = styled(CNTitleSmall)`
   color: #7680dd;
 `
 const DescriptionText = styled.div`
-  padding-bottom: 0.11rem;
+  padding-bottom: 0.06rem;
   font-size: 0.14rem;
   line-height: 0.2rem;
   font-weight: 400;
@@ -197,6 +197,7 @@ const DescriptionTextBold = styled.span`
   font-weight: 600;
 `
 const LinkTitle = styled(CNBodySmall)`
+  font-weight: 600;
   padding-bottom: 0.11rem;
   position: relative;
   padding-left: 0.24rem;
@@ -213,6 +214,8 @@ const LinkSebTitle = styled(CNBodySmall)`
 `
 const DescriptionTitle = styled(CNMarkMedium)`
   font-weight: 600;
+  font-size: 0.16rem;
+  padding-bottom: 0.12rem;
 `
 const DescriptionSubTitle = styled(CNMarkMedium)`
   padding-bottom: 0.11rem;
@@ -623,27 +626,39 @@ export default () => {
         </MainContainer>
         <RightSidebarContainer>
           <DescriptionCard>
-            <DescriptionTitle>简历评估合格后，面试流程为：</DescriptionTitle>
-            <DescriptionSubTitle>
-              具体面试流程会根据候选人的情况略有调整。
-            </DescriptionSubTitle>
-            <DescriptionClass>实习生：</DescriptionClass>
+            <DescriptionTitle>面试流程</DescriptionTitle>
+            <DescriptionClass>实习岗位：</DescriptionClass>
             <DescriptionText>
-              <DescriptionTextBold>入职初期为300元/天，</DescriptionTextBold>
-              如能力和产出优秀将予以薪资调增，最高500元/天。
+              <DescriptionTextBold>项目笔试</DescriptionTextBold>- 两天
             </DescriptionText>
-            <DescriptionClass>正式员工：</DescriptionClass>
             <DescriptionText>
-              <DescriptionTextBold>
-                对标国内一线大厂的薪资+期权，
-              </DescriptionTextBold>
-              待面试通过后根据能力情况确定。
+              <DescriptionTextBold>性能优化</DescriptionTextBold> - 不超过一周
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>交叉面试</DescriptionTextBold>
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>思路 review</DescriptionTextBold> - 交流指导
+            </DescriptionText>
+            <div style={{ paddingBlock: '0.06rem' }} />
+            <DescriptionClass>校招 / 社招岗位：</DescriptionClass>
+            <DescriptionText>
+              <DescriptionTextBold>项目笔试</DescriptionTextBold> - 两天
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>思路 review</DescriptionTextBold> - 交流指导
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>性能优化</DescriptionTextBold> - 不超过一周
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>交叉面试</DescriptionTextBold>
             </DescriptionText>
           </DescriptionCard>
           <LinkCard>
-            <LinkTitle>面试流程</LinkTitle>
-            <LinkSebTitle>- 简历投递至邮箱:</LinkSebTitle>
-            <LinkText style={{ paddingTop: '0.04rem'}}>
+            <LinkTitle>投递简历</LinkTitle>
+            <LinkSebTitle>- 投递至邮箱:</LinkSebTitle>
+            <LinkText style={{ paddingTop: '0.04rem' }}>
               <ColorText>info@datenlord.com</ColorText>
             </LinkText>
             <div style={{ height: '0.24rem' }} />
