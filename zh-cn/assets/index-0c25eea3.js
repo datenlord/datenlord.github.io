@@ -1,4 +1,4 @@
-const t="/zh-cn/assets/cover-ae42e606.jpg",s="/zh-cn/assets/image1-4de20ee3.jpg",n="/zh-cn/assets/image2-9ad061db.jpg",o=[t,s,n],r={label:"Rust X DatenLord l Rust China Conf 2023 倒计时！",description:"Rust语言作为一种强调性能、安全和并发性的新的编程语言，吸引了越来越多的程序员想要尝试学习和使用Rust。达坦科技（DatenLord）旗下的开源项目Xline （用于元数据管理的分布式KV存储）就是用Rust写就的，我们也一直坚定地做Rust语言在中国的布道。",cover:"./cover.jpg",location:"中国香港",date:"2023-06-11",title:"Countdown to Rust X DatenLord l Rust China Conf 2023"},e=[{label:"倒计时",level:2},{label:"主会场",level:2},{label:"分论坛：Rust 语言与高性能实践",level:2},{label:"Workshop：Rust in System",level:2},{label:"报名注意事项",level:2}],p=`<p><img src="${t}" alt="封面"></p>
+const t="/zh-cn/assets/cover-ae42e606.jpg",s="/zh-cn/assets/image1-4de20ee3.jpg",n="/zh-cn/assets/image2-9ad061db.jpg",o=[t,s,n],r={label:"Rust X DatenLord l Rust China Conf 2023 倒计时！",description:"Rust语言作为一种强调性能、安全和并发性的新的编程语言，吸引了越来越多的程序员想要尝试学习和使用Rust。达坦科技（DatenLord）旗下的开源项目Xline （用于元数据管理的分布式KV存储）就是用Rust写就的，我们也一直坚定地做Rust语言在中国的布道。",cover:"./cover.jpg",location:"中国香港",date:"2023-06-11",title:"Countdown to Rust X DatenLord l Rust China Conf 2023"},e=[{label:"倒计时",level:2},{label:"主会场",level:2},{label:"分论坛：Rust 语言与高性能实践",level:2},{label:"Workshop：Rust in System",level:2},{label:"报名注意事项",level:2}],g=`<p><img src="${t}" alt="封面"></p>
 <h2 id="倒计时">倒计时</h2>
 <p>Rust 语言作为一种强调性能、安全和并发性的新的编程语言，吸引了越来越多的程序员想要尝试学习和使用 Rust。达坦科技（DatenLord）旗下的<strong>开源项目 Xline</strong> （用于元数据管理的分布式 KV 存储）就是<strong>用 Rust 写就的</strong>，我们也一直坚定地做 Rust 语言在中国的布道。</p>
 <p>因此，<strong>2023 年 6 月 17-18 日</strong> 我们也将奔赴上海，支持 Rust 语言中文社区在疫情之后首次举办的大型线下 Rust 开发者大会。<strong>达坦科技的两位创始人将在 Rust China Conf 2023 上分别做主题演讲，在 6 月 17 日晚，达坦科技还将赞助举办一场干货满满的 workshop。</strong></p>
@@ -31,4 +31,4 @@ const t="/zh-cn/assets/cover-ae42e606.jpg",s="/zh-cn/assets/image1-4de20ee3.jpg"
 <p>添加小助手微信，进入<strong>达坦科技 Rust 前沿技术交流群</strong></p>
 <p><img src="${n}" alt="封面"></p>
 <p>更多关于 Rust China Conf 2023 官方信息，请查阅<br>
--<a href="https://rustcc.cn/2023rustchinaconf/">https://rustcc.cn/2023rustchinaconf/</a></p>`;export{o as assetURLs,p as default,r as metadata,e as toc};
+-<a href="https://rustcc.cn/2023rustchinaconf/">https://rustcc.cn/2023rustchinaconf/</a></p>`;export{o as assetURLs,g as default,r as metadata,e as toc};

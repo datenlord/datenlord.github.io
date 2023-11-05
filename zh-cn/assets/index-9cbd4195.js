@@ -1,4 +1,4 @@
-const l="/zh-cn/assets/cover-eeda38bf.png",e=[l],i={label:"Xline v0.2.0：一个用于元数据管理的分布式KV存储",description:"Xline是一个基于Curp协议的，用于管理元数据的分布式KV存储。现有的分布式KV存储大多采用Raft共识协议，需要两次RTT才能完成一次请求。当部署在单个数据中心时，节点之间的延迟较低，因此不会对性能产生大的影响。",cover:"./cover.png",location:"中国香港",tags:["Xline"],date:"2023-02-16",title:"Xline v0.2.0: A distributed KV store for metadata management"},t=[{label:"Xline 是什么？我们为什么要做 Xline？",level:2},{label:"V0.2.0 版本有什么新功能？",level:3},{label:"欢迎参与到 Xline 项目中",level:2},{label:"相关链接",level:2}],n=`<p><img src="${l}" alt="封面"></p>
+const e="/zh-cn/assets/cover-eeda38bf.png",l=[e],i={label:"Xline v0.2.0：一个用于元数据管理的分布式KV存储",description:"Xline是一个基于Curp协议的，用于管理元数据的分布式KV存储。现有的分布式KV存储大多采用Raft共识协议，需要两次RTT才能完成一次请求。当部署在单个数据中心时，节点之间的延迟较低，因此不会对性能产生大的影响。",cover:"./cover.png",location:"中国香港",tags:["Xline"],date:"2023-02-16",title:"Xline v0.2.0: A distributed KV store for metadata management"},t=[{label:"Xline 是什么？我们为什么要做 Xline？",level:2},{label:"V0.2.0 版本有什么新功能？",level:3},{label:"欢迎参与到 Xline 项目中",level:2},{label:"相关链接",level:2}],n=`<p><img src="${e}" alt="封面"></p>
 <h2 id="xline-是什么？我们为什么要做-xline？">Xline 是什么？我们为什么要做 Xline？</h2>
 <p><strong>Xline 是一个基于 Curp 协议的，用于管理元数据的分布式 KV 存储。</strong> 现有的分布式 KV 存储大多采用 Raft 共识协议，需要两次 RTT 才能完成一次请求。当部署在单个数据中心时，节点之间的延迟较低，因此不会对性能产生大的影响。</p>
 <p>但是，当跨数据中心部署时，节点之间的延迟可能是几十或几百毫秒，此时 Raft 协议将成为性能瓶颈。Curp 协议就是为了解决这个问题而设计的。它可以在命令不冲突的情况下减少一个 RTT，从而提高性能。因此，<strong>Xline 旨在实现高性能的数据访问和跨数据中心场景下的强一致性。</strong></p>
@@ -36,4 +36,4 @@ const l="/zh-cn/assets/cover-eeda38bf.png",e=[l],i={label:"Xline v0.2.0：一个
 <li>Curp 相关文章:<br>
 <a href="https://medium.com/@datenlord/curp-revisit-the-consensus-protocol-384464be1600">https://medium.com/@datenlord/curp-revisit-the-consensus-protocol-384464be1600</a></li>
 <li>Xline 官网：<a href="http://www.xline.cloud">www.xline.cloud</a></li>
-</ul>`;export{e as assetURLs,n as default,i as metadata,t as toc};
+</ul>`;export{l as assetURLs,n as default,i as metadata,t as toc};

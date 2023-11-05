@@ -1,4 +1,4 @@
-const n="/zh-cn/assets/cover-99998007.jpg",s="/zh-cn/assets/image1-6f9cec09.jpg",t=[n,s],e={label:"精彩回顾｜硬件敏捷开发与验证方法学研讨",description:"8月27日，作为2022年第二届RISC-V中国峰会的同期活动，达坦科技成功举办硬件敏捷开发与验证方法学研讨。虽然是线上分享活动，但大家热情依旧，会后在“硬件敏捷开发和验证方法学讨论群”中积极互动提问。长达四小时的就新一代HDL在数字芯片设计方面的实践经验分享，究竟碰撞出了什么新的火花呢？下面我们一起来回顾研讨会的精彩内容。",cover:"./cover.jpg",location:"中国香港",date:"2022-09-08",title:"Discussion on Hardware Agile Development and Verification Methodology"},o=[{label:"芯片敏捷设计与验证之路",level:2},{label:"香山处理器敏捷开发与验证实践",level:2},{label:"通过 Chainsaw 实现硬件算子敏捷开发",level:2},{label:"Scala 在 IC 开发中的应用",level:2},{label:"NaxRiscv CPU: Introduction and Extension Demonstration",level:2},{label:"结束语",level:2}],a=`<p><img src="${n}" alt="封面"></p>
+const n="/zh-cn/assets/cover-99998007.jpg",s="/zh-cn/assets/image1-6f9cec09.jpg",t=[n,s],e={label:"精彩回顾｜硬件敏捷开发与验证方法学研讨",description:"8月27日，作为2022年第二届RISC-V中国峰会的同期活动，达坦科技成功举办硬件敏捷开发与验证方法学研讨。虽然是线上分享活动，但大家热情依旧，会后在“硬件敏捷开发和验证方法学讨论群”中积极互动提问。长达四小时的就新一代HDL在数字芯片设计方面的实践经验分享，究竟碰撞出了什么新的火花呢？下面我们一起来回顾研讨会的精彩内容。",cover:"./cover.jpg",location:"中国香港",date:"2022-09-08",title:"Discussion on Hardware Agile Development and Verification Methodology"},a=[{label:"芯片敏捷设计与验证之路",level:2},{label:"香山处理器敏捷开发与验证实践",level:2},{label:"通过 Chainsaw 实现硬件算子敏捷开发",level:2},{label:"Scala 在 IC 开发中的应用",level:2},{label:"NaxRiscv CPU: Introduction and Extension Demonstration",level:2},{label:"结束语",level:2}],o=`<p><img src="${n}" alt="封面"></p>
 <p>8 月 27 日，作为 2022 年第二届 RISC-V 中国峰会的同期活动，达坦科技成功举办硬件敏捷开发与验证方法学研讨。虽然是线上分享活动，但大家热情依旧，会后在“硬件敏捷开发和验证方法学讨论群”中积极互动提问。长达四小时的就新一代 HDL 在数字芯片设计方面的实践经验分享，究竟碰撞出了什么新的火花呢？下面我们一起来回顾研讨会的精彩内容。</p>
 <h2 id="芯片敏捷设计与验证之路">芯片敏捷设计与验证之路</h2>
 <p><strong>华南理工大学计算机科学与工程学院赖晓铮副教授</strong>首先分享了 “<strong>让硬件设计像软件设计一样简单</strong>”的愿景，即开发人员编写的代码只占工作量的 10%，剩下 90%由开源芯片生态系统提供。</p>
@@ -23,4 +23,4 @@ const n="/zh-cn/assets/cover-99998007.jpg",s="/zh-cn/assets/image1-6f9cec09.jpg"
 <p>请点击如下链接：<br>
 <a href="https://t.elecfans.com/live/2113.html%E6%94%B6%E7%9C%8B%E6%9C%AC%E6%AC%A1%E7%A0%94%E8%AE%A8%E4%BC%9A%E7%9A%84%E5%9B%9E%E6%94%BE%E3%80%82">https://t.elecfans.com/live/2113.html收看本次研讨会的回放。</a><br>
 也欢迎添加小助手微信，加入“<strong>硬件敏捷开发和验证方法学讨论群</strong>”，进行延伸讨论与互动，并第一时间获得后续相关活动的讯息。</p>
-<p><img src="${s}" alt="图片"></p>`;export{t as assetURLs,a as default,e as metadata,o as toc};
+<p><img src="${s}" alt="图片"></p>`;export{t as assetURLs,o as default,e as metadata,a as toc};
