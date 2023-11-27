@@ -15,6 +15,7 @@ import ArticleLIst from '@/pages/ArticleLIst'
 import ArticleContent from '@/pages/ArticleContent'
 import JDList from '@/pages/JDList'
 import JDDetail from '@/pages/JDDetail'
+import MIT from '@/pages/MITPage'
 
 export const router = createHashRouter([
   {
@@ -116,6 +117,10 @@ export const router = createHashRouter([
       {
         path: 'job-description/:key',
         element: <JDDetail />,
+      },
+      {
+        path: 'MIT',
+        element: <MIT />,
       },
     ],
   },

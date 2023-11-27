@@ -15,7 +15,7 @@ import cover14 from '@/assets/tech-talk/cover14.jpg'
 import cover15 from '@/assets/tech-talk/cover15.jpg'
 import cover16 from '@/assets/tech-talk/cover16.jpg'
 import cover17 from '@/assets/tech-talk/cover17.jpg'
-import cover18 from '@/assets/tech-talk/cover18.jpg'
+// import cover18 from '@/assets/tech-talk/cover18.jpg'
 import cover19 from '@/assets/tech-talk/cover19.jpg'
 import cover20 from '@/assets/tech-talk/cover20.jpg'
 import cover21 from '@/assets/tech-talk/cover21.jpg'
@@ -33,21 +33,23 @@ import cover32 from '@/assets/tech-talk/cover32.jpg'
 import cover33 from '@/assets/tech-talk/cover33.jpg'
 import cover34 from '@/assets/tech-talk/cover34.jpg'
 import cover35 from '@/assets/tech-talk/cover35.jpg'
-import cover37 from '@/assets/tech-talk/cover37.jpg'
-import cover38 from '@/assets/tech-talk/cover38.jpg'
-import cover39 from '@/assets/tech-talk/cover39.jpg'
+// import cover37 from '@/assets/tech-talk/cover37.jpg'
+// import cover38 from '@/assets/tech-talk/cover38.jpg'
+// import cover39 from '@/assets/tech-talk/cover39.jpg'
 import cover40 from '@/assets/tech-talk/cover40.jpg'
-import cover41 from '@/assets/tech-talk/cover41.jpg'
-import cover42 from '@/assets/tech-talk/cover42.jpg'
-import cover43 from '@/assets/tech-talk/cover43.jpg'
-import cover44 from '@/assets/tech-talk/cover44.jpg'
-import cover45 from '@/assets/tech-talk/cover45.jpg'
-import cover46 from '@/assets/tech-talk/cover46.jpg'
-import cover47 from '@/assets/tech-talk/cover47.jpg'
-import cover48 from '@/assets/tech-talk/cover48.jpg'
-import cover49 from '@/assets/tech-talk/cover49.jpg'
+// import cover41 from '@/assets/tech-talk/cover41.jpg'
+// import cover42 from '@/assets/tech-talk/cover42.jpg'
+// import cover43 from '@/assets/tech-talk/cover43.jpg'
+// import cover44 from '@/assets/tech-talk/cover44.jpg'
+// import cover45 from '@/assets/tech-talk/cover45.jpg'
+// import cover46 from '@/assets/tech-talk/cover46.jpg'
+// import cover47 from '@/assets/tech-talk/cover47.jpg'
+// import cover48 from '@/assets/tech-talk/cover48.jpg'
+// import cover49 from '@/assets/tech-talk/cover49.jpg'
 import cover50 from '@/assets/tech-talk/cover50.jpg'
 import cover51 from '@/assets/tech-talk/cover51.jpg'
+import cover52 from '@/assets/tech-talk/cover52.jpg'
+import cover53 from '@/assets/tech-talk/cover53.jpg'
 
 export const techTalkItems = [
   {
@@ -186,14 +188,14 @@ export const techTalkItems = [
     date: '2022.12.04',
     url: 'https://www.bilibili.com/video/BV1qG4y1G784/',
   },
-  {
-    key: 18,
-    image: cover18,
-    title: 'OPAE-Xilinx平台级复用开源项目介绍',
-    text: '本场workshop由微软亚洲工程院Brainwave Beijing项目组经理杨碧波进行分享，主要内容为OPAE-Xilinx平台级复用开源项目介绍。',
-    date: '2022.12.11',
-    url: 'https://www.bilibili.com/video/BV1AP4y1D7bK/',
-  },
+  // {
+  //   key: 18,
+  //   image: cover18,
+  //   title: 'OPAE-Xilinx平台级复用开源项目介绍',
+  //   text: '本场workshop由微软亚洲工程院Brainwave Beijing项目组经理杨碧波进行分享，主要内容为OPAE-Xilinx平台级复用开源项目介绍。',
+  //   date: '2022.12.11',
+  //   url: 'https://www.bilibili.com/video/BV1AP4y1D7bK/',
+  // },
   {
     key: 19,
     image: cover19,
@@ -330,30 +332,30 @@ export const techTalkItems = [
     date: '2023.06.27',
     url: 'https://b23.tv/BZuSvyW',
   },
-  {
-    key: 37,
-    image: cover37,
-    title: 'Stream Transaction Extender设计与验证',
-    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第二部分，由电子科技大学副教授肖寅东（Readon）进行分享。',
-    date: '2023.07.08',
-    url: 'https://www.bilibili.com/video/BV1pM4y1j7Lm/',
-  },
-  {
-    key: 38,
-    image: cover38,
-    title: '面向Multi-Die FPGA的设计与部署自动化方法探索',
-    text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第三部分，由西安交通大学副教授邸志雄进行分享。',
-    date: '2023.07.08',
-    url: 'https://www.bilibili.com/video/BV1og4y1c7RS/',
-  },
-  {
-    key: 39,
-    image: cover39,
-    title: '计算机体系结构MIT课程学习社区经验分享',
-    text: '在2023年初，达坦科技发起成立硬件设计学习社区，邀请所有有志于从事数字芯片设计的同学加入我们的学习互助自学小组，以理解数字芯片设计的精髓，强化理论知识的同时提升实操技能，继而整体提升设计能力。本场分享主题为【计算机体系结构MIT课程学习社区经验分享】，旨在了解学习社区各位同学学习的状态和面临的挑战，邀请已完成课程的学员分享学习和动手操作LAB的经验和教训，以此更好地辅助大家完成课程。',
-    date: '2023.07.08',
-    url: 'https://www.bilibili.com/video/BV1cs4y1r7T3/',
-  },
+  // {
+  //   key: 37,
+  //   image: cover37,
+  //   title: 'Stream Transaction Extender设计与验证',
+  //   text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第二部分，由电子科技大学副教授肖寅东（Readon）进行分享。',
+  //   date: '2023.07.08',
+  //   url: 'https://www.bilibili.com/video/BV1pM4y1j7Lm/',
+  // },
+  // {
+  //   key: 38,
+  //   image: cover38,
+  //   title: '面向Multi-Die FPGA的设计与部署自动化方法探索',
+  //   text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第三部分，由西安交通大学副教授邸志雄进行分享。',
+  //   date: '2023.07.08',
+  //   url: 'https://www.bilibili.com/video/BV1og4y1c7RS/',
+  // },
+  // {
+  //   key: 39,
+  //   image: cover39,
+  //   title: '计算机体系结构MIT课程学习社区经验分享',
+  //   text: '在2023年初，达坦科技发起成立硬件设计学习社区，邀请所有有志于从事数字芯片设计的同学加入我们的学习互助自学小组，以理解数字芯片设计的精髓，强化理论知识的同时提升实操技能，继而整体提升设计能力。本场分享主题为【计算机体系结构MIT课程学习社区经验分享】，旨在了解学习社区各位同学学习的状态和面临的挑战，邀请已完成课程的学员分享学习和动手操作LAB的经验和教训，以此更好地辅助大家完成课程。',
+  //   date: '2023.07.08',
+  //   url: 'https://www.bilibili.com/video/BV1cs4y1r7T3/',
+  // },
   {
     key: 40,
     image: cover40,
@@ -362,86 +364,86 @@ export const techTalkItems = [
     date: '2023.07.09',
     url: 'https://www.bilibili.com/video/BV1ou411L7Yy/',
   },
-  {
-    key: 41,
-    image: cover41,
-    title: 'RDMA网络的系统测试方案',
-    text: '在本周的前沿技术分享中，我们邀请到了孔心皓，来为大家分享RDMA 网络的系统测试方案。',
-    date: '2023.07.16',
-    url: 'https://www.bilibili.com/video/BV1tz4y147rw/',
-  },
-  {
-    key: 42,
-    image: cover42,
-    title: 'RapidWright技术分享会',
-    text: '在本周的前沿技术分享中，我们邀请到了西南交通大学邸志雄副教授和他的学生向瀚章，来为大家分享开源FPGA设计工具RapidWright技术。',
-    date: '2023.07.28',
-    url: 'https://www.bilibili.com/video/BV14z4y1x7a8/',
-  },
-  {
-    key: 43,
-    image: cover43,
-    title: '基于Karmada实现Kubernetes应用跨集群故障转移',
-    text: '在本周的前沿技术分享中，我们邀请到了开源爱好者，云兴科技软件研发工程师梁远鹏，来为大家分享基于Karmada实现Kubernetes应用跨集群故障转移。',
-    date: '2023.08.01',
-    url: 'https://www.bilibili.com/video/BV1rN411Y7aZ/',
-  },
-  {
-    key: 44,
-    image: cover44,
-    title: 'RISC-V敏捷硬件开发-软件定义芯片',
-    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第一个分享《RISC-V敏捷硬件开发-软件定义芯片》。',
-    date: '2023.08.25',
-    url: 'https://www.bilibili.com/video/BV1Qh4y1K7pH/',
-  },
-  {
-    key: 45,
-    image: cover45,
-    title: '香山处理器与敏捷开发工具链的最新进展',
-    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第二个分享《香山处理器与敏捷开发工具链的最新进展》。',
-    date: '2023.08.25',
-    url: 'https://www.bilibili.com/video/BV1Dz4y1T7V6/',
-  },
-  {
-    key: 46,
-    image: cover46,
-    title: '数据流式编程在硬件设计中的应用',
-    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第三个分享《数据流式编程在硬件设计中的应用》。',
-    date: '2023.08.25',
-    url: 'https://www.bilibili.com/video/BV12N411B7TN/',
-  },
-  {
-    key: 47,
-    image: cover47,
-    title: 'EDA创新推动敏捷芯片设计',
-    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第四个分享《EDA创新推动敏捷芯片设计》。',
-    date: '2023.08.25',
-    url: 'https://www.bilibili.com/video/BV1Tz4y1M7vt/',
-  },
-  {
-    key: 48,
-    image: cover48,
-    title: 'Automated CPU design with AI',
-    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第五个分享《Automated CPU design with AI》。',
-    date: '2023.08.25',
-    url: 'https://www.bilibili.com/video/BV13w411Q7zi/',
-  },
-  {
-    key: 48,
-    image: cover48,
-    title: 'Automated CPU design with AI',
-    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第五个分享《Automated CPU design with AI》。',
-    date: '2023.08.25',
-    url: 'https://www.bilibili.com/video/BV13w411Q7zi/',
-  },
-  {
-    key: 49,
-    image: cover49,
-    title: 'MetaHVL硬件敏捷验证与协同仿真',
-    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第六个分享《MetaHVL硬件敏捷验证与协同仿》。',
-    date: '2023.08.25',
-    url: 'https://www.bilibili.com/video/BV1DN4y197Pm/',
-  },
+  // {
+  //   key: 41,
+  //   image: cover41,
+  //   title: 'RDMA网络的系统测试方案',
+  //   text: '在本周的前沿技术分享中，我们邀请到了孔心皓，来为大家分享RDMA 网络的系统测试方案。',
+  //   date: '2023.07.16',
+  //   url: 'https://www.bilibili.com/video/BV1tz4y147rw/',
+  // },
+  // {
+  //   key: 42,
+  //   image: cover42,
+  //   title: 'RapidWright技术分享会',
+  //   text: '在本周的前沿技术分享中，我们邀请到了西南交通大学邸志雄副教授和他的学生向瀚章，来为大家分享开源FPGA设计工具RapidWright技术。',
+  //   date: '2023.07.28',
+  //   url: 'https://www.bilibili.com/video/BV14z4y1x7a8/',
+  // },
+  // {
+  //   key: 43,
+  //   image: cover43,
+  //   title: '基于Karmada实现Kubernetes应用跨集群故障转移',
+  //   text: '在本周的前沿技术分享中，我们邀请到了开源爱好者，云兴科技软件研发工程师梁远鹏，来为大家分享基于Karmada实现Kubernetes应用跨集群故障转移。',
+  //   date: '2023.08.01',
+  //   url: 'https://www.bilibili.com/video/BV1rN411Y7aZ/',
+  // },
+  // {
+  //   key: 44,
+  //   image: cover44,
+  //   title: 'RISC-V敏捷硬件开发-软件定义芯片',
+  //   text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第一个分享《RISC-V敏捷硬件开发-软件定义芯片》。',
+  //   date: '2023.08.25',
+  //   url: 'https://www.bilibili.com/video/BV1Qh4y1K7pH/',
+  // },
+  // {
+  //   key: 45,
+  //   image: cover45,
+  //   title: '香山处理器与敏捷开发工具链的最新进展',
+  //   text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第二个分享《香山处理器与敏捷开发工具链的最新进展》。',
+  //   date: '2023.08.25',
+  //   url: 'https://www.bilibili.com/video/BV1Dz4y1T7V6/',
+  // },
+  // {
+  //   key: 46,
+  //   image: cover46,
+  //   title: '数据流式编程在硬件设计中的应用',
+  //   text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第三个分享《数据流式编程在硬件设计中的应用》。',
+  //   date: '2023.08.25',
+  //   url: 'https://www.bilibili.com/video/BV12N411B7TN/',
+  // },
+  // {
+  //   key: 47,
+  //   image: cover47,
+  //   title: 'EDA创新推动敏捷芯片设计',
+  //   text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第四个分享《EDA创新推动敏捷芯片设计》。',
+  //   date: '2023.08.25',
+  //   url: 'https://www.bilibili.com/video/BV1Tz4y1M7vt/',
+  // },
+  // {
+  //   key: 48,
+  //   image: cover48,
+  //   title: 'Automated CPU design with AI',
+  //   text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第五个分享《Automated CPU design with AI》。',
+  //   date: '2023.08.25',
+  //   url: 'https://www.bilibili.com/video/BV13w411Q7zi/',
+  // },
+  // {
+  //   key: 48,
+  //   image: cover48,
+  //   title: 'Automated CPU design with AI',
+  //   text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第五个分享《Automated CPU design with AI》。',
+  //   date: '2023.08.25',
+  //   url: 'https://www.bilibili.com/video/BV13w411Q7zi/',
+  // },
+  // {
+  //   key: 49,
+  //   image: cover49,
+  //   title: 'MetaHVL硬件敏捷验证与协同仿真',
+  //   text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第六个分享《MetaHVL硬件敏捷验证与协同仿》。',
+  //   date: '2023.08.25',
+  //   url: 'https://www.bilibili.com/video/BV1DN4y197Pm/',
+  // },
   {
     key: 50,
     image: cover50,
@@ -457,5 +459,21 @@ export const techTalkItems = [
     text: '在本周的前沿技术分享中，我们邀请到了王俊吉，来为大家分享RustBelt与Rust形式化方法。',
     date: '2023.09.04',
     url: 'https://www.bilibili.com/video/BV1Vw411D7rT/',
+  },
+  {
+    key: 52,
+    image: cover52,
+    title: '网络的智能该放在哪里：网卡、交换机还是xPU',
+    text: '在本周的前沿技术分享中，我们邀请到了Logenic AI联合创始人、前华为天才少年李博杰，来为大家分享网络的智能该放在哪里：网卡、交换机还是xPU。',
+    date: '2023.09.25',
+    url: 'https://www.bilibili.com/video/BV1Kw411Y7Cj/',
+  },
+  {
+    key: 53,
+    image: cover53,
+    title: '以ARM为镜的RISC-V',
+    text: '在本周的前沿技术分享中，我们邀请到了Logenic AI联合创始人、前华为天才少年李博杰，来为大家分享网络的智能该放在哪里：网卡、交换机还是xPU。',
+    date: '2023.09.25',
+    url: 'https://www.bilibili.com/video/BV1Kw411Y7Cj/',
   },
 ]
