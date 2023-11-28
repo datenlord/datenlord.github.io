@@ -16,6 +16,7 @@ import ArticleContent from '@/pages/ArticleContent'
 import JDList from '@/pages/JDList'
 import JDDetail from '@/pages/JDDetail'
 import MIT from '@/pages/MITPage'
+import MITRank from '@/pages/MITRank'
 
 export const router = createHashRouter([
   {
@@ -121,6 +122,10 @@ export const router = createHashRouter([
       {
         path: 'MIT',
         element: <MIT />,
+      },
+      {
+        path: 'MIT/rank',
+        element: <MITRank />,
       },
     ],
   },
