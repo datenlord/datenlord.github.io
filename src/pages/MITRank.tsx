@@ -81,6 +81,7 @@ const PeopleItem = styled.li`
   flex-direction: column;
   align-items: center;
   width: 0.76rem;
+  cursor: pointer;
 `
 const Avatar = styled.img`
   width: 0.62432rem;
@@ -106,43 +107,46 @@ const Name = styled.div`
   }
 `
 
-const List = [
+const stage1 = [
   {
-    avatar: 'https://avatars.githubusercontent.com/u/95062686?v=4',
-    name: '朱涵宇1',
+    avatar: 'https://avatars.githubusercontent.com/u/11474381?v=4',
+    name: '米同学',
+    url: 'https://github.com/myrfy001',
+  },
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/32484423?v=4',
+    name: '王同学',
+    url: 'https://github.com/GTwhy',
+  },
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/78157415?v=4',
+    name: '钱同学',
+    url: 'https://github.com/kazutoiris',
+  },
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/55951109?v=4',
+    name: '翁同学',
     url: '',
   },
   {
-    avatar: 'https://avatars.githubusercontent.com/u/95062686?v=4',
-    name: '朱涵宇2',
-    url: '',
+    avatar: 'https://avatars.githubusercontent.com/u/111745697?v=4',
+    name: '回同学',
+    url: 'https://github.com/Huihaojia',
   },
   {
-    avatar: 'https://avatars.githubusercontent.com/u/95062686?v=4',
-    name: '朱涵宇3',
-    url: '',
+    avatar: 'https://avatars.githubusercontent.com/u/108394891?v=4',
+    name: '李同学',
+    url: 'https://github.com/androny1012',
   },
   {
-    avatar: 'https://avatars.githubusercontent.com/u/95062686?v=4',
-    name: '朱涵宇4',
-    url: '',
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/95062686?v=4',
-    name: '朱涵宇5',
-    url: '',
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/95062686?v=4',
-    name: '朱涵宇6',
-    url: '',
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/95062686?v=4',
-    name: '朱涵宇7',
-    url: '',
+    avatar: 'https://avatars.githubusercontent.com/u/94814217?v=4',
+    name: '李同学',
+    url: 'https://github.com/adamgallas',
   },
 ]
+
+const stage2 = stage1
+const stage3 = stage2
 
 export default () => {
   return (
@@ -159,16 +163,16 @@ export default () => {
               <StageIcon src={stage1Url} />
               <PeopleWrap>
                 <PeopleCtr>
-                  {List.map(item => (
-                    <PeopleItem key={item.name}>
-                      <Avatar src={item.avatar} />
-                      <Name>{item.name}</Name>
+                  {stage1.map(({ avatar, name, url }) => (
+                    <PeopleItem key={name} onClick={() => window.open(url)}>
+                      <Avatar src={avatar} />
+                      <Name>{name}</Name>
                     </PeopleItem>
                   ))}
-                  {List.map(item => (
-                    <PeopleItem key={item.name}>
-                      <Avatar src={item.avatar} />
-                      <Name>{item.name}</Name>
+                  {stage1.map(({ avatar, name, url }) => (
+                    <PeopleItem key={name} onClick={() => window.open(url)}>
+                      <Avatar src={avatar} />
+                      <Name>{name}</Name>
                     </PeopleItem>
                   ))}
                 </PeopleCtr>
@@ -180,13 +184,13 @@ export default () => {
               <StageIcon src={stage2Url} />
               <PeopleWrap>
                 <PeopleCtr>
-                  {List.map(item => (
+                  {stage2.map(item => (
                     <PeopleItem key={item.name}>
                       <Avatar src={item.avatar} />
                       <Name>{item.name}</Name>
                     </PeopleItem>
                   ))}
-                  {List.map(item => (
+                  {stage2.map(item => (
                     <PeopleItem key={item.name}>
                       <Avatar src={item.avatar} />
                       <Name>{item.name}</Name>
@@ -201,13 +205,13 @@ export default () => {
               <StageIcon src={stage3Url} />
               <PeopleWrap>
                 <PeopleCtr>
-                  {List.map(item => (
+                  {stage3.map(item => (
                     <PeopleItem key={item.name}>
                       <Avatar src={item.avatar} />
                       <Name>{item.name}</Name>
                     </PeopleItem>
                   ))}
-                  {List.map(item => (
+                  {stage3.map(item => (
                     <PeopleItem key={item.name}>
                       <Avatar src={item.avatar} />
                       <Name>{item.name}</Name>

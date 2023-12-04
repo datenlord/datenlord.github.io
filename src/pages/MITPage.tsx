@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Typography } from '@/components/Typography'
@@ -52,6 +53,7 @@ const TopSubBtn = styled.div`
   background: rgba(0, 0, 0, 0.09);
   border: 0.01rem solid #fff;
   border-radius: 0.12rem;
+  cursor: pointer;
 `
 const TopSubBtnTxt = styled.div`
   padding-right: 0.12rem;
@@ -379,6 +381,7 @@ const SpyCont = styled.div`
 `
 const SpyCard = styled.img`
   width: 100%;
+  cursor: pointer;
 `
 
 // Footer section
@@ -419,9 +422,14 @@ const FootSecQR = styled.img`
 const FootSecLink = styled(CNTitleLarge)`
   padding-top: 0.41rem;
   color: #333;
+  cursor: pointer;
 `
 
 export default () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
+
   return (
     <React.Fragment>
       <TopSec />
@@ -435,11 +443,22 @@ export default () => {
 }
 
 const TopSec: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <TopSecCtr>
       <TopTtl>MIT体系结构公开课学习社区</TopTtl>
-      <TopBtn>立即报名</TopBtn>
-      <TopSubBtn>
+      <TopBtn
+        onClick={() => {
+          const el = document.getElementById('supply')
+          console.log(el)
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+          }
+        }}
+      >
+        立即报名
+      </TopBtn>
+      <TopSubBtn onClick={() => navigate('rank')}>
         <TopSubBtnTxt>点击查看荣誉榜单</TopSubBtnTxt>
         <TopSubBtnIcon src={rightArrowUrl} />
       </TopSubBtn>
@@ -733,15 +752,39 @@ const HlSec: React.FC = () => {
 
 const SpySec: React.FC = () => {
   return (
-    <SpyWrap>
+    <SpyWrap id="supply">
       <SpyCtr>
         <SpySubTtl src={spySubTtlUrl} />
         <SpyTtl>新手上路补给站</SpyTtl>
         <SpyCont>
-          <SpyCard src={spyBg1}></SpyCard>
-          <SpyCard src={spyBg2}></SpyCard>
-          <SpyCard src={spyBg3}></SpyCard>
-          <SpyCard src={spyBg4}></SpyCard>
+          <SpyCard
+            src={spyBg1}
+            onClick={() =>
+              (window.location.href =
+                'https://www.bilibili.com/video/BV1u8411i7Qw/')
+            }
+          ></SpyCard>
+          <SpyCard
+            src={spyBg2}
+            onClick={() =>
+              (window.location.href =
+                'https://www.bilibili.com/video/BV1cs4y1r7T3/')
+            }
+          ></SpyCard>
+          <SpyCard
+            src={spyBg3}
+            onClick={() =>
+              (window.location.href =
+                'https://mp.weixin.qq.com/s/-MnRFCXHy5v-tt4MujfqtQ')
+            }
+          ></SpyCard>
+          <SpyCard
+            src={spyBg4}
+            onClick={() =>
+              (window.location.href =
+                'https://mp.weixin.qq.com/s/I5bPw_AUWTh2VgzAm4SHhg')
+            }
+          ></SpyCard>
         </SpyCont>
       </SpyCtr>
     </SpyWrap>
@@ -776,7 +819,14 @@ const FootSec: React.FC = () => {
           <FootSecQR src={footRegQRCode} />
           <FootSecQR src={footAssQRCode} />
         </FootQRCtr>
-        <FootSecLink>往届学员{'>>'}</FootSecLink>
+        <FootSecLink
+          onClick={() =>
+            (window.location.href =
+              'https://datenlord.feishu.cn/wiki/CNwFwKXPaiy0cfkNYrqcLNdCnTf')
+          }
+        >
+          往届学员{'>>'}
+        </FootSecLink>
       </FootSecCtr>
     </FootSecWarp>
   )
