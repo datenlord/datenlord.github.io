@@ -1,4 +1,4 @@
-const s="/zh-cn/assets/cover-48216986.png",t="/zh-cn/assets/image1-02771bf0.jpg",n="/zh-cn/assets/image1-f46bfcc6.jpg",o=[s,t,n],p={label:"当RDMA遇到Rust",description:"2022年8月5日-6日，一年一度的中国开源基础设施活动日（OpenInfra Days China）即将在线上举行。本次会议没有限定一个统一的主题，主要聚焦云计算基础设施、云原生技术与应用实践、开源治理、5G、算力网络与边缘计算五大主题方向。",cover:"./cover.png",location:"新加坡",date:"2022-08-04",title:"When RDMA meets Rust"},r=[],a=`<p><img src="${s}" alt="封面"></p>
+const s="/zh-cn/assets/cover-48216986.png",t="/zh-cn/assets/image1-02771bf0.jpg",n="/zh-cn/assets/image1-f46bfcc6.jpg",o=[s,t,n],r={label:"当RDMA遇到Rust",description:"2022年8月5日-6日，一年一度的中国开源基础设施活动日（OpenInfra Days China）即将在线上举行。本次会议没有限定一个统一的主题，主要聚焦云计算基础设施、云原生技术与应用实践、开源治理、5G、算力网络与边缘计算五大主题方向。",cover:"./cover.png",location:"新加坡",date:"2022-08-04",title:"When RDMA meets Rust"},p=[],e=`<p><img src="${s}" alt="封面"></p>
 <p>2022 年 8 月 5 日-6 日，**一年一度的中国开源基础设施活动日（OpenInfra Days China）**即将在线上举行。本次会议没有限定一个统一的主题，主要聚焦云计算基础设施、云原生技术与应用实践、开源治理、5G、算力网络与边缘计算五大主题方向。</p>
 <p><strong>云计算基础设施分论坛</strong>主要聚焦云计算基础设施领域的前沿技术和优秀实践，围绕多硬件架构和多操作系统支持、人工智能技术应用、网络与存储，数据处理 DPU 及其他加速硬件、硬件自动化和智能运维等方面展开技术分享和探讨。达坦科技联合创始人施继成将在这一分论坛做题为<strong>当 RDMA 遇到 Rust</strong> 的专题分享。</p>
 <p><img src="${t}" alt="图片"></p>
@@ -10,4 +10,4 @@ const s="/zh-cn/assets/cover-48216986.png",t="/zh-cn/assets/image1-02771bf0.jpg"
 <h4>参会方式</h4>
 <p>想要了解更多达坦科技为什么选择 Rust 做 RDMA 库，以及开发设计背后的理念、逻辑、和实践经验，欢迎扫描海报二维码，免费注册报名。</p>
 <p>有意加入 <strong>Rust 前沿交流讨论群</strong>，请添加小助手微信：</p>
-<p><img src="${n}" alt="图片"></p>`;export{o as assetURLs,a as default,p as metadata,r as toc};
+<p><img src="${n}" alt="图片"></p>`;export{o as assetURLs,e as default,r as metadata,p as toc};

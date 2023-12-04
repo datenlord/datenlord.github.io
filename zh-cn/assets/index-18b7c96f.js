@@ -1,4 +1,4 @@
-const p="/zh-cn/assets/image1-f1a8209b.jpg",o="/zh-cn/assets/image2-f5de5635.jpg",t=[p,o],l={label:"喷泉码浅谈",description:"喷泉码（Fountain Code）是一种在无线通信、数据传输和网络编码领域中使用的错误纠正技术。它与传统的纠错码和编码方法有所不同，喷泉码被设计用于在不确定信道条件下的高效数据传输。",location:"新疆",author:["施继成"],tags:["RDMA"],date:"2023-08-31",title:"Fountain Code"},a=[{label:"喷泉码简介",level:2},{label:"LT 编码",level:2},{label:"Raptor 算法",level:2},{label:"总结",level:2}],r=`<h2 id="喷泉码简介">喷泉码简介</h2>
+const p="/zh-cn/assets/image1-f1a8209b.jpg",o="/zh-cn/assets/image2-f5de5635.jpg",t=[p,o],l={label:"喷泉码浅谈",description:"喷泉码（Fountain Code）是一种在无线通信、数据传输和网络编码领域中使用的错误纠正技术。它与传统的纠错码和编码方法有所不同，喷泉码被设计用于在不确定信道条件下的高效数据传输。",location:"新疆",author:["施继成"],tags:["RDMA"],date:"2023-08-31",title:"Fountain Code"},a=[{label:"喷泉码简介",level:2},{label:"LT 编码",level:2},{label:"Raptor 算法",level:2},{label:"总结",level:2}],e=`<h2 id="喷泉码简介">喷泉码简介</h2>
 <p>**喷泉码（Fountain Code）**是一种在无线通信、数据传输和网络编码领域中使用的错误纠正技术。它与传统的纠错码和编码方法有所不同，喷泉码被设计用于在不确定信道条件下的高效数据传输。</p>
 <p>传统的纠错码（如海明码、RS 码等）通常需要在发送方对数据进行编码，接收方则使用相同的编码进行解码和纠错。这些方法一般具有固定的码率（Code Rate），即针对一定长度的原始数据，编码后的长度是固定的，这些方法在面对不稳定的信道或严重的信道丢失时可能效果不佳。相比之下，喷泉码通过在发送方生成随机的冗余数据，然后将其注入到原始数据中，以创造出一个“喷泉”流——相应的码率也也就不固定了。接收方可以从这个流中采样任意数量的数据包，并将它们合并以恢复原始数据。</p>
 <p>喷泉码的一种常见应用是在无线传感器网络中，其中网络节点之间的通信可能受到弱信号、干扰和多径传播等因素的影响。通过使用喷泉码，节点可以在较差的通信条件下实现可靠的数据传输。</p>
@@ -37,4 +37,4 @@ const p="/zh-cn/assets/image1-f1a8209b.jpg",o="/zh-cn/assets/image2-f5de5635.jpg
 <p>针对 Raptor 编码的解码方式一般有两种。第一种和编码方式完全相反，首先利用 LT 编码的解码方式恢复出部分的中间编码块，然后利用固定编码的解码方式恢复出原始的数据块。第二种方式则是将上述所有的多层编码方式都变成一种矩阵运算，针对收到数据后利用矩阵的高斯消元方法解出原始的数据块。</p>
 <p>现有为人所熟知的 Raptor 编码主要有 RFC 5053 和 RFC 6330 RaptorQ 编码。两者的实现细节有诸多区别，但是内在的思路和上述的方法是类似的，有兴趣的读者可以进一步进行阅读和学习。</p>
 <h2 id="总结">总结</h2>
-<p>喷泉码是一种无固定码率的编码方式，其中比较著名的有 LT 编码和 Raptor 编码。LT 编码算法简单，实现也简单，但是算法效率不高。Raptor 算法结合了 LT 编码和一些固定码率编码，利用混合编码的方式实现了高效的喷泉码。</p>`;export{t as assetURLs,r as default,l as metadata,a as toc};
+<p>喷泉码是一种无固定码率的编码方式，其中比较著名的有 LT 编码和 Raptor 编码。LT 编码算法简单，实现也简单，但是算法效率不高。Raptor 算法结合了 LT 编码和一些固定码率编码，利用混合编码的方式实现了高效的喷泉码。</p>`;export{t as assetURLs,e as default,l as metadata,a as toc};
