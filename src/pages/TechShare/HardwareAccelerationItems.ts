@@ -7,11 +7,21 @@ import cover6 from '@/assets/hardware-acceleration/cover6.jpg'
 import cover7 from '@/assets/hardware-acceleration/cover7.jpg'
 import cover8 from '@/assets/hardware-acceleration/cover8.jpg'
 import cover9 from '@/assets/hardware-acceleration/cover9.jpg'
-import cover10 from '@/assets/hardware-acceleration/cover10.jpg'
-import cover11 from '@/assets/hardware-acceleration/cover11.jpg'
-import cover12 from '@/assets/hardware-acceleration/cover12.jpg'
+// import cover10 from '@/assets/hardware-acceleration/cover10.jpg'
+// import cover11 from '@/assets/hardware-acceleration/cover11.jpg'
+// import cover12 from '@/assets/hardware-acceleration/cover12.jpg'
 import cover13 from '@/assets/hardware-acceleration/cover13.jpg'
- 
+import cover14 from '@/assets/hardware-acceleration/cover14.jpg'
+import cover15 from '@/assets/hardware-acceleration/cover15.jpg'
+import cover16 from '@/assets/hardware-acceleration/cover16.jpg'
+import cover17 from '@/assets/hardware-acceleration/cover17.jpg'
+import cover18 from '@/assets/hardware-acceleration/cover18.jpg'
+import cover19 from '@/assets/hardware-acceleration/cover19.jpg'
+import cover20 from '@/assets/hardware-acceleration/cover20.jpg'
+import cover21 from '@/assets/hardware-acceleration/cover21.jpg'
+import cover22 from '@/assets/hardware-acceleration/cover22.jpg'
+import cover23 from '@/assets/hardware-acceleration/cover23.jpg'
+
 export const hardwareAccelerationItemsItems = [
   {
     key: 1,
@@ -85,30 +95,30 @@ export const hardwareAccelerationItemsItems = [
     date: '2022.12.21',
     url: 'https://www.bilibili.com/video/BV12v4y1Q7cg/',
   },
-  {
-    key: 10,
-    image: cover10,
-    title: '如何用Rust写分布式系统',
-    text: '分享会介绍分布式KV Store (Xline) 整体的组成，以及不同组件之间如何去交互。在广域网下的分布式系统如何高效地达成共识，以及分布式系统如何实现容错。',
-    date: '2023.06.24',
-    url: 'https://www.bilibili.com/video/BV1Hs4y1r7dD/',
-  },
-  {
-    key: 11,
-    image: cover11,
-    title: 'Building microsecond-scale system with modern networking in Rust',
-    text: '随着新型网络技术，如RDMA的普及，现代分布式应用的延迟降到了毫秒甚至微秒级别。这为构建系统软件带来了新的挑战。Rust的zero-cost抽象及内存管理能力能够为构建新型分布式应用带来新的机遇。我将分享利用Rust在用户态及内核态构建新型系统软件的相关经验，包括如何利用Rust抽象RDMA硬件的底层抽象及如何在内核构建一个毫秒级的容器启动机制',
-    date: '2023.06.24',
-    url: 'https://www.bilibili.com/video/BV1Zo4y1P7Sg/',
-  },
-  {
-    key: 12,
-    image: cover12,
-    title: '30分钟体验Rust for Linux内核模块开发',
-    text: '本主题会提供构建好的docker开发环境，在30分钟内演示如何使用r4l开发一个简易内核模块，并介绍目前r4l的发展现状。可以自备好电脑现场体验。',
-    date: '2023.06.24',
-    url: 'https://www.bilibili.com/video/BV12j411U78o/',
-  },
+  // {
+  //   key: 10,
+  //   image: cover10,
+  //   title: '如何用Rust写分布式系统',
+  //   text: '分享会介绍分布式KV Store (Xline) 整体的组成，以及不同组件之间如何去交互。在广域网下的分布式系统如何高效地达成共识，以及分布式系统如何实现容错。',
+  //   date: '2023.06.24',
+  //   url: 'https://www.bilibili.com/video/BV1Hs4y1r7dD/',
+  // },
+  // {
+  //   key: 11,
+  //   image: cover11,
+  //   title: 'Building microsecond-scale system with modern networking in Rust',
+  //   text: '随着新型网络技术，如RDMA的普及，现代分布式应用的延迟降到了毫秒甚至微秒级别。这为构建系统软件带来了新的挑战。Rust的zero-cost抽象及内存管理能力能够为构建新型分布式应用带来新的机遇。我将分享利用Rust在用户态及内核态构建新型系统软件的相关经验，包括如何利用Rust抽象RDMA硬件的底层抽象及如何在内核构建一个毫秒级的容器启动机制',
+  //   date: '2023.06.24',
+  //   url: 'https://www.bilibili.com/video/BV1Zo4y1P7Sg/',
+  // },
+  // {
+  //   key: 12,
+  //   image: cover12,
+  //   title: '30分钟体验Rust for Linux内核模块开发',
+  //   text: '本主题会提供构建好的docker开发环境，在30分钟内演示如何使用r4l开发一个简易内核模块，并介绍目前r4l的发展现状。可以自备好电脑现场体验。',
+  //   date: '2023.06.24',
+  //   url: 'https://www.bilibili.com/video/BV12j411U78o/',
+  // },
   {
     key: 13,
     image: cover13,
@@ -116,5 +126,85 @@ export const hardwareAccelerationItemsItems = [
     text: 'SpinalHDL始于2014年，最初是作为VHDL/Verilog的替代而做的创新尝试，伴随着数年来开源硬件设计的蓬勃发展，基于开源技术的硬件设计方法和范式逐渐受到业界的关注。达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第一部分，由Charles Popen进行分享。',
     date: '2023.07.08',
     url: 'https://www.bilibili.com/video/BV1Vz4y1J7ck/',
+  },
+  {
+    key: 14,
+    image: cover14,
+    title: 'RISC-V敏捷硬件开发-软件定义芯片',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第一个分享《RISC-V敏捷硬件开发-软件定义芯片》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV1Qh4y1K7pH/',
+  },
+  {
+    key: 15,
+    image: cover15,
+    title: '香山处理器与敏捷开发工具链的最新进展',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第二个分享《香山处理器与敏捷开发工具链的最新进展》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV1Dz4y1T7V6/',
+  },
+  {
+    key: 16,
+    image: cover16,
+    title: '数据流式编程在硬件设计中的应用',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第三个分享《数据流式编程在硬件设计中的应用》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV12N411B7TN/',
+  },
+  {
+    key: 17,
+    image: cover17,
+    title: 'EDA创新推动敏捷芯片设计',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第四个分享《EDA创新推动敏捷芯片设计》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV1Tz4y1M7vt/',
+  },
+  {
+    key: 18,
+    image: cover18,
+    title: 'Automated CPU design with AI',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第五个分享《Automated CPU design with AI》。',
+    date: '2023.08.25',
+    url: 'https://www.bilibili.com/video/BV13w411Q7zi/',
+  },
+  {
+    key: 19,
+    image: cover19,
+    title: 'MetaHVL硬件敏捷验证与协同仿真',
+    text: '2023年8月23日至25日， 2023 RISC-V中国峰会在北京香格里拉饭店举办。作为本届RISC-V中国峰会的同期活动，8月25日下午，达坦科技在线上举办了第二届硬件敏捷开发与验证方法学研讨会。本次研讨会邀请了业界多位专家分享他们在各自领域的硬件敏捷开发与验证实践经验，为业界提供一次深入探讨和交流的机会，促进硬件敏捷开发与验证方法学的发展与落地。这是本场研讨会的第六个分享《MetaHVL硬件敏捷验证与协同仿》。',
+    date: '2023.08.26',
+    url: 'https://www.bilibili.com/video/BV1DN4y197Pm/',
+  },
+  {
+    key: 20,
+    image: cover20,
+    title: '计算机体系结构MIT课程学习社区经验分享',
+    text: '在2023年初，达坦科技发起成立硬件设计学习社区，邀请所有有志于从事数字芯片设计的同学加入我们的学习互助自学小组，以理解数字芯片设计的精髓，强化理论知识的同时提升实操技能，继而整体提升设计能力。本场分享主题为【计算机体系结构MIT课程学习社区经验分享】，旨在了解学习社区各位同学学习的状态和面临的挑战，邀请已完成课程的学员分享学习和动手操作LAB的经验和教训，以此更好地辅助大家完成课程。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1cs4y1r7T3/',
+  },
+  {
+    key: 21,
+    image: cover21,
+    title: '计算机体系结构 l MIT课程学习新手上路宣讲',
+    text: '达坦科技在2023年始，发起成立计算机体系结构- MIT课程学习社区，号召感兴趣的工程师和同学系统地学习计算机体系结构相关知识，并且通过动手项目来验证学习的成果。为此，达坦科技软硬件联合开发工程师米明恒在2023年9月23日（周六）上午10:30为大家带来了一场计算机体系结构 l MIT课程学习新手上路宣讲。',
+    date: '2023.09.24',
+    url: 'https://www.bilibili.com/video/BV1u8411i7Qw/',
+  },
+  {
+    key: 22,
+    image: cover22,
+    title: 'Stream Transaction Extender设计与验证',
+    text: '达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第二部分，由电子科技大学副教授肖寅东（Readon）进行分享。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1pM4y1j7Lm/',
+  },
+  {
+    key: 23,
+    image: cover23,
+    title: '面向Multi-Die FPGA的设计与部署自动化方法探索',
+    text: '达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第三部分，由西安交通大学副教授邸志雄进行分享。',
+    date: '2023.07.08',
+    url: 'https://www.bilibili.com/video/BV1og4y1c7RS/',
   },
 ]

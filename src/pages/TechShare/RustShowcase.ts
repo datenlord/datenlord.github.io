@@ -7,6 +7,10 @@ import cover6 from '@/assets/rust-showcase/cover6.jpg'
 import cover7 from '@/assets/rust-showcase/cover7.jpg'
 import cover8 from '@/assets/rust-showcase/cover8.jpg'
 import cover9 from '@/assets/rust-showcase/cover9.jpg'
+import cover10 from '@/assets/rust-showcase/cover10.jpg'
+import cover11 from '@/assets/rust-showcase/cover11.jpg'
+import cover12 from '@/assets/rust-showcase/cover12.jpg'
+import cover13 from '@/assets/rust-showcase/cover13.jpg'
 
 export const rustShowcaseItems = [
   {
@@ -82,5 +86,37 @@ export const rustShowcaseItems = [
     text: '2023年4月8日，达坦科技联合南京大学、CloudWeGo、华为等技术专家成功举办了题为Rust 💡X的meetup。本场分享由达坦科技联合创始人兼CTO施继成进行，演讲主题是《Rust for Linux 6.2》。',
     date: '2023.04.12',
     url: 'https://www.bilibili.com/video/BV1Rh411M7EP/',
+  },
+  {
+    key: 10,
+    image: cover10,
+    title: '如何用Rust写分布式系统',
+    text: '分享会介绍分布式KV Store (Xline) 整体的组成，以及不同组件之间如何去交互。在广域网下的分布式系统如何高效地达成共识，以及分布式系统如何实现容错。',
+    date: '2023.06.24',
+    url: 'https://www.bilibili.com/video/BV1Hs4y1r7dD/',
+  },
+  {
+    key: 11,
+    image: cover11,
+    title: 'Building microsecond-scale system with modern networking in Rust',
+    text: '随着新型网络技术，如RDMA的普及，现代分布式应用的延迟降到了毫秒甚至微秒级别。这为构建系统软件带来了新的挑战。Rust的zero-cost抽象及内存管理能力能够为构建新型分布式应用带来新的机遇。我将分享利用Rust在用户态及内核态构建新型系统软件的相关经验，包括如何利用Rust抽象RDMA硬件的底层抽象及如何在内核构建一个毫秒级的容器启动机制。',
+    date: '2023.06.24',
+    url: 'https://www.bilibili.com/video/BV1Zo4y1P7Sg/',
+  },
+  {
+    key: 12,
+    image: cover12,
+    title: '30分钟体验Rust for Linux内核模块开发',
+    text: '本主题会提供构建好的docker开发环境，在30分钟内演示如何使用r4l开发一个简易内核模块，并介绍目前r4l的发展现状。可以自备好电脑现场体验。',
+    date: '2023.06.24',
+    url: 'https://www.bilibili.com/video/BV12j411U78o/',
+  },
+  {
+    key: 13,
+    image: cover13,
+    title: 'DatenLord 2023 Hackathon赛题宣讲会',
+    text: '达坦科技基于其跨云分布式文件系统DatenLord项目，结合AI大模型时代背景，搭建了擂台，在此正式向您发出邀约！本次大赛主题为 Explore the Possibilities 赛题深刻有趣，奖品丰厚多样，借此机会您不仅可以尽情施展才华、与来自全国各地优秀的青年才俊们同台PK，更将有机会与优秀的评委教师对话交流。Clock is Ticking！无需犹豫，行动起来吧！',
+    date: '2023.11.25',
+    url: 'https://www.bilibili.com/video/BV1su4y157iB/',
   },
 ]

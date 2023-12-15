@@ -37,9 +37,9 @@ import cover35 from '@/assets/tech-talk/cover35.jpg'
 // import cover38 from '@/assets/tech-talk/cover38.jpg'
 // import cover39 from '@/assets/tech-talk/cover39.jpg'
 import cover40 from '@/assets/tech-talk/cover40.jpg'
-// import cover41 from '@/assets/tech-talk/cover41.jpg'
-// import cover42 from '@/assets/tech-talk/cover42.jpg'
-// import cover43 from '@/assets/tech-talk/cover43.jpg'
+import cover41 from '@/assets/tech-talk/cover41.jpg'
+import cover42 from '@/assets/tech-talk/cover42.jpg'
+import cover43 from '@/assets/tech-talk/cover43.jpg'
 // import cover44 from '@/assets/tech-talk/cover44.jpg'
 // import cover45 from '@/assets/tech-talk/cover45.jpg'
 // import cover46 from '@/assets/tech-talk/cover46.jpg'
@@ -50,6 +50,7 @@ import cover50 from '@/assets/tech-talk/cover50.jpg'
 import cover51 from '@/assets/tech-talk/cover51.jpg'
 import cover52 from '@/assets/tech-talk/cover52.jpg'
 import cover53 from '@/assets/tech-talk/cover53.jpg'
+import cover54 from '@/assets/tech-talk/cover54.jpg'
 
 export const techTalkItems = [
   {
@@ -364,30 +365,30 @@ export const techTalkItems = [
     date: '2023.07.09',
     url: 'https://www.bilibili.com/video/BV1ou411L7Yy/',
   },
-  // {
-  //   key: 41,
-  //   image: cover41,
-  //   title: 'RDMA网络的系统测试方案',
-  //   text: '在本周的前沿技术分享中，我们邀请到了孔心皓，来为大家分享RDMA 网络的系统测试方案。',
-  //   date: '2023.07.16',
-  //   url: 'https://www.bilibili.com/video/BV1tz4y147rw/',
-  // },
-  // {
-  //   key: 42,
-  //   image: cover42,
-  //   title: 'RapidWright技术分享会',
-  //   text: '在本周的前沿技术分享中，我们邀请到了西南交通大学邸志雄副教授和他的学生向瀚章，来为大家分享开源FPGA设计工具RapidWright技术。',
-  //   date: '2023.07.28',
-  //   url: 'https://www.bilibili.com/video/BV14z4y1x7a8/',
-  // },
-  // {
-  //   key: 43,
-  //   image: cover43,
-  //   title: '基于Karmada实现Kubernetes应用跨集群故障转移',
-  //   text: '在本周的前沿技术分享中，我们邀请到了开源爱好者，云兴科技软件研发工程师梁远鹏，来为大家分享基于Karmada实现Kubernetes应用跨集群故障转移。',
-  //   date: '2023.08.01',
-  //   url: 'https://www.bilibili.com/video/BV1rN411Y7aZ/',
-  // },
+  {
+    key: 41,
+    image: cover41,
+    title: 'RDMA网络的系统测试方案',
+    text: '在本周的前沿技术分享中，我们邀请到了孔心皓，来为大家分享RDMA 网络的系统测试方案。',
+    date: '2023.07.16',
+    url: 'https://www.bilibili.com/video/BV1tz4y147rw/',
+  },
+  {
+    key: 42,
+    image: cover42,
+    title: 'RapidWright技术分享会',
+    text: '在本周的前沿技术分享中，我们邀请到了西南交通大学邸志雄副教授和他的学生向瀚章，来为大家分享开源FPGA设计工具RapidWright技术。',
+    date: '2023.07.28',
+    url: 'https://www.bilibili.com/video/BV14z4y1x7a8/',
+  },
+  {
+    key: 43,
+    image: cover43,
+    title: '基于Karmada实现Kubernetes应用跨集群故障转移',
+    text: '在本周的前沿技术分享中，我们邀请到了开源爱好者，云兴科技软件研发工程师梁远鹏，来为大家分享基于Karmada实现Kubernetes应用跨集群故障转移。',
+    date: '2023.08.01',
+    url: 'https://www.bilibili.com/video/BV1rN411Y7aZ/',
+  },
   // {
   //   key: 44,
   //   image: cover44,
@@ -475,5 +476,13 @@ export const techTalkItems = [
     text: '在本周的前沿技术分享中，我们邀请到了Logenic AI联合创始人、前华为天才少年李博杰，来为大家分享网络的智能该放在哪里：网卡、交换机还是xPU。',
     date: '2023.09.25',
     url: 'https://www.bilibili.com/video/BV1Kw411Y7Cj/',
+  },
+  {
+    key: 54,
+    image: cover54,
+    title: '面向网络测量的可编程交换机优化技术',
+    text: '在本周的前沿技术分享中，我们邀请到了北京大学计算机学院黄群助理教授，来为大家分享面向网络测量的可编程交换机优化技术。',
+    date: '2023.10.20',
+    url: 'https://www.bilibili.com/video/BV1i84y1974F/',
   },
 ]
