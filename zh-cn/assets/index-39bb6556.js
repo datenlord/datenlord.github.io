@@ -1,4 +1,4 @@
-const e="/zh-cn/assets/cover-c17c52cc.png",s="/zh-cn/assets/image1-0dff4570.png",c="/zh-cn/assets/image2-e09cfdc8.png",o="/zh-cn/assets/image3-2b589463.png",p="/zh-cn/assets/image4-5841c9d6.png",a="/zh-cn/assets/image5-92344f1d.png",d="/zh-cn/assets/image6-b429f851.png",t="/zh-cn/assets/image7-97920b5a.png",i="/zh-cn/assets/image8-ecf5c6f3.png",r="/zh-cn/assets/image9-f47bad66.png",n="/zh-cn/assets/image10-b50adc27.png",l="/zh-cn/assets/image11-99ec2a51.png",m=[e,s,c,o,p,a,d,t,i,r,n,l],h={label:"从数学角度思考程序与验证正确性",description:"本文旨在为没有接触过形式化方法的读者提供一种新的视角看待计算机系统与算法，而非形式化方法或 TLA+ 教程。因此本文的重点是如何从数学角度思考程序，不会使用大篇幅讲解 TLA+ 的语法。",cover:"./cover.png",location:"中国香港",author:["田野"],tags:["Xline"],date:"2023-03-02",title:"Thinking about programs mathematically and verifying correctness"},g=[{label:"我们该如何写出正确的程序？",level:2},{label:"程序中会有什么样错误？",level:3},{label:"经验",level:3},{label:"形式化方法",level:3},{label:"TLA+",level:2},{label:"简单的例子",level:3},{label:"Two-Phase Commit",level:2},{label:"总结",level:2},{label:"我们的项目：Xline",level:2}],A=`<p><img src="${e}" alt="封面"></p>
+const e="/zh-cn/assets/cover-c17c52cc.png",s="/zh-cn/assets/image1-0dff4570.png",c="/zh-cn/assets/image2-e09cfdc8.png",o="/zh-cn/assets/image3-2b589463.png",p="/zh-cn/assets/image4-5841c9d6.png",a="/zh-cn/assets/image5-92344f1d.png",d="/zh-cn/assets/image6-b429f851.png",i="/zh-cn/assets/image7-97920b5a.png",t="/zh-cn/assets/image8-ecf5c6f3.png",r="/zh-cn/assets/image9-f47bad66.png",n="/zh-cn/assets/image10-b50adc27.png",l="/zh-cn/assets/image11-99ec2a51.png",m=[e,s,c,o,p,a,d,i,t,r,n,l],h={label:"从数学角度思考程序与验证正确性",description:"本文旨在为没有接触过形式化方法的读者提供一种新的视角看待计算机系统与算法，而非形式化方法或 TLA+ 教程。因此本文的重点是如何从数学角度思考程序，不会使用大篇幅讲解 TLA+ 的语法。",cover:"./cover.png",location:"中国香港",author:["田野"],tags:["Xline"],date:"2023-03-02",title:"Thinking about programs mathematically and verifying correctness"},g=[{label:"我们该如何写出正确的程序？",level:2},{label:"程序中会有什么样错误？",level:3},{label:"经验",level:3},{label:"形式化方法",level:3},{label:"TLA+",level:2},{label:"简单的例子",level:3},{label:"Two-Phase Commit",level:2},{label:"总结",level:2},{label:"我们的项目：Xline",level:2}],A=`<p><img src="${e}" alt="封面"></p>
 <p>本文旨在为没有接触过形式化方法的读者提供一种新的视角看待计算机系统与算法，而非形式化方法或 TLA+ 教程。因此本文的重点是如何从数学角度思考程序，不会使用大篇幅讲解 TLA+ 的语法。</p>
 <h2 id="我们该如何写出正确的程序？">我们该如何写出正确的程序？</h2>
 <p>程序设计的目标永远是写出正确的程序。随着时间的推移，我们的程序越来越复杂，其中可能存在的错误也越来越多。想要写出正确的程序，首先应该了解程序中可能出现的错误有哪些。</p>
@@ -105,14 +105,14 @@ Next 用于定义状态转换关系。</p>
 <li>变量 <code>msgs</code> 作为消息池，用于记录所有正在传输的消息，初始值是一个空集。</li>
 </ul>
 <p>下面我们来定义系统做可能发生的动作。</p>
-<p><img src="${t}" alt="图片"></p>
+<p><img src="${i}" alt="图片"></p>
 <ul>
 <li>TLA+ 中可以用上述方式定义类似于其它编程语言中"函数"概念的表达式，这样就无需对每一个 Resource Manager 都定义一个表达式了。</li>
 <li><code>[type → "prepare", rm → r]</code> 是一个 TLA+ 中的 record，类似于其它编程语言中的 struct。</li>
 <li><code>UNCHANGED ⟨rmState, tmState, msgs⟩</code> 表示这个动作不会改变 <code>rmState</code>、<code>tmState</code>、<code>msgs</code> 这三个变量的值。在 TLA+ 中，每一个变量的值是否改变都需要显式地声明。</li>
 </ul>
 <p>当 <code>TM</code> 的状态为 <code>init</code>，且在消息池中存在来自 <code>r</code> 的 <code>Prepared</code> 消息，<code>tmPrepared</code> 在下一个状态的值会是 <code>tmPrepared</code> 和 <code>{r}</code> 的并集。</p>
-<p><img src="${i}" alt="图片"></p>
+<p><img src="${t}" alt="图片"></p>
 <p>上面的两个动作分别是 Transaction Manager 进行 Commit 与 Abort。</p>
 <p><img src="${r}" alt="图片"></p>
 <p>上述 4 个 Resource Manager 动作分别是 Resource Manager 选择 Prepare 与 Abort，以及处理由 Transaction Manager 决定的 Commit 与 Abort。</p>
