@@ -1,4 +1,4 @@
-const e="/zh-cn/assets/image1-145af1bc.png",a="/zh-cn/assets/image2-b5b0ee19.png",t="/zh-cn/assets/image3-204919ac.png",l="/zh-cn/assets/image4-e50f112d.png",p="/zh-cn/assets/image5-cdb8d1de.png",i=[e,a,t,l,p],n={label:"数据库隔离级别及MVCC",description:"数据库在同时处理多个事务时需要决定事务之间能否看到对方的修改，能看到多少等等。根据隔离的严格程度，从严到松可以分为 Serializable, Repeatable reads, Read committed, Read uncommitted。我们用下面这个 KV 存储的例子来解释这四个隔离级别。KV 存储的初始状态如下：",location:"中国香港",tags:["Xline"],date:"2023-02-16",title:"Database isolation level and MVCC"},o=[{label:"数据库隔离级别介绍",level:2},{label:"Read uncommitted",level:3},{label:"Repeatable read",level:3},{label:"Serializable",level:3},{label:"Snapshot 隔离级别及 MVCC",level:2},{label:"一点联想",level:2},{label:"总结",level:2}],s=`<h2 id="数据库隔离级别介绍">数据库隔离级别介绍</h2>
+const e="/zh-cn/assets/image1-145af1bc.png",a="/zh-cn/assets/image2-b5b0ee19.png",l="/zh-cn/assets/image3-204919ac.png",t="/zh-cn/assets/image4-e50f112d.png",p="/zh-cn/assets/image5-cdb8d1de.png",i=[e,a,l,t,p],n={label:"数据库隔离级别及MVCC",description:"数据库在同时处理多个事务时需要决定事务之间能否看到对方的修改，能看到多少等等。根据隔离的严格程度，从严到松可以分为 Serializable, Repeatable reads, Read committed, Read uncommitted。我们用下面这个 KV 存储的例子来解释这四个隔离级别。KV 存储的初始状态如下：",location:"中国香港",tags:["Xline"],date:"2023-02-16",title:"Database isolation level and MVCC"},o=[{label:"数据库隔离级别介绍",level:2},{label:"Read uncommitted",level:3},{label:"Repeatable read",level:3},{label:"Serializable",level:3},{label:"Snapshot 隔离级别及 MVCC",level:2},{label:"一点联想",level:2},{label:"总结",level:2}],s=`<h2 id="数据库隔离级别介绍">数据库隔离级别介绍</h2>
 <p>数据库在同时处理多个事务时需要决定事务之间能否看到对方的修改，能看到多少等等。根据隔离的严格程度，从严到松可以分为 Serializable, Repeatable reads, Read committed, Read uncommitted。我们用下面这个 KV 存储的例子来解释这四个隔离级别。KV 存储的初始状态如下：</p>
 <p>Table 1:</p>
 <p><img src="${e}" alt="图片"></p>
@@ -8,12 +8,12 @@ const e="/zh-cn/assets/image1-145af1bc.png",a="/zh-cn/assets/image2-b5b0ee19.png
 <p><img src="${a}" alt="图片"></p>
 <p>在 Read uncommitted 的隔离级别中，多个同时执行的事务是能够互相看到互相没有 commit 的写操作，因此可以认为这种隔离级别几乎没有作用。在上述例子中，Operation 2 读到的内容是 “AA”，Operation 4 读到的内容则是“DD”，即使第二个事务最终 Rollback 了。Read committed 有两个事务同时被执行，自上而下是执行顺序。</p>
 <p>Table 3:</p>
-<p><img src="${t}" alt="图片"></p>
+<p><img src="${l}" alt="图片"></p>
 <p>在 Read committed 的隔离级别中，只有被 Commit 后的结果可以被看到，因此在 Table 2 的执行顺序中，Operation 2 和 4 都能够读取到 “AA” 的值，即 Key 1 的值没有改变。如果按照 Table 3 中的情况执行两个事务，Operation 2 读到的值为 “AA”，Operation 5 读到的值为 “DD”，因为此时事务 2 已经执行成功。</p>
 <h3 id="repeatable-read">Repeatable read</h3>
 <p>如果在 Table 3 中的事务 1 两次连续读操作，用户想要保证读到相同的值，那就需要使用 repeatable read 隔离级别。在这个隔离级别中，在同一个事务中对同一条数据的多次读取保证会得到相同的值，即使这个过程中该数据被其他已经提交的事务修改掉。当然该隔离级别也有一些情况无法保证隔离性，比如下列情况：</p>
 <p>Table 4:</p>
-<p><img src="${l}" alt="图片"></p>
+<p><img src="${t}" alt="图片"></p>
 <p>在 repeatable read 的隔离级别下，Operation 2 的返回结果是 ["CC"] —— 只有 Key 3 的值被返回了，但是 Operation 5 的返回值是 ["CC", "DD"]。总结一下，repeatable read 的隔离级别仍然无法很好处理涉及多条数据的情况，特别是当有新的数据插入或者删除的情况。</p>
 <h3 id="serializable">Serializable</h3>
 <p>最严格的隔离级别叫做 Serializable，这个级别的定义也是最清晰明了的，在这种隔离级别下的执行结果，就“仿佛”是将所有事务串行起来一条一条执行的结果。上面这句话中值得强调的是 “仿佛” 二字，为了提高性能，几乎没有数据库是采用真正物理意义上的串行执行来保证 Serializable 的，仅仅达到类似效果即可，实现的方法是可以多种多样的。在 Serializable 级别下还有一个细致的分类，叫做 Snapshot，该分类与 Serializable 类似但约束能力上稍弱。正是因为 Snapshot 在约束上的放松，使得其实现起来具有更好的性能，也是绝大多数数据库默认支持的隔离级别。下面我们就来说说 Snapshot，以及引申出来的 MVCC 实现方法。</p>

@@ -1,4 +1,4 @@
-const e="/zh-cn/assets/cover-1329fc54.png",l="/zh-cn/assets/image1-03c3323d.png",s="/zh-cn/assets/image2-19f32eff.png",i="/zh-cn/assets/image3-7a5e2db9.png",a="/zh-cn/assets/image4-a055bd84.png",t="/zh-cn/assets/image5-b8622f96.png",p="/zh-cn/assets/image6-5093ee75.png",n="/zh-cn/assets/image7-9fa09d91.png",o="/zh-cn/assets/image8-84dd6aec.png",c="/zh-cn/assets/image9-2f762488.png",r="/zh-cn/assets/image10-f2b55246.png",h="/zh-cn/assets/image11-c5d501bb.png",d="/zh-cn/assets/image12-56434254.png",m="/zh-cn/assets/image13-1c12a6c5.png",u="/zh-cn/assets/image14-69943dbe.png",b="/zh-cn/assets/image15-45a7b638.png",g="/zh-cn/assets/image16-5b765721.jpg",f="/zh-cn/assets/image17-8fb19d7c.jpg",R="/zh-cn/assets/image18-c8c4d5a1.jpg",y="/zh-cn/assets/image19-fb1e5167.png",_="/zh-cn/assets/image20-a391e7d8.jpg",S=[e,l,s,i,a,t,p,n,o,c,r,h,d,m,u,b,g,f,R,y,_],v={label:"计算机体系结构｜MIT6.175和MIT6.375学习笔记",description:"在2023年初，达坦科技发起成立硬件设计学习社区，邀请所有有志于从事数字芯片设计的同学加入我们的学习互助自学小组，以理解数字芯片设计的精髓，强化理论知识的同时提升实操技能，继而整体提升设计能力。现在，完成第一期学习的同学整理了MIT6.175和MIT6.375的关键内容以及Lab实践的学习笔记。",cover:"./cover.png",location:"中国香港",author:["kazutoiris"],tags:["硬件加速"],date:"2023-05-17",title:"Computer Architecture｜MIT6.175 and MIT6.375 Study Notes"},M=[{label:"MIT 6.175",level:2},{label:"环境搭建",level:3},{label:"四种 FIFO (Lab 4)",level:3},{label:"Ready 和 Valid 握手",level:3},{label:"EHR 寄存器 (Lab4)",level:3},{label:"RISC-V (Lab5)",level:3},{label:"Branch Prediction (Lab6)",level:3},{label:"DDR3 Memory (Lab7)",level:3},{label:"Cache Coherence (Project)",level:3},{label:"MIT 6.375",level:2},{label:"Bluespec 中的一些特性",level:3},{label:"CORDIC 算法",level:3},{label:"一些常用的概念",level:2},{label:"Setup Time 、Hold Time 和 Clock-to-Q Time",level:3},{label:"SRAM",level:3},{label:"DRAM",level:3},{label:"References",level:2}],C=`<p><img src="${e}" alt="图片"></p>
+const e="/zh-cn/assets/cover-1329fc54.png",l="/zh-cn/assets/image1-03c3323d.png",s="/zh-cn/assets/image2-19f32eff.png",i="/zh-cn/assets/image3-7a5e2db9.png",a="/zh-cn/assets/image4-a055bd84.png",t="/zh-cn/assets/image5-b8622f96.png",p="/zh-cn/assets/image6-5093ee75.png",n="/zh-cn/assets/image7-9fa09d91.png",o="/zh-cn/assets/image8-84dd6aec.png",c="/zh-cn/assets/image9-2f762488.png",r="/zh-cn/assets/image10-f2b55246.png",d="/zh-cn/assets/image11-c5d501bb.png",h="/zh-cn/assets/image12-56434254.png",m="/zh-cn/assets/image13-1c12a6c5.png",u="/zh-cn/assets/image14-69943dbe.png",b="/zh-cn/assets/image15-45a7b638.png",g="/zh-cn/assets/image16-5b765721.jpg",f="/zh-cn/assets/image17-8fb19d7c.jpg",y="/zh-cn/assets/image18-c8c4d5a1.jpg",R="/zh-cn/assets/image19-fb1e5167.png",S="/zh-cn/assets/image20-a391e7d8.jpg",_=[e,l,s,i,a,t,p,n,o,c,r,d,h,m,u,b,g,f,y,R,S],v={label:"计算机体系结构｜MIT6.175和MIT6.375学习笔记",description:"在2023年初，达坦科技发起成立硬件设计学习社区，邀请所有有志于从事数字芯片设计的同学加入我们的学习互助自学小组，以理解数字芯片设计的精髓，强化理论知识的同时提升实操技能，继而整体提升设计能力。现在，完成第一期学习的同学整理了MIT6.175和MIT6.375的关键内容以及Lab实践的学习笔记。",cover:"./cover.png",location:"中国香港",author:["kazutoiris"],tags:["硬件加速"],date:"2023-05-17",title:"Computer Architecture｜MIT6.175 and MIT6.375 Study Notes"},M=[{label:"MIT 6.175",level:2},{label:"环境搭建",level:3},{label:"四种 FIFO (Lab 4)",level:3},{label:"Ready 和 Valid 握手",level:3},{label:"EHR 寄存器 (Lab4)",level:3},{label:"RISC-V (Lab5)",level:3},{label:"Branch Prediction (Lab6)",level:3},{label:"DDR3 Memory (Lab7)",level:3},{label:"Cache Coherence (Project)",level:3},{label:"MIT 6.375",level:2},{label:"Bluespec 中的一些特性",level:3},{label:"CORDIC 算法",level:3},{label:"一些常用的概念",level:2},{label:"Setup Time 、Hold Time 和 Clock-to-Q Time",level:3},{label:"SRAM",level:3},{label:"DRAM",level:3},{label:"References",level:2}],F=`<p><img src="${e}" alt="图片"></p>
 <p>在 2023 年初，<strong>达坦科技发起成立硬件设计学习社区</strong>，邀请所有有志于从事数字芯片设计的同学加入我们的学习互助自学小组，以理解数字芯片设计的精髓，强化理论知识的同时提升实操技能，继而整体提升设计能力。现在，完成第一期学习的同学整理了 <strong>MIT6.175 和 MIT6.375 的关键内容以及 Lab 实践的学习笔记</strong>。</p>
 <p>6.175 和 6.375 的课程和 Lab 学习都有一定的难度，要求采用 Bluespec 语言实现 RISC-V 处理器，并支持多级流水、分支预测、缓存、异常处理、缓存一致性等功能。此外，Lab 环节还涉及软硬件联合开发，要求基于所实现的 RISC-V 处理器运行真实的 RISC-V 程序，并给出性能评估。希望第一期学员（GitHub:kazutoiris ）的学习笔记对想从事数字芯片设计的工程师有所帮助。</p>
 <h2 id="mit-6.175">MIT 6.175</h2>
@@ -223,12 +223,12 @@ case class <span class="hljs-title function_ invoke__">Delay3</span>() extends C
 <ol start="2">
 <li>MESI</li>
 </ol>
-<p><img src="${h}" alt="图片"></p>
+<p><img src="${d}" alt="图片"></p>
 <p>MESI 协议将“Exclusive”状态添加到 MSI 状态机中，可以减少只在单个缓存中存在的缓存行的回写次数。</p>
 <ol start="3">
 <li>MOSI</li>
 </ol>
-<p><img src="${d}" alt="图片"></p>
+<p><img src="${h}" alt="图片"></p>
 <p>MOSI 协议将“Owner”状态添加到 MSI，可以减少由从其他处理器读取而触发的写回操作。</p>
 <ol start="4">
 <li>MOESI</li>
@@ -342,11 +342,11 @@ Memory Consistency → 内存连贯性</p>
 <p><img src="${f}" alt="图片"></p>
 <p>伪双端口具有独立的读写字线（RWL， WWL）和读写位线（RBL， WBL 和 WBLB）。</p>
 <h4>真双端口 SRAM （2R2W）</h4>
-<p><img src="${R}" alt="图片"></p>
+<p><img src="${y}" alt="图片"></p>
 <p>具有两套完整的读写字线和读写位线。<br>
 All the images in this section are cited from [宇芯电子].</p>
 <h3 id="dram">DRAM</h3>
-<p><img src="${y}" alt="图片"></p>
+<p><img src="${R}" alt="图片"></p>
 <ol>
 <li>DRAM 写</li>
 </ol>
@@ -380,4 +380,4 @@ All the images in this section are cited from [宇芯电子].</p>
 </ol>
 <hr>
 <p>达坦科技硬件设计学习社区持续开放，点击原文了解社区学习详情。若想询问加入细节，请添加下方小助手微信号或<a href="mailto:info@datenlord.com">info@datenlord.com</a></p>
-<p><img src="${_}" alt="图片"></p>`;export{S as assetURLs,C as default,v as metadata,M as toc};
+<p><img src="${S}" alt="图片"></p>`;export{_ as assetURLs,F as default,v as metadata,M as toc};

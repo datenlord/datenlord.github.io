@@ -1,4 +1,4 @@
-const o="/zh-cn/assets/image1-fe10a0d4.jpg",t="/zh-cn/assets/image2-86112638.jpg",n=[o,t],r={label:"倒计时6天 | 机遇与挑战-生成式AI的发展趋势和落地应用",description:"生成式AI作为人工智能的重要分支，在语言模型、图像生成、音乐创作等领域都取得了突破性地进展。技术的发展，也伴随着机遇、挑战与难题。本周日（8月6日）在北京，将由亚马逊云科技和真格基金主办，达坦科技和INP协办举行一场关于生成式AI的闭门沙龙，主题为“机遇与挑战——生成式AI的发展趋势和落地应用”。",location:"新疆",date:"2023-08-01",title:"Countdown to 6 days l Opportunities and Challenges The Development Trend of Generative AI and its Application on the Ground"},s=[],e=`<p>生成式 AI 作为人工智能的重要分支，在语言模型、图像生成、音乐创作等领域都取得了突破性地进展。技术的发展，也伴随着机遇、挑战与难题。<strong>本周日（8 月 6 日）在北京</strong>，将由<strong>亚马逊云科技和真格基金主办，达坦科技和 INP 协办</strong>举行一场关于生成式 AI 的闭门沙龙，主题为“<strong>机遇与挑战——生成式 AI 的发展趋势和落地应用</strong>”。</p>
+const o="/zh-cn/assets/image1-fe10a0d4.jpg",t="/zh-cn/assets/image2-86112638.jpg",n=[o,t],r={label:"倒计时6天 | 机遇与挑战-生成式AI的发展趋势和落地应用",description:"生成式AI作为人工智能的重要分支，在语言模型、图像生成、音乐创作等领域都取得了突破性地进展。技术的发展，也伴随着机遇、挑战与难题。本周日（8月6日）在北京，将由亚马逊云科技和真格基金主办，达坦科技和INP协办举行一场关于生成式AI的闭门沙龙，主题为“机遇与挑战——生成式AI的发展趋势和落地应用”。",location:"新疆",date:"2023-08-01",title:"Countdown to 6 days l Opportunities and Challenges The Development Trend of Generative AI and its Application on the Ground"},e=[],s=`<p>生成式 AI 作为人工智能的重要分支，在语言模型、图像生成、音乐创作等领域都取得了突破性地进展。技术的发展，也伴随着机遇、挑战与难题。<strong>本周日（8 月 6 日）在北京</strong>，将由<strong>亚马逊云科技和真格基金主办，达坦科技和 INP 协办</strong>举行一场关于生成式 AI 的闭门沙龙，主题为“<strong>机遇与挑战——生成式 AI 的发展趋势和落地应用</strong>”。</p>
 <p>我们邀请了国内外知名的 AI Infra/应用创业者、硬核 NLP/LLM 专家、咨询大咖，分享在生成式 AI 研究和实践中的经验，通过具体的案例，<strong>探讨生成式 AI 在不同领域的落地应用和挑战</strong>，揭示其对产业升级和创新的重要作用。</p>
 <p><img src="${o}" alt="图片"></p>
 <p>本次闭门沙龙邀请到的 AI Infra/应用创业者、硬核 NLP/LLM 专家、咨询大咖有（以下介绍按照姓氏字母排序）：</p>
@@ -50,4 +50,4 @@ At Stochastic, he focus on developing Enterprise-ready LLM system that trains lo
 通用工具与行业客户需求不匹配怎么办？<br>
 是否要出海？中美两地的生态差异？<br>
 AI PaaS+SaaS 工具选择最佳实践+避坑指南。<br>
-以及其他你在报名表中提交的想要讨论的话题......</p>`;export{n as assetURLs,e as default,r as metadata,s as toc};
+以及其他你在报名表中提交的想要讨论的话题......</p>`;export{n as assetURLs,s as default,r as metadata,e as toc};
