@@ -194,7 +194,7 @@ loop {
 
 ## 我们的项目：Xline
 
-**Xline 是一个用于元数据管理的分布式 KV 存储。**以上为对 Xline 中使用的 Curp 共识协议的重构总结。
+**Xline 是一个用于元数据管理的分布式 KV 存储。** 以上为对 Xline 中使用的 Curp 共识协议的重构总结。
 
 如果你想了解更多关于Xline的信息，请参考我们的Github：  
 https://github.com/datenlord/Xline
