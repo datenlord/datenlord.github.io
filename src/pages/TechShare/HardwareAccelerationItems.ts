@@ -21,6 +21,12 @@ import cover20 from '@/assets/hardware-acceleration/cover20.jpg'
 import cover21 from '@/assets/hardware-acceleration/cover21.jpg'
 import cover22 from '@/assets/hardware-acceleration/cover22.jpg'
 import cover23 from '@/assets/hardware-acceleration/cover23.jpg'
+import cover24 from '@/assets/hardware-acceleration/cover24.jpg'
+import cover25 from '@/assets/hardware-acceleration/cover25.jpg'
+import cover26 from '@/assets/hardware-acceleration/cover26.jpg'
+import cover27 from '@/assets/hardware-acceleration/cover27.jpg'
+import cover28 from '@/assets/hardware-acceleration/cover28.jpg'
+import cover29 from '@/assets/hardware-acceleration/cover29.jpg'
 
 export const hardwareAccelerationItemsItems = [
   {
@@ -206,5 +212,53 @@ export const hardwareAccelerationItemsItems = [
     text: '达坦科技联合了SpinalHDL社区，以及四川芯测电子技术有限公司举办了一场题为SpinalHDL的使用和开发经验研讨会，旨在和大家分享SpinalHDL最新的实践、挑战和经验的分享。本视频为Workshop的第三部分，由西安交通大学副教授邸志雄进行分享。',
     date: '2023.07.08',
     url: 'https://www.bilibili.com/video/BV1og4y1c7RS/',
+  },
+  {
+    key: 24,
+    image: cover24,
+    title: 'Get Started with SpinalHDL with a Simplified Setup',
+    text: '在2023年12月10日，达坦科技联合SpinalHDL社区及该语言的创建者 Charles Papon 举办了 《2023 SpinalHDL应用前景探索》的线上研讨会，这是研讨会第一个视频，Get Started with SpinalHDL with a Simplified Setup',
+    date: '2023.12.17',
+    url: 'https://www.bilibili.com/video/BV1TW4y1F7uQ/',
+  },
+  {
+    key: 25,
+    image: cover25,
+    title: 'Some Tips on Using Memory Black Box in SpinalHDL',
+    text: '在2023年12月10日，达坦科技联合SpinalHDL社区及该语言的创建者 Charles Papon 举办 了《2023 SpinalHDL应用前景探索》的线上研讨会，分为两个Track。这是第二个视频，由yportne13带来“Some Tips on Using Memory Black Box in SpinalHDL”。',
+    date: '2023.12.17',
+    url: 'https://www.bilibili.com/video/BV1LC4y1g7c7/',
+  },
+  {
+    key: 26,
+    image: cover26,
+    title: 'Pipelining API Introduction',
+    text: '在2023年12月10日，达坦科技联合SpinalHDL社区及该语言的创建者 Charles Papon 举办 了《2023 SpinalHDL应用前景探索》的线上研讨会，分为两个Track。这是第三个视频，由Charles Papon带来“Pipelining API Introduction”。',
+    date: '2023.12.17',
+    url: 'https://www.bilibili.com/video/BV1Zj411n7SC/',
+  },
+  {
+    key: 27,
+    image: cover27,
+    title: 'SpinalHDL Intro for New Users',
+    text: '在2023年12月10日，达坦科技联合SpinalHDL社区及该语言的创建者 Charles Papon 举办 了《2023 SpinalHDL应用前景探索》的线上研讨会，分为两个Track。这是第四个视频，由Andreas Wallner带来“SpinalHDL Intro for New Users”。',
+    date: '2023.12.17',
+    url: 'https://www.bilibili.com/video/BV1Mw41147aS/',
+  },
+  {
+    key: 28,
+    image: cover28,
+    title: 'Pcie Brief Introduction',
+    text: '在2023年12月10日，达坦科技联合SpinalHDL社区及该语言的创建者 Charles Papon 举办 了《2023 SpinalHDL应用前景探索》的线上研讨会，分为两个Track。这是第五个视频，由Chenbo带来“Pcie Brief Introduction”。',
+    date: '2023.12.17',
+    url: 'https://www.bilibili.com/video/BV1Mw41147aS/',
+  },
+  {
+    key: 29,
+    image: cover29,
+    title: 'The J1Sc Family',
+    text: '在2023年12月10日，达坦科技联合SpinalHDL社区及该语言的创建者 Charles Papon 举办 了《2023 SpinalHDL应用前景探索》的线上研讨会，分为两个Track。这是第六个视频，由Christopher Lozinsk带来“The J1Sc Family”。',
+    date: '2023.12.17',
+    url: 'https://www.bilibili.com/video/BV1Jc411o7A6/',
   },
 ]
