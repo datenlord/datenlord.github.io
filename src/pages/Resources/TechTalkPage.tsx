@@ -6,6 +6,7 @@ import CoverUrl from '@/assets/resources/cover.png'
 import Image1Url from '@/assets/resources/image1.png'
 import Image2Url from '@/assets/resources/image2.png'
 import Image3Url from '@/assets/resources/image3.png'
+import Image4Url from '@/assets/resources/image4.png'
 import DotUrl from '@/assets/resources/dot.svg'
 
 const ViewWrapper = styled.div`
@@ -192,6 +193,16 @@ const data = [
     read: '35min',
     img: Image3Url,
     url: 'https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-how-to-write-a-distributed-key-value-store-in-rust/',
+  },
+  {
+    date: '2023-12-14',
+    title: 'Application and analysis of Jepsen tests in Xline',
+    description:
+      'This presentation offers an overview of applying Jepsen tests to Xline, a distributed KV Store. It begins with a brief introduction to Jepsen, followed by an exploration of the application of Jepsen tests to Xline. The presentation then delves into the test results and system analysis. Finally, it discusses the lessons learned and outlines future work in chaos engineering for Xline.',
+    author: 'Zhegnhao Yin',
+    read: '13min',
+    img: Image4Url,
+    url: 'https://www.cncf.io/online-programs/cncf-on-demand-webinar-application-and-analysis-of-jepsen-tests-in-xline/',
   },
 ]
 
