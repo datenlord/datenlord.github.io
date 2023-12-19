@@ -8,11 +8,10 @@ import { Typography } from '@/components/Typography'
 import videoDemoCoverUrl from '@/assets/video/video-demo-cover.png'
 import arrowUpRightUrl from '@/assets/video/arrow-up-right.svg'
 
-import { techTalkItems } from './TechShare/TechTalk'
-import { OSSShowcaseItems } from './TechShare/OSSShowcase'
-import { rustShowcaseItems } from './TechShare/RustShowcase'
-import { hardwareAccelerationItemsItems } from './TechShare/HardwareAccelerationItems'
-import { RecommendItems } from './TechShare/Recommend'
+import { techTalkItems } from '@/video/TechTalk'
+import { OSSShowcaseItems } from '@/video/OSSShowcase'
+import { rustShowcaseItems } from '@/video/RustShowcase'
+import { hardwareAccelerationItemsItems } from '@/video/HardwareAccelerationItems'
 
 const { Heading, Paragraph } = Typography
 const { CNHead4, CNTitleLarge } = Heading
@@ -29,7 +28,7 @@ interface Data {
 
 const data = new Map<
   string,
-  { label: string; description: string; list: Data[] }
+  { label: string; description: string; list: Data[]; recommend: number }
 >([
   [
     'tech-talk',
@@ -37,6 +36,7 @@ const data = new Map<
       label: '前沿科技分享',
       description: '探索前沿技术，拥抱创新与改变',
       list: techTalkItems,
+      recommend: 27,
     },
   ],
   [
@@ -45,6 +45,7 @@ const data = new Map<
       label: '开源产品分享',
       description: '软硬件融合创新实践的观察与输出',
       list: OSSShowcaseItems,
+      recommend: 2,
     },
   ],
   [
@@ -53,6 +54,7 @@ const data = new Map<
       label: 'Rust语言应用及案例分享',
       description: 'Rust编程语言的应用、实践与探索',
       list: rustShowcaseItems,
+      recommend: 12,
     },
   ],
   [
@@ -61,6 +63,7 @@ const data = new Map<
       label: '硬件加速',
       description: '硬件加速领域的实践、经验与挑战',
       list: hardwareAccelerationItemsItems,
+      recommend: 21,
     },
   ],
 ])
@@ -160,9 +163,9 @@ export default () => {
   const title = data.get(name)?.label
   const description = data.get(name)?.description
   const items = data.get(name)?.list.reverse()
-  // console.log(typeof title.get(name))
+  const recommend = data.get(name)?.recommend
 
-  const randomKey = Math.floor(Math.random() * 3) + 1;
+  // const randomKey = Math.floor(Math.random() * 3) + 1;
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -214,9 +217,9 @@ export default () => {
           </Section>
           <Section>
             <SectionTitle>推荐视频</SectionTitle>
-            {RecommendItems &&
-              RecommendItems.map(({ key, image, date, title, text, url }, index) => {
-                if (key === randomKey) {
+            {items &&
+              items.map(({ key, image, date, title, text, url }) => {
+                if (key === recommend) {
                   return (
                     <VideoHorizon key={key}>
                       <VideoImageHorizon src={image} />
