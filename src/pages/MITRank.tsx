@@ -110,27 +110,27 @@ const Name = styled.div`
 const stage1 = [
   {
     avatar: 'https://avatars.githubusercontent.com/u/11474381?v=4',
-    name: '米明恒',
+    name: 'myrfy001',
     url: 'https://github.com/myrfy001',
   },
   {
     avatar: 'https://avatars.githubusercontent.com/u/32484423?v=4',
-    name: '王恒宇',
+    name: 'GTwhy',
     url: 'https://github.com/GTwhy',
   },
   {
     avatar: 'https://avatars.githubusercontent.com/u/78157415?v=4',
-    name: '钱嘉程',
+    name: 'kazutoiris',
     url: 'https://github.com/kazutoiris',
   },
   {
     avatar: 'https://avatars.githubusercontent.com/u/55951109?v=4',
-    name: '翁万正',
+    name: 'wengwz',
     url: 'https://github.com/wengwz',
   },
   {
     avatar: 'https://avatars.githubusercontent.com/u/111745697?v=4',
-    name: '回浩嘉',
+    name: 'Huihaojia',
     url: 'https://github.com/Huihaojia',
   },
   {

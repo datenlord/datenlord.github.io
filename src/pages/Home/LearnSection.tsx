@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Typography } from '@/components/Typography'
@@ -55,6 +56,7 @@ const LabelZH = styled(CNHead4)`
   margin-bottom: 0.65rem;
   padding-bottom: 0.12rem;
   border-bottom: 0.01rem solid ${props => props.theme.secondary02};
+  cursor: pointer;
 `
 const IconContainer = styled.div`
   position: relative;
@@ -114,6 +116,7 @@ const Data = [
     iconBg: '#FDCB6E',
     label_en: 'Open Source Project Internship',
     label_zh: '开源毕业设计实习',
+    url: '',
     content: [
       {
         key: 'first',
@@ -143,6 +146,7 @@ const Data = [
     iconBg: '#7680DD',
     label_en: 'Hardware Design Learning Community',
     label_zh: '硬件设计学习社区',
+    url: 'mit',
     content: [
       {
         key: 'first',
@@ -169,12 +173,13 @@ const Data = [
 ]
 
 export const LearnSection: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <SectionWrapper>
       <SectionContainer>
         <Title>学习社区</Title>
         <MainContainer>
-          {Data.map(({ key, icon, iconBg, label_en, label_zh, content }) => (
+          {Data.map(({ key, icon, iconBg, label_en, label_zh, url, content }) => (
             <Card key={key}>
               <IconContainer>
                 <IconWrapper bg={iconBg}>
@@ -188,7 +193,7 @@ export const LearnSection: React.FC = () => {
                 </RippleContainer>
               </IconContainer>
               <LabelEN>{label_en}</LabelEN>
-              <LabelZH>{label_zh}</LabelZH>
+              <LabelZH onClick={() => navigate(url)}>{label_zh}</LabelZH>
               <List>
                 {content.map(({ key, label }) => (
                   <ListItem as={'li'} key={key}>
