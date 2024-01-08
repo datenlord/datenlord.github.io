@@ -11,6 +11,7 @@ import cover10 from '@/assets/rust-showcase/cover10.jpg'
 import cover11 from '@/assets/rust-showcase/cover11.jpg'
 import cover12 from '@/assets/rust-showcase/cover12.jpg'
 import cover13 from '@/assets/rust-showcase/cover13.jpg'
+import cover14 from '@/assets/rust-showcase/cover14.jpg'
 
 export const rustShowcaseItems = [
   {
@@ -118,5 +119,13 @@ export const rustShowcaseItems = [
     text: '达坦科技基于其跨云分布式文件系统DatenLord项目，结合AI大模型时代背景，搭建了擂台，在此正式向您发出邀约！本次大赛主题为 Explore the Possibilities 赛题深刻有趣，奖品丰厚多样，借此机会您不仅可以尽情施展才华、与来自全国各地优秀的青年才俊们同台PK，更将有机会与优秀的评委教师对话交流。Clock is Ticking！无需犹豫，行动起来吧！',
     date: '2023.11.25',
     url: 'https://www.bilibili.com/video/BV1su4y157iB/',
+  },
+  {
+    key: 14,
+    image: cover14,
+    title: 'DatenLord Hackathon2023空中路演',
+    text: 'DatenLord Hackathon 2023已经顺利完赛。达坦科技基于其跨云分布式文件系统DatenLord项目，结合AI大模型时代背景，搭建了擂台。我们邀请参赛者为DatenLord的极端场景设计并实现缓存 p2p 传输和同步模块。本次空中路演邀请了最终获得优胜奖的两支队伍进行思路分享，包括他们的解题思路，碰到的难点和挑战，以及如何应对的方法和设计亮点。欢迎感兴趣的大家进行观看，有问题也欢迎在评论区进行交流～～不要忘记一键三连哦～～',
+    date: '2024.01.07',
+    url: 'https://www.bilibili.com/video/BV1ic411t7Nf/',
   },
 ]
