@@ -92,10 +92,16 @@ const data: Data[] = [
         key: 1,
         type: 'text',
         content:
-          'RDMA可以实现从一台机器到另一台机器对内存的直接访问。这可以提高需要低延迟和高吞吐量的应用程序的性能。RDMA支持内核旁路和零拷贝，无需CPU的参与。然而，用低级别的C语言库编写RDMA应用程序往往很困难，而且容易出错。为了让事情变得更简单，我们开发了Async-RDMA，它提供了易于使用的API，隐藏了底层RDMA操作的复杂性。有了Async-RDMA，大多数RDMA操作只需一行代码就能完成。它提供了以下几点主要的功能：',
+          'RDMA可以实现从一台机器到另一台机器对内存的直接访问。这可以提高需要低延迟和高吞吐量的应用程序的性能。RDMA支持内核旁路和零拷贝，无需CPU的参与。',
       },
       {
         key: 2,
+        type: 'text',
+        content:
+          '然而，用低级别的C语言库编写RDMA应用程序往往很困难，而且容易出错。为了让事情变得更简单，我们开发了Async-RDMA，它提供了易于使用的API，隐藏了底层RDMA操作的复杂性。有了Async-RDMA，大多数RDMA操作只需一行代码就能完成。它提供了以下几点主要的功能：',
+      },
+      {
+        key: 3,
         type: 'list',
         items: [
           {
@@ -120,37 +126,9 @@ const data: Data[] = [
     url: 'https://github.com/datenlord/async-rdma',
   },
   {
-    key: 'RoCE-Sim',
-    title: 'RoCE-Sim',
-    subTitle:
-      'RoCE-Sim是RoCE v2模拟器，一个用python编写的模拟RoCE v2协议行为的软件。',
-    main: [
-      {
-        key: 1,
-        type: 'text',
-        content:
-          'RoCE v2（RDMA over Converged Ethernet version 2）是一个网络协议来在以太网上实现远程直接内存访问（RDMA）。它是对于原始RoCE标准的改进，为在以太网上执行RDMA提供了一种更有效且可扩展的方式。',
-      },
-      {
-        key: 2,
-        type: 'text',
-        content:
-          'RoCE-Sim模拟了RoCE v2协议的数据处理流程，可用于支持RoCE v2协议的设备的端到端验证。模拟器可以灵活地模拟各种正确和错误的RDMA请求和响应数据包，同时通过分析设备的响应数据来决定其是否符合协议要求。',
-      },
-      {
-        key: 3,
-        type: 'text',
-        content:
-          '该模拟器集成了一个测试框架，开发人员只需编写配置文件来控制模拟器生成、发送、接收和检查数据包，从而有效地完成端端验证工作。',
-      },
-    ],
-    url: 'https://github.com/datenlord/roce-sim',
-    img: imgUrl,
-  },
-  {
     key: 'Open-RDMA',
     title: 'Open-RDMA',
-    subTitle: 'Open-RDMA是一个使用Spinal HDL的RoCE v2硬件实现。',
+    subTitle: 'Open-RDMA 是一个开源的、基于 RoCE v2 协议扩展优化的软硬件实现套件',
     main: [
       {
         key: 1,
@@ -162,16 +140,23 @@ const data: Data[] = [
         key: 2,
         type: 'text',
         content:
-          'Open-RDMA是RoCEv2的一个开源实现，它利用了敏捷开发和验证方法，以及软硬件协同设计的方法。我们使用Spinal HDL和Bluespec SystemVerilog来实现RoCEv2，利用它们的高级抽象的优势来提高开发效率和减少错误率。我们还使用Cocotb（一种Python验证框架）来进行有效的验证。',
+          'Open-RDMA 套件的核心部分是基于 RoCE v2 协议进行再次扩展优化后的软硬件实现，充分发挥软硬件协同设计开发的优势，通过硬件加速实现高吞吐低延迟，通过软件用户态协议栈实现集中管理且高度可配置的传输策略，从而实现在不同网络环境下都可以发挥极致性能。项目采用 Bluespec SystemVerilog、C 和 Rust 来实现硬件及软件逻辑，从而确保开源项目的正确性和可维护性。',
       },
       {
         key: 3,
         type: 'text',
         content:
-          '目前，我们已经实现了该协议的基本框架，并计划实现一些增强功能，如优先级流量控制、拥堵控制以及对组播流量的支持，使其更适合大规模数据中心环境。此外，我们正在探索如何使用形式化方法来对我们的实现进行验证。',
+          '在测试及验证方面，我们积极采用开源验证工具，同时也开发了自己的验证工具。Open-RDMA 套件通过 Bluesim、Cocotb 工具来进行RTL级别的验证，通过自研的 RoCE-Sim 工具进行协议数据包级别的验证，通过 Distro-Sim 工具进行软硬件联合仿真验证和调试。',
+      },
+      {
+        key: 4,
+        type: 'text',
+        content:
+          '目前，我们已经实现了整个开源套件的基本框架，并正在逐步加入更多功能。',
       },
     ],
     url: 'https://github.com/datenlord/open-rdma',
+    img: imgUrl,
   },
 ]
 
