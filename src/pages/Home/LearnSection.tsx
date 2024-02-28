@@ -37,7 +37,7 @@ const Card = styled.div`
   background: #f7f7f9;
   border-radius: 0.18rem;
   padding-top: 0;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.48rem;
   padding-inline: 0.32rem;
 
   &:hover {
@@ -75,7 +75,7 @@ const RippleContainer = styled.div`
   width: 100%;
   height: 100%;
 `
-const RippleItem1 = styled.div<{bg: string}>`
+const RippleItem1 = styled.div<{ bg: string }>`
   background: ${props => props.bg};
   position: absolute;
   border-radius: 50%;
@@ -90,7 +90,7 @@ const RippleItem3 = styled(RippleItem1)`
 const RippleItem4 = styled(RippleItem1)`
   animation-delay: 3s;
 `
-const IconWrapper = styled.div<{bg: string}>`
+const IconWrapper = styled.div<{ bg: string }>`
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -108,38 +108,18 @@ const List = styled.ul`
   padding-left: 0.18rem;
 `
 const ListItem = styled(CNBodyLarge)``
+const ListBtn = styled.div`
+  width: 100%;
+  text-align: center;
+  font-size: 0.18rem;
+  color: #9966CC;
+  border: 1px solid #9966CC;
+  border-radius: 0.16rem;
+  padding-block: 0.04rem;
+  margin-top: 0.18rem;
+`
 
 const Data = [
-  {
-    key: 'open-source-diploma-internship',
-    icon: IconCpuUrl,
-    iconBg: '#FDCB6E',
-    label_en: 'Open Source Project Internship',
-    label_zh: '开源毕业设计实习',
-    url: '',
-    content: [
-      {
-        key: 'first',
-        label:
-          '体验透明开源和知识共享带来的乐趣，并在社区的反馈中获得技术成长。',
-      },
-      {
-        key: 'second',
-        label:
-          '弥合学校和工业界实践的脱节和差距，系统梳理学校的知识结构，并运用到具有影响力的时间项目中。',
-      },
-      {
-        key: 'third',
-        label:
-          '手把手获得行业内专家、教授、学者的点评以及前沿科研项目的合作机会。',
-      },
-      {
-        key: 'forth',
-        label:
-          '在硬核的开源技术社区自我展示的机会是同学升学以及就业最佳、最强有力的背书。',
-      },
-    ],
-  },
   {
     key: 'hardware-design-learning-community',
     icon: IconInboxUrl,
@@ -170,6 +150,36 @@ const Data = [
       },
     ],
   },
+  {
+    key: 'open-source-diploma-internship',
+    icon: IconCpuUrl,
+    iconBg: '#FDCB6E',
+    label_en: 'Open Source Project Internship',
+    label_zh: '开源毕业设计',
+    url: '',
+    content: [
+      {
+        key: 'first',
+        label:
+          '体验透明开源和知识共享带来的乐趣，并在社区的反馈中获得技术成长。',
+      },
+      {
+        key: 'second',
+        label:
+          '弥合学校和工业界实践的脱节和差距，系统梳理学校的知识结构，并运用到具有影响力的时间项目中。',
+      },
+      {
+        key: 'third',
+        label:
+          '手把手获得行业内专家、教授、学者的点评以及前沿科研项目的合作机会。',
+      },
+      {
+        key: 'forth',
+        label:
+          '在硬核的开源技术社区自我展示的机会是同学升学以及就业最佳、最强有力的背书。',
+      },
+    ],
+  },
 ]
 
 export const LearnSection: React.FC = () => {
@@ -193,7 +203,7 @@ export const LearnSection: React.FC = () => {
                 </RippleContainer>
               </IconContainer>
               <LabelEN>{label_en}</LabelEN>
-              <LabelZH onClick={() => navigate(url)}>{label_zh}</LabelZH>
+              <LabelZH>{label_zh}</LabelZH>
               <List>
                 {content.map(({ key, label }) => (
                   <ListItem as={'li'} key={key}>
@@ -201,6 +211,7 @@ export const LearnSection: React.FC = () => {
                   </ListItem>
                 ))}
               </List>
+              {url && <ListBtn onClick={() => navigate(url)}>了解详情</ListBtn>}
             </Card>
           ))}
         </MainContainer>
