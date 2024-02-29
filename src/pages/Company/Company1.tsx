@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Cover } from '@/components/Cover'
 import { AboutUsSection } from './AboutUsSection'
-import { QuickQA } from './QuickQ&A'
+// import { QuickQA } from './QuickQ&A'
 import { VisionMissionValuesSection } from './VisionMissionValues'
+import { ContactUsSection } from './ContactUsSection'
 
 import CoverUrl from '@/assets/company/cover.png'
 
@@ -26,8 +27,9 @@ export default () => {
         公司
       </Cover>
       <AboutUsSection />
-      <QuickQA />
+      {/* <QuickQA /> */}
       <VisionMissionValuesSection />
+      <ContactUsSection />
     </React.Fragment>
   )
 }
