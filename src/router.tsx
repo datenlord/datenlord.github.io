@@ -5,6 +5,7 @@ import Home from '@/pages/Home/Home'
 import Products from '@/pages/Products'
 import RDMA from '@/pages/RDMA'
 import Service from '@/pages/Service'
+import App from '@/pages/App'
 import Solutions from '@/pages/Solutions'
 import Resources1 from '@/pages/Resources/Resources1'
 import Resources2 from '@/pages/Resources/Resources2'
@@ -43,6 +44,10 @@ export const router = createHashRouter([
       {
         path: 'service',
         element: <Service />,
+      },
+      {
+        path: 'app',
+        element: <App />,
       },
       {
         path: 'solutions',
