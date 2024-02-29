@@ -4,6 +4,7 @@ import Layout from '@/pages/Layout'
 import Home from '@/pages/Home/Home'
 import Products from '@/pages/Products'
 import RDMA from '@/pages/RDMA'
+import Service from '@/pages/Service'
 import Solutions from '@/pages/Solutions'
 import Resources1 from '@/pages/Resources/Resources1'
 import Resources2 from '@/pages/Resources/Resources2'
@@ -38,6 +39,10 @@ export const router = createHashRouter([
       {
         path: 'rdma',
         element: <RDMA />,
+      },
+      {
+        path: 'service',
+        element: <Service />,
       },
       {
         path: 'solutions',
