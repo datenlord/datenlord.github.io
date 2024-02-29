@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Typography } from '@/components/Typography'
@@ -12,40 +13,12 @@ const { CNBodyLarge, CNMarkSmall, CNBodyMedium } = Paragraph
 
 const cardData = [
   {
-    key: 'open-source-diploma-internship',
-    icon: IconCpuUrl,
-    iconBg: '#FDCB6E',
-    label_en: 'Open Source Diploma Internship',
-    label_zh: '开源毕业设计实习',
-    content: [
-      {
-        key: 'first',
-        label:
-          '体验透明开源和知识共享带来的乐趣，并在社区的反馈中获得技术成长。',
-      },
-      {
-        key: 'second',
-        label:
-          '弥合学校和工业界实践的脱节和差距，系统梳理学校的知识结构，并运用到具有影响力的时间项目中。',
-      },
-      {
-        key: 'third',
-        label:
-          '手把手获得行业内专家、教授、学者的点评以及前沿科研项目的合作机会。',
-      },
-      {
-        key: 'forth',
-        label:
-          '在硬核的开源技术社区自我展示的机会是同学升学以及就业最佳、最强有力的背书。',
-      },
-    ],
-  },
-  {
     key: 'hardware-design-learning-community',
     icon: IconInboxUrl,
     iconBg: '#7680DD',
     label_en: 'Hardware Design Learning Community',
     label_zh: '硬件设计学习社区',
+    url: 'mit',
     content: [
       {
         key: 'first',
@@ -66,6 +39,35 @@ const cardData = [
         key: 'forth',
         label:
           '通过动手项目来验证学习的成果，培养出兼具理论和实操能力的数字芯片设计人才。',
+      },
+    ],
+  },
+  {
+    key: 'open-source-diploma-internship',
+    icon: IconCpuUrl,
+    iconBg: '#FDCB6E',
+    label_en: 'Open Source Diploma Internship',
+    label_zh: '开源毕业设计',
+    content: [
+      {
+        key: 'first',
+        label:
+          '体验透明开源和知识共享带来的乐趣，并在社区的反馈中获得技术成长。',
+      },
+      {
+        key: 'second',
+        label:
+          '弥合学校和工业界实践的脱节和差距，系统梳理学校的知识结构，并运用到具有影响力的时间项目中。',
+      },
+      {
+        key: 'third',
+        label:
+          '手把手获得行业内专家、教授、学者的点评以及前沿科研项目的合作机会。',
+      },
+      {
+        key: 'forth',
+        label:
+          '在硬核的开源技术社区自我展示的机会是同学升学以及就业最佳、最强有力的背书。',
       },
     ],
   },
@@ -218,14 +220,25 @@ const StoryItem = styled(CNBodyMedium)`
     padding-bottom: 0;
   }
 `
+const ListBtn = styled.div`
+  width: 100%;
+  text-align: center;
+  font-size: 0.18rem;
+  color: #9966CC;
+  border: 1px solid #9966CC;
+  border-radius: 0.16rem;
+  padding-block: 0.04rem;
+  margin-top: 0.18rem;
+`
 
 export const LearnCommunitySection: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <Section>
       <TitleEN>Learning Community</TitleEN>
       <TitleZH>学习社区</TitleZH>
       <MainContainer>
-        {cardData.map(({ key, icon, iconBg, label_en, label_zh, content }) => (
+        {cardData.map(({ key, icon, iconBg, label_en, label_zh, content, url }) => (
           <Card key={key}>
             <IconContainer>
               <IconWrapper bg={iconBg}>
@@ -247,6 +260,7 @@ export const LearnCommunitySection: React.FC = () => {
                 </ListItem>
               ))}
             </List>
+            {url && <ListBtn onClick={() => navigate(url)}>了解详情</ListBtn>}
           </Card>
         ))}
       </MainContainer>
