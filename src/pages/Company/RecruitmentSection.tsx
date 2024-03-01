@@ -14,47 +14,73 @@ const { CNBodyMedium, CNMarkMedium } = Paragraph
 
 const items = [
   {
-    title: '分布式存储软件开发资深工程师（全职，急招）',
-    avatar: '',
-    items: [
-      '参与开源分布式存储项目DatenLord的开发和维护；',
-      '完善DatenLord的测试，构建新的DatenLord测试框架；',
-      '提高DatenLord分布式性能表现。',
-    ],
-    url: '/job-description/distributed-storage-software-development-senior-engineer',
-  },
-  {
-    title: 'Rust分布式存储开发（实习，即将招满）',
+    title: 'Rust分布式存储开发（远程实习）',
     avatar: '',
     text: '参与高性能分布式存储系统研发，涉及的开发内容包括但不限于：',
     items: [
-      '分布式存储系统开发；',
-      '分布式数据一致性协议研究和开发；',
-      '分布式缓存、数据管理服务...',
+      '分布式数据一致性协议；',
+      '高速网络传输接口、驱动；',
+      '分布式缓存、数据管理服务；',
+      '对象存储接口；',
+      '文件存储接口；',
+      '块存储接口。',
     ],
     url: '/job-description/rust-distributed-storage-development',
   },
   {
-    title: 'FPGA开发（实习）',
+    title: 'Rust高性能网络系统开发（远程实习）',
+    avatar: '',
+    text: '参与研发高性能网络系统开发，涉及的工作包括但不限于：',
+    items: [
+      '网络硬件Linux驱动开发；',
+      '网络流量控制算法设计与实现；',
+      '网络仿真系统开发与测试。',
+    ],
+    url: '/job-description/rust-high-performance-web-systems-development',
+  },
+  {
+    title: 'AI平台研发 （远程实习）',
+    avatar: '',
+    items: [
+      '负责大模型平台后端的开发研发，根据产品和项目计划按时完成功能模块的架构设计、编码、测试的全流程工作。',
+      '负责持续优化系统架构，提供高并发的数据请求分析的处理能力，提高系统的容灾容错能力，保证系统的可运维、高可用性、高可靠性。',
+    ],
+    url: '/job-description/ai-platform-development',
+  },
+  {
+    title: 'FPGA开发（远程实习）',
     avatar: '',
     items: [
       '负责基于FPGA实现网络IO加速，以及加密、压缩、编码等算法加速的设计与RTL实现；',
       '实现常用外设接口IP的RTL设计、集成和验证；',
-      '配合上层软件实现软硬件联调。',
+      '参与SoC集成设计与验证；',
+      '撰写相关设计文档。',
     ],
     url: '/job-description/fpga-development',
   },
   {
-    title: '软硬件联合研发实习生（实习）',
+    title: '软硬件联合研发（远程实习）',
     avatar: '',
     text: '参与高性能存储SoC芯片的软硬件开发：',
     items: [
       '负责网络IO加速的RTL实现；',
       '负责加密、压缩、编码等算法加速的设计与RTL实现；',
       '负责SoC芯片的Linux驱动开发；',
-      '负责实现软硬件联合调试与自动化测...',
+      '负责实现软硬件联合调试与自动化测试。',
     ],
-    url: '/job-description/the-joint-hardware-and-software-research-and-development-internship',
+    url: '/job-description/joint-research-and-development-of-hardware-and-software',
+  },
+  {
+    title: '数字IC前端设计（远程实习）',
+    avatar: '',
+    text: '参与高性能存储SoC芯片开发：',
+    items: [
+      '负责实现网络IO加速，以及加密、压缩、编码等算法加速的设计与RTL实现； ',
+      '负责实现SoC的集成、综合与原型验证；',
+      '负责实现常用外设接口IP的RTL设计、集成；',
+      '撰写相关设计文档。',
+    ],
+    url: '/job-description/digital-ic-front-end-design',
   },
 ]
 

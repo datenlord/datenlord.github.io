@@ -277,7 +277,7 @@ const Placeholder = styled.div`
 interface TagProps {
   icon: string
 }
-const Tag = styled(CNBodySmall)<TagProps>`
+const Tag = styled(CNBodySmall) <TagProps>`
   position: relative;
   padding-left: 0.2rem;
   padding-right: 0.22rem;
@@ -350,7 +350,7 @@ const CardAvatarIcon = styled.img`
 
 const workTypeMap = new Map([
   ['fullTime', '全职'],
-  ['internship', '兼职'],
+  ['internship', '实习'],
 ])
 
 type JDdataProps = {
@@ -367,121 +367,170 @@ type JDdataProps = {
 }[]
 const JDdata: JDdataProps = [
   {
-    id: 'Distributed storage software development senior engineer'
-      .split(' ')
-      .join('-')
-      .toLowerCase(),
-    label: '分布式存储软件开发资深工程师',
-    tag: ['全职', '急招'],
-    workNature: '远程办公',
-    workType: 'fullTime',
-    releaseTime: '2023-5-17',
-    content: [
-      {
-        title: '【岗位职责】',
-        body: [
-          '参与开源分布式存储项目DatenLord的开发和维护；',
-          '完善DatenLord的测试，构建新的DatenLord测试框架；',
-          '提高DatenLord分布式性能表现。 ',
-        ],
-      },
-      {
-        title: '【岗位要求】',
-        body: [
-          '至少5年的分布式系统开发或研究经验，最好是分布式存储系统研发或研究经验；',
-          '具有HDFS 、Ceph、GlusterFS等分布式存储系统具有相关开发和使用经验；',
-          '熟悉Rust、C或C++语言；',
-          '具有开源项目的开发和维护经验。',
-        ],
-      },
-    ],
-  },
-  {
-    id: 'Rust distributed storage development'
+    id: 'Rust Distributed Storage Development'
       .split(' ')
       .join('-')
       .toLowerCase(),
     label: 'Rust分布式存储开发',
-    tag: ['实习', '即将招满'],
-    workNature: '远程办公',
+    tag: ['实习'],
+    workNature: '远程实习',
     workType: 'internship',
-    releaseTime: '2023-5-17',
+    releaseTime: '2024-2-19',
     content: [
       {
         title: '【岗位职责】',
         body: [
           '参与高性能分布式存储系统研发，涉及的开发内容包括但不限于：',
-          '分布式存储系统开发；',
-          '分布式数据一致性协议研究和开发；',
+          '分布式数据一致性协议；',
+          '高速网络传输接口、驱动；',
           '分布式缓存、数据管理服务；',
-          '使用 Rust 语言进行内核驱动开发。',
+          '对象存储接口；',
+          '文件存储接口；',
+          '块存储接口。',
         ],
       },
       {
         title: '【岗位要求】',
         body: [
-          '熟练使用Rust语言，熟悉多线程、高并发编程；',
-          '熟悉Linux操作系统存储管理相关功能；',
-          '具有很强的学习能力，自我驱动以及团队合作意识；',
-          '实习时间6个月以上，每周4~5天。',
+          '熟悉Rust和C语言；',
+          '熟悉多线程、高并发编程；',
+          '熟悉Docker和K8S等容器相关工具；',
+          '熟悉Linux操作系统；',
+          '具有很强的学习能力，自我驱动以及团队合作意识。',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'Rust High Performance Web Systems Development'
+      .split(' ')
+      .join('-')
+      .toLowerCase(),
+    label: 'Rust高性能网络系统开发',
+    tag: ['实习'],
+    workNature: '远程实习',
+    workType: 'internship',
+    releaseTime: '2024-2-19',
+    content: [
+      {
+        title: '【岗位职责】',
+        body: [
+          '参与研发高性能网络系统开发，涉及的工作包括但不限于：',
+          '网络硬件Linux驱动开发；',
+          '网络流量控制算法设计与实现；',
+          '网络仿真系统开发与测试。',
+        ],
+      },
+      {
+        title: '【岗位要求】',
+        body: [
+          '熟悉Rust和C语言；',
+          '熟悉多线程、高并发编程；',
+          '熟悉Docker、KVM等容器和虚拟化相关工具；',
+          '熟悉Linux操作系统网络管理相关功能；',
+          '具有很强的学习能力，自我驱动以及团队合作意识。',
         ],
       },
       {
         title: '【加分项】',
         body: [
           '熟悉Rust异步编程、有tokio或async-std使用经验优先；',
-          '熟悉分布式一致性协议Paxos或Raft、分布式KV存储etcd、有K8S的CSI接口编程经验优先；',
-          '有过开源项目/开源贡献经验者优先。',
+          '熟悉Linux内核IO相关功能，有eBPF、XDP相关开发经验优先；',
+          '有Linux内核网络模块相关开发经验优先；',
+          '有无损以太网流量控制相关的开发经验优先；',
+          '熟悉常见流量控制算法优先，诸如BBR、CUBIC、QCN等；',
+          '有DPDK或RDMA等高性能网络编程经验优先；',
+          '有P4、OpenFlow、NS3、SONiC等相关编程经验优先；',
+          '有K8S的CNI接口编程经验优先；',
+          '能长期实习优先。',
         ],
       },
     ],
   },
   {
-    id: 'FPGA development'.split(' ').join('-').toLowerCase(),
+    id: 'AI platform development'.split(' ').join('-').toLowerCase(),
+    label: 'AI平台研发',
+    tag: ['实习'],
+    workNature: '远程办公',
+    workType: 'internship',
+    releaseTime: '2024-2-19',
+    content: [
+      {
+        title: '【岗位职责】',
+        body: [
+          '负责大模型平台后端的开发研发，根据产品和项目计划按时完成功能模块的架构设计、编码、测试的全流程工作。',
+          '负责持续优化系统架构，提供高并发的数据请求分析的处理能力，提高系统的容灾容错能力，保证系统的可运维、高可用性、高可靠性。',
+        ],
+      },
+      {
+        title: '【岗位要求】',
+        body: [
+          '具备全面的软件知识结构，基础扎实，熟悉常用数据结构与算法。',
+          '熟练使用Python语言，熟悉使用常用模块，完成过基于Python的中大型项目。',
+          '熟练使用MySQL、Redis、Nginx、Flask、MongoDB等。',
+          '熟悉Linux操作，了解Shell脚本，有Linux下的多线程编程经验，有性能调优经验。',
+          '有开源项目贡献经验者优先。',
+          '熟悉机器学习，能够使用PyTorch、TensorFlow等框架者优先。',
+          '熟悉网络编程的基本模型和方法，有实际项目的开发经验者优先。',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'FPGA Development'
+      .split(' ')
+      .join('-')
+      .toLowerCase(),
     label: 'FPGA开发',
     tag: ['实习'],
     workNature: '远程办公',
     workType: 'internship',
-    releaseTime: '2023-5-17',
+    releaseTime: '2024-2-19',
     content: [
       {
         title: '【岗位职责】',
         body: [
           '负责基于FPGA实现网络IO加速，以及加密、压缩、编码等算法加速的设计与RTL实现；',
           '实现常用外设接口IP的RTL设计、集成和验证；',
-          '配合上层软件实现软硬件联调。',
+          '3.参与SoC集成设计与验证；',
+          '撰写相关设计文档。',
         ],
       },
       {
         title: '【岗位要求】',
         body: [
           '熟悉基于FPGA的设计流程，熟悉Xilinx的FPGA芯片架构，熟练掌握Xilinx的FPGA开发工具；',
-          '熟练掌握Verilog、SystemVerilog以及SystemVerilog Assertion的使用；',
-          '熟练掌握TCL、Python脚本语言；',
+          '熟悉Bluespec、SpinalHDL、Chisel或Clash等新一代HDL语言；',
+          '熟练掌握Verilog、SystemVerilog或VHDL语言；',
+          '熟悉SystemVerilog Assertion的使用；',
+          '熟练掌握TCL脚本语言；',
           '具有很强的学习能力，自我驱动以及团队合作意识；',
-          '实习时间6个月以上，每周4~5天。',
         ],
       },
       {
         title: '【加分项】',
         body: [
-          '熟悉Bluespec、SpinalHDL、Chisel、Clash等至少一种新一代HDL语言；',
-          ' 熟悉CXL、PCIe、AXI、ACE、CHI等相关总线接口开发优先；',
-          '熟悉TCP/IP、RDMA、NVMe协议，有加密、压缩、编码开发经验优先。',
+          '有网络或存储硬件系统开发经验优先；',
+          '熟悉PCIe、DMA、NVMe、DDR3/4、SerDes等相关接口开发优先；',
+          '有DSP领域相关经验、熟悉LDPC、喷泉码、椭圆曲线加密算法和零知识证明算法优先；',
+          '熟悉AXI、ACE、CHI等AMBA总线协议；',
+          '熟悉基于Python的仿真测试工具Cocotb优先；',
+          '熟悉TCP/IP或InfiniBand/RDMA网络协议栈优先。',
+          '能长期实习（6个月以上）优先。',
         ],
       },
     ],
   },
   {
-    id: 'The joint hardware and software research and development internship'
+    id: 'Joint research and development of hardware and software'
       .split(' ')
       .join('-')
       .toLowerCase(),
-    label: '软硬件联合研发实习生',
+    label: '软硬件联合研发',
     tag: ['实习'],
     workNature: '远程办公',
     workType: 'internship',
-    releaseTime: '2023-5-17',
+    releaseTime: '2024-2-19',
     content: [
       {
         title: '【岗位职责】',
@@ -499,7 +548,8 @@ const JDdata: JDdataProps = [
           '熟悉IC设计流程，熟悉常用的仿真、综合等EDA工具；',
           '熟悉Xilinx的FPGA设计流程，熟练掌握Xilinx的FPGA开发工具；',
           '熟悉Bluespec、SpinalHDL、Chisel或Clash等新一代HDL语言；',
-          '熟悉Rust for Linux开发内核模块、驱动；',
+          '熟练掌握Verilog、SystemVerilog和SystemC语言；',
+          '熟悉Linux开发内核模块、驱动；',
           '熟悉基于QEMU的软硬件联合调试工具链；',
           '具有很强的学习能力，自我驱动以及团队合作意识。',
         ],
@@ -512,7 +562,54 @@ const JDdata: JDdataProps = [
           '熟悉CXL、PCIe、AXI、ACE、CHI、NVMe等协议接口开发优先；',
           '有DSP领域相关经验，熟悉LDPC、喷泉码、椭圆曲线加密算法和零知识证明算法优先；',
           '有Linux内核网络、文件、存储相关开发经验优先；',
-          '能长期实习（1年以上）优先。',
+          '熟悉Rust for Linux开发内核模块、驱动开发经验优先；',
+          '能长期实习（6个月以上）优先。',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'Digital IC front-end design'
+      .split(' ')
+      .join('-')
+      .toLowerCase(),
+    label: '数字IC前端设计',
+    tag: ['实习'],
+    workNature: '远程办公',
+    workType: 'internship',
+    releaseTime: '2024-2-19',
+    content: [
+      {
+        title: '【岗位职责】',
+        body: [
+          '参与高性能存储SoC芯片的软硬件开发：',
+          '负责实现网络IO加速，以及加密、压缩、编码等算法加速的设计与RTL实现；',
+          '负责实现SoC的集成、综合与原型验证；',
+          '负责实现常用外设接口IP的RTL设计、集成；',
+          '撰写相关设计文档。',
+        ],
+      },
+      {
+        title: '【岗位要求】',
+        body: [
+          '熟悉数字IC的开发工具链；',
+          '熟悉Bluespec、SpinalHDL或Chisel等新一代HDL语言；',
+          '熟练掌握Verilog、SystemVerilog、SystemC语言；',
+          '熟悉SystemVerilog Assertion的使用；',
+          '熟练掌握TCL脚本语言；',
+          '具有很强的学习能力，自我驱动以及团队合作意识。',
+        ],
+      },
+      {
+        title: '【加分项】',
+        body: [
+          '有网络或存储硬件系统开发经验优先；',
+          '熟悉TCP/IP或InfiniBand/RDMA网络协议栈优先；',
+          '熟悉CXL、PCIe、AXI、ACE、CHI、NVMe等协议接口开发优先；',
+          '有加密和编码领域相关经验，熟悉LDPC、喷泉码、椭圆曲线加密算法和零知识证明算法优先；',
+          '熟悉基于Python的仿真测试工具Cocotb优先；',
+          '有形式化验证相关经验优先；',
+          '能长期实习优先。',
         ],
       },
     ],
@@ -634,29 +731,46 @@ export default () => {
         </MainContainer>
         <RightSidebarContainer>
           <DescriptionCard>
-            <DescriptionTitle>简历评估合格后，面试流程为：</DescriptionTitle>
-            <DescriptionSubTitle>
-              具体面试流程会根据候选人的情况略有调整。
-            </DescriptionSubTitle>
-            <DescriptionClass>实习生：</DescriptionClass>
+            <DescriptionTitle>面试流程</DescriptionTitle>
+            <DescriptionClass>实习岗位：</DescriptionClass>
             <DescriptionText>
-              <DescriptionTextBold>入职初期为300元/天，</DescriptionTextBold>
-              如能力和产出优秀将予以薪资调增，最高500元/天。
+              <DescriptionTextBold>项目笔试</DescriptionTextBold>- 两天
             </DescriptionText>
-            <DescriptionClass>正式员工：</DescriptionClass>
             <DescriptionText>
-              <DescriptionTextBold>
-                对标国内一线大厂的薪资+期权，
-              </DescriptionTextBold>
-              待面试通过后根据能力情况确定。
+              <DescriptionTextBold>性能优化</DescriptionTextBold> - 不超过一周
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>交叉面试</DescriptionTextBold>
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>思路 review</DescriptionTextBold> - 交流指导
+            </DescriptionText>
+            <div style={{ paddingBlock: '0.06rem' }} />
+            <DescriptionClass>校招 / 社招岗位：</DescriptionClass>
+            <DescriptionText>
+              <DescriptionTextBold>项目笔试</DescriptionTextBold> - 两天
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>思路 review</DescriptionTextBold> - 交流指导
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>性能优化</DescriptionTextBold> - 不超过一周
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>交叉面试</DescriptionTextBold>
             </DescriptionText>
           </DescriptionCard>
           <LinkCard>
-            <LinkTitle>面试流程</LinkTitle>
-            <LinkSebTitle>- 简历投递至邮箱:</LinkSebTitle>
-            <LinkText>
-              <ColorText>info@datenlord.com</ColorText>或扫描微信联系也可以喔~
+            <LinkTitle>投递简历</LinkTitle>
+            <LinkSebTitle>- 投递至邮箱:</LinkSebTitle>
+            <LinkText style={{ paddingTop: '0.04rem' }}>
+              <ColorText>info@datenlord.com</ColorText>
             </LinkText>
+            <div style={{ height: '0.24rem' }} />
+            <LinkSebTitle>- 添加达坦科技小助手微信:</LinkSebTitle>
+            {/* <LinkText>
+              <ColorText>info@datenlord.com</ColorText>或扫描微信联系也可以喔~
+            </LinkText> */}
             <Img src={weChatQRcode} />
           </LinkCard>
         </RightSidebarContainer>
