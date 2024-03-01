@@ -40,6 +40,16 @@ const Placeholder = styled.div`
   flex: 1;
   min-width: 32px;
 `
+const Button = styled.div`
+  font-size: 0.14rem;
+  line-height: 0.2rem;
+  font-weight: 600;
+  color: #7680DD;
+  padding: 0.08rem 0.24rem;
+  border-radius: 0.24rem;
+  border: 0.01rem solid #7680DD;
+  margin-left: 0.24rem;
+`
 
 interface HeaderContextProps {
   color: 'dark' | 'light' | 'transparent'
@@ -92,6 +102,7 @@ export const Header: React.FC<{
             window.innerWidth > 425 ? <PCNav items={items} /> : null
             // <MobNav items={items} />
           }
+          <Button onClick={() => window.location.href = 'https://datenlord.github.io/'}>中/英</Button>
         </HeaderContainer>
       </HeaderWrapper>
     </HeaderContext.Provider>

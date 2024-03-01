@@ -6,19 +6,14 @@ export const nav: NavItem[] = [
     label: '产品',
     children: [
       {
-        key: 'datenlord',
-        label: 'DatenLord',
-        url: '/products/datenlord',
+        key: 'service',
+        label: 'Cloud Service',
+        url: '/products/service',
       },
       {
-        key: 'xline',
-        label: 'Xline',
-        url: '/products/xline',
-      },
-      {
-        key: 'rdma',
-        label: 'RDMA',
-        url: '/rdma',
+        key: 'app',
+        label: 'Appliance',
+        url: '/products/app',
       },
     ],
   },
