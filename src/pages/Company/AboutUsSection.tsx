@@ -143,8 +143,7 @@ export const AboutUsSection: React.FC = () => {
         <Overview>
           <OverviewLogo src={LogoUrl} />
           <OverviewText>
-            <Bold>达坦科技（DatenLord）</Bold>
-            专注下一代云计算——“天空计算”的基础设施技术，致力于拓宽云计算的边界。达坦科技打造的新一代开源跨云存储平台DatenLord，通过软硬件深度融合的方式打通云间壁垒，实现数据高效跨云访问，建立海量异地、异构数据的统一存储访问机制，为云上应用提供高性能安全存储支持。以满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。
+            达坦科技始终致力于打造高性能 <Bold>AI+ Cloud 基础设施平台 DatenLord</Bold>，积极推动AI应用的落地。DatenLord 通过<Bold>软硬件深度融合的方式</Bold>，提供高性能存储和高性能网络。为 AI + Cloud 应用提供<Bold>弹性、便利、经济</Bold>的基础设施服务，以此满足不同行业客户对 AI + Cloud 的需求。
           </OverviewText>
         </Overview>
         <FoundingContainer>
@@ -155,7 +154,7 @@ export const AboutUsSection: React.FC = () => {
               创始团队
             </FoundingTitle>
             <FoundingText>
-              DatenLord始于2021年，由两位经验丰富的基础设施工程师联合创立，他们不满足于云计算和云储存互相隔离、数据被分割而无法有效使用的现状，因此决定通过利用非阻塞/异步IO、异步编程、NVMe、非易失内存和硬件加速的开源方式来提高存储设备和跨云数据传输的性能。
+              达坦科技<Bold>专注底层硬核技术</Bold>，通过软硬件深度融合的方式，涉及分布式系统、Linux 内核、 InfiniBand/RDMA、 SoC、硬件加速等多个前沿技术领域。公司创始团队和核心成员大部分来自谷歌, 微软、阿里巴巴等国际知名科技公司的顶尖人才，拥有<Bold>深厚的软硬件技术和丰富的行业经验</Bold>。
             </FoundingText>
           </FoundingContent>
           <FoundingImage src={FoundingImageUrl} />

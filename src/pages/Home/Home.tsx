@@ -124,7 +124,7 @@ const Home: React.FC = () => {
       <DetailSection />
       <ProductSection />
       <LearnSection />
-      <UseSection />
+      {/* <UseSection /> */}
       <ExploreSection />
       <LinkSection />
     </PageContainer>

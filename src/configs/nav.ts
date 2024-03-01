@@ -8,12 +8,12 @@ export const nav: NavItem[] = [
       {
         key: 'service',
         label: 'Cloud Service',
-        url: '/products/service',
+        url: '/service',
       },
       {
         key: 'app',
         label: 'Appliance',
-        url: '/products/app',
+        url: '/app',
       },
     ],
   },
@@ -22,19 +22,19 @@ export const nav: NavItem[] = [
     label: '解决方案',
     children: [
       {
-        key: 'data-access',
-        label: '统一高性能的跨云数据访问',
-        url: '/solutions/data-access',
+        key: 'ai',
+        label: 'AI 推理',
+        url: '/solutions/ai',
       },
       {
-        key: 'metadata-management',
-        label: '跨云分布式元数据管理',
-        url: '/solutions/metadata-management',
+        key: 'storage',
+        label: '高性能存储',
+        url: '/solutions/storage',
       },
       {
-        key: 'hardware-acceleration',
-        label: '存储网络的硬件加速',
-        url: '/solutions/hardware-acceleration',
+        key: 'networks',
+        label: '高性能网络',
+        url: '/solutions/networks',
       },
       {
         key: 'related-resource',

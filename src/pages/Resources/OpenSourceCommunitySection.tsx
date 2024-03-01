@@ -16,26 +16,26 @@ const data1 = [
     title: '社区—贡献意味着思考和学习',
     text: '开源不仅仅是在Github上贡献代码。在DatenLord，我们相信：贡献代码（给予）同样是一个思考和学习的过程。在不断收到开源社区反馈的过程中，我们能够构建彼此的信任与合作。我们也想借助于开源的社区平台吸引更多优秀的开发者参与到项目中来。',
   },
-  {
-    key: 2,
-    title: '在Discord上与我们对话',
-    text: '加入我们的开发者社区，构建下一代云原生、跨云的存储系统。',
-    link: {
-      icon: discordIconUrl,
-      text: 'Discord',
-      url: 'https://discord.gg/Et7eSBgZ',
-    },
-  },
-  {
-    key: 3,
-    title: '在Github中成为贡献者',
-    text: '你在寻找源代码吗，或有一个精彩的想法想要贡献？加入我们在GitHub上的开源项目。',
-    link: {
-      icon: githubIconUrl,
-      text: 'GitHub',
-      url: 'https://github.com/datenlord',
-    },
-  },
+  // {
+  //   key: 2,
+  //   title: '在Discord上与我们对话',
+  //   text: '加入我们的开发者社区，构建下一代云原生、跨云的存储系统。',
+  //   link: {
+  //     icon: discordIconUrl,
+  //     text: 'Discord',
+  //     url: 'https://discord.gg/Et7eSBgZ',
+  //   },
+  // },
+  // {
+  //   key: 3,
+  //   title: '在Github中成为贡献者',
+  //   text: '你在寻找源代码吗，或有一个精彩的想法想要贡献？加入我们在GitHub上的开源项目。',
+  //   link: {
+  //     icon: githubIconUrl,
+  //     text: 'GitHub',
+  //     url: 'https://github.com/datenlord',
+  //   },
+  // },
 ]
 
 const cardData = [
@@ -76,6 +76,7 @@ const TitleZH = styled(Heading3)`
 `
 // - - -
 const Content = styled.div`
+  height: 4.6rem;
   margin-bottom: 0.61rem;
 `
 const ContentItem = styled.div`
@@ -159,19 +160,19 @@ export const OpenSourceCommunity: React.FC = () => {
       <TitleZH>开源社区</TitleZH>
       <Content>
         <Illustration src={illustrationUrl} />
-        {data1.map(({ key, title, text, link }) => {
+        {data1.map(({ key, title, text }) => {
           return (
             <ContentItem key={key}>
               <SubTitle
                 style={{ paddingBottom: '0.23rem' }}
-                extra={
-                  link && (
-                    <SubTitleExtraContainer as={'a'} href={link.url}>
-                      <SubTitleExtraIcon src={link.icon} />
-                      <SubTitleExtraText>{link.text}</SubTitleExtraText>
-                    </SubTitleExtraContainer>
-                  )
-                }
+                // extra={
+                  // link && (
+                  //   <SubTitleExtraContainer as={'a'} href={link.url}>
+                  //     <SubTitleExtraIcon src={link.icon} />
+                  //     <SubTitleExtraText>{link.text}</SubTitleExtraText>
+                  //   </SubTitleExtraContainer>
+                  // )
+                // }
               >
                 {title}
               </SubTitle>

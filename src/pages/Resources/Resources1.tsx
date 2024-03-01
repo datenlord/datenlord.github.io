@@ -7,6 +7,7 @@ import { Typography } from '@/components/Typography'
 
 import { OpenSourceCommunity } from './OpenSourceCommunitySection'
 import { LearnCommunitySection } from './LearnCommunitySection'
+import { ProductSection } from '../Home/ProductSection'
 
 import coverUrl from '@/assets/resources/cover.png'
 import cloudUrl from '@/assets/resources/cloud.png'
@@ -57,6 +58,9 @@ export default () => {
         <PageContainer id="community">
           <PageTitle>社区</PageTitle>
           <OpenSourceCommunity />
+          <div style={{ marginInline: '-2.04rem' }}>
+            <ProductSection />
+          </div>
           <LearnCommunitySection />
         </PageContainer>
         <CloudBg src={cloudUrl} />

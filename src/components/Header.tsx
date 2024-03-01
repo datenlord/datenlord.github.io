@@ -47,7 +47,7 @@ const Button = styled.div`
   color: #7680DD;
   padding: 0.08rem 0.24rem;
   border-radius: 0.24rem;
-  border: 0.01rem solid #7680DD;
+  border: 0.02rem solid #7680DD;
   margin-left: 0.24rem;
 `
 

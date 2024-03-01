@@ -144,7 +144,7 @@ const SectImg = styled.img`
 
 const Card1: React.FC = () => {
   return (
-    <CardWrap style={{ background: '#EDEDF6' }}>
+    <CardWrap style={{ background: '#EDEDF6' }} id="ai">
       <TitleWrap>
         <TitleLeftLine />
         <TitleTxt>AI 推理</TitleTxt>
@@ -184,10 +184,10 @@ const Card1: React.FC = () => {
 
 const Card2: React.FC = () => {
   return (
-    <CardWrap>
+    <CardWrap id="networks" style={{ background: '#EDEDF6' }}>
       <TitleWrap>
         <TitleLeftLine />
-        <TitleTxt>高性能存储</TitleTxt>
+        <TitleTxt>高性能网络</TitleTxt>
         <TitleRightLine />
       </TitleWrap>
       <Cont>
@@ -210,7 +210,7 @@ const Card2: React.FC = () => {
 
 const Card3: React.FC = () => {
   return (
-    <CardWrap>
+    <CardWrap id='storage'>
       <TitleWrap>
         <TitleLeftLine />
         <TitleTxt>高性能存储</TitleTxt>

@@ -361,10 +361,10 @@ export const ProductSection: React.FC = () => {
               <RDMAContent>
                 是RDMA协议的开源硬件实现，采用Bluespec和SpinalHDL实现，目前主要实现了RoCEv2协议，此外，我们还进行一些特定功能的拓展来提升RDMA的传输效率。
               </RDMAContent>
-              <RDMAListItem as={'li'}>roce-sim</RDMAListItem>
+              {/* <RDMAListItem as={'li'}>roce-sim</RDMAListItem>
               <RDMAContent>
                 是一套验证RDMA协议的软件框架，方便测试RDMA硬件的正确性，即是否符合RoCEv2协议的要求。
-              </RDMAContent>
+              </RDMAContent> */}
             </RDMAList>
             <Button
               style={{ width: 'max-content', color: '#fff' }}
