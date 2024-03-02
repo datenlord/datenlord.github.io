@@ -40,7 +40,7 @@ const carouselData: CarouseData[] = [
   },
   {
     key: 'hardware-acceleration',
-    title: '高性能RDMA网络',
+    title: '高性能 RDMA 网络',
     description: '采用软硬件深度融合的方式，实现高性能RDMA网络',
     url: '',
   },
@@ -96,7 +96,7 @@ const LinkSection: React.FC = () => {
     <SectionWrapper>
       <SectionContainer>
         <Content>
-          通过软硬件深度融合的方式，满足不同行业客户对海量数据跨云、跨数据中心高性能访问的需求。
+          通过软硬件深度融合的方式，提供高性能存储和高性能网络，满足不同行业客户对高性能 AI+Cloud 的需求。
         </Content>
         <ButtonContainer>
           <OutlineButtonWrapper>

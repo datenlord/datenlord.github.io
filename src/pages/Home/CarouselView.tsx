@@ -163,11 +163,10 @@ const Text = styled.p`
 // const DecorationRight = styled(Decoration)``
 
 const routerMap = new Map([
-  ['distributed-storage', 'company1'],
-  ['data-access', '/solutions/data-access'],
-  ['metadata-management', '/solutions/metadata-management'],
-  ['hardware-acceleration', '/solutions'],
-  ['open-source', '/resources1'],
+  ['distributed-storage', '/solutions/ai'],
+  ['data-access', '/solutions/storage'],
+  ['hardware-acceleration', '/solutions/networks'],
+  ['open-source', '/community'],
 ])
 
 const Card: React.FC = () => {

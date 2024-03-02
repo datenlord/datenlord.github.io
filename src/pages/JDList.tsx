@@ -289,7 +289,7 @@ const Placeholder = styled.div`
 interface TagProps {
   icon: string
 }
-const Tag = styled(CNBodySmall)<TagProps>`
+const Tag = styled(CNBodySmall) <TagProps>`
   position: relative;
   padding-left: 0.2rem;
   padding-right: 0.22rem;
@@ -729,13 +729,13 @@ export default () => {
               <DescriptionTextBold>项目笔试</DescriptionTextBold>- 两天
             </DescriptionText>
             <DescriptionText>
+              <DescriptionTextBold>思路 review</DescriptionTextBold> - 交流指导
+            </DescriptionText>
+            <DescriptionText>
               <DescriptionTextBold>性能优化</DescriptionTextBold> - 不超过一周
             </DescriptionText>
             <DescriptionText>
               <DescriptionTextBold>交叉面试</DescriptionTextBold>
-            </DescriptionText>
-            <DescriptionText>
-              <DescriptionTextBold>思路 review</DescriptionTextBold> - 交流指导
             </DescriptionText>
             <div style={{ paddingBlock: '0.06rem' }} />
             <DescriptionClass>校招 / 社招岗位：</DescriptionClass>
@@ -749,7 +749,14 @@ export default () => {
               <DescriptionTextBold>性能优化</DescriptionTextBold> - 不超过一周
             </DescriptionText>
             <DescriptionText>
-              <DescriptionTextBold>交叉面试</DescriptionTextBold>
+              <DescriptionTextBold>技术 open talk 评审</DescriptionTextBold>
+            </DescriptionText>
+            <DescriptionTitle style={{ marginTop: '0.2rem' }}>薪资待遇</DescriptionTitle>
+            <DescriptionText>
+              <DescriptionTextBold>实习生：</DescriptionTextBold>入职初期为 300/天，如能力和产出优秀将予以薪资调增，最高 500/天。
+            </DescriptionText>
+            <DescriptionText>
+              <DescriptionTextBold>正式员工：</DescriptionTextBold>对标国内一线大厂的薪资+期权，待面试通过后根据能力情况而定。
             </DescriptionText>
           </DescriptionCard>
           <LinkCard>

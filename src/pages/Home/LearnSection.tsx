@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Typography } from '@/components/Typography'
@@ -126,7 +126,7 @@ const Data = [
     iconBg: '#7680DD',
     label_en: 'Hardware Design Learning Community',
     label_zh: '硬件设计学习社区',
-    url: 'mit',
+    url: '/mit',
     content: [
       {
         key: 'first',
@@ -211,7 +211,7 @@ export const LearnSection: React.FC = () => {
                   </ListItem>
                 ))}
               </List>
-              {url && <ListBtn onClick={() => navigate(url)}>了解详情</ListBtn>}
+              {url && <ListBtn onClick={() => navigate('/mit', { replace: true })}>了解详情</ListBtn>}
             </Card>
           ))}
         </MainContainer>

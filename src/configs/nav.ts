@@ -7,12 +7,12 @@ export const nav: NavItem[] = [
     children: [
       {
         key: 'service',
-        label: 'Cloud Service',
+        label: 'DatenLord Cloud Service',
         url: '/service',
       },
       {
         key: 'app',
-        label: 'Appliance',
+        label: 'DatenLord Appliance',
         url: '/app',
       },
     ],
@@ -36,22 +36,12 @@ export const nav: NavItem[] = [
         label: '高性能网络',
         url: '/solutions/networks',
       },
-      {
-        key: 'related-resource',
-        label: '相关资源',
-        url: '/solutions/related-resource',
-      },
     ],
   },
   {
     key: 'resource',
     label: '资源',
     children: [
-      {
-        key: 'community',
-        label: '社区',
-        url: '/resources1/community',
-      },
       {
         key: 'tech-share',
         label: '技术分享',
@@ -70,18 +60,23 @@ export const nav: NavItem[] = [
     ],
   },
   {
-    key: 'client',
-    label: '客户',
+    key: 'community',
+    label: '社区',
     children: [
       {
-        key: 'usage-scenarios',
-        label: '使用场景',
-        url: '/clients/usage-scenarios',
+        key: 'open-source-community',
+        label: '开源社区',
+        url: '/community',
       },
       {
-        key: 'project-cooperation',
-        label: '产学研项目合作',
-        url: '/clients/project-cooperation',
+        key: 'open-source-project',
+        label: '开源项目',
+        url: '/community',
+      },
+      {
+        key: 'learning-community',
+        label: '学习社区',
+        url: '/community',
       },
     ],
   },

@@ -58,11 +58,11 @@ export const router = createHashRouter([
         element: <Solutions />,
       },
       {
-        path: 'resources1',
+        path: 'community',
         element: <Resources1 />,
       },
       {
-        path: 'resources1/:sectionId',
+        path: 'community',
         element: <Resources1 />,
       },
       {
@@ -131,6 +131,10 @@ export const router = createHashRouter([
       },
       {
         path: 'MIT',
+        element: <MIT />,
+      },
+      {
+        path: 'resources1/community/mit',
         element: <MIT />,
       },
       {
