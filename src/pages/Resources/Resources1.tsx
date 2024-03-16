@@ -53,7 +53,7 @@ export default () => {
   }, [sectionId])
   return (
     <React.Fragment>
-      <Cover cover={coverUrl}>资源</Cover>
+      <Cover cover={coverUrl}>社区</Cover>
       <PageWrapper>
         <PageContainer id="community">
           <PageTitle>社区</PageTitle>

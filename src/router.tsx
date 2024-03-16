@@ -134,7 +134,7 @@ export const router = createHashRouter([
         element: <MIT />,
       },
       {
-        path: 'resources1/community/mit',
+        path: 'community/mit',
         element: <MIT />,
       },
       {

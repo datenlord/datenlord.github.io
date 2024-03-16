@@ -8,7 +8,7 @@ import { Button } from '@/components/Button'
 
 import coverUrl from '@/assets/solutions/cover.png'
 import imageUrl from '@/assets/solutions/image.png'
-import image1Url from '@/assets/solutions/image1.png'
+import image1Url from '@/assets/solutions/image1.jpeg'
 
 interface CardData {
   key: string

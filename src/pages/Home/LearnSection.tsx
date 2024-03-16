@@ -1,4 +1,4 @@
-import { useNavigate, useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Typography } from '@/components/Typography'
