@@ -143,7 +143,11 @@ export const AboutUsSection: React.FC = () => {
         <Overview>
           <OverviewLogo src={LogoUrl} />
           <OverviewText>
-            达坦科技始终致力于打造高性能 <Bold>AI+ Cloud 基础设施平台 DatenLord</Bold>，积极推动AI应用的落地。DatenLord 通过<Bold>软硬件深度融合的方式</Bold>，提供高性能存储和高性能网络。为 AI + Cloud 应用提供<Bold>弹性、便利、经济</Bold>的基础设施服务，以此满足不同行业客户对 AI + Cloud 的需求。
+            达坦科技始终致力于打造高性能 <Bold>AI+ Cloud 基础设施平台</Bold>
+            ，积极推动AI应用的落地。达坦科技通过
+            <Bold>软硬件深度融合的方式</Bold>，提供高性能存储和高性能网络。为 AI
+            + Cloud 应用提供<Bold>弹性、便利、经济</Bold>
+            的基础设施服务，以此满足不同行业客户对 AI + Cloud 的需求。
           </OverviewText>
         </Overview>
         <FoundingContainer>
@@ -154,7 +158,12 @@ export const AboutUsSection: React.FC = () => {
               创始团队
             </FoundingTitle>
             <FoundingText>
-              达坦科技<Bold>专注底层硬核技术</Bold>，通过软硬件深度融合的方式，涉及分布式系统、Linux 内核、 InfiniBand/RDMA、 SoC、硬件加速等多个前沿技术领域。公司创始团队和核心成员大部分来自谷歌, 微软、阿里巴巴等国际知名科技公司的顶尖人才，拥有<Bold>深厚的软硬件技术和丰富的行业经验</Bold>。
+              达坦科技<Bold>专注底层硬核技术</Bold>
+              ，通过软硬件深度融合的方式，涉及分布式系统、Linux 内核、
+              InfiniBand/RDMA、
+              SoC、硬件加速等多个前沿技术领域。公司创始团队和核心成员大部分来自谷歌,
+              微软、阿里巴巴等国际知名科技公司的顶尖人才，拥有
+              <Bold>深厚的软硬件技术和丰富的行业经验</Bold>。
             </FoundingText>
           </FoundingContent>
           <FoundingImage src={FoundingImageUrl} />

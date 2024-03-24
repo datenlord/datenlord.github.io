@@ -100,7 +100,7 @@ export const DetailSection: React.FC = () => {
 					<SectInfra src={infrastructureUrl} />
 				</Section>
 				<Section>
-					<SectionTitle>将云计算资源复用的方式引入 GPU 资源分配管理</SectionTitle>
+					<SectionTitle>将云计算资源复用的方式引入 AI 算力资源分配管理</SectionTitle>
 					<SectCont>
 						<SectImg src={pcUrl} />
 						<SectTxtCnt>

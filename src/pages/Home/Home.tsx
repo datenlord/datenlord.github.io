@@ -40,7 +40,7 @@ const carouselData: CarouseData[] = [
   },
   {
     key: 'hardware-acceleration',
-    title: '高性能 RDMA 网络',
+    title: 'RDMA 高性能网络',
     description: '采用软硬件深度融合的方式，实现高性能RDMA网络',
     url: '',
   },

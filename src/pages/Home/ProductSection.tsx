@@ -283,13 +283,10 @@ export const ProductSection: React.FC = () => {
         <DatenLordCardWrapper id="datenlord">
           <DatenLordCard>
             <DatenLordLogo src={datenlordLogoUrl} />
-            <DatenLordTitle>DatenLord</DatenLordTitle>
+            <DatenLordTitle>DatenLord 高性能分布式存储</DatenLordTitle>
             <DatenLordDescription>
-              DatenLord 是一套
-              <span style={{ color: '#7680DD' }}>
-                跨云跨数据中心的存储解决方案
-              </span>
-              ，帮助企业实现高效的跨云跨数据中心的存储访问。该方案为用户提供了丰富的系统结构，包括
+              DatenLord 是开源高性能分布式存储平台，帮助企业实现在 AI + Cloud
+              场景下的高效数据访问需求。该平台为用户提供了丰富的系统结构，包括
               Posix 文件接口，
               KV接口和面向对象存储接口等，用户可以根据需求选择适合自己的方式。DatenLord
               使用了软硬件融合的方式，充分发挥软硬件的性能潜力，实现了极致的数据传输和读写性能。
@@ -317,7 +314,7 @@ export const ProductSection: React.FC = () => {
           <XlineCard>
             <XlineLogo src={xlineLogoUrl} />
             <XlineContent>
-              <XlineTitle>Xline开源分布式KV存储系统</XlineTitle>
+              <XlineTitle>Xline 开源分布式KV存储系统</XlineTitle>
               <XlineDescription>
                 保证数据在跨数据中心，跨云访问时的一致性，
                 方便业务系统实现多地多中心多活部署。
@@ -348,7 +345,7 @@ export const ProductSection: React.FC = () => {
         </XlineCardWrapper>
         <RDMACardWrapper id="rdma">
           <RDMACard>
-            <RDMATitle>RDMA</RDMATitle>
+            <RDMATitle>RDMA 高性能网络</RDMATitle>
             <RDMADescription>
               跨云场景下，网络对数据访问的性能影响最为突出，DatenLord采用高性能网络RDMA来降低延迟并提高带宽。RDMA方面我们有多个相关的开源项目：
             </RDMADescription>
