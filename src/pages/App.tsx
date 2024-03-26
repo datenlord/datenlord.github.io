@@ -48,10 +48,6 @@ export default () => {
       <Cover cover={coverUrl}>DatenLord Appliance</Cover>
       <SectWrap>
         <SectCtn>
-          <TitleCtr>
-            <Title>AI 推理一体机</Title>
-            <SubTitle>参考配置</SubTitle>
-          </TitleCtr>
           <Image src={sect1Url} />
           <Image src={sect2Url} style={{ marginBottom: '0.82rem' }} />
           <Image src={sect3Url} style={{ marginBottom: '0.64rem' }} />
