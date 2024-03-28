@@ -1,8 +1,11 @@
 ---
 label: 一封来自 DatenLord 关于GSoC 2024的挑战书
 description: Google Summer of Code 是一项全球性的在线计划，致力于将新的contributor引入开源软件开发领域。GSoC 参与者在导师的指导下，与开源组织合作开展为期 12 周以上的编程项目。今年，达坦科技入选作为开源社区组织，携CNCF Sandbox项目Xline下众多有趣、创新且有挑战性的题目参与本次活动。
+cover: ./cover.jpg
 location: 中国香港
 ---
+
+![图片](./cover.jpg)
 
 Google Summer of Code 是一项全球性的在线计划，致力于将新的 contributor 引入开源软件开发领域。GSoC 参与者在导师的指导下，与开源组织合作开展为期 12 周以上的编程项目。今年，达坦科技入选作为开源社区组织，携 CNCF Sandbox 项目 Xline 下众多有趣、创新且有挑战性的题目参与本次活动。  
 https://summerofcode.withgoogle.com/programs/2024/organizations/datenlord-6z

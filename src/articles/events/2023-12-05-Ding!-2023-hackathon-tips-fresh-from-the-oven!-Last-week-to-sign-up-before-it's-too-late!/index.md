@@ -1,8 +1,11 @@
 ---
 label: 2023 hackathon攻略新鲜出炉！最后一周还不速来报名！
 description: DatenLord Hackathon 2023正式启动！达坦科技基于其跨云分布式文件系统DatenLord项目，结合AI大模型时代背景，搭建了擂台，在此正式向您发出邀约！本次大赛赛题深刻有趣，奖品丰厚多样，借此机会您不仅可以尽情施展才华、与来自全国各地优秀的青年才俊们同台PK，更将有机会与优秀的评委教师对话交流。Clock is Ticking！无需犹豫，行动起来，抓住机遇，创造奇迹！
+cover: ./cover.jpg
 location: 中国香港
 ---
+
+![图片](./cover.jpg)
 
 ## Hackathon2023
 

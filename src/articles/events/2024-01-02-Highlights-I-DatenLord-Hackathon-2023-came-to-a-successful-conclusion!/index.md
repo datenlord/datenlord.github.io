@@ -1,8 +1,11 @@
 ---
 label: 精彩回顾 | DatenLord Hackathon 2023圆满结束！
 description: DatenLord Hackathon 2023已经顺利完赛。达坦科技基于其跨云分布式文件系统DatenLord项目，结合AI大模型时代背景，搭建了擂台。我们邀请参赛者为DatenLord的极端场景设计并实现缓存 p2p 传输和同步模块。
+cover: ./cover.jpg
 location: 中国新疆
 ---
+
+![图片](./cover.jpg)
 
 DatenLord Hackathon 2023 已经顺利完赛。达坦科技基于其跨云分布式文件系统 DatenLord 项目，结合 AI 大模型时代背景，搭建了擂台。我们邀请参赛者为 DatenLord 的极端场景设计并实现缓存 p2p 传输和同步模块。
 

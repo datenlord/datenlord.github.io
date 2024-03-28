@@ -105,6 +105,7 @@ export const BlogSection: React.FC = () => {
   }, [])
 
   useEffect(() => {
+    console.log(blogs)
     setCover(blogs[0]?.assetURLs[0] || blogTestImageUrl)
   }, [blogs])
 
@@ -114,7 +115,7 @@ export const BlogSection: React.FC = () => {
         <Title>技术博客</Title>
         <MainContainer>
           <ContentContainer>
-            <Image src={blogCoverUrl} />
+            <Image src={cover} />
             {blogs.map(({ metadata }, index) => {
               const { title, date, label, description } = metadata
               return (
