@@ -14,6 +14,7 @@ import BlogDetailPage from './pages/Resources/BlogDetail'
 import TechTalkPage from './pages/Resources/TechTalkPage'
 import TOC from './demo/TOC/TOC'
 import CloudService from './pages/Products/CloudService'
+import Appliance from './pages/Products/Appliance'
 
 export const router = createHashRouter([
   {
@@ -26,6 +27,10 @@ export const router = createHashRouter([
       {
         path: 'cloud-service',
         element: <CloudService />,
+      },
+      {
+        path: 'appliance',
+        element: <Appliance />,
       },
     ],
   },
