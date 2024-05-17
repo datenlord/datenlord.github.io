@@ -13,11 +13,21 @@ import BlogList from './pages/Resources/BlogList'
 import BlogDetailPage from './pages/Resources/BlogDetail'
 import TechTalkPage from './pages/Resources/TechTalkPage'
 import TOC from './demo/TOC/TOC'
+import CloudService from './pages/Products/CloudService'
 
 export const router = createHashRouter([
   {
     path: '',
     element: <HomePage />,
+  },
+  {
+    path: 'products',
+    children: [
+      {
+        path: 'cloud-service',
+        element: <CloudService />,
+      },
+    ],
   },
   {
     path: 'products/RDMA',
