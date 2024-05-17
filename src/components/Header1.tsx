@@ -121,6 +121,7 @@ const HeaderWrapper = styled.header<{
   height: 86px;
   width: 100%;
   background-color: ${props => props.bg};
+  z-index: 1000;
   color: ${props => (props.headerTheme === 'dark' ? '#000' : '#fff')};
   @media screen and (max-width: 1024px) {
     height: 69px;

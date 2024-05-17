@@ -1,288 +1,297 @@
 import styled from 'styled-components'
-import { useState, useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
-// import { Header } from '@/components/Header'
+import React, { useState } from 'react'
+import { Carousel } from '@/components/Carousel'
 import { Header } from '@/components/Header1'
-import cover1Url from '@/assets/Home/cover1.svg'
-import cover2Url from '@/assets/Home/cover2.svg'
-import cover3Url from '@/assets/Home/cover3.svg'
-import cover4Url from '@/assets/Home/cover4.svg'
-import cover5Url from '@/assets/Home/cover5.svg'
+import img6Url from '@/assets/Home/image6.png'
+import img7Url from '@/assets/Home/image7.png'
+import img8Url from '@/assets/Home/image8.png'
+import img9Url from '@/assets/Home/image9.png'
+import xlineUrl from '@/assets/Home/xline.png'
 
-const view: ViewProps[] = [
-  {
-    id: 'first-page',
-    layout: 'row',
-    theme: 'dark',
-    cover: cover1Url,
-    title: 'High Performance Geo-Distributed Storage',
-    description:
-      'DatenLord aims to break cloud barrier by deeply integrating hardware and software to build a unified storage-access mechanism to provide high-performance and secure storage support for applications across clouds.',
-    bgcolor: 'hsl(250, 68%, 7%)',
-  },
-  {
-    id: 'second-page',
-    layout: 'col',
-    theme: 'light',
-    cover: cover2Url,
-    title: 'Unified and High Performance Data Access Across Clouds',
-    description:
-      'A unified data access service across clouds assisted by high performance cache and effective network technology',
-    bgcolor: 'hsl(235, 41%, 89%)',
-    url: '/solution/Unified-and-High-Performance-Data-Access-Across-Clouds',
-  },
-  {
-    id: 'third-page',
-    layout: 'row-reverse',
-    theme: 'light',
-    cover: cover3Url,
-    title: 'Geo-Distributed Metadata Management',
-    description:
-      'The first industrial geo-distributed metadata management guarantees high-speed and strong consistency in WAN scenarios',
-    bgcolor: 'hsl(0, 0%, 100%)',
-    url: '/solution/Geo-Distributed-Metadata-management',
-  },
-  {
-    id: 'forth-page',
-    layout: 'row',
-    theme: 'light',
-    cover: cover4Url,
-    title: 'Hardware Acceleration For Storage Network',
-    description: 'Adoption of RDMA and DPDK to build high performance network',
-    bgcolor: 'hsl(235, 41%, 89%)',
-    url: '/solution/Hardware-Acceleration-For-Storage-Network',
-  },
-  {
-    id: 'fifth-page',
-    layout: 'row-reverse',
-    theme: 'light',
-    cover: cover5Url,
-    title: 'Believe in the Power of Open Source',
-    description:
-      'Attract global talents from open source communities related to distributed system, Linux kernel, open source hardware and more',
-    bgcolor: 'hsl(0, 0%, 100%)',
-    url: '/resources/contribute',
-  },
-]
-
-interface ViewStyleProps {
-  myTheme: string
-  backgroundColor: string
-}
-
-interface ViewProps {
-  id: string
-  layout: 'row' | 'row-reverse' | 'col'
-  theme: string
-  cover: string
-  title: string
-  description: string
-  bgcolor: string
-  url?: string
-}
-
-interface LayoutProps {
-  layout: 'row' | 'row-reverse' | 'col'
-}
-
-const ScrollContainer = styled.main`
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  ::-webkit-scrollbar {
-    display: none; /* Chrome Safari */
-  }
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-`
-const ViewWrapper = styled.div<ViewStyleProps>`
-  height: 100vh;
-  padding-top: 84px;
-  color: ${({ myTheme }) => (myTheme === 'dark' ? 'white' : 'black')};
-  background: ${({ backgroundColor }) => backgroundColor};
-  scroll-snap-align: center;
-  @media screen and (max-width: 1024px) {
-    padding-top: 69px;
-  }
-  @media screen and (max-width: 768px) {
-    padding-top: 53px;
-  }
-`
-const ViewContainer = styled.div<LayoutProps>`
-  display: flex;
-  flex-direction: ${({ layout }) => {
-    switch (layout) {
-      case 'row':
-        return 'row'
-      case 'row-reverse':
-        return 'row-reverse'
-      case 'col':
-        return 'column'
-      default:
-        return 'row'
-    }
-  }};
-  justify-content: ${({ layout }) =>
-    layout === 'row' || layout === 'row-reverse' ? 'center' : 'center'};
-  align-items: center;
-  max-width: 1440px;
-  height: 100%;
-  margin-inline: auto;
-  padding-inline: 0.64rem;
-  padding-bottom: 0.64rem;
-  @media screen and (max-width: 425px) {
-    flex-direction: column;
-    padding-inline: 2.45rem;
-    padding-bottom: 20%;
-  }
-`
-const Cover = styled.img<LayoutProps>`
-  height: 5rem;
-  width: 5rem;
-  margin-left: ${({ layout }) => (layout === 'row-reverse' ? '0.64rem' : 0)};
-  margin-right: ${({ layout }) => (layout === 'row' ? '0.64rem' : 0)};
-  margin-bottom: ${({ layout }) => (layout === 'col' ? '0.32rem' : 0)};
-  @media screen and (max-width: 425px) {
-    margin-bottom: 0.48rem;
-  }
-`
-const Content = styled.div<LayoutProps>`
-  display: flex;
-  flex-direction: column;
-  text-align: ${({ layout }) => (layout === 'row' ? 'left' : 'right')};
-`
-const Title = styled.div<LayoutProps>`
-  margin-bottom: 0.32rem;
-  font-weight: 700;
+const Title = styled.div`
   font-size: 0.4rem;
-  line-height: 1.5;
-  text-align: ${({ layout }) => (layout === 'col' ? 'center' : 'inherit')};
+  line-height: 0.6rem;
+  font-weight: 700;
+  margin-inline: 1.64rem;
+  text-align: center;
 `
-const Description = styled.div<LayoutProps>`
-  min-width: 7.5rem;
-  margin-bottom: 0.24rem;
-  font-weight: 400;
-  font-size: 0.26rem;
-  line-height: 1.3;
-  text-align: ${({ layout }) => (layout === 'col' ? 'center' : 'inherit')};
-  max-width: ${({ layout }) => (layout === 'col' ? '896px' : '100%')};
+const SubTitle = styled.div`
+  font-size: 0.32rem;
+  line-height: 0.38rem;
+  font-weight: 600;
+  color: #101828;
 `
-const Button = styled.div<LayoutProps>`
-  width: fit-content;
-  margin-left: ${({ layout }) => (layout === 'row-reverse' ? 'auto' : '0')};
-  padding: 0.12rem 0.48rem;
-  background: linear-gradient(90deg, #767ee5, #9966cc);
-  color: white;
-  font-weight: 400;
+const Desc = styled.div`
   font-size: 0.26rem;
   line-height: 0.4rem;
-  border-radius: 0.32rem;
-  cursor: pointer;
+  font-weight: 400;
+`
+const Txt = styled.div`
+  font-size: 0.22rem;
+  line-height: 0.4rem;
+  font-weight: 400;
+`
+const LiTxt = styled(Txt)`
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0.14rem;
+    height: 0.14rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #767ee5, #9966cc);
+    transform: translateX(-0.16rem);
+  }
+  text-indent: -0.16rem;
+`
+const StyleLiTxt = styled(Txt)`
+  position: relative;
+  padding-left: 0.36rem;
+  &::before {
+    content: '√';
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 0.28rem;
+    height: 0.28rem;
+    border-radius: 50%;
+    color: #fff;
+    background: #7680dd;
+    text-align: center;
+    line-height: 0.28rem;
+  }
+`
+const Card = styled.div`
+  border: 0.02rem solid #00000014;
+  background: linear-gradient(90deg, rgb(243, 245, 255), rgb(225, 223, 244));
+  padding: 0.6rem 0.7rem 0.7rem;
+  border-radius: 0.2rem;
+`
+const Button = styled.div`
+  font-size: 0.16rem;
+  width: min-content;
+  white-space: nowrap;
+  padding: 0.12rem 0.34rem;
+  border-radius: 0.24rem;
+  background: linear-gradient(90deg, #767ee5, #9966cc);
+  color: #ffffff;
 `
 
-const View: React.FC<ViewProps> = ({
-  id,
-  layout,
-  theme,
-  bgcolor,
-  cover,
-  title,
-  description,
-  url,
-}) => {
-  const navigate = useNavigate()
-  return (
-    <ViewWrapper myTheme={theme} backgroundColor={bgcolor}>
-      {layout === 'row' || layout === 'row-reverse' ? (
-        <ViewContainer id={`${id}-${theme}`} className="view" layout={layout}>
-          <Cover src={cover} alt="cover" layout={layout} />
-          <Content layout={layout}>
-            <Title layout={layout}>{title}</Title>
-            <Description layout={layout}>{description}</Description>
-            {url && (
-              <Button
-                layout={layout}
-                onClick={() => {
-                  navigate(url)
-                }}
-              >
-                Learn more {'>'}
-              </Button>
-            )}
-          </Content>
-        </ViewContainer>
-      ) : (
-        <ViewContainer id={`${id}-${theme}`} className="view" layout={layout}>
-          <Title layout={layout}>{title}</Title>
-          <Description layout={layout}>{description}</Description>
-          <Cover src={cover} alt="cover" layout={layout} />
-          {url && (
-            <Button layout={layout} onClick={() => navigate(url)}>
-              Learn more {'>'}
-            </Button>
-          )}
-        </ViewContainer>
-      )}
-    </ViewWrapper>
-  )
-}
-
 const HomePage: React.FC = () => {
-  const [headerTheme, setHeaderTheme] = useState<'dark' | 'light'>('dark')
-  const viewElementsRef = useRef<{
-    [propName: string]: IntersectionObserverEntry
-  }>({})
-
-  useEffect(() => {
-    const callback = (views: IntersectionObserverEntry[]) => {
-      /**
-       *  使用 useRef hook 存储被观察对象
-       */
-      viewElementsRef.current = views.reduce((map, viewElement) => {
-        map[viewElement.target.id] = viewElement
-        return map
-      }, viewElementsRef.current)
-      /**
-       *  获得所有可见标题列表
-       */
-      const visibleHeadings: IntersectionObserverEntry[] = []
-      Object.keys(viewElementsRef.current).forEach(key => {
-        const headingElement = viewElementsRef.current[key]
-        if (headingElement.isIntersecting) visibleHeadings.push(headingElement)
-        getHeaderTheme(visibleHeadings[0]?.target.id)
-      })
-    }
-    const option = {
-      rootMargin: '-40% 0px -40% 0px',
-    }
-    const observer = new IntersectionObserver(callback, option)
-    const headingElements = Array.from(document.querySelectorAll('.view'))
-    headingElements.forEach(element => observer.observe(element))
-  }, [])
-
-  const getHeaderTheme = (viewId: string) => {
-    const viewIdArr = (viewId || '').split('-')
-    const _headerTheme = viewIdArr[viewIdArr.length - 1]
-    switch (_headerTheme) {
-      case 'dark':
-        setHeaderTheme('light')
-        break
-      case 'light':
-        setHeaderTheme('dark')
-        break
-      default:
-        setHeaderTheme('dark')
-        break
-    }
-  }
+  const [headerTheme, setHeaderTheme] = useState<'dark' | 'light'>('light')
 
   return (
-    <ScrollContainer>
-      <Header theme={headerTheme} bg="transparent" />
-      {view.map(props => (
-        <View key={props.id} {...props} />
-      ))}
-    </ScrollContainer>
+    <React.Fragment>
+      <Header activeId="" theme={headerTheme} bg="transparent" />
+      <Carousel setHeaderTheme={setHeaderTheme} />
+      <div style={{ color: '#42424A', padding: '1rem 1.48rem' }}>
+        <div style={{ marginBottom: '1.28rem' }}>
+          <Title
+            style={{
+              borderBottom: '0.01rem solid #D9DBEF',
+              paddingBottom: '0.24rem',
+              marginBottom: '0.2rem',
+            }}
+          >
+            DatenLord Integrates Storage and Network Solutions to Address the AI
+            Computational Resource Challenges
+          </Title>
+          <Desc style={{ marginInline: '0.96rem' }}>
+            The Development of AI Lead to a Tight, Dispersed, and Expensive
+            Situation Regarding Computational Resources.
+          </Desc>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.84rem',
+              marginTop: '0.96rem',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.48rem',
+              }}
+            >
+              <LiTxt>
+                The surge in demand for high-performance GPU computational
+                resources, driven by AI large models, has resulted in a severe
+                imbalance between supply and demand. This has further elevated
+                the already high prices of GPU computational power, attributed
+                to factors such as design and manufacturing costs and market
+                monopolies.
+              </LiTxt>
+              <LiTxt>
+                GPU computational resources are primarily allocated to satisfy
+                the demands of AI training scenarios, leading to a dispersed or
+                fragmented nature of GPU computational resources for AI
+                inference scenarios.
+              </LiTxt>
+            </div>
+            <img style={{ width: '6.52rem' }} src={img6Url} />
+          </div>
+        </div>
+        <div style={{ position: 'relative', marginBottom: '1.28rem' }}>
+          <Title style={{ marginBottom: '1rem' }}>
+            The Dispersion and High Cost of AI Computational Resources Pose New
+            Challenges for Cloud Computing
+          </Title>
+          <img style={{ width: '100%' }} src={img7Url} />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '0',
+              left: '0',
+              width: '2rem',
+              height: '0.64rem',
+              background: '#ffffff',
+            }}
+          ></div>
+        </div>
+        <div style={{ marginBottom: '1.28rem' }}>
+          <Title>
+            DatenLord Integrates Storage and Network Solutions to Address the AI
+            Computational Resource Challenges
+          </Title>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.84rem',
+              marginTop: '0.96rem',
+            }}
+          >
+            <img style={{ width: '4.46rem' }} src={img8Url} />
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.48rem',
+              }}
+            >
+              <LiTxt>
+                By optimizing caching technology, it achieves data preloading
+                and asynchronous persistence, thereby enhancing data access
+                performance.
+              </LiTxt>
+              <LiTxt>
+                The high-performance RDMA (Remote Direct Memory Access)
+                facilitates multi-node memory sharing, accelerating the
+                distribution of large models.
+              </LiTxt>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{ background: '#F8FAFF', padding: '1rem 1.48rem' }}>
+        <Title style={{ marginBottom: '1.5rem' }}>Open Source Product</Title>
+        <Card
+          style={{
+            display: 'flex',
+            gap: '0.48rem',
+            alignItems: 'center',
+            marginBottom: '0.5rem',
+          }}
+        >
+          <div
+            style={{ display: 'flex', flexDirection: 'column', gap: '0.32rem' }}
+          >
+            <SubTitle>DatenLord</SubTitle>
+            <StyleLiTxt>
+              DatenLord is a cross-cloud, cross-data center storage solution
+              designed to facilitate efficient storage access across clouds and
+              data centers for enterprises.
+            </StyleLiTxt>
+            <StyleLiTxt>
+              This solution offers users a versatile system architecture,
+              including Posix file interface, KV interface, and object storage
+              interface, allowing users to choose the most suitable method based
+              on their specific needs.
+            </StyleLiTxt>
+            <StyleLiTxt>
+              DatenLord utilizes a combination of software and hardware
+              integration, harnessing the full potential of both to achieve
+              unparalleled data transfer and read/write performance.
+            </StyleLiTxt>
+            <Button style={{ marginLeft: '0.36rem' }}>Learn more</Button>
+          </div>
+          <img style={{ height: '0.9rem' }} src={img9Url} />
+        </Card>
+        <div
+          style={{
+            padding: '0.6rem 0.7rem 0.7rem',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.96rem',
+            marginBottom: '0.5rem',
+          }}
+        >
+          <img style={{ height: '0.66rem' }} src={xlineUrl} />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.32rem',
+            }}
+          >
+            <SubTitle>Xline Open Source Distributed KV Storage System</SubTitle>
+            <Txt>
+              Ensures data consistency when accessed across data centers and
+              clouds, facilitating multi-site, multi-center, active-active
+              deployment for business systems..
+            </Txt>
+            <Button>Learn more</Button>
+          </div>
+        </div>
+        <Card
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.48rem',
+            marginBottom: '0.5rem',
+          }}
+        >
+          <SubTitle>RDMA</SubTitle>
+          <Txt>
+            In cross-cloud scenarios, network performance has a significant
+            impact on data access, and DatenLord leverages high-performance RDMA
+            (Remote Direct Memory Access) to reduce latency and enhance
+            bandwidth. We have several related open-source projects in the RDMA
+            domain:
+          </Txt>
+          <div
+            style={{ display: 'flex', alignItems: 'center', gap: '0.32rem' }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.24rem',
+              }}
+            >
+              <StyleLiTxt>async-rdma</StyleLiTxt>
+              <Txt style={{ paddingLeft: '0.36rem' }}>
+                An RDMA asynchronous API library encapsulated in Rust, providing
+                advanced abstractions and asynchronous API interfaces for
+                developing RDMA applications.
+              </Txt>
+              <StyleLiTxt>open-rdma</StyleLiTxt>
+              <Txt style={{ paddingLeft: '0.36rem' }}>
+                An open-source hardware implementation of the RDMA protocol,
+                implemented using Bluespec and SpinalHDL. Currently, it
+                primarily supports the RoCEv2 protocol. Additionally, specific
+                extensions have been incorporated to enhance the efficiency of
+                RDMA transfers.
+              </Txt>
+              <Button style={{ marginLeft: '0.36rem' }}>Learn more</Button>
+            </div>
+            <img style={{ height: '0.9rem' }} src={img9Url} />
+          </div>
+        </Card>
+      </div>
+    </React.Fragment>
   )
 }
 
