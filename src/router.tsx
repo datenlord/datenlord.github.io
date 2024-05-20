@@ -15,6 +15,7 @@ import TechTalkPage from './pages/Resources/TechTalkPage'
 import TOC from './demo/TOC/TOC'
 import CloudService from './pages/Products/CloudService'
 import Appliance from './pages/Products/Appliance'
+import Solutions from './pages/Solutions'
 
 export const router = createHashRouter([
   {
@@ -33,6 +34,10 @@ export const router = createHashRouter([
         element: <Appliance />,
       },
     ],
+  },
+  {
+    path: 'solutions',
+    element: <Solutions />,
   },
   {
     path: 'products/RDMA',
