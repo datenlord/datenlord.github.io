@@ -17,6 +17,7 @@ import CloudService from './pages/Products/CloudService'
 import Appliance from './pages/Products/Appliance'
 import Solutions from './pages/Solutions'
 import ContactUs from './pages/Company/ContactUs'
+import Project from './pages/Community/Project'
 
 export const router = createHashRouter([
   {
@@ -39,6 +40,15 @@ export const router = createHashRouter([
   {
     path: 'solutions',
     element: <Solutions />,
+  },
+  {
+    path: 'community',
+    children: [
+      {
+        path: 'project',
+        element: <Project />,
+      },
+    ],
   },
   {
     path: 'company',
