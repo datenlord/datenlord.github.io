@@ -16,6 +16,7 @@ import TOC from './demo/TOC/TOC'
 import CloudService from './pages/Products/CloudService'
 import Appliance from './pages/Products/Appliance'
 import Solutions from './pages/Solutions'
+import ContactUs from './pages/Company/ContactUs'
 
 export const router = createHashRouter([
   {
@@ -38,6 +39,15 @@ export const router = createHashRouter([
   {
     path: 'solutions',
     element: <Solutions />,
+  },
+  {
+    path: 'company',
+    children: [
+      {
+        path: 'contact-us',
+        element: <ContactUs />,
+      },
+    ],
   },
   {
     path: 'products/RDMA',
