@@ -18,6 +18,7 @@ import Appliance from './pages/Products/Appliance'
 import Solutions from './pages/Solutions'
 import ContactUs from './pages/Company/ContactUs'
 import Project from './pages/Community/Project'
+import Company from './pages/Company'
 
 export const router = createHashRouter([
   {
@@ -52,12 +53,7 @@ export const router = createHashRouter([
   },
   {
     path: 'company',
-    children: [
-      {
-        path: 'contact-us',
-        element: <ContactUs />,
-      },
-    ],
+    element: <Company />,
   },
   {
     path: 'products/RDMA',
