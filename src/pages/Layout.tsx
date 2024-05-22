@@ -1,0 +1,22 @@
+import React, { createContext, useState } from 'react'
+import { Header } from '@/components/Header1'
+import { Outlet } from 'react-router-dom'
+
+interface ThemeContextValue {
+  setTheme: React.Dispatch<React.SetStateAction<'light' | 'dark'>>
+}
+
+export const ThemeCtx = createContext<ThemeContextValue | null>(null)
+
+const Layout = () => {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+
+  return (
+    <ThemeCtx.Provider value={{ setTheme }}>
+      <Header activeId="" theme={theme} bg="transparent" />
+      <Outlet />
+    </ThemeCtx.Provider>
+  )
+}
+
+export default Layout

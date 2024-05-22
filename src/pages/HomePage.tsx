@@ -82,7 +82,7 @@ const HomePage: React.FC = () => {
 
   return (
     <React.Fragment>
-      <Header activeId="" theme={headerTheme} bg="transparent" />
+      {/* <Header activeId="" theme={headerTheme} bg="transparent" /> */}
       <Carousel setHeaderTheme={setHeaderTheme} />
       <div style={{ color: '#42424A', padding: '1rem 1.48rem' }}>
         <div style={{ marginBottom: '1.28rem' }}>

@@ -19,72 +19,46 @@ import Solutions from './pages/Solutions'
 import ContactUs from './pages/Company/ContactUs'
 import Project from './pages/Community/Project'
 import Company from './pages/Company'
+import Layout from './pages/Layout'
 
 export const router = createHashRouter([
   {
     path: '',
-    element: <HomePage />,
-  },
-  {
-    path: 'products',
+    element: <Layout />,
     children: [
       {
-        path: 'cloud-service',
-        element: <CloudService />,
+        path: '',
+        element: <HomePage />,
       },
       {
-        path: 'appliance',
-        element: <Appliance />,
-      },
-    ],
-  },
-  {
-    path: 'solutions',
-    element: <Solutions />,
-  },
-  {
-    path: 'community',
-    children: [
-      {
-        path: 'project',
-        element: <Project />,
-      },
-    ],
-  },
-  {
-    path: 'company',
-    element: <Company />,
-  },
-  {
-    path: 'products/RDMA',
-    element: <ProductsPage />,
-  },
-  {
-    path: 'customers',
-    element: <CustomersPage />,
-  },
-  {
-    path: 'solution/:id',
-    element: <SolutionPage />,
-  },
-  {
-    path: 'company',
-    children: [
-      {
-        path: 'why-join',
-        element: <WhyJoinPage />,
+        path: 'products',
+        children: [
+          {
+            path: 'cloud-service',
+            element: <CloudService />,
+          },
+          {
+            path: 'appliance',
+            element: <Appliance />,
+          },
+        ],
       },
       {
-        path: 'contact-us',
-        element: <ContactUsPage />,
+        path: 'solution',
+        element: <Solutions />,
       },
       {
-        path: 'why-build',
-        element: <WhyBuildPage />,
+        path: 'community',
+        children: [
+          {
+            path: 'project',
+            element: <Project />,
+          },
+        ],
       },
       {
-        path: 'join-us',
-        element: <JoinUsPage />,
+        path: 'company',
+        element: <Company />,
       },
     ],
   },
@@ -106,19 +80,6 @@ export const router = createHashRouter([
       {
         path: 'blog/:params',
         element: <BlogDetailPage />,
-      },
-    ],
-  },
-  {
-    path: 'test',
-    children: [
-      {
-        path: 'full-page-scroll',
-        element: <FullPageScroll />,
-      },
-      {
-        path: 'toc',
-        element: <TOC />,
       },
     ],
   },

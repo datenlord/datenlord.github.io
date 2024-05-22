@@ -15,19 +15,14 @@ const items: NavItem[] = [
     label: 'products',
     children: [
       {
-        key: 'DatenLord',
-        label: 'DatenLord',
-        url: 'https://github.com/datenlord/datenlord',
+        key: 'cloud-service',
+        label: 'DatenLord cloud Service',
+        url: '/products/cloud-service',
       },
       {
-        key: 'Xline',
-        label: 'Xline',
-        url: 'https://github.com/datenlord/Xline',
-      },
-      {
-        key: 'RDMA',
-        label: 'RDMA',
-        url: '/products/RDMA',
+        key: 'appliance',
+        label: 'DatenLord Appliance',
+        url: '/products/appliance',
       },
     ],
   },
@@ -36,19 +31,19 @@ const items: NavItem[] = [
     label: 'solution',
     children: [
       {
-        key: 'Unified and High Performance Data Access Across Clouds',
-        label: 'Unified and High Performance Data Access Across Clouds',
-        url: '/solution/Unified-and-High-Performance-Data-Access-Across-Clouds',
+        key: 'inference',
+        label: 'AI Inference',
+        url: '/solution',
       },
       {
-        key: 'Geo-Distributed Metadata management',
-        label: 'Geo-Distributed Metadata management',
-        url: '/solution/Geo-Distributed-Metadata-management',
+        key: 'storage',
+        label: 'High Performance Storage',
+        url: '/solution',
       },
       {
-        key: 'Hardware Acceleration For Storage Network',
-        label: 'Hardware Acceleration For Storage Network',
-        url: '/solution/Hardware-Acceleration-For-Storage-Network',
+        key: 'network',
+        label: 'High Performance Network',
+        url: '/solution',
       },
     ],
   },
@@ -57,55 +52,56 @@ const items: NavItem[] = [
     label: 'resources',
     children: [
       {
-        key: 'Contributing is Thinking and Learning',
-        label: 'Community',
-        url: '/resources/contribute',
-      },
-      {
-        key: 'Tech Talk',
+        key: 'tech-talk',
         label: 'Tech Talk',
         url: '/resources/tech-talk',
       },
       {
-        key: 'Blog',
+        key: 'blog',
         label: 'Blog',
         url: '/resources/blog',
       },
       {
-        key: 'Events',
+        key: 'events',
         label: 'Events',
         url: 'https://www.youtube.com/@datenlord',
       },
     ],
   },
   {
-    key: 'customers',
-    label: 'customers',
-    url: '/customers',
+    key: 'community',
+    label: 'Community',
+    children: [
+      {
+        key: 'community',
+        label: 'Open Source community',
+        url: '',
+      },
+      {
+        key: 'project',
+        label: 'Open Source Project',
+        url: '/community/project',
+      },
+    ],
   },
   {
     key: 'company',
-    label: 'company',
+    label: 'Company',
     children: [
       {
-        key: 'Why build DatenLord',
-        label: 'Why build DatenLord ?',
-        url: '/company/why-build',
+        key: 'intro',
+        label: 'Company intro',
+        url: '/company',
       },
       {
-        key: 'Why Join DatenLord',
-        label: 'Why Join DatenLord ?',
-        url: '/company/why-join',
-      },
-      {
-        key: 'Contact Us',
-        label: 'Contact Us',
-        url: '/company/contact-us',
-      },
-      {
-        key: 'Join Us',
+        key: 'join-us',
         label: 'Join Us',
-        url: '/company/join-us',
+        url: '/company',
+      },
+      {
+        key: 'follow-us',
+        label: 'follow-us',
+        url: '/company',
       },
     ],
   },

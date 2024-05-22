@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Scrollbar } from 'swiper/modules'
 import cover1Url from '@/assets/Home/cover1.svg'
@@ -10,6 +10,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import './index.css'
+import { ThemeCtx } from '@/pages/Layout'
 
 const carouselData = [
   {
@@ -53,6 +54,8 @@ const carouselData = [
 export const Carousel: React.FC<{
   setHeaderTheme: React.Dispatch<React.SetStateAction<'dark' | 'light'>>
 }> = ({ setHeaderTheme }) => {
+  const ctx = useContext(ThemeCtx)
+
   return (
     <Swiper
       modules={[Pagination, Scrollbar]}
@@ -62,9 +65,7 @@ export const Carousel: React.FC<{
           '--swiper-pagination-bullet-inactive-color',
           activeIndex === 1 ? '#FFFFFF' : '#d9dbef',
         )
-        setHeaderTheme(
-          activeIndex === 0 || activeIndex === 3 ? 'light' : 'dark',
-        )
+        ctx?.setTheme(activeIndex === 0 || activeIndex === 3 ? 'light' : 'dark')
       }}
       style={{
         height: '100vh',
