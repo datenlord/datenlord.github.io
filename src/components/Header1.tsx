@@ -9,7 +9,7 @@ import logoUrl from '@/assets/logo.svg'
 import logoTextDarkUrl from '@/assets/logo-text-dark.svg'
 import logoTextLightUrl from '@/assets/logo-text-light.svg'
 
-const items: NavItem[] = [
+export const items: NavItem[] = [
   {
     key: 'products',
     label: 'products',
