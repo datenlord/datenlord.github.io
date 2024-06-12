@@ -67,6 +67,20 @@ const StyledSubNavItem = styled.li`
     color: hsl(234, 60%, 66%);
   }
 `
+const Button = styled.div`
+  height: min-content;
+  font-size: 0.18rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  align-items: center;
+  padding: 0.05rem 0.195rem;
+  color: #7680dd;
+  border: 0.01rem solid #7680dd;
+  transform: translateY(60%);
+  border-radius: 0.4rem;
+  margin-left: 0.58rem;
+`
 
 const jumpPage = (navigate: NavigateFunction, url?: string) => {
   if (!url) {
@@ -149,6 +163,11 @@ const Nav: React.FC<{
           activeId={activeId}
         />
       ))}
+      <Button
+        onClick={() => (location.href = 'https://datenlord.github.io/zh-cn/')}
+      >
+        CN/EN
+      </Button>
     </StyledNav>
   )
 }

@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 import React, { useState } from 'react'
 import { Carousel } from '@/components/Carousel'
-import { Header } from '@/components/Header1'
 import img6Url from '@/assets/Home/image6.png'
 import img7Url from '@/assets/Home/image7.png'
 import img8Url from '@/assets/Home/image8.png'
-import img9Url from '@/assets/Home/image9.png'
 import xlineUrl from '@/assets/Home/xline.png'
 
 const Title = styled.div`
@@ -184,112 +182,6 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div style={{ background: '#F8FAFF', padding: '1rem 1.48rem' }}>
-        <Title style={{ marginBottom: '1.5rem' }}>Open Source Product</Title>
-        <Card
-          style={{
-            display: 'flex',
-            gap: '0.48rem',
-            alignItems: 'center',
-            marginBottom: '0.5rem',
-          }}
-        >
-          <div
-            style={{ display: 'flex', flexDirection: 'column', gap: '0.32rem' }}
-          >
-            <SubTitle>DatenLord</SubTitle>
-            <StyleLiTxt>
-              DatenLord is a cross-cloud, cross-data center storage solution
-              designed to facilitate efficient storage access across clouds and
-              data centers for enterprises.
-            </StyleLiTxt>
-            <StyleLiTxt>
-              This solution offers users a versatile system architecture,
-              including Posix file interface, KV interface, and object storage
-              interface, allowing users to choose the most suitable method based
-              on their specific needs.
-            </StyleLiTxt>
-            <StyleLiTxt>
-              DatenLord utilizes a combination of software and hardware
-              integration, harnessing the full potential of both to achieve
-              unparalleled data transfer and read/write performance.
-            </StyleLiTxt>
-            <Button style={{ marginLeft: '0.36rem' }}>Learn more</Button>
-          </div>
-          <img style={{ height: '0.9rem' }} src={img9Url} />
-        </Card>
-        <div
-          style={{
-            padding: '0.6rem 0.7rem 0.7rem',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.96rem',
-            marginBottom: '0.5rem',
-          }}
-        >
-          <img style={{ height: '0.66rem' }} src={xlineUrl} />
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '0.32rem',
-            }}
-          >
-            <SubTitle>Xline Open Source Distributed KV Storage System</SubTitle>
-            <Txt>
-              Ensures data consistency when accessed across data centers and
-              clouds, facilitating multi-site, multi-center, active-active
-              deployment for business systems..
-            </Txt>
-            <Button>Learn more</Button>
-          </div>
-        </div>
-        <Card
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '0.48rem',
-            marginBottom: '0.5rem',
-          }}
-        >
-          <SubTitle>RDMA</SubTitle>
-          <Txt>
-            In cross-cloud scenarios, network performance has a significant
-            impact on data access, and DatenLord leverages high-performance RDMA
-            (Remote Direct Memory Access) to reduce latency and enhance
-            bandwidth. We have several related open-source projects in the RDMA
-            domain:
-          </Txt>
-          <div
-            style={{ display: 'flex', alignItems: 'center', gap: '0.32rem' }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.24rem',
-              }}
-            >
-              <StyleLiTxt>async-rdma</StyleLiTxt>
-              <Txt style={{ paddingLeft: '0.36rem' }}>
-                An RDMA asynchronous API library encapsulated in Rust, providing
-                advanced abstractions and asynchronous API interfaces for
-                developing RDMA applications.
-              </Txt>
-              <StyleLiTxt>open-rdma</StyleLiTxt>
-              <Txt style={{ paddingLeft: '0.36rem' }}>
-                An open-source hardware implementation of the RDMA protocol,
-                implemented using Bluespec and SpinalHDL. Currently, it
-                primarily supports the RoCEv2 protocol. Additionally, specific
-                extensions have been incorporated to enhance the efficiency of
-                RDMA transfers.
-              </Txt>
-              <Button style={{ marginLeft: '0.36rem' }}>Learn more</Button>
-            </div>
-            <img style={{ height: '0.9rem' }} src={img9Url} />
-          </div>
-        </Card>
       </div>
     </React.Fragment>
   )

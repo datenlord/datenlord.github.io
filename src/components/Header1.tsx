@@ -75,7 +75,7 @@ export const items: NavItem[] = [
       {
         key: 'community',
         label: 'Open Source community',
-        url: '',
+        url: 'community',
       },
       {
         key: 'project',
@@ -89,8 +89,8 @@ export const items: NavItem[] = [
     label: 'Company',
     children: [
       {
-        key: 'intro',
-        label: 'Company intro',
+        key: 'about-us',
+        label: 'About Us',
         url: '/company',
       },
       {
@@ -99,8 +99,8 @@ export const items: NavItem[] = [
         url: '/company',
       },
       {
-        key: 'follow-us',
-        label: 'follow-us',
+        key: 'contact-us',
+        label: 'Contact Us',
         url: '/company',
       },
     ],

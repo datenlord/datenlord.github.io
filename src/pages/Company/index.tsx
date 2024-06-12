@@ -130,6 +130,7 @@ const List = styled(Txt)`
 `
 const Bold = styled.span`
   font-weight: 600;
+  color: #7680dd;
 `
 const CardTitle = styled.div`
   font-weight: 600;
@@ -233,7 +234,7 @@ const Company = () => {
     <React.Fragment>
       <Cover>Company</Cover>
       <Section>
-        <Title>Company Intro</Title>
+        <Title>Company Introduction</Title>
         <div
           style={{
             display: 'flex',
@@ -268,17 +269,20 @@ const Company = () => {
         >
           <div>
             <List style={{ marginBottom: '0.64rem' }}>
-              DatenLord focuses on core foundational technologies, engaging in
-              various cutting-edge technical domains such as distributed
-              systems, Linux kernel, InfiniBand/RDMA, SoC (System on Chip),
-              hardware acceleration, and more, through deep integration of
-              software and hardware.
+              DatenLord focuses on <Bold>core foundational technologies</Bold>,
+              engaging in various cutting-edge technical domains such as
+              distributed systems, Linux kernel, InfiniBand/RDMA, SoC (System on
+              Chip), hardware acceleration, and more, through deep integration
+              of software and hardware.
             </List>
             <List>
               The core members of the company mostly hail from top international
-              technology companies like Google, Microsoft, Alibaba, bringing
-              profound expertise in both software and hardware technologies
-              along with rich industry experience.
+              technology companies like Google, Microsoft, Alibaba, bringing{' '}
+              <Bold>
+                profound expertise in both software and hardware technologies
+                along with rich industry experience
+              </Bold>
+              .
             </List>
           </div>
           <img src={img2Url} style={{ width: '5.11rem' }} />

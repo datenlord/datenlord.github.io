@@ -11,6 +11,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import './index.css'
 import { ThemeCtx } from '@/pages/Layout'
+import { useNavigate } from 'react-router-dom'
 
 const carouselData = [
   {
@@ -20,7 +21,7 @@ const carouselData = [
     img: cover1Url,
     title: 'High-Performance AI+ Cloud Infrastructure Provider',
     desc: 'By deeply integrating software and hardware, we offer high-performance storage and networking, delivering elastic, convenient, and cost-effective infrastructure services for AI+Cloud applications.',
-    btn: '',
+    btn: '/solution',
   },
   {
     id: 2,
@@ -28,8 +29,8 @@ const carouselData = [
     txtColor: '#42424A',
     img: cover2Url,
     title: 'High-Performance Cross-Cloud Distributed Storage',
-    desc: 'By deeply integrating software and hardware, we offer high-performance storage and networking, delivering elastic, convenient, and cost-effective infrastructure services for AI+Cloud applications.',
-    btn: '',
+    desc: 'Establishing a unified storage access layer, we provide high-performance and highly secure storage support for cross-cloud applications, breaking down barriers between different cloud environments.',
+    btn: '/solution',
   },
   {
     id: 3,
@@ -37,8 +38,8 @@ const carouselData = [
     txtColor: '#42424A',
     img: cover3Url,
     title: 'High-Performance RDMA Network',
-    desc: 'By deeply integrating software and hardware, we offer high-performance storage and networking, delivering elastic, convenient, and cost-effective infrastructure services for AI+Cloud applications.',
-    btn: '',
+    desc: 'Adopting a deep integration of software and hardware, we achieve a high-performance RDMA network.',
+    btn: '/solution',
   },
   {
     id: 4,
@@ -46,14 +47,15 @@ const carouselData = [
     txtColor: '#FFFFFF',
     img: cover4Url,
     title: 'Believe in the Power of Open Source',
-    desc: 'By deeply integrating software and hardware, we offer high-performance storage and networking, delivering elastic, convenient, and cost-effective infrastructure services for AI+Cloud applications.',
-    btn: '',
+    desc: 'We attract global talents from the open-source community, including those experienced in distributed systems, Linux kernel, open-source hardware, and related fields.',
+    btn: '/community',
   },
 ]
 
 export const Carousel: React.FC<{
   setHeaderTheme: React.Dispatch<React.SetStateAction<'dark' | 'light'>>
 }> = ({ setHeaderTheme }) => {
+  const navigate = useNavigate()
   const ctx = useContext(ThemeCtx)
 
   return (
@@ -71,7 +73,7 @@ export const Carousel: React.FC<{
         height: '100vh',
       }}
     >
-      {carouselData.map(({ id, title, desc, img, bgColor, txtColor }) => {
+      {carouselData.map(({ id, title, desc, img, bgColor, txtColor, btn }) => {
         return (
           <SwiperSlide
             key={id}
@@ -115,6 +117,7 @@ export const Carousel: React.FC<{
                   background: 'linear-gradient(90deg, #767EE5, #9966CC)',
                   color: '#FFFFFF',
                 }}
+                onClick={() => navigate(btn)}
               >
                 Learn more
               </div>

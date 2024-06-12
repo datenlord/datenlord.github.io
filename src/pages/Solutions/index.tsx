@@ -160,9 +160,9 @@ const cardData = [
         ],
       },
       {
-        title:
-          'DatenLord Cloud Service offers an integrated solution to help the customer effectively manage the complexity of multiple-country, multiple-data-center operations, thereby enhancing business availability and stability.',
+        title: 'DatenLord Cloud Service offers:',
         txt: [
+          'An integrated solution to help the customer effectively manage the complexity of multiple-country, multiple-data-center operations, thereby enhancing business availability and stability.',
           'Real-time data synchronization across multiple countries and data centers, ensuring consistency of content globally.',
           'Efficient tools for data migration and backup, addressing the needs of business expansion and disaster recovery.',
           'Automated management tools, including automated deployment, resource allocation, and monitoring.',

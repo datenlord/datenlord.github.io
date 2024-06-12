@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div<{ bgColor: string }>`
-  padding: 0.96rem 1.24rem 1.24rem;
+  padding: 0.96rem 2rem 1.24rem;
   background: ${props => props.bgColor};
 `
 

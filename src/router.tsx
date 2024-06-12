@@ -51,6 +51,10 @@ export const router = createHashRouter([
         path: 'community',
         children: [
           {
+            path: '',
+            element: <ContributingPage />,
+          },
+          {
             path: 'project',
             element: <Project />,
           },
@@ -65,10 +69,6 @@ export const router = createHashRouter([
   {
     path: 'resources',
     children: [
-      {
-        path: 'contribute',
-        element: <ContributingPage />,
-      },
       {
         path: 'tech-talk',
         element: <TechTalkPage />,

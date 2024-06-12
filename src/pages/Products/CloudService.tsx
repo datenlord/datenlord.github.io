@@ -18,7 +18,7 @@ const CloudService = () => {
         <Image style={{ width: '100%' }} src={img1Url} />
       </Section>
       <Section backgroundColor="#F8FAFF">
-        <Title style={{ marginBottom: '1rem' }}>Open Source Product</Title>
+        <Title style={{ marginBottom: '1rem' }}>DatenLord Innovations</Title>
         <Image style={{ width: '100%' }} src={img2Url} />
       </Section>
     </React.Fragment>

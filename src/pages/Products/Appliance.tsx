@@ -5,6 +5,7 @@ import img1Url from '@/assets/products/appliance/image1.png'
 import img2Url from '@/assets/products/appliance/image2.png'
 import img3Url from '@/assets/products/appliance/image3.png'
 import img4Url from '@/assets/products/appliance/image4.png'
+import allUrl from '@/assets/products/appliance/all.png'
 import styled from 'styled-components'
 
 const Image = styled.img`
@@ -20,10 +21,7 @@ const Appliance: React.FC = () => {
     <React.Fragment>
       <Cover>DatenLord Appliance</Cover>
       <Section>
-        <Image src={img1Url} />
-        <Image src={img2Url} />
-        <Image src={img3Url} />
-        <Image src={img4Url} />
+        <Image src={allUrl} />
       </Section>
     </React.Fragment>
   )
