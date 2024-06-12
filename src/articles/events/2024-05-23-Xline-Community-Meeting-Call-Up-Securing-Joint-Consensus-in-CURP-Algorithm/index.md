@@ -1,8 +1,11 @@
 ---
 label: Xline社区会议Call Up｜在 CURP 算法中实现联合共识的安全性
 description: 为了更全面地向大家介绍Xline的进展，同时促进Xline社区的发展，我们将于2024年5月31日北京时间11:00 p.m.召开Xline社区会议。
+cover: ./cover.png
 location: 中国香港
 ---
+
+![图片](./cover.png)
 
 为了更全面地向大家介绍 Xline 的进展，同时促进 Xline 社区的发展，我们将于 **2024 年 5 月 31 日北京时间 11:00 p.m.** 召开 **Xline 社区会议**。
 
