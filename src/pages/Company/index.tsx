@@ -250,7 +250,7 @@ const Company = () => {
           <Txt>
             DatenLord has consistently dedicated itself to building{' '}
             <Bold>
-              the high-performance AI+ Cloud infrastructure platform, actively
+              the high-performance AI+Cloud infrastructure platform, actively
               driving the implementation of AI applications.
             </Bold>{' '}
             Through deep integration of software and hardware, DatenLord
