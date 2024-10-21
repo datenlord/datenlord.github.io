@@ -1,8 +1,6 @@
 ---
 label: Xline社区会议Call Up：揭秘Xline 0.7版本更新
-description: 为了更全面地向大家介绍Xline的进展，同时促进Xline社区的发展，我们将于2024年7月31日北京时间11:00 p.m.召开Xline社区会议。欢迎您届时登陆zoom观看直播，或点击“阅读原文”链接加入会议：会议号： 975-8012-1637会议链接：https://zoom-lfx.platform.linuxfoundation.org/meeting/97580121637?password=8f9543a5-54bb-48dc-ab90-99d8b75938e4
-
-
+description: 为了更全面地向大家介绍Xline的进展，同时促进Xline社区的发展，我们将于2024年7月31日北京时间11:00 p.m.召开Xline社区会议。
 cover: ./cover.png
 location: 中国香港
 ---

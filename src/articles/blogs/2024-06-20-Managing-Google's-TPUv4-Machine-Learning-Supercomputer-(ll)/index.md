@@ -4,7 +4,7 @@ description: 我由于字数过长，文章分为两期发布，本片涵盖原�
 location: 中国香港
 cover: ./image.png
 author: [达坦科技]
-tags: [TPUv4]
+
 ---
 ![图片](./image.png)
 由于字数过长，文章分为两期发布，本片涵盖原文后半部分4～9节，前三章节请参考文章：规模弹性：管理谷歌的TPUv4机器学习超级计算机

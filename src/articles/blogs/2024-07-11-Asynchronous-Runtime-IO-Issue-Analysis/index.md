@@ -4,7 +4,6 @@ description: 在异步运行时上进行编程经常是很困难的，在本篇�
 cover: ./image1.png
 location: 中国香港
 author: [达坦科技]
-tags: [Xline]
 ---
 ![图片](./image1.png)
 在异步运行时上进行编程经常是很困难的，在本篇文章中，我们主要会通过Xline开发中的几个例子，讨论Rust的异步运行时中有关于IO的问题，以及在代码实现中如何正确使用Tokio runtime以实现最佳性能。我会使用Tokio runtime作为本文的示例。本文所有示例都运行在:

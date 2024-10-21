@@ -4,7 +4,6 @@ description: 本系列文章将带领读者逐步了解Linux操作系统下的RD
 location: 中国香港
 cover: ./image.png
 author: [达坦科技]
-tags: [RDMA]
 ---
 ![图片](./image.png)
 本系列文章将带领读者逐步了解Linux操作系统下的RDMA子系统。本篇文章作为系列的第二篇，将深入内核态驱动程序的代码，主要介绍如下内容：
