@@ -128,4 +128,13 @@ export const rustShowcaseItems = [
     date: '2024.01.07',
     url: 'https://www.bilibili.com/video/BV1ic411t7Nf/',
   },
+  {
+    key: 15,
+    image: cover6,
+    title:
+      'Rust For IC design & Verification: vfw, vhost, terminus',
+    text: '达坦科技始终致力于打造高性能 Al+ Cloud 基础设施平台，积极推动AI应用的落地。达坦科技通过软硬件深度融合的方式，提供高性能存储和高性能网络。为 AI 应用提供弹性、便利、经济的基础设施服务，以此满足不同行业客户对 AI+Cloud 的需求。',
+    date: '2024.08.16',
+    url: 'https://www.bilibili.com/video/BV1qPe3ezE94/',
+  },
 ]
