@@ -1,6 +1,6 @@
 ---
 label: 【转发】GLCC学生报名延期！速来抢位！
-description: 达坦科技此次参与GitLink“确实开源”编程夏令营(GLCC)，我们的开源项目题目为：为开源RDMA网卡编写测试工具。课题简介：为了对RDMA网卡进行功能测试，需要在line-rate的条件下创建出数据包乱序、丢包、重复等情况。目前已有的解决方案大多需要昂贵的P4交换机来实现。本项目要求使用HDL语言在FPGA上实现指定模式的数据包收发功能。课题链接：https://www.gitlink.org.cn/datenlord/open-rdma/issues/1导师信息：米明恒联络方式：mingheng.mi@datenlord.com
+description: 达坦科技此次参与GitLink“确实开源”编程夏令营(GLCC)，我们的开源项目题目为：为开源RDMA网卡编写测试工具。课题简介：为了对RDMA网卡进行功能测试，需要在line-rate的条件下创建出数据包乱序、丢包、重复等情况。目前已有的解决方案大多需要昂贵的P4交换机来实现。本项目要求使用HDL语言在FPGA上实现指定模式的数据包收发功能。
 cover: ./image3.png
 location: 中国香港
 ---
