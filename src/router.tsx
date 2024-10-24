@@ -20,7 +20,7 @@ import ContactUs from './pages/Company/ContactUs'
 import Project from './pages/Community/Project'
 import Company from './pages/Company'
 import Layout from './pages/Layout'
-
+import OpenSourceProduct from './pages/Resources/sections/OpenSourceProduct'
 export const router = createHashRouter([
   {
     path: '',
@@ -51,12 +51,12 @@ export const router = createHashRouter([
         path: 'community',
         children: [
           {
-            path: '',
+            path: 'communitys',
             element: <ContributingPage />,
           },
           {
-            path: 'project',
-            element: <Project />,
+            path: 'Product',
+            element: <OpenSourceProduct />,  
           },
         ],
       },
@@ -82,5 +82,9 @@ export const router = createHashRouter([
         element: <BlogDetailPage />,
       },
     ],
+  },
+  {
+    path: 'Project',
+    element: <Project />,
   },
 ])

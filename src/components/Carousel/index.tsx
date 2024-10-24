@@ -19,7 +19,7 @@ const carouselData = [
     bgColor: '#0A061F',
     txtColor: '#FFFFFF',
     img: cover1Url,
-    title: 'High-Performance AI+Cloud Infrastructure Provider',
+    title: 'High-Performance AI + Cloud Infrastructure Provider',
     desc: 'By deeply integrating software and hardware, we offer high-performance storage and networking, delivering elastic, convenient, and cost-effective infrastructure services for AI+Cloud applications.',
     btn: '/solution',
   },

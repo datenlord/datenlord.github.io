@@ -73,14 +73,14 @@ export const items: NavItem[] = [
     label: 'Community',
     children: [
       {
-        key: 'community',
+        key: 'communitys',
         label: 'Open Source community',
-        url: 'community',
+        url: '/community/communitys',
       },
       {
-        key: 'project',
-        label: 'Open Source Project',
-        url: '/community/project',
+        key: 'Product',
+        label: 'Open Source Product',
+        url: '/community/Product',
       },
     ],
   },

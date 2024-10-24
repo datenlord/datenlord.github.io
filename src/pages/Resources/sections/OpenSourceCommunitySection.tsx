@@ -90,7 +90,7 @@ const data1 = [
 const cardData = [
   {
     key: 1,
-    text: 'Hengyu Wang is a graduate student majoring in computer science. He joined the async-rdma project because it happens to fit in his academic interest on integrating software and hardware. Guided by his community mentor, he grows with the development of the project and is invited to share his practical experience on using Rust to package RDMA on several hands-on workshops.。在社区导师的指导下，他也随着项目的发展而逐步成长，并被邀请在一些实践研讨会上分享他使用Rust开发RDMA的实践经验。',
+    text: 'Hengyu Wang is a graduate student majoring in computer science. He joined the async-rdma project because it happens to fit in his academic interest on integrating software and hardware. Guided by his community mentor, he grows with the development of the project and is invited to share his practical experience on using Rust to package RDMA on several hands-on workshops.',
     quote:
       '“I am having unforgettable experience with the async-rdma project. The DatenLord community is friendly and my mentor is a seasoned engineer who encourages me to verify my ideas and assumptions about the project while pay attention to the engineering discipline, which shift my perspective from a student who merely focuses on running a program to a professional engineer who cares about its maintainability and stability as well. ”',
     link_text: 'GitHub ID: GTwhy',

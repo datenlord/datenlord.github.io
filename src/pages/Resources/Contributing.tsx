@@ -12,6 +12,8 @@ import img7Url from '@/assets/Home/image7.png'
 import img8Url from '@/assets/Home/image8.png'
 import xlineUrl from '@/assets/Home/xline.png'
 import { useNavigate } from 'react-router-dom'
+import {OpenSourceProduct} from './sections/OpenSourceProduct'; 
+import { useEffect } from 'react';
 
 const TabData = [
   {
@@ -405,187 +407,17 @@ const Button = styled.div`
 const ContributingPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('WangHengyu')
   const navigate = useNavigate()
-
   return (
     <React.Fragment>
       <Cover>Open Source Community</Cover>
       <Section backgroundColor="#EDEDF6">
         <Title style={{ marginBottom: '1.25rem' }}>Community</Title>
         <OpenSourceCommunity />
+       
       </Section>
-      <Section>
-        <Title style={{ marginBottom: '1.5rem' }}>Open Source Product</Title>
-        <Card
-          style={{
-            display: 'flex',
-            gap: '0.48rem',
-            alignItems: 'center',
-            marginBottom: '0.5rem',
-          }}
-        >
-          <div
-            style={{ display: 'flex', flexDirection: 'column', gap: '0.32rem' }}
-          >
-            <SubTitle>DatenLord</SubTitle>
-            <StyleLiTxt>
-              DatenLord is a cross-cloud, cross-data center storage solution
-              designed to facilitate efficient storage access across clouds and
-              data centers for enterprises.
-            </StyleLiTxt>
-            <StyleLiTxt>
-              This solution offers users a versatile system architecture,
-              including Posix file interface, KV interface, and object storage
-              interface, allowing users to choose the most suitable method based
-              on their specific needs.
-            </StyleLiTxt>
-            <StyleLiTxt>
-              DatenLord utilizes a combination of software and hardware
-              integration, harnessing the full potential of both to achieve
-              unparalleled data transfer and read/write performance.
-            </StyleLiTxt>
-            <Button
-              style={{ marginLeft: '0.36rem' }}
-              onClick={() =>
-                (window.location.href =
-                  'https://github.com/datenlord/datenlord')
-              }
-            >
-              Learn more
-            </Button>
-          </div>
-        </Card>
-        <div
-          style={{
-            padding: '0.6rem 0.7rem 0.7rem',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.96rem',
-            marginBottom: '0.5rem',
-          }}
-        >
-          <img style={{ height: '0.66rem' }} src={xlineUrl} />
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '0.32rem',
-            }}
-          >
-            <SubTitle>Xline Open Source Distributed KV Storage System</SubTitle>
-            <Txt>
-              Ensures data consistency when accessed across data centers and
-              clouds, facilitating multi-site, multi-center, active-active
-              deployment for business systems..
-            </Txt>
-            <Button
-              onClick={() =>
-                (window.location.href =
-                  'https://datenlord.github.io/xline-home/')
-              }
-            >
-              Learn more
-            </Button>
-          </div>
-        </div>
-        <Card
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '0.48rem',
-            marginBottom: '0.5rem',
-          }}
-        >
-          <SubTitle>RDMA</SubTitle>
-          <Txt>
-            In cross-cloud scenarios, network performance has a significant
-            impact on data access, and DatenLord leverages high-performance RDMA
-            (Remote Direct Memory Access) to reduce latency and enhance
-            bandwidth. We have several related open-source projects in the RDMA
-            domain:
-          </Txt>
-          <div
-            style={{ display: 'flex', alignItems: 'center', gap: '0.32rem' }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.24rem',
-              }}
-            >
-              <StyleLiTxt>async-rdma</StyleLiTxt>
-              <Txt style={{ paddingLeft: '0.36rem' }}>
-                An RDMA asynchronous API library encapsulated in Rust, providing
-                advanced abstractions and asynchronous API interfaces for
-                developing RDMA applications.
-              </Txt>
-              <StyleLiTxt>open-rdma</StyleLiTxt>
-              <Txt style={{ paddingLeft: '0.36rem' }}>
-                An open-source hardware implementation of the RDMA protocol,
-                implemented using Bluespec and SpinalHDL. Currently, it
-                primarily supports the RoCEv2 protocol. Additionally, specific
-                extensions have been incorporated to enhance the efficiency of
-                RDMA transfers.
-              </Txt>
-              <Button
-                style={{ marginLeft: '0.36rem' }}
-                onClick={() => navigate('/community/project')}
-              >
-                Learn more
-              </Button>
-            </div>
-          </div>
-        </Card>
-      </Section>
+     
     </React.Fragment>
-    // <ViewWrapper>
-    //   <Header theme="dark" activeId="resources" />
-    //   <ViewContainer>
-    //     <FirstSection>
-    //       <Image src={imageUrl} />
-    //       <FirstSectionContent>
-    //         <Heading1>Contributing is Thinking and Learning</Heading1>
-    //         <Paragraph1>
-    //           Open source is not merely about contributing code in Github. In
-    //           Datenlord, however, we believe that giving is thinking and
-    //           learning, and together with the received feedback from the virtual
-    //           community are capable of framing trust and collaboration.
-    //         </Paragraph1>
-    //       </FirstSectionContent>
-    //     </FirstSection>
-    //     <SecondSection>
-    //       <Card>
-    //         <CardTitleContainer>
-    //           <CardTitle>Join Conversation on Gitter</CardTitle>
-    //           <CardIcon src={gitterUrl} />
-    //         </CardTitleContainer>
-    //         <Paragraph2>
-    //           Join our community of experts in building the next generation of
-    //           cloud-native, geo-distributed storage system
-    //         </Paragraph2>
-    //         <Button
-    //           as="a"
-    //           href="https://app.gitter.im/#/room/#datenlord_datenlord:gitter.im"
-    //         >
-    //           DatenLord Gitter Channel
-    //         </Button>
-    //       </Card>
-    //       <Card>
-    //         <CardTitleContainer>
-    //           <CardTitle>Become A Contributor</CardTitle>
-    //           <CardIcon src={githubUrl} />
-    //         </CardTitleContainer>
-    //         <Paragraph2>
-    //           Looking for the source code, or have an idea to contribute? Join
-    //           our open source community on GitHub.
-    //         </Paragraph2>
-    //         <Button as="a" href="https://github.com/datenlord">
-    //           DatenLord on Github
-    //         </Button>
-    //       </Card>
-    // </SecondSection>
-    //   </ViewContainer>
-    // </ViewWrapper>
+  
   )
 }
 
