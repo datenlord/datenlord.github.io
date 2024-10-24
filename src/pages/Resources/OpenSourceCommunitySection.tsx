@@ -155,7 +155,7 @@ const CardLinkIcon = styled.img`
 
 export const OpenSourceCommunity: React.FC = () => {
   return (
-    <Section>
+    <Section id='open-source-community'>
       <TitleEN>Open Source Community</TitleEN>
       <TitleZH>开源社区</TitleZH>
       <Content>

@@ -62,7 +62,7 @@ export const router = createHashRouter([
         element: <Resources1 />,
       },
       {
-        path: 'community',
+        path: 'community/:sectionId',
         element: <Resources1 />,
       },
       {

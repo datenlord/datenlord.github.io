@@ -12,6 +12,7 @@ import cover11 from '@/assets/rust-showcase/cover11.jpg'
 import cover12 from '@/assets/rust-showcase/cover12.jpg'
 import cover13 from '@/assets/rust-showcase/cover13.jpg'
 import cover14 from '@/assets/rust-showcase/cover14.jpg'
+import cover15 from '@/assets/rust-showcase/cover15.jpg'
 
 export const rustShowcaseItems = [
   {
@@ -130,7 +131,7 @@ export const rustShowcaseItems = [
   },
   {
     key: 15,
-    image: cover6,
+    image: cover15,
     title:
       'Rust For IC design & Verification: vfw, vhost, terminus',
     text: '达坦科技始终致力于打造高性能 Al+ Cloud 基础设施平台，积极推动AI应用的落地。达坦科技通过软硬件深度融合的方式，提供高性能存储和高性能网络。为 AI 应用提供弹性、便利、经济的基础设施服务，以此满足不同行业客户对 AI+Cloud 的需求。',

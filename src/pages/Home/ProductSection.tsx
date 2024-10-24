@@ -277,7 +277,7 @@ const FakeNaveDotActive = styled.div`
 export const ProductSection: React.FC = () => {
   const navigate = useNavigate()
   return (
-    <Wrapper>
+    <Wrapper id='open-source-project'>
       <Container>
         <Title>开源产品</Title>
         <DatenLordCardWrapper id="datenlord">

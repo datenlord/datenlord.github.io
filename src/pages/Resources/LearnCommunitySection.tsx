@@ -234,7 +234,7 @@ const ListBtn = styled.div`
 export const LearnCommunitySection: React.FC = () => {
   const navigate = useNavigate()
   return (
-    <Section>
+    <Section id='learning-community'>
       <TitleEN>Learning Community</TitleEN>
       <TitleZH>学习社区</TitleZH>
       <MainContainer>
