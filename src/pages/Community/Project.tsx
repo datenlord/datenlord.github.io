@@ -3,7 +3,7 @@ import { Section } from '@/components/Section'
 import React from 'react'
 import styled from 'styled-components'
 import img1Url from '@/assets/community/project/image1.png'
-
+import { Header } from '@/components/Header1'
 const Card = styled.div`
   padding: 0.75rem 0.4rem;
   border-radius: 0.12rem;
@@ -45,7 +45,8 @@ const Image = styled.img`
 
 const Project: React.FC = () => {
   return (
-    <React.Fragment>
+    <React.Fragment> 
+      <Header theme="dark" activeId="community"  />
       <Cover>Open Source Project</Cover>
       <Section>
         <Title style={{ marginBottom: '0.36rem' }}>RDMA</Title>
@@ -75,10 +76,10 @@ const Project: React.FC = () => {
             which offers an easy-to-use API, abstracting the complexity of
             underlying RDMA operations.
           </CardDesc>
-          <CardTxt>
+          <CardDesc>
             With Async-RDMA, most RDMA operations can be accomplished with just
             a single line of code. It provides the following key features:
-          </CardTxt>
+          </CardDesc>
         </Card>
         <Card
           style={{
@@ -105,23 +106,16 @@ const Project: React.FC = () => {
           based on the optimized extension of the RoCE v2 protocol.
         </Desc>
         <Card style={{ background: '#0A061F', color: '#FFFFFF' }}>
-          <CardTxt style={{ marginBottom: '0.16rem' }}>
+          <CardDesc style={{ marginBottom: '0.16rem' }}>
             RoCE v2
-            <span
-              style={{
-                fontWeight: '600',
-                fontSize: '0.32rem',
-                lineHeight: '0.42rem',
-              }}
-            >
               {' '}
               (RDMA over Converged Ethernet version 2)
-            </span>{' '}
+            {' '}
             is a network protocol designed to enable Remote Direct Memory Access
             (RDMA) over Ethernet. It represents an improvement over the original
             RoCE standard, offering a more efficient and scalable approach to
             RDMA execution on Ethernet.
-          </CardTxt>
+          </CardDesc>
           <CardDesc style={{ marginBottom: '0.48rem' }}>
             The core component of the Open-RDMA suite is a software and hardware
             implementation that further optimizes the RoCE v2 protocol. Taking

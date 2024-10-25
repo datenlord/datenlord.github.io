@@ -11,7 +11,7 @@ const FooterWrapper = styled.footer`
   background-color: #0a061f;
 `
 const FooterContainer = styled.div`
-  max-width: 1440px;
+  max-width: 1600px;
   margin-inline: auto;
   padding-inline: 1.22rem;
   padding-block: 0.64rem;
@@ -23,9 +23,9 @@ const Logo = styled.img`
 const LinkClassContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`
+  justify-content: space-between;
+  flex-wrap: nowrap; 
+`;
 const LinkClass = styled.div`
   padding-inline: 0.16rem;
   padding-bottom: 0.64rem;
