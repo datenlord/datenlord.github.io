@@ -66,17 +66,17 @@ export const nav: NavItem[] = [
       {
         key: 'open-source-community',
         label: '开源社区',
-        url: '/community',
+        url: '/community/open-source-community',
       },
       {
         key: 'open-source-project',
         label: '开源项目',
-        url: '/community',
+        url: '/community/open-source-project',
       },
       {
         key: 'learning-community',
         label: '学习社区',
-        url: '/community',
+        url: '/community/learning-community',
       },
     ],
   },
