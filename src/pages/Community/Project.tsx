@@ -3,7 +3,7 @@ import { Section } from '@/components/Section'
 import React from 'react'
 import styled from 'styled-components'
 import img1Url from '@/assets/community/project/image1.png'
-
+import { Header } from '@/components/Header1'
 const Card = styled.div`
   padding: 0.75rem 0.4rem;
   border-radius: 0.12rem;
@@ -45,7 +45,8 @@ const Image = styled.img`
 
 const Project: React.FC = () => {
   return (
-    <React.Fragment>
+    <React.Fragment> 
+      <Header theme="dark" activeId="community"  />
       <Cover>Open Source Project</Cover>
       <Section>
         <Title style={{ marginBottom: '0.36rem' }}>RDMA</Title>
