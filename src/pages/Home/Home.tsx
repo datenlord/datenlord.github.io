@@ -32,13 +32,6 @@ const carouselData: CarouseData[] = [
     url: '',
   },
   {
-    key: 'data-access',
-    title: '高性能跨云分布式存储',
-    description:
-      '建立一个统一的存储访问层，为跨云的应用提供高性能和高安全性的存储支持，从而打破跨云之间的隔阂',
-    url: '',
-  },
-  {
     key: 'hardware-acceleration',
     title: 'RDMA 高性能网络',
     description: '采用软硬件深度融合的方式，实现高性能RDMA网络',

@@ -84,7 +84,7 @@ export const DetailSection: React.FC = () => {
 	return (
 		<Wrapper>
 			<Container>
-				<Title>DatenLord 存储+网络的融合方案解决 AI 算力资源问题</Title>
+				<Title>软硬件融合方案解决 AI 算力资源问题</Title>
 				<Section>
 					<SectionTitle>AI 的发展引起算力资源的紧张、分散和昂贵</SectionTitle>
 					<SectCont>

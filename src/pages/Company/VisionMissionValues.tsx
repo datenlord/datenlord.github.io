@@ -142,7 +142,7 @@ export const VisionMissionValuesSection = () => {
             <Card>
               <CardTitle>愿景</CardTitle>
               <CardText>
-                使企业能够以高性能和高安全性的方式在全球多个云中读、写和提取数据。
+                成为全球领先的高性能 AI + Cloud 基础设施平台，推动各行业AI应用的广泛落地与创新。
               </CardText>
             </Card>
           </Col1>
@@ -150,7 +150,7 @@ export const VisionMissionValuesSection = () => {
             <Card>
               <CardTitle>使命</CardTitle>
               <CardText>
-                通过使用DatenLord 跨云分布式的存储系统，打破跨云之间的隔阂。
+                通过软硬件深度融合，提供弹性、便利、经济的 AI 基础设施服务，满足不同行业客户对 AI + Cloud 的需求。
               </CardText>
             </Card>
             <Card>
