@@ -208,45 +208,6 @@ const Card2: React.FC = () => {
   )
 }
 
-const Card3: React.FC = () => {
-  return (
-    <CardWrap id='storage'>
-      <TitleWrap>
-        <TitleLeftLine />
-        <TitleTxt>高性能存储</TitleTxt>
-        <TitleRightLine />
-      </TitleWrap>
-      <Cont>
-        <Desc>统一的高性能跨云数据访问和跨云分布式元数据管理</Desc>
-        <SectCtn>
-          <Sect style={{ width: '46%' }}>
-            <SectTitle>问题</SectTitle>
-            <ColorSectDesc>云之间的隔阂导致数据隔离和数据碎片化，在跨云访问数据时，访问速度和一致性将会受到影响。</ColorSectDesc>
-            <SectTxt>随着AI应用的快速落地，多云架构成为企业级IT的主流选择。但是，云之间的隔阂导致数据隔离和数据碎片化。由于数据往往被绑定在一个特定的云厂商/数据中心里，无法自由访问。此外，跨云数据访问具有高延迟的特性，然而现有的分布式共识协议只限于在单个数据中心使用。因此，在跨云访问数据时，访问速度和一致性将会受到影响。</SectTxt>
-          </Sect>
-          <Sect style={{ width: '46%' }}>
-            <SectTitle>解决方案</SectTitle>
-            <QuoteSectTxt style={{ marginBottom: '0.36rem' }}>无论数据存储在哪里，DatenLord 都可以通过缓存来加速跨云的数据访问，并提供统一的数据管理来实现数据的自动迁移和备份。</QuoteSectTxt>
-            <QuoteSectTxt>DatenLord 采用内核旁路架构，实现存储 IO 自行调度管理，以提升性能。再次，低延迟的跨云分布式共识协议保证了广域网场景下的高速和强一致性，同时保证系统中没有单点瓶颈。</QuoteSectTxt>
-          </Sect>
-          <Sect style={{ width: '100%' }}>
-            <SectTitle>案例</SectTitle>
-            <SectDesc>客户的需求和问题是什么？</SectDesc>
-            <ListSectTxt>· 客户是一家主要做中东、欧洲地区教育、社交和短剧的内容型娱乐公司。</ListSectTxt>
-            <ListSectTxt style={{ paddingBottom: '0.3rem' }}>· 客户需要解决多国多数据中心间的数据同步、迁移、备份和自动化管理的问题。</ListSectTxt>
-            <SectDesc>客户的需求和问题是什么？</SectDesc>
-            <SectTxt style={{ color: '#7680DD' }}>DatenLord Cloud Service 提供一体化的解决方案，帮助客户有效管理多国多数据中心的复杂性，提高业务的可用性和稳定性</SectTxt>
-            <SectTxt><b>多国多数据中心的数据实时同步</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确保大模型在不同数据中心之间的实时性和一致性。</SectTxt>
-            <SectTxt><b>提供高效的数据迁移和备份工具</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确保大模型能够及时获取和处理最新的数据，提高业务的响应速度。</SectTxt>
-            <SectTxt><b>提供自动化的管理工具</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使客户能自主控制大模型，根据业务变化灵活调整。</SectTxt>
-            <SectTxt><b>提供高可用性和弹性伸缩的解决方案</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;包括数据加密、身份验证等，确保大模型在跨云环境中的安全运行。</SectTxt>
-          </Sect>
-        </SectCtn>
-      </Cont>
-    </CardWrap>
-  )
-}
-
 export default () => {
   const navigate = useNavigate()
   const { sectionId } = useParams()
@@ -267,7 +228,6 @@ export default () => {
           <Title>解决方案</Title>
           <Image src={imageUrl} />
           <Card1></Card1>
-          <Card3></Card3>
           <Card2></Card2>
         </MainContainer>
         <RelatedResources id="related-resource">

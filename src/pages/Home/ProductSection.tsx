@@ -280,36 +280,6 @@ export const ProductSection: React.FC = () => {
     <Wrapper id='open-source-project'>
       <Container>
         <Title>开源产品</Title>
-        <DatenLordCardWrapper id="datenlord">
-          <DatenLordCard>
-            <DatenLordLogo src={datenlordLogoUrl} />
-            <DatenLordTitle>DatenLord 高性能分布式存储</DatenLordTitle>
-            <DatenLordDescription>
-              DatenLord 是开源高性能分布式存储平台，帮助企业实现在 AI + Cloud
-              场景下的高效数据访问需求。该平台为用户提供了丰富的系统结构，包括
-              Posix 文件接口，
-              KV接口和面向对象存储接口等，用户可以根据需求选择适合自己的方式。DatenLord
-              使用了软硬件融合的方式，充分发挥软硬件的性能潜力，实现了极致的数据传输和读写性能。
-            </DatenLordDescription>
-            <Button
-              style={{ width: 'max-content', color: '#fff' }}
-              onClick={() =>
-                (window.location.href =
-                  'https://github.com/datenlord/datenlord')
-              }
-            >
-              了解更多
-            </Button>
-          </DatenLordCard>
-          <DecorationContainer>
-            <TopLine1 />
-            <BottomLine1 />
-            <TopLeftCorner />
-            <BottomLeftCorner />
-            <Dot1 />
-            <Dot2 />
-          </DecorationContainer>
-        </DatenLordCardWrapper>
         <XlineCardWrapper id="xline">
           <XlineCard>
             <XlineLogo src={xlineLogoUrl} />

@@ -45,7 +45,7 @@ export default () => {
     <React.Fragment>
       <Cover
         cover={CoverUrl}
-        subTitle="达坦科技通过软硬件深度融合的方式，提供高性能存储和高性能网络，打造高性能 AI + Cloud 基础设施平台。"
+        subTitle="达坦科技通过软硬件深度融合的方式，提供 AI 推理引擎和高性能网络，打造高性能 AI + Cloud 基础设施平台。"
       >
         公司
       </Cover>

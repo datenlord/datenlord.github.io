@@ -143,11 +143,9 @@ export const AboutUsSection: React.FC = () => {
         <Overview>
           <OverviewLogo src={LogoUrl} />
           <OverviewText>
-            达坦科技始终致力于打造高性能 <Bold>AI+ Cloud 基础设施平台</Bold>
+            达坦科技始终致力于打造<Bold>高性能 AI + Cloud 基础设施平台</Bold>
             ，积极推动AI应用的落地。达坦科技通过
-            <Bold>软硬件深度融合的方式</Bold>，提供高性能存储和高性能网络。为 AI
-            + Cloud 应用提供<Bold>弹性、便利、经济</Bold>
-            的基础设施服务，以此满足不同行业客户对 AI + Cloud 的需求。
+            <Bold>软硬件深度融合</Bold>的方式，<Bold>提供 AI 推理引擎和高性能网络</Bold>，为 AI 应用提供弹性、便利、经济的基础设施服务，以此满足不同行业客户对 AI + Cloud 的需求。
           </OverviewText>
         </Overview>
         <FoundingContainer>
