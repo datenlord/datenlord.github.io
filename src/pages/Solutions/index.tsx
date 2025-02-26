@@ -136,42 +136,6 @@ const cardData = [
     image: img4Url,
   },
   {
-    title: 'High-Performance Storage',
-    desc: 'Unified high-performance cross-cloud data access and cross-cloud distributed metadata management.',
-    cover: img2Url,
-    challenge: {
-      desc: 'The disconnect between clouds leads to data isolation and data fragmentation, and when accessing data across clouds, access speed and consistency will suffer.',
-      txt: 'With the rapid implementation of AI applications, multi-cloud architecture has become the mainstream choice for enterprise-level IT. However, the isolation between clouds leads to data segregation and fragmentation. Due to data often being bound to a specific cloud provider/data center, it cannot be freely accessed. Additionally, cross-cloud data access exhibits high-latency characteristics, and existing distributed consensus protocols are limited to use within a single data center. Therefore, when accessing data across clouds, access speed and consistency are compromised.',
-    },
-    options: [
-      {
-        title: 'Solution',
-        txt: [
-          'Firstly, regardless of where the data is stored, DatenLord accelerates cross-cloud data access through caching and provides unified data management for automatic data migration and backup. ',
-          'Secondly, DatenLord adopts a kernel-bypass architecture, enabling storage IO self-scheduling management to enhance performance. ',
-          'Thirdly, a low-latency cross-cloud distributed consensus protocol ensures high speed and strong consistency in wide-area network scenarios, while eliminating single-point bottlenecks within the system.',
-        ],
-      },
-      {
-        title: "Customer's needs and challenges:",
-        txt: [
-          'The customer is a content-focused entertainment company primarily operating in the education, social, and short-form content sectors in the Middle East and Europe.',
-          'The customer requires a solution for data synchronization, migration, backup, and automated management across multiple countries and data centers.',
-        ],
-      },
-      {
-        title: 'DatenLord Cloud Service offers:',
-        txt: [
-          'An integrated solution to help the customer effectively manage the complexity of multiple-country, multiple-data-center operations, thereby enhancing business availability and stability.',
-          'Real-time data synchronization across multiple countries and data centers, ensuring consistency of content globally.',
-          'Efficient tools for data migration and backup, addressing the needs of business expansion and disaster recovery.',
-          'Automated management tools, including automated deployment, resource allocation, and monitoring.',
-          'High availability and elastic scaling solutions to address challenges posed by technical failures or peak periods.',
-        ],
-      },
-    ],
-  },
-  {
     title: 'High-Performance Networking',
     desc: 'A deep integration of software and hardware',
     cover: img3Url,

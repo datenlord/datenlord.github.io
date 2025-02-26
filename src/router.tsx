@@ -13,7 +13,6 @@ import BlogList from './pages/Resources/BlogList'
 import BlogDetailPage from './pages/Resources/BlogDetail'
 import TechTalkPage from './pages/Resources/TechTalkPage'
 import TOC from './demo/TOC/TOC'
-import CloudService from './pages/Products/CloudService'
 import Appliance from './pages/Products/Appliance'
 import Solutions from './pages/Solutions'
 import ContactUs from './pages/Company/ContactUs'
@@ -33,10 +32,6 @@ export const router = createHashRouter([
       {
         path: 'products',
         children: [
-          {
-            path: 'cloud-service',
-            element: <CloudService />,
-          },
           {
             path: 'appliance',
             element: <Appliance />,

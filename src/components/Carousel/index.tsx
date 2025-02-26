@@ -24,15 +24,6 @@ const carouselData = [
     btn: '/solution',
   },
   {
-    id: 2,
-    bgColor: '#D9DBEF',
-    txtColor: '#42424A',
-    img: cover2Url,
-    title: 'High-Performance Cross-Cloud Distributed Storage',
-    desc: 'Establishing a unified storage access layer, we provide high-performance and highly secure storage support for cross-cloud applications, breaking down barriers between different cloud environments.',
-    btn: '/solution',
-  },
-  {
     id: 3,
     bgColor: '#F8FAFF',
     txtColor: '#42424A',

@@ -91,8 +91,7 @@ const HomePage: React.FC = () => {
               marginBottom: '0.2rem',
             }}
           >
-            DatenLord Integrates Storage and Network Solutions to Address the AI
-            Computational Resource Challenges
+            A Software-Hardware Integrated Solution to Address AI Computing Power Challenges
           </Title>
           <Desc style={{ marginInline: '0.96rem' }}>
             The Development of AI Lead to a Tight, Dispersed, and Expensive

@@ -248,16 +248,15 @@ const Company = () => {
             style={{ width: '4.46rem', height: 'min-content' }}
           />
           <Txt>
-            DatenLord has consistently dedicated itself to building{' '}
+            DatenLord is dedicated to building a{' '}
             <Bold>
-              the high-performance AI+Cloud infrastructure platform, actively
-              driving the implementation of AI applications.
+              high-performance AI+Cloud infrastructure platform
             </Bold>{' '}
-            Through deep integration of software and hardware, DatenLord
-            delivers high-performance storage and networking. It provides
-            <Bold>elastic , convenient, and cost-effective</Bold> infrastructure
-            services for AI applications, aiming to meet the diverse demands of
-            AI + Cloud across various industries.
+            and actively promoting the implementation of AI applications. By{' '}
+            <Bold>deeply integrating software and hardware</Bold>, DatenLord provides{' '}
+            <Bold>AI inference engines</Bold> and{' '}
+            <Bold>high-performance networks</Bold>{' '}
+            to offer elastic, convenient, and cost-effective infrastructure services for AI applications, thereby meeting the diverse needs of customers across various industries for AI+Cloud solutions.
           </Txt>
         </div>
         <div
