@@ -15,11 +15,6 @@ export const items: NavItem[] = [
     label: 'products',
     children: [
       {
-        key: 'cloud-service',
-        label: 'DatenLord cloud Service',
-        url: '/products/cloud-service',
-      },
-      {
         key: 'appliance',
         label: 'DatenLord Appliance',
         url: '/products/appliance',
@@ -33,11 +28,6 @@ export const items: NavItem[] = [
       {
         key: 'inference',
         label: 'AI Inference',
-        url: '/solution',
-      },
-      {
-        key: 'storage',
-        label: 'High Performance Storage',
         url: '/solution',
       },
       {
