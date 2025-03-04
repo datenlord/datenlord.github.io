@@ -7,7 +7,7 @@ import { Button } from '@/components/Button'
 import type { CarouseData } from './Home'
 
 import distributedStorageBgUrl from '@/assets/carousel/distributed-storage-bg.png'
-import dataAccessBgUrl from '@/assets/carousel/data-access-bg.png'
+import dataAccessBgUrl from '@/assets/carousel/reasoning-engine-bg.png'
 import metadataManagementBgUrl from '@/assets/carousel/metadata-management-bg.png'
 import hardwareAccelerationBgUrl from '@/assets/carousel/hardware-acceleration-bg.png'
 import openSourceBgUrl from '@/assets/carousel/open-source-bg.png'
@@ -66,7 +66,7 @@ const getBackgroundImage = (bg: string) => {
   switch (bg) {
     case 'distributed-storage':
       return distributedStorageBgUrl
-    case 'data-access':
+    case 'reasoning-engine':
       return dataAccessBgUrl
     case 'metadata-management':
       return metadataManagementBgUrl
@@ -164,7 +164,7 @@ const Text = styled.p`
 
 const routerMap = new Map([
   ['distributed-storage', '/solutions/ai'],
-  ['data-access', '/solutions/storage'],
+  ['reasoning-engine', '/deepseek'],
   ['hardware-acceleration', '/solutions/networks'],
   ['open-source', '/community'],
 ])
