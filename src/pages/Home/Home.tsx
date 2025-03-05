@@ -32,6 +32,12 @@ const carouselData: CarouseData[] = [
     url: '',
   },
   {
+    key: 'reasoning-engine',
+    title: 'AI 推理引擎',
+    description: '一站式 AI 推理平台，整合模型与算力，助力高效智能化应用',
+    url: '',
+  },
+  {
     key: 'hardware-acceleration',
     title: 'RDMA 高性能网络',
     description: '采用软硬件深度融合的方式，实现高性能RDMA网络',

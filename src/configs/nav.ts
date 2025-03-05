@@ -10,6 +10,11 @@ export const nav: NavItem[] = [
         label: 'DatenLord Appliance',
         url: '/app',
       },
+      {
+        key: 'deepseek',
+        label: 'DeepSeek 一体机',
+        url: '/deepseek',
+      },
     ],
   },
   {
