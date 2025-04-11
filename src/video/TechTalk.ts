@@ -52,6 +52,7 @@ import cover52 from '@/assets/tech-talk/cover52.jpg'
 import cover53 from '@/assets/tech-talk/cover53.jpg'
 import cover54 from '@/assets/tech-talk/cover54.jpg'
 import cover55 from '@/assets/tech-talk/cover55.jpg'
+import cover56 from '@/assets/tech-talk/cover56.jpg'
 
 export const techTalkItems = [
   {
@@ -482,8 +483,16 @@ export const techTalkItems = [
     key: 55,
     image: cover55,
     title: '让大模型在场景中真正落地的产品形态、技术堆栈、交付服务',
-    text: '达坦科技始终致力于打造高性能 Al+ Cloud 基础设施平台，积极推动AI应用的落地。达坦科技通过软硬件深度融合的方式，提供高性能存储和高性能网络。为 AI 应用提供弹性、便利、经济的基础设施服务，以此满足不同行业客户对 AI+Cloud 的需求。在本周的前沿技术分享中，我们邀请到了猴子无限创始人兼CEO尹伯昊，来为大家分享让大模型在场景中真正落地的产品形态、技术堆栈、交付服务。',
+    text: '在本周的前沿技术分享中，我们邀请到了猴子无限创始人兼CEO尹伯昊，来为大家分享让大模型在场景中真正落地的产品形态、技术堆栈、交付服务。',
     date: '2024.03.18',
     url: 'https://www.bilibili.com/video/BV1KJ4m187gS/',
+  },
+  {
+    key: 56,
+    image: cover56,
+    title: 'GPUDirect RDMA 技术演进之路',
+    text: '在本周的前沿技术分享中，我们邀请到了软硬件联合开发工程师 陈添，来为大家分享 GPUDirect RDMA 技术的演进历程与关键实现机制。',
+    date: '2025.04.09',
+    url: 'https://www.bilibili.com/video/BV1d8dtYHErj/?spm_id_from=333.337.search-card.all.click',
   },
 ]
