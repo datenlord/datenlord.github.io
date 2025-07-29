@@ -4,9 +4,9 @@ import Layout from '@/pages/Layout'
 import Home from '@/pages/Home/Home'
 import Products from '@/pages/Products'
 import RDMA from '@/pages/RDMA'
-import App from '@/pages/App'
 import DeepSeek from '@/pages/DeepSeek'
-import Solutions from '@/pages/Solutions'
+import RDMANIC from '@/pages/RDMANIC'
+import AI from '@/pages/Ai'
 import Resources1 from '@/pages/Resources/Resources1'
 import Resources2 from '@/pages/Resources/Resources2'
 import Clients from '@/pages/Clients'
@@ -42,20 +42,16 @@ export const router = createHashRouter([
         element: <RDMA />,
       },
       {
-        path: 'app',
-        element: <App />,
-      },
-      {
-        path: 'deepseek',
+        path: 'products/deepseek',
         element: <DeepSeek />,
       },
       {
-        path: 'solutions',
-        element: <Solutions />,
+        path: 'products/rdma-nic',
+        element: <RDMANIC />,
       },
       {
-        path: 'solutions/:sectionId',
-        element: <Solutions />,
+        path: 'solutions/ai',
+        element: <AI />,
       },
       {
         path: 'community',

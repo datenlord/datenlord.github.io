@@ -6,15 +6,16 @@ export const nav: NavItem[] = [
     label: '产品',
     children: [
       {
-        key: 'app',
-        label: 'DatenLord Appliance',
-        url: '/app',
+        key: 'rdma',
+        label: 'RDMA 网卡',
+        url: '/products/rdma-nic',
       },
       {
         key: 'deepseek',
         label: 'DeepSeek 一体机',
-        url: '/deepseek',
+        url: '/products/deepseek',
       },
+      
     ],
   },
   {
@@ -23,13 +24,13 @@ export const nav: NavItem[] = [
     children: [
       {
         key: 'ai',
-        label: 'AI 推理',
+        label: '高性能AI推理框架',
         url: '/solutions/ai',
       },
       {
         key: 'networks',
-        label: '高性能网络',
-        url: '/solutions/networks',
+        label: 'RDMA 高性能网络',
+        url: '/rdma',
       },
     ],
   },

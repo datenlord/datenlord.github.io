@@ -1,9 +1,7 @@
 import styled from "styled-components"
 
-import mapUrl from '@/assets/home/map.png'
-import infrastructureUrl from '@/assets/home/infrastructure.png'
+import addUrl from '@/assets/home/add.png'
 import pcUrl from '@/assets/home/pc.png'
-
 
 const Wrapper = styled.section`
   background: #fff;
@@ -47,6 +45,7 @@ const SectionTitle = styled.div`
 `
 const SectCont = styled.div`
 	display: flex;
+	justify-content: space-between;
 	gap: 0.56rem;
 `
 const SectTxtCnt = styled.div`
@@ -55,57 +54,133 @@ const SectTxtCnt = styled.div`
 	justify-content: center;
 `
 const SectTxt = styled.div`
-  font-size: 0.16rem;
-  line-height: 0.28rem;
+	font-size: 0.16rem;
+	line-height: 0.28rem;
+	padding-block: 0.24rem;
+`
+const SectImg = styled.img`
+	width: 45%;
+`
+const SectBox = styled.div`
+	width: 100%;
+	margin-block: 0.56rem;
+	padding-inline: 0.56rem;
+	border-radius: 12px;
+	background: linear-gradient(180deg, rgba(187, 202, 243, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+`
+const SectTittle = styled.div`
+	font-size: 0.2rem;
+	font-weight: 500;
+	padding-block: 0.12rem;
+`
+const SectTxtTittle = styled.div`
+	font-size: 0.2rem;
+	font-weight: 500;
 	padding-block: 0.24rem;
 	&::before {
 		content: '';
 		display: inline-block;
 		width: 0.12rem;
 		height: 0.12rem;
-		background: #7680DD;
+		background: linear-gradient(90deg, #767EE5 0%, #9966CC 106.43%);
 		border-radius: 50%;
 		margin-left: -0.22rem;
 		margin-right: 0.1rem;
 	}
 `
-const SectStylTxt = styled.span`
-	color: #7680DD;
+const SectTxtMain= styled.div`
+	font-size: 0.16rem;
+	line-height: 0.28rem;
+	color: #42424ACC;
 `
-const SectImg = styled.img`
-	width: 45%;
-`
-const SectInfra = styled.img`
-	width: 100%;
-	margin-bottom: -0.24rem;
+const SectNum = styled.div`
+    color: #5465CF;
+	font-size: 0.6rem;
+	font-family: PingFang SC;
+	font-weight: 500;
 `
 
 export const DetailSection: React.FC = () => {
 	return (
-		<Wrapper>
+		<Wrapper style={{}}>
 			<Container>
-				<Title>软硬件融合方案解决 AI 算力资源问题</Title>
+				<Title>推理场景的高性能 AI 基础设施</Title>
 				<Section>
-					<SectionTitle>AI 的发展引起算力资源的紧张、分散和昂贵</SectionTitle>
+					<SectionTitle>高性能 AI 基础设施的核心特征：软硬件深度融合</SectionTitle>
 					<SectCont>
+						<SectImg src={addUrl} />
 						<SectTxtCnt>
-							<SectTxt><SectStylTxt>AI 大模型对高性能 GPU 算力资源需求大爆发。</SectStylTxt>GPU 算力供不应求，供需极度不平衡。这进一步<SectStylTxt>推高</SectStylTxt>了原本因设计和制造成本以及市场垄断等因素就<SectStylTxt>已经高企不下的GPU 算力价格</SectStylTxt>。</SectTxt>
-							<SectTxt>GPU 算力资源优先满足 AI 训练场景，这造成 <SectStylTxt>AI 推断场景的 GPU 算力资源具有分散或碎片化</SectStylTxt>的特点。</SectTxt>
+							<SectTxtTittle>AI 大模型推理对系统性能提出极高要求</SectTxtTittle>
+							<SectTxtTittle>硬件能力需与软件栈深度协同，提升整体效率</SectTxtTittle>
 						</SectTxtCnt>
-						<SectImg src={mapUrl} />
+					</SectCont>
+					<SectBox>
+						<SectCont>
+							<SectTxt>
+								<SectTxtTittle>算子性能与可移植性双提升</SectTxtTittle>
+								<SectTxtMain>面向新硬件平台做算子底层优化</SectTxtMain>
+								<SectTxtMain>提升算子在不同设备间的可迁移性</SectTxtMain>
+							</SectTxt>
+							<SectTxt>
+								<SectTxtTittle>通信性能的系统级优化</SectTxtTittle>
+								<SectTxtMain>优化网络协议与通信栈，降低延迟与丢包</SectTxtMain>
+								<SectTxtMain>适配AI场景下的集合通信模式</SectTxtMain>
+							</SectTxt>
+						</SectCont>
+						<SectCont>
+							<SectTxt>
+								<SectTxtTittle>计算与通信的智能调度与重叠</SectTxtTittle>
+								<SectTxtMain>动态追踪系统性能瓶颈</SectTxtMain>
+								<SectTxtMain>让计算与通信协同推进，不断迭代匹配，释放最大吞吐</SectTxtMain>
+							</SectTxt>
+						</SectCont>
+					</SectBox>
+				</Section>
+				<Section>
+					<SectionTitle>为什么要做新一代RDMA网络与深度优化推理框架？</SectionTitle>
+					<SectCont>
+							<SectBox>
+								<SectNum>01</SectNum>
+								<SectTittle>性能权衡</SectTittle>
+								<SectTxtMain>虽然RDMA是目前AI大模型跨节点通信的事实标准，但作为25年前为HPC场景设计的协议，其在应对AI大模型新需求时的局限性正日益显现。</SectTxtMain>
+							</SectBox>
+							<SectBox>
+								<SectNum>02</SectNum>
+								<SectTittle>通盘优化</SectTittle>
+								<SectTxtMain>随着AI大模型的快速发展，对大模型系统性能提出更高的要求。如何降本增效成为大家关注的核心问题。极致的高性能要求采用软硬件协同设计的理念，而不能单独改进软件算法或堆高端硬件。</SectTxtMain>
+							</SectBox>
+							<SectBox>
+								<SectNum>03</SectNum>
+								<SectTittle>开放性</SectTittle>
+								<SectTxtMain>虽然RDMA是目前AI大模型跨节点通信的事实标准，但作为25年前为HPC场景设计的协议，其在应对AI大模型新需求时的局限性正日益显现。</SectTxtMain>
+							</SectBox>
 					</SectCont>
 				</Section>
 				<Section>
-					<SectionTitle>AI 算力资源的分散和昂贵对云计算带来的新问题</SectionTitle>
-					<SectInfra src={infrastructureUrl} />
-				</Section>
-				<Section>
-					<SectionTitle>将云计算资源复用的方式引入 AI 算力资源分配管理</SectionTitle>
+					<SectionTitle>达坦科技软硬件融合的AI基础设施的亮点</SectionTitle>
 					<SectCont>
 						<SectImg src={pcUrl} />
 						<SectTxtCnt>
-							<SectTxt>优化缓存技术，实现数据预加载、异步持久化，进而提升数据访问的性能； </SectTxt>
-							<SectTxt> 高性能RDMA网络，实现多节点内存共享，加速大模型的分发、加载。</SectTxt>
+						<SectCont>
+							<SectTxt>
+								<SectTxtTittle>国产信创</SectTxtTittle>
+								<SectTxtMain>适配多款软硬件平台，支持国产信创操作系统及国产GPU。对国产FPGA芯片的适配也在进行中。</SectTxtMain>
+							</SectTxt>
+							<SectTxt>
+								<SectTxtTittle>高性能</SectTxtTittle>
+								<SectTxtMain>提供从硬件到软件的统一解决方案，深度打通AI大模型系统不同层级之间的壁垒，最大限度发挥硬件效能。</SectTxtMain>
+							</SectTxt>
+						</SectCont>
+						<SectCont>
+							<SectTxt>
+								<SectTxtTittle>开源开放</SectTxtTittle>
+								<SectTxtMain>从硬件到软件，全栈开源。对于开发能力强的客户，甚至可以对RDMA硬件的逻辑进行二次开发扩展，从而适配自己的需求。</SectTxtMain>
+							</SectTxt>
+							<SectTxt>
+								<SectTxtTittle>易用性</SectTxtTittle>
+								<SectTxtMain>采用创新的通信协议，在兼容标准RDMA API接口的同时，降低了对网络环境的要求，可以实现免调参一键部署，可以实现无感故障迁移。</SectTxtMain>
+							</SectTxt>
+						</SectCont>
 						</SectTxtCnt>
 					</SectCont>
 				</Section>
