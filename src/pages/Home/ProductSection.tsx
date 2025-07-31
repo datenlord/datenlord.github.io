@@ -274,20 +274,49 @@ const FakeNaveDotActive = styled.div`
   border-radius: 50%;
 `
 
+const StylTxt = styled.span`
+	color: #7680DD;
+`
+
 export const ProductSection: React.FC = () => {
   const navigate = useNavigate()
   return (
     <Wrapper id='open-source-project'>
       <Container>
-        <Title>开源产品</Title>
+        <Title>开源项目</Title>
+        <DatenLordCardWrapper id="datenlord">
+          <DatenLordCard>
+            <DatenLordLogo src={datenlordLogoUrl} />
+            <DatenLordTitle>DatenLord</DatenLordTitle>
+            <DatenLordDescription>
+              DatenLord 是一套<StylTxt>跨云跨数据中心的存储解决方案</StylTxt>，帮助企业实现高效的跨云跨数据中心的存储访问。该方案为用户提供了丰富的系统结构，包括 Posix 文件接口， KV 接口 和 面向对象存储接口等，用户可以根据需求选择适合自己的方式。DatenLord 使用了软硬件融合的方式，充分发挥软硬件的性能潜力，实现了极致的数据传输和读写性能。
+            </DatenLordDescription>
+            <Button
+              style={{ width: 'max-content', color: '#fff' }}
+              onClick={() =>
+                (window.location.href =
+                  'https://github.com/datenlord/datenlord')
+              }
+            >
+              了解更多
+            </Button>
+          </DatenLordCard>
+          <DecorationContainer>
+            <TopLine1 />
+            <BottomLine1 />
+            <TopLeftCorner />
+            <BottomLeftCorner />
+            <Dot1 />
+            <Dot2 />
+          </DecorationContainer>
+        </DatenLordCardWrapper>
         <XlineCardWrapper id="xline">
           <XlineCard>
             <XlineLogo src={xlineLogoUrl} />
             <XlineContent>
-              <XlineTitle>Xline 开源分布式KV存储系统</XlineTitle>
+              <XlineTitle>Xline开源分布式KV存储系统</XlineTitle>
               <XlineDescription>
-                保证数据在跨数据中心，跨云访问时的一致性，
-                方便业务系统实现多地多中心多活部署。
+                保证数据在跨数据中心跨云访问时的一致性，方便业务系统实现多地多中心多活部署
               </XlineDescription>
               <Button
                 style={{ width: 'max-content', color: '#fff' }}
@@ -315,7 +344,7 @@ export const ProductSection: React.FC = () => {
         </XlineCardWrapper>
         <RDMACardWrapper id="rdma">
           <RDMACard>
-            <RDMATitle>RDMA 高性能网络</RDMATitle>
+            <RDMATitle>RDMA</RDMATitle>
             <RDMADescription>
               跨云场景下，网络对数据访问的性能影响最为突出，DatenLord采用高性能网络RDMA来降低延迟并提高带宽。RDMA方面我们有多个相关的开源项目：
             </RDMADescription>

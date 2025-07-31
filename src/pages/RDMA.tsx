@@ -64,6 +64,16 @@ const Image = styled.img`
   float: right;
 `
 
+const CoverTittle = styled.span`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const CoverSpan = styled.span`
+  font-size: 0.4rem;
+`
+
 interface Data {
   key: React.Key
   title: string
@@ -208,7 +218,12 @@ export default () => {
   }, [])
   return (
     <>
-      <Cover cover={coverUrl}>RDMA</Cover>
+      <Cover cover={coverUrl}>
+        <CoverTittle>
+          <CoverSpan>解决方案</CoverSpan>
+          <span>RDMA 高性能网络</span>
+        </CoverTittle>
+      </Cover>
       <MainWrapper>
         <MainContainer>
           {data.map(item => (

@@ -65,7 +65,7 @@ export const HeaderContext = createContext<HeaderContextProps>({
 
 export const HeaderMap = new Map([
   ['products', 'product'],
-  ['rdma', 'product'],
+  ['rdma', 'solution'],
   ['solutions', 'solution'],
   ['resources1', 'resource'],
   ['resources2', 'resource'],
