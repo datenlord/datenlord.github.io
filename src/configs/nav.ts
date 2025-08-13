@@ -27,11 +27,11 @@ export const nav: NavItem[] = [
         label: '高性能AI推理框架',
         url: '/solutions/ai',
       },
-      {
-        key: 'networks',
-        label: 'RDMA 高性能网络',
-        url: '/rdma',
-      },
+      // {
+      //   key: 'networks',
+      //   label: 'RDMA 高性能网络',
+      //   url: '/rdma',
+      // },
     ],
   },
   {
