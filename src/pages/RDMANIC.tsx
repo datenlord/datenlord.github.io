@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
-import { Cover } from '@/components/Cover'
-
+import bgUrl from '@/assets/RDMA-NIC/bg.png'
 import coverUrl from '@/assets/RDMA-NIC/cover.png'
 import image1Url from '@/assets/RDMA-NIC/image1.png'
 import image2Url from '@/assets/RDMA-NIC/image2.png'
@@ -220,10 +219,36 @@ const SectIconImg = styled.img`
 	height: 1rem
 `
 
+const SCover = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -0.72rem;
+  padding-top: 0.72rem;
+  height: 6.6rem;
+  background: linear-gradient(121.54deg, #FFFFFF 18.78%, #A9ADBB 80.74%);
+`
+
+const Img = styled.img`
+  width: 9rem;
+`
+
+const Span = styled.span`
+  font-size: 0.3rem;
+  font-weight: 600;
+  padding: 3px 20px;
+  border: 2px solid #000;
+  border-radius: 28px;
+`
+
 export default () => {
   return (
     <>
-      <Cover cover={coverUrl}>RDMA 网卡</Cover>
+      <SCover>
+        <Img src={bgUrl} />
+        <Span>RDMA 网卡</Span>
+      </SCover>
       <SectWrap>
         <Sect1Box>
           <SectPinkBg></SectPinkBg>
