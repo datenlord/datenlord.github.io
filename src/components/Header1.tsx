@@ -49,7 +49,7 @@ export const items: NavItem[] = [
       {
         key: 'blog',
         label: 'Blog',
-        url: '/resources/blog',
+        url: 'https://medium.com/@datenlord',
       },
       {
         key: 'events',
