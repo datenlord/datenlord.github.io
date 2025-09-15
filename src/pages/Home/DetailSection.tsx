@@ -152,7 +152,7 @@ export const DetailSection: React.FC = () => {
 							<SectBox>
 								<SectNum>03</SectNum>
 								<SectTittle>开放性</SectTittle>
-								<SectTxtMain>虽然RDMA是目前AI大模型跨节点通信的事实标准，但作为25年前为HPC场景设计的协议，其在应对AI大模型新需求时的局限性正日益显现。</SectTxtMain>
+								<SectTxtMain>开源开放已成为趋势，也是推动技术演进的必要条件。而目前商用智能网卡都是黑盒闭源方案，难以二次开发，扩展性差。很难与上层通信、计算框架进行深度融合。</SectTxtMain>
 							</SectBox>
 					</SectCont>
 				</Section>
