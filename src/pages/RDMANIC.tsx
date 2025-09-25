@@ -242,6 +242,11 @@ const Span = styled.span`
   border-radius: 28px;
 `
 
+const OrangeSpan = styled.span`
+  color: #F2994A;
+  font-size: 0.14rem;
+`
+
 export default () => {
   return (
     <>
@@ -259,7 +264,7 @@ export default () => {
               <SectCtnCard>
                 <SectCtnCardHeader>高性能 / AI 场景深度优化</SectCtnCardHeader>
                 <SectCtnCardTittle>高带宽 & 低时延</SectCtnCardTittle>
-                <SectCtnCardText>支持 100Gbps / 200Gbps / 400Gbps 多种方案，可满足大规模模型训练的海量数据传输需求</SectCtnCardText>
+                <SectCtnCardText>支持 100Gbps / 200Gbps / 400Gbps 多种方案，可满足大模型应用的海量数据传输需求</SectCtnCardText>
                 <SectCtnCardTittle>容忍恶劣网络环境</SectCtnCardTittle>
                 <SectCtnCardText>自研通信协议，丢包率高、网络抖动大的环境下仍能保持稳定高效传输</SectCtnCardText>
                 <SectCtnCardTittle>透明故障转移</SectCtnCardTittle>
@@ -276,12 +281,13 @@ export default () => {
               </SectCtnCard>
               <SectCtnCard>
                 <SectCtnCardHeader>易用性</SectCtnCardHeader>
-                <SectCtnCardTittle>零配置</SectCtnCardTittle>
+                <SectCtnCardTittle>零配置 <OrangeSpan>*</OrangeSpan></SectCtnCardTittle>
                 <SectCtnCardText>网卡自动识别集群环境并完成关键参数调优，无需繁琐手动配置</SectCtnCardText>
-                <SectCtnCardTittle>可视化驱动与管理工具</SectCtnCardTittle>
+                <SectCtnCardTittle>可视化驱动与管理工具 <OrangeSpan>*</OrangeSpan></SectCtnCardTittle>
                 <SectCtnCardText>提供开源驱动与监控接口，方便集群运维与生态扩展</SectCtnCardText>
-                <SectCtnCardTittle>自动化运维</SectCtnCardTittle>
+                <SectCtnCardTittle>自动化运维 <OrangeSpan>*</OrangeSpan></SectCtnCardTittle>
                 <SectCtnCardText>监控、告警与日志功能齐全，故障排查更高效</SectCtnCardText>
+                <SectCtnCardTittle><OrangeSpan>* 即将支持</OrangeSpan></SectCtnCardTittle>
               </SectCtnCard>
             </SectMain>
           </SectCtn>

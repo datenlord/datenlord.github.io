@@ -53,6 +53,7 @@ import cover53 from '@/assets/tech-talk/cover53.jpg'
 import cover54 from '@/assets/tech-talk/cover54.jpg'
 import cover55 from '@/assets/tech-talk/cover55.jpg'
 import cover56 from '@/assets/tech-talk/cover56.jpg'
+import cover57 from '@/assets/tech-talk/cover57.jpg'
 
 export const techTalkItems = [
   {
@@ -494,5 +495,13 @@ export const techTalkItems = [
     text: '在本周的前沿技术分享中，我们邀请到了软硬件联合开发工程师 陈添，来为大家分享 GPUDirect RDMA 技术的演进历程与关键实现机制。',
     date: '2025.04.09',
     url: 'https://www.bilibili.com/video/BV1d8dtYHErj/?spm_id_from=333.337.search-card.all.click',
+  },
+  {
+    key: 57,
+    image: cover57,
+    title: '【DatenLord前沿技术分享】Triton 实战：从零开始构建一个 GPU序列化算子',
+    text: '达坦科技始终致力于打造高性能AI+Cloud基础设施平台，积极推动AI应用的落地。达坦科技通过软硬件深度融合的方式，提供AI推理引擎和高性能网络，为AI应用提供弹性、便利、经济的基础设施服务，以此满足不同行业客户对AI+Cloud的需求。在本周的前沿技术分享中，我们邀请到了软硬件联合开发工程师 陈添，来为大家分享 Triton 实战：从零开始构建一个 GPU序列化算子。',
+    date: '2025.09.08',
+    url: 'https://www.bilibili.com/video/BV1r6aRzxEX6/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ad1f311db2570f6cb118c74112331e48',
   },
 ]

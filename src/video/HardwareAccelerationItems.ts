@@ -27,6 +27,7 @@ import cover26 from '@/assets/hardware-acceleration/cover26.jpg'
 import cover27 from '@/assets/hardware-acceleration/cover27.jpg'
 import cover28 from '@/assets/hardware-acceleration/cover28.jpg'
 import cover29 from '@/assets/hardware-acceleration/cover29.jpg'
+import cover30 from '@/assets/hardware-acceleration/cover30.jpg'
 
 export const hardwareAccelerationItemsItems = [
   {
@@ -260,5 +261,37 @@ export const hardwareAccelerationItemsItems = [
     text: '在2023年12月10日，达坦科技联合SpinalHDL社区及该语言的创建者 Charles Papon 举办 了《2023 SpinalHDL应用前景探索》的线上研讨会，分为两个Track。这是第六个视频，由Christopher Lozinsk带来“The J1Sc Family”。',
     date: '2023.12.17',
     url: 'https://www.bilibili.com/video/BV1Jc411o7A6/',
+  },
+  {
+    key: 30,
+    image: cover30,
+    title: '【2025 RISC-V中国峰会 x 达坦科技DatenLord】硬件敏捷开发与验证方法学研讨会 ｜构建“香山”开源芯片研发的基础设施',
+    text: '本视频为第四届“敏捷硬件开发与验证方法学”研讨会第一部分，由徐易难老师，中国科学院计算技术研究所特别研究助理，进行题目为《构建“香山”开源芯片研发的基础设施》的分享，聚焦国产自主研发“香山”芯片背后的支撑平台建设，探讨开源芯片如何走向规模化协作与工程落地。',
+    date: '2025.07.23',
+    url: 'https://www.bilibili.com/video/BV1Pk8czBEeu/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
+  },
+  {
+    key: 31,
+    image: cover30,
+    title: '【2025 RISC-V中国峰会 x 达坦科技DatenLord】硬件敏捷开发与验证方法学研讨会 ｜基于LLM的敏捷芯片设计',
+    text: '本视频为第四届“敏捷硬件开发与验证方法学”研讨会第一部分，由华南理工大学，计算机学院副教授赖晓铮教授，进行题目为《基于LLM的敏捷芯片设计》的分享，探索大语言模型（LLM）如何赋能芯片设计流程，重构开发范式，实现从代码生成到设计验证的全流程智能化。',
+    date: '2025.07.23',
+    url: 'https://www.bilibili.com/video/BV1Nr8czuENy/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
+  },
+  {
+    key: 32,
+    image: cover30,
+    title: '【2025 RISC-V中国峰会 x 达坦科技DatenLord】硬件敏捷开发与验证方法学研讨会 ｜SpinalHDL与Vivado协同开发方法初探',
+    text: '本视频为第四届“敏捷硬件开发与验证方法学”研讨会第一部分，由电子科技大学，自动化工程学院教授肖寅东教授，进行题目为《SpinalHDL与Vivado协同开发方法初探》的分享，介绍如何在传统EDA工具（如Vivado）环境下，灵活运用SpinalHDL实现高效协同设计，提升生产力与验证效率。',
+    date: '2025.07.23',
+    url: 'https://www.bilibili.com/video/BV1Nr8czuENu/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
+  },
+  {
+    key: 33,
+    image: cover30,
+    title: '【2025 RISC-V中国峰会 x 达坦科技DatenLord】｜万众一芯之UCAgent验证助手在RISC-V芯片验证中的探索与实践',
+    text: '本视频为第四届“敏捷硬件开发与验证方法学”研讨会第一部分',
+    date: '2025.07.23',
+    url: 'https://www.bilibili.com/video/BV1Zd8czZEcL/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
   },
 ]
