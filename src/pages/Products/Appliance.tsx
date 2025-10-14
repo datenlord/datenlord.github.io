@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Header } from '@/components/Header1'
 
 import bgUrl from '@/assets/RDMA-NIC/bg.png'
 import coverUrl from '@/assets/RDMA-NIC/cover.png'
@@ -265,6 +266,7 @@ const OrangeSpan = styled.span`
 export default () => {
   return (
     <>
+      <Header theme='dark' bg="transparent" activeId="customers" />
       <SCover>
         <Img src={bgUrl} />
         <Span>RDMA NIC</Span>
