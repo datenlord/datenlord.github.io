@@ -16,7 +16,7 @@ export const items: NavItem[] = [
     children: [
       {
         key: 'appliance',
-        label: 'DatenLord Appliance',
+        label: 'RDMA NIC',
         url: '/products/appliance',
       },
     ],
@@ -27,12 +27,12 @@ export const items: NavItem[] = [
     children: [
       {
         key: 'inference',
-        label: 'AI Inference',
+        label: 'AI Inference Platform',
         url: '/solution',
       },
       {
         key: 'network',
-        label: 'High Performance Network',
+        label: 'High Performance AI Network',
         url: '/solution',
       },
     ],
