@@ -242,7 +242,7 @@ const SCover = styled.section`
   justify-content: center;
   align-items: center;
   padding-top: 0.72rem;
-  height: 6.6rem;
+  height: 7.3rem;
   background: linear-gradient(121.54deg, #FFFFFF 18.78%, #A9ADBB 80.74%);
 `
 
