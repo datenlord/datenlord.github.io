@@ -28,12 +28,12 @@ export const items: NavItem[] = [
       {
         key: 'inference',
         label: 'AI Inference Platform',
-        url: '/solution',
+        url: '/solution/AI-inference-platform',
       },
       {
         key: 'network',
         label: 'High Performance AI Network',
-        url: '/solution',
+        url: '/solution/network-solutions',
       },
     ],
   },

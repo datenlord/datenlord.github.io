@@ -14,7 +14,8 @@ import BlogDetailPage from './pages/Resources/BlogDetail'
 import TechTalkPage from './pages/Resources/TechTalkPage'
 import TOC from './demo/TOC/TOC'
 import Appliance from './pages/Products/Appliance'
-import Solutions from './pages/Solutions'
+import AIInferencePlatform from './pages/Solutions/AIInferencePlatform'
+import NetworkSolutions from './pages/Solutions/NetworkSolutions'
 import ContactUs from './pages/Company/ContactUs'
 import Project from './pages/Community/Project'
 import Company from './pages/Company'
@@ -40,7 +41,16 @@ export const router = createHashRouter([
       },
       {
         path: 'solution',
-        element: <Solutions />,
+        children: [
+          {
+            path: 'AI-inference-platform',
+            element: <AIInferencePlatform />,
+          },
+          {
+            path: 'network-solutions',
+            element: <NetworkSolutions />,
+          },
+        ],
       },
       {
         path: 'community',
