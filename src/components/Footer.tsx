@@ -81,7 +81,13 @@ export const Footer: React.FC = () => {
                         <LinkListItem
                           key={key}
                           onClick={() => {
-                            url && navigate(url)
+                            if (!url) {
+                              return
+                            } else if (url.startsWith('http') || url.startsWith('https')) {
+                              window.location.href = url
+                            } else {
+                              navigate(url)
+                            }
                           }}
                         >
                           <Txt>{label}</Txt>
