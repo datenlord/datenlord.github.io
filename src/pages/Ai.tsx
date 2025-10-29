@@ -8,6 +8,9 @@ import { Button } from '@/components/Button'
 
 import coverUrl from '@/assets/solutions/cover.png'
 import imageUrl from '@/assets/solutions/image.png'
+import image2Url from '@/assets/solutions/image2.svg'
+import image3Url from '@/assets/solutions/image3.svg'
+import image4Url from '@/assets/solutions/image4.svg'
 
 const { Heading } = Typography
 const { CNHead4 } = Heading
@@ -122,10 +125,10 @@ const CoverTittle = styled.span`
   flex-direction: column;
   align-items: center;
 `
-const CoverSpan = styled.span`
-  font-size: 0.4rem;
-`
 const SectSpan = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.12rem;
   font-size: 0.18rem;
   font-weight: 500;
   color: #42424A;
@@ -133,6 +136,13 @@ const SectSpan = styled.span`
 const SectUl = styled.ul`
   margin-top: 0.16rem;
   margin-left: 0.2rem;
+`
+const Icon = styled.img`
+  width: 0.28rem;
+`
+const SectTxtTitle = styled.b`
+  display: inline-block;
+  width: 1.8rem;
 `
 
 const Card1: React.FC = () => {
@@ -148,18 +158,18 @@ const Card1: React.FC = () => {
           <Sect style={{ width: '100%' }}>
             <SectTitle>亮点</SectTitle>
             <SectDesc style={{ color: '#7680DD' }}>高性能 / AI 场景深度优化</SectDesc>
-            <SectTxt><b>软硬融合的推理引擎优化</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;针对不同型号GPU、异构加速卡等硬件进行针对性优化</SectTxt>
-            <SectTxt><b>计算图算子级别并行优化</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对每个模型都量身打造对应的并行策略，实现计算与通信的重叠</SectTxt>
-            <SectTxt><b>与自研通信框架的融合</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;与通信框架协同配合，最大限度利用网络带宽</SectTxt>
+            <SectTxt><SectTxtTitle>软硬融合的推理引擎优化</SectTxtTitle>针对不同型号GPU、异构加速卡等硬件进行针对性优化</SectTxt>
+            <SectTxt><SectTxtTitle>计算图算子级别并行优化</SectTxtTitle>对每个模型都量身打造对应的并行策略，实现计算与通信的重叠</SectTxt>
+            <SectTxt><SectTxtTitle>与自研通信框架的融合</SectTxtTitle>与通信框架协同配合，最大限度利用网络带宽</SectTxt>
             <SectDesc style={{ color: '#7680DD' }}>开源开放</SectDesc>
-            <SectTxt><b>融合上游开源生态</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;与开源深度学习模型库、推理引擎无缝衔接</SectTxt>
-            <SectTxt><b>便于二次开发</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;完全开放的框架，便于集成和二次开发</SectTxt>
+            <SectTxt><SectTxtTitle>融合上游开源生态</SectTxtTitle>与开源深度学习模型库、推理引擎无缝衔接</SectTxt>
+            <SectTxt><SectTxtTitle>便于二次开发</SectTxtTitle>完全开放的框架，便于集成和二次开发</SectTxt>
             <SectDesc style={{ color: '#7680DD' }}>易用性</SectDesc>
-            <SectTxt><b>简化推理流程</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提供脚本化工具，自动完成模型转换、优化与部署</SectTxt>
-            <SectTxt><b>可视化管理</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图形化界面查看推理任务性能、资源使用情况，快速调整参数</SectTxt>
-            <SectTxt><b>弹性扩展</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可在云端或本地横向扩展节点，动态增加/移除推理实例，满足多变业务需求</SectTxt>
-            <SectTxt><b>开放调度接口</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户可根据业务需要编写调度策略，灵活管理多实例并行运行</SectTxt>
-            <SectTxt><b>多模型一键部署</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;支持多种推理场景</SectTxt>
+            <SectTxt><SectTxtTitle>简化推理流程</SectTxtTitle>提供脚本化工具，自动完成模型转换、优化与部署</SectTxt>
+            <SectTxt><SectTxtTitle>可视化管理</SectTxtTitle>图形化界面查看推理任务性能、资源使用情况，快速调整参数</SectTxt>
+            <SectTxt><SectTxtTitle>弹性扩展</SectTxtTitle>可在云端或本地横向扩展节点，动态增加/移除推理实例，满足多变业务需求</SectTxt>
+            <SectTxt><SectTxtTitle>开放调度接口</SectTxtTitle>用户可根据业务需要编写调度策略，灵活管理多实例并行运行</SectTxt>
+            <SectTxt><SectTxtTitle>多模型一键部署</SectTxtTitle>支持多种推理场景</SectTxt>
             <Desc>AI推理引擎的跨平台适配与性能优化</Desc>
           </Sect>
           <Sect style={{ width: '42%' }}>
@@ -170,7 +180,7 @@ const Card1: React.FC = () => {
           <Sect style={{ width: '52%' }}>
             <SectTitle>解决方案：自动化算子适配与优化</SectTitle>
             <QuoteSectTxt style={{ marginBottom: '0.36rem' }}>
-              <SectSpan>可移植的算子设计</SectSpan>
+              <SectSpan>可移植的算子设计<Icon src={image2Url} /></SectSpan>
               <SectUl>
                 <li>通过先进的 AI 编译器技术实现算子的跨平台兼容</li>
                 <li>在不支持特定指令集的 GPU 上，使用通用指令模拟专有指令，确保功能一致性</li>
@@ -178,7 +188,7 @@ const Card1: React.FC = () => {
               </SectUl>
             </QuoteSectTxt>
             <QuoteSectTxt style={{ marginBottom: '0.36rem' }}>
-              <SectSpan>算力受限场景下的模型切分与并行策略</SectSpan>
+              <SectSpan>算力受限场景下的模型切分与并行策略<Icon src={image3Url} /></SectSpan>
               <SectUl>
                 <li>将大模型划分为多个子模块，分别在不同的GPU上并行执行，提升整体推理效率</li>
                 <li>采用流水线并行、张量并行等策略，充分利用有限的计算资源</li>
@@ -186,7 +196,7 @@ const Card1: React.FC = () => {
               </SectUl>
             </QuoteSectTxt>
             <QuoteSectTxt style={{ marginBottom: '0.36rem' }}>
-              <SectSpan>异构算力的PD分离</SectSpan>
+              <SectSpan>异构算力的PD分离<Icon src={image4Url} /></SectSpan>
               <SectUl>
                 <li>支持不同品牌算力芯片混合部署。Prefill 调度至强算力 GPU；Decode 落在内存带宽高但算力弱的 GPU 上，实现算力与任务类型匹配</li>
                 <li>PD 分离提升计算利用率 3.2~4.48 倍，有效缓解 Decode 阶段造成的队列阻塞</li>
@@ -216,7 +226,6 @@ export default () => {
     <>
       <Cover cover={coverUrl}>
         <CoverTittle>
-          <CoverSpan>解决方案</CoverSpan>
           <span>高性能AI推理框架</span>
         </CoverTittle>
       </Cover>
