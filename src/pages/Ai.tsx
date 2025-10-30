@@ -196,7 +196,7 @@ const Card1: React.FC = () => {
               </SectUl>
             </QuoteSectTxt>
             <QuoteSectTxt style={{ marginBottom: '0.36rem' }}>
-              <SectSpan>异构算力的PD分离<Icon src={image4Url} /></SectSpan>
+              <SectSpan>异构算力的PD分离、AF分离<Icon src={image4Url} /></SectSpan>
               <SectUl>
                 <li>支持不同品牌算力芯片混合部署。Prefill 调度至强算力 GPU；Decode 落在内存带宽高但算力弱的 GPU 上，实现算力与任务类型匹配</li>
                 <li>PD 分离提升计算利用率 3.2~4.48 倍，有效缓解 Decode 阶段造成的队列阻塞</li>
