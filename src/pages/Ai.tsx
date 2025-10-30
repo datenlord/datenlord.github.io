@@ -182,25 +182,25 @@ const Card1: React.FC = () => {
             <QuoteSectTxt style={{ marginBottom: '0.36rem' }}>
               <SectSpan>可移植的算子设计<Icon src={image2Url} /></SectSpan>
               <SectUl>
-                <li>通过先进的 AI 编译器技术实现算子的跨平台兼容</li>
-                <li>在不支持特定指令集的 GPU 上，使用通用指令模拟专有指令，确保功能一致性</li>
+                <li>通过先进的 AI 编译器技术实现算子的跨平台兼容。</li>
+                <li>在不支持特定指令集的 GPU 上，使用通用指令模拟专有指令，确保功能一致性。</li>
                 <li>引入参数可调的算子模板，根据目标GPU的特性自动调整参数，优化性能。</li>
               </SectUl>
             </QuoteSectTxt>
             <QuoteSectTxt style={{ marginBottom: '0.36rem' }}>
               <SectSpan>算力受限场景下的模型切分与并行策略<Icon src={image3Url} /></SectSpan>
               <SectUl>
-                <li>将大模型划分为多个子模块，分别在不同的GPU上并行执行，提升整体推理效率</li>
-                <li>采用流水线并行、张量并行等策略，充分利用有限的计算资源</li>
+                <li>将大模型划分为多个子模块，分别在不同的GPU上并行执行，提升整体推理效率。</li>
+                <li>采用流水线并行、张量并行等策略，充分利用有限的计算资源。</li>
                 <li>实现计算与通信的重叠执行，动态调整调度策略，提升系统吞吐量。</li>
               </SectUl>
             </QuoteSectTxt>
             <QuoteSectTxt style={{ marginBottom: '0.36rem' }}>
               <SectSpan>异构算力的PD分离、AF分离<Icon src={image4Url} /></SectSpan>
               <SectUl>
-                <li>支持不同品牌算力芯片混合部署。Prefill 调度至强算力 GPU；Decode 落在内存带宽高但算力弱的 GPU 上，实现算力与任务类型匹配</li>
-                <li>PD 分离提升计算利用率 3.2~4.48 倍，有效缓解 Decode 阶段造成的队列阻塞</li>
-                <li>通过解耦调度，缩短响应时间（Prefill 吞吐提升），SLO 满足率提升可达 10 倍</li>
+                <li>支持不同品牌算力芯片混合部署。将PD分离和AF分离混合，以更细的颗粒度将不同计算特征的任务分离部署，针对异构算力的特性将不同的计算任务分配到对应的机器上。</li>
+                <li>PD 分离提升计算利用率 3.2~4.48 倍，有效缓解 Decode 阶段造成的队列阻塞。</li>
+                <li>通过解耦调度，缩短响应时间（Prefill 吞吐提升），SLO 满足率提升可达 10 倍。</li>
               </SectUl>
             </QuoteSectTxt>
           </Sect>
