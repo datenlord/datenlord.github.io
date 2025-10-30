@@ -117,6 +117,8 @@ const SectDesc = styled.div`
   padding-block: 0.2rem;
 `
 const SectTxt = styled.div`
+  display: flex;
+  justify-content: space-between;
   font-size: 0.14rem;
   color: #42424A;
   line-height: 0.26rem;
@@ -294,18 +296,18 @@ const Card1: React.FC = () => {
           <Sect style={{ width: '100%' }}>
             <SectTitle>亮点</SectTitle>
             <SectDesc style={{ color: '#7680DD' }}><Icon src={image1Url} />为AI计算场景而生</SectDesc>
-            <SectTxt><SectTxtTitle>采用创新协议</SectTxtTitle>解决传统RDMA网络面临的拥塞、重传问题，在复杂网络条件下依然保证高吞吐。</SectTxt>
-            <SectTxt><SectTxtTitle>深度软硬件融合</SectTxtTitle>系统性打通GPU算子、通信库、驱动程序、网卡硬件四大环节，提供极致网络传输效率。</SectTxt>
-            <SectTxt><SectTxtTitle>前沿（领先）的控制算法</SectTxtTitle>密切追踪学术与产业界最新的拥塞控制与调度算法，通过软件和硬件的配合充分利用网络带宽。</SectTxt>
+            <SectTxt><SectTxtTitle>采用创新协议</SectTxtTitle><div style={{ flex: 1 }}>解决传统RDMA网络面临的拥塞、重传问题，在复杂网络条件下依然保证高吞吐。</div></SectTxt>
+            <SectTxt><SectTxtTitle>深度软硬件融合</SectTxtTitle><div style={{ flex: 1 }}>系统性打通GPU算子、通信库、驱动程序、网卡硬件四大环节，提供极致网络传输效率。</div></SectTxt>
+            <SectTxt><SectTxtTitle>前沿（领先）的控制算法</SectTxtTitle><div style={{ flex: 1 }}>密切追踪学术与产业界最新的拥塞控制与调度算法，通过软件和硬件的配合充分利用网络带宽。</div></SectTxt>
             <SectDesc style={{ color: '#7680DD' }}><Icon src={image2Url} />精巧灵活</SectDesc>
-            <SectTxt><SectTxtTitle>精简的软硬件实现</SectTxtTitle>通过软硬件协同，大幅简化硬件与软件的实现复杂度，减少不必要的中间环节，提供极致精简的控制逻辑。</SectTxt>
-            <SectTxt><SectTxtTitle>用户态驱动</SectTxtTitle>将网卡硬件的核心控制逻辑实现在用户态，绕开操作系统内核，轻量且易于和用户系统集成。</SectTxt>
-            <SectTxt><SectTxtTitle>多种控制逻辑</SectTxtTitle>支持Receiver Driven、Selective Retransmition、MultiPath Routing等多种控制方案的组合，不依赖PFC进行拥塞控制，适应不同的网络环境。</SectTxt>
-            <SectTxt><SectTxtTitle>透明故障迁移</SectTxtTitle>网卡发生故障时，可无感切换至其他网卡。</SectTxt>
+            <SectTxt><SectTxtTitle>精简的软硬件实现</SectTxtTitle><div style={{ flex: 1 }}>通过软硬件协同，大幅简化硬件与软件的实现复杂度，减少不必要的中间环节，提供极致精简的控制逻辑。</div></SectTxt>
+            <SectTxt><SectTxtTitle>用户态驱动</SectTxtTitle><div style={{ flex: 1 }}>将网卡硬件的核心控制逻辑实现在用户态，绕开操作系统内核，轻量且易于和用户系统集成。</div></SectTxt>
+            <SectTxt><SectTxtTitle>多种控制逻辑</SectTxtTitle><div style={{ flex: 1 }}>支持Receiver Driven、Selective Retransmition、MultiPath Routing等多种控制方案组合，不依赖PFC进行拥塞控制，适应不同的网络环境。</div></SectTxt>
+            <SectTxt><SectTxtTitle>透明故障迁移</SectTxtTitle><div style={{ flex: 1 }}>网卡发生故障时，可无感切换至其他网卡。</div></SectTxt>
             <SectDesc style={{ color: '#7680DD' }}><Icon src={image3Url} />开源开放</SectDesc>
-            <SectTxt><SectTxtTitle>硬件RTL开源</SectTxtTitle>使用先进的Bluespec SystemVerilog作为开发语言，代码精巧，易于定制开发和维护。</SectTxt>
-            <SectTxt><SectTxtTitle>驱动软件开源</SectTxtTitle>使用先进且安全的Rust语言开发软件驱动程序，易于开发调试。</SectTxt>
-            <SectTxt><SectTxtTitle>网络通信库开源</SectTxtTitle>兼容verbs API、xCCL通信库，适配主流大模型推理应用</SectTxt>
+            <SectTxt><SectTxtTitle>硬件RTL开源</SectTxtTitle><div style={{ flex: 1 }}>使用先进的Bluespec SystemVerilog作为开发语言，代码精巧，易于定制开发和维护。</div></SectTxt>
+            <SectTxt><SectTxtTitle>驱动软件开源</SectTxtTitle><div style={{ flex: 1 }}>使用先进且安全的Rust语言开发软件驱动程序，易于开发调试。</div></SectTxt>
+            <SectTxt><SectTxtTitle>网络通信库开源</SectTxtTitle><div style={{ flex: 1 }}>兼容verbs API、xCCL通信库，适配主流大模型推理应用。</div></SectTxt>
           </Sect>
         </SectCtn>
       </Cont>
