@@ -205,7 +205,7 @@ export default () => {
                 <Card1>
                     <Icon src={image9Url} />
                     <Card1Tittle>Deep Software-Hardware Integration</Card1Tittle>
-                    <Card1Text>Systematically integrates GPU operators, communication libraries, drivers, and NIC hardware to deliver ultimate network transmission efficiency.</Card1Text>
+                    <Card1Text>Systematically integrates GPU kernels, communication libraries, drivers, and NIC hardware to deliver ultimate network transmission efficiency.</Card1Text>
                 </Card1>
                 <Card1>
                     <Icon src={image10Url} />
@@ -215,10 +215,10 @@ export default () => {
             </div>
             <H2>Compact and Flexible</H2>
             <div style={{marginBlock: '0.6rem'}}>
-                <Tittle><Icon src={image11Url} />Streamlined Software/Hardware Implementation</Tittle>
+                <Tittle><Icon src={image11Url} />Pipelined Software/Hardware Implementation</Tittle>
                 <Text>Significantly simplifies implementation complexity through hardware-software synergy, eliminating unnecessary intermediaries for minimal control logic.</Text>
-                <Tittle><Icon src={image12Url} />User-Mode Driver</Tittle>
-                <Text>Implements core NIC control logic in user mode, bypassing the OS kernel for lightweight operation and seamless integration with user systems.</Text>
+                <Tittle><Icon src={image12Url} />User Space Driver</Tittle>
+                <Text>Implements core NIC control logic in user space, bypassing the OS kernel for lightweight operation and seamless integration with user systems.</Text>
                 <Tittle><Icon src={image13Url} />Diverse Control Logics</Tittle>
                 <Text>Supports combinations of control schemes including Receiver Driven, Selective Retransmission, and MultiPath Routing. Independent of PFC for congestion control, adapting to varied network environments.</Text>
                 <Tittle><Icon src={image14Url} />Transparent Failover</Tittle>
