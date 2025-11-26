@@ -12,6 +12,7 @@ import { techTalkItems } from '@/video/TechTalk'
 import { OSSShowcaseItems } from '@/video/OSSShowcase'
 import { rustShowcaseItems } from '@/video/RustShowcase'
 import { hardwareAccelerationItemsItems } from '@/video/HardwareAccelerationItems'
+import { AIInfraMeeting } from '@/video/AIInfraMeeting'
 
 const { Heading, Paragraph } = Typography
 const { CNHead4, CNTitleLarge } = Heading
@@ -64,6 +65,15 @@ const data = new Map<
       description: '硬件加速领域的实践、经验与挑战',
       list: hardwareAccelerationItemsItems,
       recommend: 21,
+    },
+  ],
+  [
+    'ai-infra-meeting',
+    {
+      label: 'AI Infra 开源组会',
+      description: 'AI Infra 领域的前沿实践经验和实用技巧',
+      list: AIInfraMeeting,
+      recommend: 1,
     },
   ],
 ])
