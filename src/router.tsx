@@ -110,6 +110,10 @@ export const router = createHashRouter([
         element: <VideoList />,
       },
       {
+        path: 'ai-infra-meeting',
+        element: <VideoList />,
+      },
+      {
         path: ':title',
         element: <ArticleLIst />,
       },
