@@ -54,6 +54,7 @@ import cover54 from '@/assets/tech-talk/cover54.jpg'
 import cover55 from '@/assets/tech-talk/cover55.jpg'
 import cover56 from '@/assets/tech-talk/cover56.jpg'
 import cover57 from '@/assets/tech-talk/cover57.jpg'
+import cover58 from '@/assets/tech-talk/cover58.jpg'
 
 export const techTalkItems = [
   {
@@ -503,5 +504,13 @@ export const techTalkItems = [
     text: '达坦科技始终致力于打造高性能AI+Cloud基础设施平台，积极推动AI应用的落地。达坦科技通过软硬件深度融合的方式，提供AI推理引擎和高性能网络，为AI应用提供弹性、便利、经济的基础设施服务，以此满足不同行业客户对AI+Cloud的需求。在本周的前沿技术分享中，我们邀请到了软硬件联合开发工程师 陈添，来为大家分享 Triton 实战：从零开始构建一个 GPU序列化算子。',
     date: '2025.09.08',
     url: 'https://www.bilibili.com/video/BV1r6aRzxEX6/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ad1f311db2570f6cb118c74112331e48',
+  },
+  {
+    key: 58,
+    image: cover58,
+    title: '【达坦科技DatenLord】2025 GPU 性能优化大赛分享会',
+    text: '本次大赛不仅是技术的竞技场，更是创新思维的碰撞平台。参赛选手们通过精妙的架构设计、算法优化与资源调度策略，在模型推理效率、资源利用率等多个维度展现了卓越的技术实力。再次感谢所有参赛者的智慧贡献与热情参与。技术之路，永无止境；优化之趣，存乎一心。让我们在追求极致的道路上，继续携手前行！',
+    date: '2026.01.06',
+    url: 'https://www.bilibili.com/video/BV14XitB7EqN/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
   },
 ]

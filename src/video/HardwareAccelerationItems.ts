@@ -28,6 +28,8 @@ import cover27 from '@/assets/hardware-acceleration/cover27.jpg'
 import cover28 from '@/assets/hardware-acceleration/cover28.jpg'
 import cover29 from '@/assets/hardware-acceleration/cover29.jpg'
 import cover30 from '@/assets/hardware-acceleration/cover30.jpg'
+import cover31 from '@/assets/hardware-acceleration/cover31.jpg'
+import cover32 from '@/assets/hardware-acceleration/cover32.jpg'
 
 export const hardwareAccelerationItemsItems = [
   {
@@ -293,5 +295,21 @@ export const hardwareAccelerationItemsItems = [
     text: '本视频为第四届“敏捷硬件开发与验证方法学”研讨会第一部分',
     date: '2025.07.23',
     url: 'https://www.bilibili.com/video/BV1Zd8czZEcL/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
+  },
+  {
+    key: 34,
+    image: cover32,
+    title: '【达坦科技DatenLord】从 Triton Kernel 到 AMDGCN：深入线程行为解析',
+    text: '在本周的前沿技术分享中，我们邀请到了中国科学院大学在读学生许佳凯，来为大家分享从 Triton Kernel 到 AMDGCN：深入线程行为解析。',
+    date: '2025.11.12',
+    url: 'https://www.bilibili.com/video/BV18wCjBME9x/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
+  },
+  {
+    key: 35,
+    image: cover31,
+    title: '【达坦科技DatenLord】Open RDMA 驱动与硬件仿真环境构建演示',
+    text: '在本周的前沿技术分享中，我们邀请到了达坦科技实习生彭伟浩，来为大家分享Open RDMA 驱动与硬件仿真环境构建演示。',
+    date: '2025.12.06',
+    url: 'https://www.bilibili.com/video/BV12c2JBjEcu/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
   },
 ]
