@@ -30,6 +30,7 @@ import cover29 from '@/assets/hardware-acceleration/cover29.jpg'
 import cover30 from '@/assets/hardware-acceleration/cover30.jpg'
 import cover31 from '@/assets/hardware-acceleration/cover31.jpg'
 import cover32 from '@/assets/hardware-acceleration/cover32.jpg'
+import cover33 from '@/assets/hardware-acceleration/cover33.jpg'
 
 export const hardwareAccelerationItemsItems = [
   {
@@ -311,5 +312,13 @@ export const hardwareAccelerationItemsItems = [
     text: '在本周的前沿技术分享中，我们邀请到了达坦科技实习生彭伟浩，来为大家分享Open RDMA 驱动与硬件仿真环境构建演示。',
     date: '2025.12.06',
     url: 'https://www.bilibili.com/video/BV12c2JBjEcu/?spm_id_from=333.337.search-card.all.click&vd_source=ad1f311db2570f6cb118c74112331e48',
+  },
+  {
+    key: 36,
+    image: cover33,
+    title: '开源硬件：400G RDMA网卡项目open-rdma及其快速开发环境搭建介绍',
+    text: '在本周的前沿技术分享中，我们邀请到了达坦科技open-rdma项目负责人米明恒，来为大家分享开源硬件：400G RDMA网卡项目open-rdma及其快速开发环境搭建介绍。',
+    date: '2026.03.20',
+    url: 'https://www.bilibili.com/video/BV1yQALzCEYn/?spm_id_from=333.1387.homepage.video_card.click',
   },
 ]
