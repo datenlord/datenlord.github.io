@@ -18,7 +18,7 @@ const cardData = [
     iconBg: '#7680DD',
     label_en: 'Hardware Design Learning Community',
     label_zh: '硬件设计学习社区',
-    url: 'mit',
+    url: '/mit',
     content: [
       {
         key: 'first',
