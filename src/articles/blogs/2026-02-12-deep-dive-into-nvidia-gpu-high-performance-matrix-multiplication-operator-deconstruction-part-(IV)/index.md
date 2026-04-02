@@ -1,6 +1,6 @@
 ---
 label: 深入 NVIDIA GPU：高性能矩阵乘法算子解构（四）
-description: 本文是文章：Inside NVIDIA GPUs: Anatomy of high performance matmul kernels 的翻译版。本篇文章翻译将分为四个部分，本文是最后一部分。
+description: 本文是文章：Inside NVIDIA GPUs - Anatomy of high performance matmul kernels 的翻译版。本篇文章翻译将分为四个部分，本文是最后一部分。
 location: 美国
 cover: ./image1.png
 author: [达坦科技DatenLord]
