@@ -167,7 +167,7 @@ for (int block_k_iter = 0; block_k_iter < num_blocks_k; ++block_k_iter) {
 
 让我们从一个启发性示例开始：
 
-![Swizzling（交织）示例](image3.png)
+![Swizzling（交织）示例](./image3.png)
 图 35：Swizzling（交织）示例
 
 
@@ -191,7 +191,7 @@ for (int block_k_iter = 0; block_k_iter < num_blocks_k; ++block_k_iter) {
 同样的特性适用于任何行或列：在 Swizzling 之后，它们都可以在单个周期内获得服务！
 
 
-![加载行或列时无银行冲突](image4.png)
+![加载行或列时无银行冲突](./image4.png)
 图 36：加载行或列时无银行冲突
 
 存储操作也具有同样的特性。例如，如果你想在 SMEM 中转置一个矩阵，朴素的方法是：加载一行，然后将其作为一列写回。如果没有 Swizzling，这会导致 8 路银行冲突。
@@ -261,7 +261,7 @@ output = input_number ^ shifted
 
 让我们为 Swizzle 函数的行为建立一些直觉：
 
-![Swizzle 函数直觉图解](image5.png)
+![Swizzle 函数直觉图解](./image5.png)
 图 37：Swizzle 函数直觉图解
 
 对于 32B 和 64B 交织模式，Swizzle 函数分别为 0bxxxxxxxx_IxxZxxxx 和 0bxxxxxxxH_IxYZxxxx。它们遵循相同的“用掩码进行 XOR”的思想，只是驱动哪些低位被翻转的控制位不同。
@@ -270,7 +270,7 @@ output = input_number ^ shifted
 
 这一切如何联系回到我们开始时的那个启发性示例？这就是链接点：
 
-![将 Swizzle 函数连接到矩阵 Swizzle 示例](image6.png)
+![将 Swizzle 函数连接到矩阵 Swizzle 示例](./image6.png)
 图 38：将 Swizzle 函数连接到矩阵 Swizzle 示例
 
 
@@ -370,7 +370,7 @@ wgmma.wait_group 0 —— 意味着：在之前的所有组完成之前不要继
 以下是为什么我们需要 4 个 wgmma 调用的解释：
 
 
-![执行四个 64x16 @ 16x64 的 wgmma 调用等同于执行一个 64x64 @ 64x64 的矩阵乘法](image7.png)
+![执行四个 64x16 @ 16x64 的 wgmma 调用等同于执行一个 64x64 @ 64x64 的矩阵乘法](./image7.png)
 图 39：执行四个 64x16 @ 16x64 的 wgmma 调用等同于执行一个 64x64 @ 64x64 的矩阵乘法
 
 
@@ -385,7 +385,7 @@ wgmma.wait_group 0 —— 意味着：在之前的所有组完成之前不要继
 
 即便如此，这仅仅是起点。我们仍然在浪费 TMA 和张量核心（tensor core）的周期：
 
-![我们在浪费 TMA 和 TC 周期——我们可以做得更好](image8.png)
+![我们在浪费 TMA 和 TC 周期——我们可以做得更好](./image8.png)
 图 40：我们在浪费 TMA 和 TC 周期——我们可以做得更好
 
 解决周期浪费的方法是流水线化（pipelining）计算和数据移动。具体来说，我们将驻留在 SMEM 的分块 sA 和 sB 变成一个长度为（比如）5 的分块队列。
@@ -474,7 +474,7 @@ __syncthreads();  // 与之前相同
 
 可视化图解应该会让这一切变得清晰得多：
 
-![image](image9.png)
+![image](./image9.png)
 图 41：更高效的 TC/TMA 流水线：生产者线程束组（producer warp-group）将分块流式传输到循环缓冲区；消费者线程束组（consumer warp-group）将分块排干到张量核心（tensor cores）中。
 
 
@@ -499,7 +499,7 @@ WG2：消费者 B（计算下半部分）
 
 以下是现在矩阵乘法的执行方式：
 
-![image](image10.png)
+![image](./image10.png)
 
 图 42：两个消费者线程束组（warp groups）允许我们将分块从 128x128 增加到 128x256 且不产生寄存器溢出。
 
@@ -507,7 +507,7 @@ WG2：消费者 B（计算下半部分）
 
 下一个重要想法是，我们同样可以隐藏写入输出分块的延迟：
 
-![image](image11.png)
+![image](./image11.png)
 
 图 43：持久化内核（Persistent kernels）：通过为每个 SM 启动一个处理多个分块的长寿命块（block），使输出存储与传入加载相互重叠。
 
@@ -531,7 +531,7 @@ SM 数量：10。
 
 第一种尝试可能如下所示：
 
-![image](image12.png)
+![image](./image12.png)
 
 图 45：块状缓存感知调度 (Block-wise cache-aware schedule)
 
@@ -540,7 +540,7 @@ SM 数量：10。
 但我们能做得更好吗？令人惊讶的是，答案是肯定的——通过使用空间填充曲线（space-filling curve）：
 
 
-![image](image13.png)
+![image](./image13.png)
 
 
 图 45：块状缓存感知调度
@@ -550,7 +550,7 @@ SM 数量：10。
 但我们能做得更好吗？令人惊讶的是，答案是肯定的——通过使用空间填充曲线（space-filling curve）：
 
 
-![image](image14.png)
+![image](./image14.png)
 
 图 46：希尔伯特曲线调度（Hilbert-curve schedule）
 
@@ -558,7 +558,7 @@ SM 数量：10。
 
 我将深入探讨的最后一个想法是利用 Hopper 架构新的集群级（cluster-level） CUDA 执行模型来减少 L2/GMEM 流量：
 
-![image](image15.png)
+![image](./image15.png)
 
 图 47：使用线程块集群（thread block clusters）来减少 L2/GMEM 加载次数。
 
@@ -597,7 +597,7 @@ SM 数量：10。
 作为参考，以下是性能数据（来自 Pranjal 的博客），展示了每个想法是如何叠加在之前想法之上的：
 
 
-![image](image16.png)
+![image](./image16.png)
 
 此外，Aroun 提交了一个 PR，使用 stmatrix 方法优化了异步存储，性能又提升了 +1%。又有几座核反应堆被省下来了。
 
@@ -631,4 +631,3 @@ SM 数量：10。
 ## 致谢 (Acknowledgements)
 
 非常感谢 Hyperstack 在过去一年中为我的实验提供 H100 GPU！ 感谢我的朋友 Aroun Demeure（Magic 公司的 GPU 与 AI 专家，曾任 Apple 和 Imagination 的 GPU 架构师）和 Mark Saroufim（PyTorch 团队）阅读了本博文的预发布版本并提供反馈！
-
